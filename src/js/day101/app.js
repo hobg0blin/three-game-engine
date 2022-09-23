@@ -1,12 +1,8 @@
 import Config from 'data/config';
 import Detector from 'utils/detector';
-import Texture from './app/main';
+import Sketch from './app/main';
 import React, { Component } from "react"
 import ReactDOM from "react-dom"
-import { TextForm, fonts } from 'components/React/TextForm'
-import { Button } from 'components/React/button.js'
-import { VideoCapture }  from 'components/React/videoCapture.js'
-//
 // Styles
 import 'css/main.css'
 
@@ -17,47 +13,26 @@ if(__ENV__ === 'dev') {
   Config.isDev = true
 }
 
-const defaultText = ""
-
-const mappedFonts = fonts.map(font => {
-  return {name: font.familyName, font: font}
-})
 
 class App extends Component {
   constructor(props) {
     super(props)
-    this.state = { value: defaultText, font: "helvetiker", crabMode: null}
     this.handleChange = this.handleChange.bind(this)
   }
   componentDidMount() {
-      this.three = new Texture(this.state.value)
-    //TODO: should prob rename this
-//    this.three.render(20)
+      // add Three to the DOM
+      this.sketch = new Sketch()
   }
   handleChange(event) {
-    console.log('new val: ', event)
-    if (event.hasOwnProperty("font")) {
-    this.setState({font: event.font}, () => {
-     // this.three.updateText({ font: this.state.font})
-  })
     }
-    if (event.hasOwnProperty("value")) {
-    this.setState({value: event.value}, () => {
-    //  this.three.updateText({ value: this.state.value })
-  })
-
-    }
-  }
   render() {
     return (
       <div className="grid grid-cols-1">
-        <VideoCapture />
-        <TextForm value={this.state.value} handleChange={this.handleChange} />
       </div>
     );
   }
 }
 
 const rootEl = document.getElementById("root")
-ReactDOM.render(<App value={defaultText}/>, rootEl)
+ReactDOM.render(<App/>, rootEl)
 

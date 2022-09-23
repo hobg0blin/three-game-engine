@@ -60,9 +60,6 @@ module.exports = (env) => {
     },
     resolve: {
       extensions: [".js", ".css", ".jpg"],
-        alias: {
-            textures: path.resolve('src/public/textures')
-        },
       modules: [path.resolve(__dirname, 'src/public'), path.resolve(__dirname, 'src/js'), path.resolve(__dirname, 'src'), path.resolve(__dirname, 'node_modules')],
       fallback: {
         "fs": false,

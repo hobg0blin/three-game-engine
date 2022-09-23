@@ -1,5 +1,5 @@
 import { Object3D, Mesh, CylinderGeometry, CircleGeometry, MeshPhongMaterial, DoubleSide} from 'three'
-import {getRandomInt} from '../utils/RandomInt.js'
+import {getRandomInt} from 'utils/RandomInt.js'
 // from https://github.com/lmparppei/deadtree/blob/master/deadtree.js
 /*
 DEADTREE 1.1

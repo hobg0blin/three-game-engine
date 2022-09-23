@@ -4,9 +4,9 @@ import {Water} from 'three/examples/jsm/objects/Water2.js'
 
 function createWater() {
         const textureLoader = new TextureLoader()
-        const flowMap = textureLoader.load('textures/Water_1_M_Flow.jpg')
-        const normalMap0 = textureLoader.load('textures/Water_1_M_Normal.jpg')
-        const normalMap1 = textureLoader.load('textures/Water_2_M_Normal.jpg')
+        const flowMap = textureLoader.load('../textures/Water_1_M_Flow.jpg')
+        const normalMap0 = textureLoader.load('../textures/Water_1_M_Normal.jpg')
+        const normalMap1 = textureLoader.load('../textures/Water_2_M_Normal.jpg')
 
 
         const waterGeo = new PlaneGeometry(100, 100)
