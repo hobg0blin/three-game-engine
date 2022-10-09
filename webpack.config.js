@@ -116,6 +116,10 @@ module.exports = (env) => {
           }]
         },
         {
+            test: /\.(frag|vert)/i,
+            use: 'raw-loader',
+        },
+        {
           test: /\.css$/i,
           include: path.resolve(__dirname, 'src'),
           exclude: /node_modules/,

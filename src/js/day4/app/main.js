@@ -1,13 +1,17 @@
 // Global imports -
 import * as THREE from 'three';
+//utils
+import {mapRange} from 'utils/mapRange.js'
+//THREE
 import {createCamera} from 'components/Three/camera.js'
 import {createLights} from 'components/Three/lights.js'
+import {createFloor} from 'components/Three/Floor.js'
 import {createRenderer} from 'components/Three/renderer.js'
 import {createControls, addToGUI} from 'components/Three/controls.js'
 //Custom:
-import {createSun} from 'components/Three/sun.js'
+import {createSky} from 'components/Three/sun.js'
 import {createWater} from 'components/Three/water.js'
-import {proceduralTree} from 'components/Three/proceduralTree.js'
+import {proceduralTree, fall} from 'components/Three/proceduralTree.js'
 import {createTransmissiveMaterial} from 'components/Three/transmissiveMaterial.js'
 //PostProcessing
 import { EffectComposer } from 'three/examples/jsm/postprocessing/EffectComposer.js';
@@ -71,22 +75,28 @@ setup() {
         this.effect2 = new FilmPass(0.3, 0.7, 4, 0)
         this.composer.addPass(this.effect2)
 
-        createSun(this.scene, this.renderer, 200)
-
-        const planeBottom = createWater();
-        planeBottom.water.position.y = -5
-        this.scene.add( planeBottom.water );
-        this.scene.add(planeBottom.baseMesh)
-        planeBottom.baseMesh.position.y = -5.1
-
-      let transmissiveMat = createTransmissiveMaterial({ opacity: 0.9, specularIntensity: 2, thickness: 1, transmission: 1, exposure: 0.1})
-        this.tree = proceduralTree(1.5,transmissiveMat, 4)
-        this.tree.position.set(0, -5, 0)
-        this.scene.add(this.tree)
-
+        createSky(this.scene, this.renderer, 200)
+        let options = {
+          width: 400,
+          height: 400,
+          segments: 20,
+          range: 15,
+          color: 'green'
+        }
+let floor =      createFloor(options)
+      this.scene.add(floor)
+      console.log('floor pos:', floor.geometry.attributes.position.array.length);
+      let treeMat = new THREE.MeshPhongMaterial({color: 'green'})
+    for (let i = -100;i <= 100; i+=20) {
+      for (let j = 100; j >= -100; j-=20) {
+        let tree = proceduralTree(1.5,treeMat, 2)
+        tree.position.set(i, Math.random() * -5, j)
+        this.scene.add(tree)
+      }
+      }
     }
     animate() {
-        this.tree.rotation.y += 0.01
+        fall();
         this.render()
     }
     render(time, i) {

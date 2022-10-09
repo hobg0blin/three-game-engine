@@ -11,6 +11,7 @@ var material = new THREE.MeshPhongMaterial({ color: 0x555555 });
 var tree = deadTree(5, material, 5);
 scene.add(tree);
 */
+let leavesArr = []
 
 let leafColors = ['red', 'yellow', 'orange', 'salmon', 'violet']
 function proceduralTree (size, material, children, leaves = false) {
@@ -56,13 +57,26 @@ function proceduralTree (size, material, children, leaves = false) {
                 branchEnd.add(child);
             }
         } else {
+            for (let i = 0; i < 10; i++) {
             let leaf = new Mesh(new CircleGeometry(0.4, getRandomInt(3, 10)), new MeshPhongMaterial({color: leafColors[getRandomInt(0, leafColors.length -1)], side: DoubleSide}))
             leaf.scale.set(1 + Math.random() * 3, 2.5 + Math.random() * 3, 1 + Math.random() * 3)
+            leaf.position.set(Math.random() * 10, Math.random() *10, Math.random() * 5);
             branchEnd.add(leaf)
+            leavesArr.push(leaf)
+
+            }
         }
 
         return branchPivot;
     }
 }
 
-export { proceduralTree }
+function fall() {
+    for (let leaf of leavesArr) {
+        if (leaf.position.y > -50) {
+            leaf.position.set(leaf.position.x + (Math.random() > 0.5 ? -0.1 : 0.1), leaf.position.y -=  0.6 * Math.random(), leaf.position.z + (Math.random() > 0.5 ? -0.1 : 0.1));
+        }
+    }
+}
+
+export { proceduralTree, fall }
