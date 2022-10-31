@@ -24,6 +24,7 @@
     "autoprefixer": "^10.4.2",
     "babel-plugin-syntax-dynamic-import": "^6.18.0",
     "buffer": "^6.0.3",
+    "capture-website": "^3.1.0",
     "chroma-js": "^2.1.2",
     "es6-promise": "^4.2.8",
     "fs": "^0.0.1-security",
@@ -31,6 +32,8 @@
     "optionator": "^0.9.1",
     "os": "^0.1.2",
     "path-browserify": "^1.0.1",
+    "phantomjs": "^2.1.7",
+    "phantomjs-prebuilt": "^2.1.16",
     "postcss": "^8.4.5",
     "postcss-cli": "^9.1.0",
     "process": "^0.11.10",
@@ -41,6 +44,7 @@
     "tailwindcss": "^3.0.17",
     "three": "^0.144.0",
     "toxiclibsjs": "^0.3.3",
+    "webshot-node": "^0.18.3",
     "wordnet-db": "^3.1.14"
   },
   "devDependencies": {

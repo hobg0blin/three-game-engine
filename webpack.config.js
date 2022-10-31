@@ -7,7 +7,7 @@ const fs = require('fs');
 const entryMap = {};
 
 fs.readdirSync(path.resolve(__dirname, 'src/js/'))
-    .filter((f) => fs.lstatSync(path.resolve(__dirname, 'src/js/'), '/' + f).isDirectory() && f.indexOf('day') >= 0)
+    .filter((f) => fs.lstatSync(path.resolve(__dirname, 'src/js/'), '/' + f).isDirectory() && f.indexOf('sketch') >= 0)
     .map((f) => {
         return f
     })
@@ -45,7 +45,7 @@ module.exports = (env) => {
               chunkId
 
         }},
-          title: 'ThreeJS Playground',
+      title: 'ThreeJS Playground',
         template: path.join(__dirname, '/src/html/index.html'),
         path: path.resolve(__dirname, './dist/'),
         filename: '[name]/index.html',
