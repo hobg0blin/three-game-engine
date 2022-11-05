@@ -1,29 +1,26 @@
-import {Euler, MathUtils, BoxGeometry, SphereGeometry, CylinderGeometry, TorusKnotGeometry, Mesh, Vector2, Vector3, MeshPhongMaterial, MeshStandardMaterial, MeshLambertMaterial, RepeatWrapping, Quaternion, TextureLoader, PlaneGeometry, VideoTexture} from 'three'
+import {MathUtils, BoxGeometry, SphereGeometry, TorusKnotGeometry, Mesh, Vector2, Vector3, MeshPhongMaterial, MeshStandardMaterial, MeshLambertMaterial, RepeatWrapping, Quaternion, TextureLoader, PlaneGeometry, VideoTexture} from 'three'
 import {ConvexObjectBreaker} from 'three/examples/jsm/misc/ConvexObjectBreaker.js'
 import {ConvexGeometry} from 'three/examples/jsm/geometries/ConvexGeometry.js'
-import { Reflector } from 'three/examples/jsm/objects/Reflector.js'
 import { importSTLModel } from '../importSTLModel.js'
-import { importFBXModel } from '../importFBXModel.js'
-import { importGLTFModel }  from '../importGLTFModel.js'
-import { importOBJModel }  from '../importOBJModel.js'
-import { createFloor } from '../Floor.js'
-import {createBall} from '../ball.js'
-import {createStaticPhysicsObject} from './createStaticPhysicsObject.js'
-import { getRandomInt} from '../../utils/RandomInt.js'
+import { importGLTFModel } from '../importGLTFModel.js'
 //code from https://github.com/mrdoob/three.js/blob/dev/examples/physics_ammo_break.html
-const ballMaterial = new MeshPhongMaterial( { color: 'red', emissive: 'red', emissiveIntensity: 3 } );
+const ballMaterial = new MeshPhongMaterial( { color: 0x202020 } );
 const textureLoader = new TextureLoader()
 let scene;
 let camera
+let crab;
+let crabLoaded = false;
+let raycaster
 let rigidBodies = []
 let playerBody
 let playerHead
 let moveDirection = { left: 0, right: 0, forward: 0, back: 0 }
 let physicsWorld
-const gravityConstant = 11;
+const gravityConstant = 1;
 const margin = 0.05
 const convexBreaker = new ConvexObjectBreaker
 const mouseCoords = new Vector2();
+let clickRequest = false;
 const pos = new Vector3();
 		const quat = new Quaternion();
 		let transformAux1;
@@ -69,13 +66,14 @@ let terrainMesh
 			let inc = 3
 			let depthMod = 2
 			let widthMod = 2
-let phaseMult = 4
+let phaseMult = 8
 
 
 
 		function initPhysics() {
 			console.log('foo')
 			scene = this.scene
+      raycaster = this.raycaster
 			camera = this.camera
 			// Physics configuration
 
@@ -88,10 +86,26 @@ let phaseMult = 4
 
 			transformAux1 = new Ammo.btTransform();
 			tempBtVec3_1 = new Ammo.btVector3( 0, 0, 0 );
-			heightData = generateHeight( terrainWidth, terrainDepth, terrainMinHeight, terrainMaxHeight );
+				heightData = generateHeight( terrainWidth, terrainDepth, terrainMinHeight, terrainMaxHeight );
 				geometry.rotateX( - Math.PI / 2 );
-			//rotating Y breaks actualy physics map since that isn't rotated -worth trying to fix
-//			geometry.rotateY( - Math.PI/2)
+			geometry.rotateY( - Math.PI/2)
+createTerrain()
+
+groundShape = createTerrainShape();
+				groundTransform = new Ammo.btTransform();
+				groundTransform.setIdentity();
+			// Shifts the terrain, since bullet re-centers it on its bounding box.
+				groundTransform.setOrigin( new Ammo.btVector3( 0, ( terrainMaxHeight + terrainMinHeight ) / 2, 0 ) );
+				groundMass = 100;
+				groundLocalInertia = new Ammo.btVector3( 0, 0, 0 );
+				groundMotionState = new Ammo.btDefaultMotionState( groundTransform );
+				groundShape.calculateLocalInertia(groundMass, groundLocalInertia)
+
+				groundBody = new Ammo.btRigidBody( new Ammo.btRigidBodyConstructionInfo( groundMass, groundMotionState, groundShape, groundLocalInertia ) );
+				groundBody.setRestitution(1.5)
+				groundBody.setDamping(0.8, 0)
+				physicsWorld.addRigidBody( groundBody );
+
 
 		}
 
@@ -99,61 +113,88 @@ let phaseMult = 4
 			object.position.copy( pos );
 			object.quaternion.copy( quat );
 			convexBreaker.prepareBreakableObject( object, mass, new Vector3(), new Vector3(), true );
-			let body = createDebrisFromBreakableObject( object, shape );
-			return body
+			createDebrisFromBreakableObject( object, shape );
+
 		}
 
 		function createPhysicsObjects() {
-//				createTerrain()
-//				groundShape = createTerrainShape();
-////				geometry.rotateX( - Math.PI / 2 );
-//				groundTransform = new Ammo.btTransform();
-//				groundTransform.setIdentity();
-//			// Shifts the terrain, since bullet re-centers it on its bounding box.
-//				groundTransform.setOrigin( new Ammo.btVector3( 0, 0, 0 ) );
-//				groundMass = 0;
-//				groundLocalInertia = new Ammo.btVector3( 0, 0, 0 );
-//				groundMotionState = new Ammo.btDefaultMotionState( groundTransform );
-//				groundShape.calculateLocalInertia(groundMass, groundLocalInertia)
-//				groundBody = new Ammo.btRigidBody( new Ammo.btRigidBodyConstructionInfo( groundMass, groundMotionState, groundShape, groundLocalInertia ) );
-//				groundBody.setRestitution(0.4)
-////				physicsWorld.addRigidBody(groundBody)
-			let x = -50
-//			for (let i = 0; i < 10; i++) {
-//			pos.set(x, 30, 0)
-//			x+= 10
-//			quat.set(0, 0, 0, 1)
-//        let ball = createBall(3, 12, 'red')
-//        ball.castShadow = true
-//				let ballShape = new Ammo.btSphereShape(1.5)
-//				let ballObject = createObject(ball, 2, pos, quat, ballShape)
-//				ballObject.setRestitution(2.5)
-//				ballObject.setFriction(0.1)
-////				ballObject.setRollingFriction(4)
-//				ball.userData.velocity.set(0, 0, 3)
-//				ball.userData.angularVelocity.set(0, 0, 3)
-//
-//			}
 
-//			let ground = createParalellepipedWithPhysics(100, 2, 100, 0, pos, quat, groundMaterial)
-			quat.set( 0, 0, 0, 1 );
+			//bodyModel
+			let crabMat = new MeshPhongMaterial({color: 'red'})
+			importSTLModel('/three/models/Crab_t.stl', crabMat, addBody)
+      console.log('adding gun');
+       let gun = importGLTFModel('/three/models/ar-181.glb', addGun)
 
+			// Head
 		}
-			function addBody(scene, mat) {
-				let model = scene.children[4]
-				model.scale.set(0.2, 0.2, 0.2)
-				//FIXME why is position se tting so weird?
-				//pos not doing anything but quat affecting position
-				//aaand now it works with using axis angle on quaternion
-				//but pos still not doing anything on y axis?
-				//geometry is weird
-//				obj.position.set(0, 0, 0)
-				return model
+function processClick() {
+
+				if ( clickRequest && crabLoaded) {
+
+					raycaster.setFromCamera( mouseCoords, camera );
+
+					// Creates a crab
+					const crabMass = 10;
+					const crabRadius = 0.4;
+
+//          let shape = new Ammo.btBoxShape(new Ammo.btVector3(2, 6, 1.5))
+
+					crab.castShadow = true;
+					crab.receiveShadow = true;
+					const crabShape = new Ammo.btSphereShape( crabRadius );
+					crabShape.setMargin( margin );
+					pos.copy( raycaster.ray.direction );
+          let origin = new THREE.Vector3()
+            origin.copy(playerBody.position)
+          origin.z = origin.z - 50
+					pos.add( origin );
+          console.log('origin: ', origin)
+					quat.set( 0, 0, 0, 1 );
+					const crabBody = createRigidBody( crab.clone(), crabShape, crabMass, playerBody.position, quat );
+					crabBody.setFriction( 0.5 );
+
+					pos.copy( raycaster.ray.direction );
+					pos.multiplyScalar( 40 );
+					crabBody.setLinearVelocity( new Ammo.btVector3( pos.x, pos.y, pos.z ) );
+
+					clickRequest = false;
+
+				}
+
+			}
+      function addGun(model) {
+        console.log('scene: ', model);
+        let obj = model.scene
+        obj.scale.set(0.75, 0.75, 0.75);
+        obj.rotation.y = MathUtils.degToRad(180)
+				pos.set(0, 4, 0)
+					quat.setFromAxisAngle(new Vector3(0, 1, 1), Math.PI)
+				playerBody = obj
+				let shape = new Ammo.btBoxShape(new Ammo.btVector3(2, 6, 1.5))
+//				createObject(obj, 5.5, pos, quat, shape)
+			createHead()
+      scene.add(obj);
+				return obj
+
+      }
+			function addBody(model, mat) {
+
+				let obj = new Mesh(model, mat)
+				obj.scale.set(0.05, 0.05, 0.05)
+        crabLoaded = true
+        crab = obj
 				}
 
 		function createHead() {
-			let hankTex = textureLoader.load('textures/hank.jpg')
-			let headMat = new MeshPhongMaterial({ map: videoTex})
+//			let video = document.getElementById('video')
+//			let videoTex = new VideoTexture(video)
+//			videoTex.wrapT = RepeatWrapping
+//			videoTex.wrapS = RepeatWrapping
+//			videoTex.repeat.set(0.9, 0.9, 0.9)
+			let hankTex = textureLoader.load('/three/textures/hank.jpg')
+			let headMat = new MeshPhongMaterial({ map: hankTex})
+			const p = 2
+			const q = 6
 
 			let object = new Mesh( new SphereGeometry(4, 20, 20), headMat );
 			let headMass = 0.1
@@ -189,7 +230,6 @@ let phaseMult = 4
 			const btVecUserData = new Ammo.btVector3( 0, 0, 0 );
 			btVecUserData.threeObject = object;
 			body.setUserPointer( btVecUserData );
-			return body
 
 		}
 
@@ -251,7 +291,7 @@ let phaseMult = 4
 			const rbInfo = new Ammo.btRigidBodyConstructionInfo( mass, motionState, physicsShape, localInertia );
 			const body = new Ammo.btRigidBody( rbInfo );
 
-			body.setFriction( 0 );
+			body.setFriction( 0.5 );
 
 			if ( vel ) {
 
@@ -299,25 +339,45 @@ let phaseMult = 4
 		}
 
 		function initInput(raycaster) {
-			window.addEventListener('keydown', function(e) {
-				handleKeyDown(e)
-			})
-			window.addEventListener('keyup', function(e) {
-				handleKeyUp(e)
-			})
-
-			window.addEventListener( 'pointerdown', function ( event ) {
+//			window.addEventListener('keydown', function(e) {
+//				handleKeyDown(e)
+//			})
+//			window.addEventListener('keyup', function(e) {
+//				handleKeyUp(e)
+//			})
+//
+      window.addEventListener( 'pointerdown', function ( event ) {
+				clickRequest = true
 
 				mouseCoords.set(
 					( event.clientX / window.innerWidth ) * 2 - 1,
 					- ( event.clientY / window.innerHeight ) * 2 + 1
 				);
-				console.log('foo')
 
-				shootBall(raycaster)
+				raycaster.setFromCamera( mouseCoords, camera );
+        processClick();
+      } );
 
+			window.addEventListener( 'mousemove', function ( event ) {
+//
+				mouseCoords.set(
+					( event.clientX / window.innerWidth ) * 2 - 1,
+					- ( event.clientY / window.innerHeight ) * 2 + 1
+				);
+        if (playerBody != undefined){
+//
+				raycaster.setFromCamera( mouseCoords, camera );
+        let distance = 5;
+       const { origin, direction } = raycaster.ray;
 
-		})
+       playerBody.position.copy(origin.clone().add(direction.multiplyScalar(distance)));
+          console.log('playerBody pos: ', playerBody.position);
+//          playerBody.rotation.set(MathUtils.degToRad(playerBody.position.x), ( MathUtils.degToRad(playerBody.position.y)), 0);
+            playerBody.rotation.y = MathUtils.degToRad(180 - (playerBody.position.x * 15));
+            playerBody.rotation.x = MathUtils.degToRad((0 - (playerBody.position.y*2)));
+          }
+			} );
+//
 		}
 function updatePhysics( deltaTime ) {
 
@@ -345,11 +405,7 @@ function updatePhysics( deltaTime ) {
 
 			}
 
-
 			for ( let i = 0, il =this.dispatcher.getNumManifolds(); i < il; i ++ ) {
-
-				//skip collision stuff
-				break;
 
 				const contactManifold =this.dispatcher.getManifoldByIndexInternal( i );
 				const rb0 = Ammo.castObject( contactManifold.getBody0(), Ammo.btRigidBody );
@@ -411,62 +467,52 @@ function updatePhysics( deltaTime ) {
 
 				// Subdivision
 
-				let scalingFactor = 0.8
-				const fractureImpulse = 1000;
-
-				if ( breakable0 && ! collided0 && maxImpulse > fractureImpulse ) {
-					console.log('subdivide2')
-
-					const debris = convexBreaker.subdivideByImpact( threeObject0, impactPoint, impactNormal,1.5,2 );
-
-					const numObjects = debris.length;
-					console.log('num objects: ', numObjects)
-					for ( let j = 0; j < numObjects; j ++ ) {
-
-						const vel = rb0.getLinearVelocity();
-
-						vel.op_mul(scalingFactor);
-						const angVel = rb0.getAngularVelocity();
-						const fragment = debris[ j ];
-						fragment.userData.velocity.set( vel.x(), vel.y(), vel.z() );
-						fragment.userData.angularVelocity.set( angVel.x(), angVel.y(), angVel.z() );
-						let shape = createConvexHullPhysicsShape(fragment.geometry.attributes.position.array)
-
-						createDebrisFromBreakableObject( fragment, shape );
-
-					}
-
-					objectsToRemove[ numObjectsToRemove ++ ] = threeObject0;
-					userData0.collided = true;
-
-				}
-				if ( breakable1 && ! collided1 && maxImpulse > fractureImpulse ) {
-					console.log('subdivide1')
-
-					const debris = convexBreaker.subdivideByImpact( threeObject1, impactPoint, impactNormal, 1.5, 2);
-
-					const numObjects = debris.length;
-					console.log('num objects: ', numObjects)
-					for ( let j = 0; j < numObjects; j ++ ) {
-
-						const vel = rb1.getLinearVelocity();
-
-						vel.op_mul(scalingFactor);
-						const angVel = rb1.getAngularVelocity();
-						const fragment = debris[ j ];
-						fragment.userData.velocity.set( vel.x(), vel.y(), vel.z() );
-						fragment.userData.angularVelocity.set( angVel.x(), angVel.y(), angVel.z() );
-
-						let shape = createConvexHullPhysicsShape(fragment.geometry.attributes.position.array)
-						createDebrisFromBreakableObject( fragment, shape );
-
-					}
-
-					objectsToRemove[ numObjectsToRemove ++ ] = threeObject1;
-					userData1.collided = true;
-
-				}
-
+//				const fractureImpulse = 250;
+//
+//				if ( breakable0 && ! collided0 && maxImpulse > fractureImpulse ) {
+//
+//					const debris = convexBreaker.subdivideByImpact( threeObject0, impactPoint, impactNormal, 1, 2, 1.5 );
+//
+//					const numObjects = debris.length;
+//					for ( let j = 0; j < numObjects; j ++ ) {
+//
+//						const vel = rb0.getLinearVelocity();
+//						const angVel = rb0.getAngularVelocity();
+//						const fragment = debris[ j ];
+//						fragment.userData.velocity.set( vel.x(), vel.y(), vel.z() );
+//						fragment.userData.angularVelocity.set( angVel.x(), angVel.y(), angVel.z() );
+//
+//						createDebrisFromBreakableObject( fragment );
+//
+//					}
+//
+//					objectsToRemove[ numObjectsToRemove ++ ] = threeObject0;
+//					userData0.collided = true;
+//
+//				}
+//
+//				if ( breakable1 && ! collided1 && maxImpulse > fractureImpulse ) {
+//
+//					const debris = convexBreaker.subdivideByImpact( threeObject1, impactPoint, impactNormal, 1, 2, 1.5 );
+//
+//					const numObjects = debris.length;
+//					for ( let j = 0; j < numObjects; j ++ ) {
+//
+//						const vel = rb1.getLinearVelocity();
+//						const angVel = rb1.getAngularVelocity();
+//						const fragment = debris[ j ];
+//						fragment.userData.velocity.set( vel.x(), vel.y(), vel.z() );
+//						fragment.userData.angularVelocity.set( angVel.x(), angVel.y(), angVel.z() );
+//
+//						createDebrisFromBreakableObject( fragment );
+//
+//					}
+//
+//					objectsToRemove[ numObjectsToRemove ++ ] = threeObject1;
+//					userData1.collided = true;
+//
+//				}
+//
 			}
 
 			for ( let i = 0; i < numObjectsToRemove; i ++ ) {
@@ -479,40 +525,19 @@ function updatePhysics( deltaTime ) {
 
   }
 function setupEventHandlers(){
+
     window.addEventListener( 'keydown', handleKeyDown, false);
     window.addEventListener( 'keyup', handleKeyUp, false);
 
 }
 
-function shootBall(raycaster) {
-			// Creates a ball and throws it
-	raycaster.setFromCamera( mouseCoords, camera );
 
-	// Creates a ball and throws it
-	const ballMass = 45;
-	const ballRadius = 0.4;
-
-	const ball = new Mesh( new SphereGeometry( ballRadius, 14, 10 ), ballMaterial );
-	ball.castShadow = true;
-	ball.receiveShadow = true;
-	const ballShape = new Ammo.btSphereShape( ballRadius );
-	ballShape.setMargin( margin );
-	pos.copy( raycaster.ray.direction );
-	pos.add( raycaster.ray.origin );
-	quat.set( 0, 0, 0, 1 );
-	const ballBody = createRigidBody( ball, ballShape, ballMass, pos, quat );
-
-	pos.copy( raycaster.ray.direction );
-	pos.multiplyScalar( 200 );
-	ballBody.setLinearVelocity( new Ammo.btVector3( pos.x, pos.y, pos.z ) );
-
-
-}
 function handleKeyDown(event){
 
     let keyCode = event.keyCode;
 
     switch(keyCode){
+
         case 87: //W: FORWARD
             moveDirection.forward = 1
             break;
@@ -530,9 +555,8 @@ function handleKeyDown(event){
             break;
 
     }
-	moveBody(playerBody)
+//	moveBody(playerBody)
 }
-
 
 function handleKeyUp(event){
     let keyCode = event.keyCode;
@@ -559,6 +583,7 @@ function handleKeyUp(event){
 }
 
 function moveBody(body){
+  console.log('moving: ')
 
     let scalingFactor = 20;
 
@@ -576,16 +601,31 @@ function moveBody(body){
 
 }
 			function createTerrain() {
-				terrainMesh = createFloor({width: 100, height: 100, range:10, segments: 10, color: 'white'});
-				terrainMesh.geometry.rotateX( - Math.PI / 2 );
+
+		const groundMaterial = new MeshLambertMaterial( { color: 0xC7C7C7 } );
+				updateVertices()
+				terrainMesh = new Mesh( geometry, groundMaterial );
 				terrainMesh.receiveShadow = true;
 				terrainMesh.castShadow = true;
-				terrainMesh.position.set(0, -20, 0)
 
 				scene.add( terrainMesh );
+				console.log('terrain mesh: ', terrainMesh)
+				textureLoader.load( '/three/textures/grid.png', function ( texture ) {
+
+					texture.wrapS = RepeatWrapping;
+					texture.wrapT = RepeatWrapping;
+					//texture.repeat.set( terrainWidth - 1, terrainDepth - 1 );
+					texture.repeat.set(2, 2);
+//					texture.offset.set(0, 1.2)
+
+					groundMaterial.map = texture;
+					groundMaterial.needsUpdate = true;
+
+			})
 
 }
 			function createTerrainShape() {
+				console.log('should be creating terrain')
 
 				// This parameter is not really used, since we are using PHY_FLOAT height data type and hence it is ignored
 				const heightScale = 1;
@@ -656,21 +696,21 @@ function moveBody(body){
 
 				}				heightData = generateHeight( terrainWidth, terrainDepth, terrainMinHeight, terrainMaxHeight );
 
-//groundShape = createTerrainShape();
-////				geometry.rotateX( - Math.PI / 2 );
-//				groundTransform = new Ammo.btTransform();
-//				groundTransform.setIdentity();
-//			// Shifts the terrain, since bullet re-centers it on its bounding box.
-//				groundTransform.setOrigin( new Ammo.btVector3( 0, 0, 0 ) );
-//				groundMass = 0;
-//				groundLocalInertia = new Ammo.btVector3( 0, 0, 0 );
-//				groundMotionState = new Ammo.btDefaultMotionState( groundTransform );
-//				groundShape.calculateLocalInertia(groundMass, groundLocalInertia)
-//
-//				groundBody = new Ammo.btRigidBody( new Ammo.btRigidBodyConstructionInfo( groundMass, groundMotionState, groundShape, groundLocalInertia ) );
-//				groundBody.setRestitution(1)
-//				groundBody.setDamping(0.8, 0)
-//				physicsWorld.addRigidBody( groundBody );
+groundShape = createTerrainShape();
+//				geometry.rotateX( - Math.PI / 2 );
+				groundTransform = new Ammo.btTransform();
+				groundTransform.setIdentity();
+			// Shifts the terrain, since bullet re-centers it on its bounding box.
+				groundTransform.setOrigin( new Ammo.btVector3( 0, ( terrainMaxHeight + terrainMinHeight ) / 2, 0 ) );
+				groundMass = 0;
+				groundLocalInertia = new Ammo.btVector3( 0, 0, 0 );
+				groundMotionState = new Ammo.btDefaultMotionState( groundTransform );
+				groundShape.calculateLocalInertia(groundMass, groundLocalInertia)
+
+				groundBody = new Ammo.btRigidBody( new Ammo.btRigidBodyConstructionInfo( groundMass, groundMotionState, groundShape, groundLocalInertia ) );
+				groundBody.setRestitution(1.5)
+				groundBody.setDamping(0.8, 0)
+				physicsWorld.addRigidBody( groundBody );
 
 
 				geometry.attributes.position.needsUpdate = true
@@ -716,4 +756,4 @@ function moveBody(body){
 			}
 
 
-export { initPhysics, createPhysicsObjects, initInput, updatePhysics}
+export { initPhysics, createPhysicsObjects, initInput, updatePhysics, processClick}

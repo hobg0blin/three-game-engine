@@ -1,0 +1,24 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.sketch {
+  display: flex;
+  align-self: center;
+  flex-wrap: wrap;
+  max-width: 30%;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 600;
+  margin: 5% auto;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}

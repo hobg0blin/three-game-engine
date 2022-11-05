@@ -1,0 +1,12 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sketch {
+  display: flex;
+  align-self: center;
+}
+img {
+  display: block;
+}

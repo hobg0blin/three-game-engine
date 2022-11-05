@@ -9,6 +9,13 @@ function getEmptyDirs(path) {
       }
   })
 }
+function delay(time) {
+   return new Promise(function(resolve) {
+       setTimeout(resolve, time)
+   });
+}
+
+
 function getDirs(path) {
   return fs.readdirSync(path).filter(function(file) {
       let stat = fs.statSync(path + '/' + file)
@@ -41,25 +48,40 @@ let options = {
 
 
 
-dirs.map(async dir => {
+let browsers = dirs.slice(0,10).map(async dir => {
 const browser = await puppeteer.launch({
         "headless": true,
         "timeout": 0
   });
 
+  console.log('going to : ', dir);
   const page = await browser.newPage();
+  page.setDefaultNavigationTimeout(0);
   await page.goto('https://blog.hellagrapes.club/three/dist/' + dir + '/index.html'); //
-  return page.screenshot({ path: '../src/public/screenshots/' + dir + '.jpg' });
+  await delay(1000);
+  const [button] = await page.$x("//button[contains(., 'Generate')]");
+  if (button) {
+    console.log('found button: ', button);
+      await button.click();
+      await delay(500);
+  }
+  console.log('loaded: ', dir);
+  let screenshot = await page.screenshot({ path: '../src/public/screenshots/' + dir + '.jpg' });
+  console.log('screenshot made for ', dir);
   await browser.close()
-
+  console.log('browser closed!')
+  return screenshot
 })
 
+
 let reversed = fullDirs.reverse()
-let data = ""
+console.log('reverse: ', reversed)
+let data = "<html><head><title>Brent's Cool Sketches</title><link rel='stylesheet' href='/three/screenshots/screenshots.css'></head><body><h1>My Cool Code Sketches</h1><p>These are code sketches I do on a semi-daily basis. This page and the sketch screenshots are (mostly) generated automatically, so if you see a black screen or broken image it's probably because I did something particularly weird that day.</p> <div class='container'>"
 for (let dir of reversed) {
-  let text = dir.replace("sketch", "").replace("_", " ")
-  data+=`<div><a href="https://blog.hellagrapes.club/three/dist/${dir}/"><img src="https://blog.hellagrapes.club/three/screenshots/${dir}.jpg"/>${text}</a></div>`
+  let text = dir.replace("sketch", "").replace(/_/g, " ")
+  data+=`<div class='sketch'><a href="https://blog.hellagrapes.club/three/dist/${dir}/"><img src="https://blog.hellagrapes.club/three/screenshots/${dir}.jpg"/>${text}</a></div>`
 }
+data += '</div></body></html>'
 fs.writeFile("../src/public/index.html", data, e => {
   console.log('error:', e)
 })

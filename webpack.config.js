@@ -60,7 +60,7 @@ module.exports = (env) => {
     },
     resolve: {
       extensions: [".js", ".css", ".jpg"],
-      modules: [path.resolve(__dirname, 'src/public'), path.resolve(__dirname, 'src/js'), path.resolve(__dirname, 'src'), path.resolve(__dirname, 'node_modules')],
+      modules: [path.resolve(__dirname, 'src/public'), path.resolve(__dirname, 'src/js'), path.resolve(__dirname, 'src'), path.resolve(__dirname, 'node_modules'), path.resolve(__dirname, 'src/js/[name]')],
       fallback: {
         "fs": false,
         "os": false,
