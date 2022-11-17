@@ -8,23 +8,25 @@ let currentColor = new Color
 let boundingBox = new Box3();
 let measure = new Vector3
 
-function createText(text, font, mat) {
+function createText(text, font, mat, scale=0.2, hasBubble= false) {
     let group = new Group();
     font = loader.parse(font)
     const geo = new TextGeometry(text, {font: font})
     geo.center()
-  geo.scale(0.2, 0.2, 0.2)
+  geo.scale(scale, scale, scale)
     geo.attributes.position.array.needsUpdate = true
     geo.computeVertexNormals()
     let mesh = new Mesh(geo, mat)
     boundingBox.setFromObject(mesh)
     boundingBox.getSize(measure)
     console.log('measure: ', measure)
-    let bubbleGeo = new PlaneGeometry(measure.x + 10, measure.y + 10)
-    let bubbleMat = new MeshPhongMaterial({color: 'white'})
-//    let bubble = new Mesh(bubbleGeo, bubbleMat)
     group.add(mesh)
- //   group.add(bubble)
+    if (hasBubble) {
+      let bubbleGeo = new PlaneGeometry(measure.x + 10, measure.y + 10)
+      let bubbleMat = new MeshPhongMaterial({color: 'white'})
+      let bubble = new Mesh(bubbleGeo, bubbleMat)
+      group.add(bubble)
+    }
     return group
 }
 function lerpColor(textObj, time) {

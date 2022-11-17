@@ -28,41 +28,17 @@ class App extends Component {
     this.handleChange = this.handleChange.bind(this)
     this.state = { value: defaultText, font: helvetiker}
     this.handleChange = this.handleChange.bind(this)
-    this.addText = this.addText.bind(this);
-    this.playPoem = this.playPoem.bind(this);
-    this.clearPoem = this.clearPoem.bind(this);
   }
   componentDidMount() {
       // add Three to the DOM
       this.sketch = new Sketch()
   }
   handleChange(event) {
-       console.log('new val: ', event)
-    if (event.hasOwnProperty("font")) {
-    this.setState({font: event.font}, () => {
-      this.sketch.updateText({font: this.state.font})
-    })
-    }
-    if (event.hasOwnProperty("value")) {
-    this.setState({value: event.value})
-    }
-  }
-  addText(e) {
-    console.log('add text: ', e)
-    this.sketch.updateText(this.state)
-  }
-  clearPoem(e) {
-    this.sketch.clearText()
-  }
-  playPoem(e) {
-    console.log('play poem')
-    this.sketch.playPoem();
+       console.log('e: ', event)
   }
   render() {
     return (
       <div className="grid grid-cols-1">
-        <TextForm value={this.state.value} handleChange={this.handleChange} handleSubmit={this.addText}/>
-        <Button handleChange={this.clearPoem} text={"clear poem"}/>
       </div>
     );
   }
