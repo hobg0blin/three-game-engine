@@ -114,14 +114,14 @@ setup() {
 					width: 1.0,
 					height: 0.25,
 //					background: new THREE.Color( 0.7, 0.5, 0.5 ),
-					eye: [ 0, -53, 85],
+					eye: [ 0, -35, 50 ],
 					up: [ 0, 1, 0 ],
 					fov: 25,
 					updateCamera: function ( view, camera, scene, mouse ) {
 
 	//				  camera.position.x -= mouse.x * 0.05;
 	//				  camera.position.x = Math.max( Math.min( camera.position.x, 2000 ), - 2000 );
-//					  camera.lookAt( 0, -40, 0 );
+					  camera.lookAt( 0, -40, 0 );
 
 					}
 				}]
@@ -129,16 +129,7 @@ setup() {
 				for ( let ii = 0; ii < views.length; ++ ii ) {
 
 					const view = views[ ii ];
-					let camera;
-          if (ii == 1) {
-				const aspect = window.innerWidth / (window.innerHeight * view.height);
-            const frustumSize = 25;
-				camera = new THREE.OrthographicCamera( frustumSize * aspect / - 2, frustumSize * aspect / 2, frustumSize / 2, frustumSize / - 2, 1, 1000 );            console.log('ortho: ', camera);
-            camera.setViewOffset(window.innerWidth, window.innerHeight, 0, window.innerHeight * view.height* -1, window.innerWidth, window.innerHeight*view.height);
-          } else {
-        camera = new THREE.PerspectiveCamera( view.fov, window.innerWidth / window.innerHeight, 1, 10000 );
-          }
-
+					const camera = new THREE.PerspectiveCamera( view.fov, window.innerWidth / window.innerHeight, 1, 10000 );
 					camera.position.fromArray( view.eye );
 					camera.up.fromArray( view.up );
 					view.camera = camera;
@@ -236,19 +227,19 @@ setup() {
       switch(sceneIndex) {
         case 0:
           firstPass()
-          text = createText('there is a tower at the end of the world.', font, textMat, textScale, textPos, true, true)
+          text = createText('there is a tower at the end of the world.', font, textMat, textScale, textPos, true)
           break;
         case 1:
-          text = createText('it rises past what used to be the stratosphere,', font, textMat, textScale, textPos, true, true)
+          text = createText('it rises past what used to be the stratosphere,', font, textMat, textScale, textPos, true)
           break;
         case 2:
-         text = createText('but there is no sky left for it to pierce.', font, textMat, textScale, textPos, true, true)
+         text = createText('but there is no sky left for it to pierce.', font, textMat, textScale, textPos, true)
           break;
         case 3:
-          text = createText('it is a monument to everything that ever was, \n a cemetry of ideas.', font, textMat, textScale, textPos, true, true)
+          text = createText('it is a monument to everything that ever was, \n a cemetry of ideas.', font, textMat, textScale, textPos, true)
           break;
         case 4:
-          text = createText('it is a place where nothing new will ever be born.', font, textMat, textScale, textPos, true, true)
+          text = createText('it is a place where nothing new will ever be born.', font, textMat, textScale, textPos, true)
           break;
 
       }
