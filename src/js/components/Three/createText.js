@@ -1,4 +1,4 @@
-import {MeshPhongMaterial, Color, Mesh, Box3, Vector3, Group, PlaneGeometry} from 'three'
+import {MeshPhongMaterial, MeshLambertMaterial, Color, Mesh, Box3, BackSide, Vector3, Group, PlaneGeometry} from 'three'
 import {TextGeometry} from 'three/examples/jsm/geometries/TextGeometry.js'
 import {FontLoader} from 'three/examples/jsm/loaders/FontLoader.js'
 import randomColor from 'randomcolor'
@@ -8,7 +8,9 @@ let currentColor = new Color
 let boundingBox = new Box3();
 let measure = new Vector3
 
-function createText(text, font, mat, scale=0.2, hasBubble= false) {
+let outlineMat = new MeshLambertMaterial({color: 'black', side: BackSide});
+
+function createText(text, font, mat, scale=0.2, pos = {x: 0, y: 0, z: 0}, hasBubble= false, hasOutline = false) {
     let group = new Group();
     font = loader.parse(font)
     const geo = new TextGeometry(text, {font: font})
@@ -21,12 +23,19 @@ function createText(text, font, mat, scale=0.2, hasBubble= false) {
     boundingBox.getSize(measure)
     console.log('measure: ', measure)
     group.add(mesh)
+    if (hasOutline) {
+      let scale = 1.02
+      let outline = new Mesh(geo, outlineMat)
+      outline.scale.set(scale, scale, scale)
+      group.add(outline)
+    }
     if (hasBubble) {
       let bubbleGeo = new PlaneGeometry(measure.x + 10, measure.y + 10)
       let bubbleMat = new MeshPhongMaterial({color: 'white'})
       let bubble = new Mesh(bubbleGeo, bubbleMat)
       group.add(bubble)
     }
+    group.position.set(pos.x, pos.y, pos.z)
     return group
 }
 function lerpColor(textObj, time) {
