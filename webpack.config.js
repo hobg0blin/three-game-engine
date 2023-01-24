@@ -5,17 +5,18 @@ const webpack = require('webpack')
 const CopyPlugin = require('copy-webpack-plugin')
 const fs = require('fs');
 const entryMap = {};
-
-fs.readdirSync(path.resolve(__dirname, 'src/js/'))
-    .filter((f) => fs.lstatSync(path.resolve(__dirname, 'src/js/'), '/' + f).isDirectory() && f.indexOf('sketch') >= 0)
+let customPaths = ['','tower']
+for (let c_path of customPaths) {
+fs.readdirSync(path.resolve(__dirname, 'src/js/' + c_path))
+    .filter((f) => fs.lstatSync(path.resolve(__dirname, 'src/js/' + c_path), '/' + f).isDirectory() && f.indexOf('sketch') >= 0)
     .map((f) => {
         return f
     })
-    .map((f) => [f, fs.readdirSync(path.resolve(__dirname, 'src/js/') + '/' + f).filter(name => name == 'app.js')])
+    .map((f) => [f, fs.readdirSync(path.resolve(__dirname, 'src/js/' + c_path) + '/' + f).filter(name => name == 'app.js')])
     .forEach(f => {
-        entryMap[f[0]] = [ path.resolve(__dirname, 'src/js/') + '/' + f[0] + '/'  + f[1]];
+        entryMap[f[0]] = [ path.resolve(__dirname, 'src/js/' + c_path) + '/' + f[0] + '/'  + f[1]];
     });
-
+}
 
 module.exports = (env) => {
   let mode = "development"

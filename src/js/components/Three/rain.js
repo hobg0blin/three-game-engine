@@ -1,5 +1,5 @@
 import {BufferGeometry, Vector3, Float32BufferAttribute, PointsMaterial, Points} from 'three'
-import {getRandomInt} from '../utils/RandomInt.js'
+import {getRandomInt} from 'utils/RandomInt.js'
 
 function createRain(rainCount) {
         let rainGeo = new BufferGeometry();

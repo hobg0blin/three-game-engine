@@ -3,8 +3,8 @@ function createLights(options) {
         const light = new DirectionalLight(options.color, options.intensity);
 //        light.target.position.set(0, 0, 0)
         light.castShadow = true
-//        light.shadow.camera.near = -200
- //       light.shadow.camera.far = 500
+        light.shadow.camera.near = -200
+        light.shadow.camera.far = 500
         light.shadow.camera.left = -200
         light.shadow.camera.right= 200
         light.shadow.camera.top = 200

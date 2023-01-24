@@ -5,11 +5,12 @@ import { MTLLoader}from 'three/examples/jsm/loaders/MTLLoader'
 const objLoader = new OBJLoader()
 const mtlLoader = new MTLLoader()
 
-function importOBJModel(filePath, matFilepath, callback = () => console.log('model loaded!')) {
+function importOBJModel(filePath, matFilepath, callback = () => console.log('model loaded!'), isPNG = false) {
     console.log('foo')
     return new Promise((resolve) => {
 
       mtlLoader.load(matFilepath, (mat) => {
+        console.log('mat: ', mat);
         objLoader.setMaterials(mat)
         objLoader.load(filePath, (output) => {
           console.log('output:', output)

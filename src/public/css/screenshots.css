@@ -1,0 +1,25 @@
+.container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.sketch {
+  display: flex;
+  align-self: center;
+  width: 20%;
+  height: 20%;
+  margin: 16px 1%;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+h1 {
+  margin: 0 auto;
+  text-align: center;
+}
+p {
+  max-width: 50%;
+  margin: 0 auto;
+}

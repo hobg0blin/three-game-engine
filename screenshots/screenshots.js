@@ -4,10 +4,8 @@ import puppeteer from 'puppeteer'
 function getEmptyDirs(path) {
   return fs.readdirSync(path).filter(function(file) {
       let stat = fs.statSync(path + '/' + file)
-      if (stat.isDirectory() && file.indexOf('sketch') >= 0 && checkForImg('../src/public/screenshots', file)) {
-        return true;
-      }
-  })
+      if (stat.isDirectory() && file.indexOf('sketch') >= 0 && checkForImg('../src/public/screenshots', file)) { return true;
+      } })
 }
 function delay(time) {
    return new Promise(function(resolve) {
@@ -38,8 +36,8 @@ function checkForImg(path, file) {
   }
 }
 
-let dirs = getEmptyDirs('../src/js/')
-let fullDirs = getDirs('../src/js/')
+let dirs = getEmptyDirs('../src/js/fall_2022')
+let fullDirs = getDirs('../src/js/fall_2022')
 let options = {
   timeout: 0,
   launchOptions: {
@@ -76,10 +74,11 @@ const browser = await puppeteer.launch({
 
 let reversed = fullDirs.reverse()
 console.log('reverse: ', reversed)
-let data = "<html><head><title>Brent's Cool Sketches</title><link rel='stylesheet' href='/three/screenshots/screenshots.css'></head><body><h1>My Cool Code Sketches</h1><p>These are code sketches I do on a semi-daily basis. This page and the sketch screenshots are (mostly) generated automatically, so if you see a black screen or broken image it's probably because I did something particularly weird that day.</p> <div class='container'>"
+let data = "<html><head><title>Brent's Cool Sketches</title><link rel='stylesheet' href='/three/css/screenshots.css'></head><body><h1>My Cool Code Sketches</h1><p>These are code sketches I do on a semi-regular basis. This page and the sketch screenshots are (mostly) generated automatically, so if you see a black screen or broken image it's probably because I did something particularly weird that day.</p> "
+  data += `<h2>Fall/Winter 2022</h2><div class='container'>`
 for (let dir of reversed) {
   let text = dir.replace("sketch", "").replace(/_/g, " ")
-  data+=`<div class='sketch'><a href="https://blog.hellagrapes.club/three/dist/${dir}/"><img src="https://blog.hellagrapes.club/three/screenshots/${dir}.jpg"/>${text}</a></div>`
+  data+=`<div class='sketch'><a href="https://blog.hellagrapes.club/three/fall_2022/${dir}/"><img src="https://blog.hellagrapes.club/three/screenshots/${dir}.jpg"/>${text}</a></div>`
 }
 data += '</div></body></html>'
 fs.writeFile("../src/public/index.html", data, e => {

@@ -21,11 +21,12 @@ function createButton(params=
 	color: 'green',
 	textColor: 'black',
 	text: 'click me',
-	view: null,
+	view: undefined,
 	callback: ()=>{console.log('Button clicked')}
 }) {
-			view = params.view
-			camera = params.view.camera
+			view = params.view != undefined ? params.view : { width: window.innerWidth, height: window.innerHeight, camera: params.camera }
+			camera = view.camera
+	console.log('camera: ', camera);
 			callback = params.callback
 			let geo = new BoxGeometry(params.Xsize, params.Ysize, 1);
 			let mat = new MeshPhongMaterial({color: params.color})
@@ -42,8 +43,9 @@ function createButton(params=
 
 function checkIntersection(x, y) {
 			mouse.x = ( x / ( window.innerWidth )) * 2 - 1;
-			mouse.y = - ( (y - (window.innerHeight*view.height))/(window.innerHeight)) * 2 + 1;
+			mouse.y = - ( (y /*- (window.innerHeight*view.height)*/)/(window.innerHeight)) * 2 + 1;
 	console.log('mouse: ', mouse);
+			// mouse.y = - ( y / window.innerHeight) * 2 + 1;
 			raycaster.setFromCamera(mouse, camera);
 			let intersects = raycaster.intersectObject(button, false);
 	console.log('intersects: ', intersects);

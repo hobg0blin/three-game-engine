@@ -14,12 +14,13 @@ scene.add(tree);
 let leavesArr = []
 
 let leafColors = ['red', 'yellow', 'orange', 'salmon', 'violet']
-function proceduralTree (size, material, children, leaves = false) {
+function proceduralTree (size, material, children, leaves = true) {
     var sizeModifier = .65;
     var branchPivots = [];
 
     var tree = createBranch(size, material, children, false, sizeModifier)
     tree.branchPivots = branchPivots;
+  console.log('has leaves: ', leaves);
     return tree;
 
     // Recursive branch function
@@ -57,6 +58,7 @@ function proceduralTree (size, material, children, leaves = false) {
                 branchEnd.add(child);
             }
         } else {
+          if( leaves == true) {
             for (let i = 0; i < 10; i++) {
             let leaf = new Mesh(new CircleGeometry(0.4, getRandomInt(3, 10)), new MeshPhongMaterial({color: leafColors[getRandomInt(0, leafColors.length -1)], side: DoubleSide}))
             leaf.scale.set(1 + Math.random() * 3, 2.5 + Math.random() * 3, 1 + Math.random() * 3)
@@ -65,6 +67,7 @@ function proceduralTree (size, material, children, leaves = false) {
             leavesArr.push(leaf)
 
             }
+          }
         }
 
         return branchPivot;

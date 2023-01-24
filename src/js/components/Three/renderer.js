@@ -4,7 +4,7 @@ function createRenderer() {
     renderer.setSize(window.innerWidth, window.innerHeight)
 //    renderer.physicallyCorrectLights = true;
     renderer.setPixelRatio(window.devicePixelRatio)
-      renderer.shadowMapEnabled = true
+      renderer.shadowMap.enabled = true
       renderer.shadowMapSoft = true
         //do not ever delete me
         document.body.append(renderer.domElement)
