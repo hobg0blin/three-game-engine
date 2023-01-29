@@ -3,7 +3,7 @@ import {createCamera} from 'components/Three/camera.js'
 import {createLights} from 'components/Three/lights.js'
 import {createRenderer} from 'components/Three/renderer.js'
 import {createControls, addToGUI} from 'components/Three/controls.js'
-import { scene1 }from 'scenes/scene1.js'
+import { level1 }from 'levels/level1.js'
 import { EffectComposer } from 'three/examples/jsm/postprocessing/EffectComposer.js';
 import { RenderPass } from 'three/examples/jsm/postprocessing/RenderPass.js';
 
@@ -41,17 +41,18 @@ const setup = (THREE) => {
     // CONTROLS
     world.controls = createControls(world.camera, world.renderer)
 //    this.controls.target.set(0, 0, 0)
-  world.render = (scene, world) => {
-        updateSize(world.renderer)
-        requestAnimationFrame(scene.animate)
-        world.renderer.render(world.scene, world.camera)
-  //      render(scene, world)
+    // RENDERING
+    //
+    world.render = (level, world) => {
+      updateSize(world.renderer)
+      requestAnimationFrame(level.animate)
+      world.renderer.render(world.scene, world.camera)
       world.composer.render()
-  }
+    }
     return world
 }
-//
-// stuff
+
+// deal with browser resizing
 let windowWidth, windowHeight
 
 function updateSize(renderer) {
@@ -68,11 +69,11 @@ function updateSize(renderer) {
 }
 
 
-
-const sceneHandler = (sceneIndex) => {
-  let scenes = [scene1]
-  return scenes[sceneIndex]
+// handle level changes
+const levelHandler = (levelIndex) => {
+  let levels = [level1]
+  return levels[levelIndex]
 }
 
-export {setup,  sceneHandler}
+export {setup,  levelHandler}
 

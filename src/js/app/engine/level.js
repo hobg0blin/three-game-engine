@@ -3,24 +3,27 @@ import {createText} from 'components/Three/createText.js'
 import helvetiker from 'three/examples/fonts/helvetiker_regular.typeface.json'
 let font = helvetiker;
 
-// create a simple scene template, to be modified in individual scene files
-let createScene = (world) => {
-  let scene = {};
+// create a simple level template, to be modified in individual level files
+let createLevel = (world) => {
+  let level = {};
   console.log('world: ', world)
-  scene.objects = []
-  scene.addObjects = () => {}
-  scene.customAnimations = () => {}
-  scene.firstPass = () => {}
-  scene.animate = () => {
-      scene.customAnimations()
-      console.log('foo')
-      world.render(scene, world)
+  level.objects = []
+  // add core objects to scene
+  level.addObjects = () => {}
+  // manage unique animations, to automatically be dealt with in the animate render loop
+  level.customAnimations = () => {}
+  // first draw pass, if it needs to be different from "add objects"
+  level.firstPass = () => {}
+  level.animate = () => {
+      level.customAnimations()
+      world.render(level, world)
   }
-  scene.handleButtonClick = (callback) => {
+  // handle click of the "next" button
+  level.handleButtonClick = () => {
     disposeAll(world)
-    scene.addObjects()
+    level.addObjects()
   }
-  return scene;
+  return level;
 }
 
 // set universal text variables for game
@@ -34,7 +37,7 @@ const addText = (text, textMat) => {
 
 
 // dispose of all world objects that aren't marked "do not dispose"
-// TODO: once there's more than one scene, could pass a "newscene" flag that disposes of everything
+// TODO: once there's more than one level, could pass a "newlevel" flag that disposes of everything
 const disposeAll = (world) => {
       //TODO prob handle disposal in separate function that can be run recursively on an object
       const toRemove = []
@@ -62,4 +65,4 @@ const disposeAll = (world) => {
         world.scene.remove(child)
       })
     }
-export { createScene, addText, disposeAll}
+export { createLevel, addText, disposeAll}

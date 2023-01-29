@@ -1,5 +1,5 @@
 // import scne template
-import { createScene, addText, disposeAll } from 'app/engine/scene.js'
+import { createLevel, addText, disposeAll } from 'app/engine/level.js'
 
 //GUI/Buttons
 import { GUI } from 'three/addons/libs/lil-gui.module.min.js';
@@ -20,30 +20,30 @@ import { RenderPixelatedPass } from 'components/Three/RenderPixelatedPass.js';
 // track pixel direction
 let dir = false
 let pixelSize = 2
-let sceneIndex = -1
+let textIndex = -1
 
 let globe, tower, pixelPass;
 
-const scene1 = (world) => {
+const level1 = (world) => {
 const THREE = world.THREE
-let sceneTemplate = createScene(world)
-sceneTemplate.addObjects = () => {
+let levelTemplate = createLevel(world)
+levelTemplate.addObjects = () => {
     pixelPass = new RenderPixelatedPass(pixelSize, world.scene, world.camera);
     world.composer.addPass(pixelPass)
 
   // GUI
   let gui = new GUI();
   // SET UP INITIAL SCENE COMPONENTS
-  sceneIndex++;
-    if (sceneIndex > 4) {
-    sceneIndex = 0
+  textIndex++;
+    if (textIndex > 4) {
+    textIndex = 0
   }
   //FIXME: there is, presumably, a better way to do this than a switch, but also go fuck yourself
   let text;
   let textMat = new THREE.MeshPhongMaterial({color: 'green'});
-  switch(sceneIndex) {
+  switch(textIndex) {
   case 0:
-    sceneTemplate.firstPass()
+    levelTemplate.firstPass()
     text = addText('there is a tower at the end of the world.', textMat)
     break;
   case 1:
@@ -65,7 +65,7 @@ sceneTemplate.addObjects = () => {
   world.scene.add(text)
 }
 
-sceneTemplate.firstPass = () => {
+levelTemplate.firstPass = () => {
   // next button
     let button = createButton({
     x: 10,
@@ -78,7 +78,7 @@ sceneTemplate.firstPass = () => {
     textColor: 'black',
     text: 'next',
     camera: world.camera,
-    callback: sceneTemplate.handleButtonClick
+    callback: levelTemplate.handleButtonClick
   })
    button.doNotDispose = true;
     world.scene.add(button);
@@ -110,7 +110,7 @@ sceneTemplate.firstPass = () => {
 
 
 
-sceneTemplate.customAnimations = () => {
+levelTemplate.customAnimations = () => {
      if (globe != undefined && tower != undefined) {
           globe.rotation.z += 0.003
           tower.rotation.y += 0.003
@@ -129,9 +129,9 @@ sceneTemplate.customAnimations = () => {
       pixelPass.setPixelSize(pixelSize)
 }
 
-return sceneTemplate
+return levelTemplate
 
 }
 
 
-export { scene1 }
+export { level1 }

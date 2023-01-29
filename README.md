@@ -2,7 +2,7 @@
 
 ### Running
 
-To run this on your own machine, just clone it and run ```npm install`, then `npm run dev`. A simple scene should be available at `localhost:8080/main`.
+To run this on your own machine, just clone it and run `npm install`, then `npm run dev`. A simple scene should be available at `localhost:8080/main`.
 
 ### Structure
 
@@ -14,10 +14,10 @@ The core game stuff runs from the `app` folder.
 
 `engine/setup.js` gets the basic THREE environment running in the browser, creating a `world` object that allows you to access the scene, camera, lights, etc. It also contains a currently unopinionated `sceneHandler` function where you can set up logic for switching between scenes/levels.
 
-`engine/scene.js` provides core functions for building a  “scene” or level - I need a better wording for this, maybe level. The core idea is that this `scene.js` allows you to swap out objects, text and postprocessing effects, while the basic THREE environment built in `setup.js` remains the same.
+`engine/level.js` provides core functions for building a level - I need a better wording for this. The core idea is that this `level.js` allows you to swap out objects, text and postprocessing effects, while the basic THREE environment built in `setup.js` remains the same.
 
-`scenes/` is where your individual scenes, or levels (I really need a better naming structure here) can live. Each should follow the structure of the core `scene` object in `engine/scene.js`, but you can customize each `addObjects` and `customAnimation` function.
+`levels/` is where your individual levels can live. Each should follow the structure of the core `level` object in `engine/level.js`, but you can customize each `addObjects` and `customAnimation` function.
 
 `components` contains a whole bunch of different experiments I’ve done previously in Three that are not well-documented at all, but may come in handy in the process of building a game -- just import them into your scenes and find out!
 
-
+The `public` folder similarly holds a bunch of old textures, models, and files that you may or may not find useful.
