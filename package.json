@@ -32,7 +32,6 @@
     "optionator": "^0.9.1",
     "os": "^0.1.2",
     "path-browserify": "^1.0.1",
-    "phantomjs": "^2.1.7",
     "phantomjs-prebuilt": "^2.1.16",
     "postcss": "^8.4.5",
     "postcss-cli": "^9.1.0",

@@ -1,9 +1,9 @@
 import  { WebGLRenderer } from 'three'
 function createRenderer() {
      const renderer = new WebGLRenderer({antialias: true});
-    renderer.setSize(window.innerWidth, window.innerHeight)
+      renderer.setSize(window.innerWidth, window.innerHeight)
 //    renderer.physicallyCorrectLights = true;
-    renderer.setPixelRatio(window.devicePixelRatio)
+      renderer.setPixelRatio(window.devicePixelRatio)
       renderer.shadowMap.enabled = true
       renderer.shadowMapSoft = true
         //do not ever delete me

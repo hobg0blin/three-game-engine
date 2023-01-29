@@ -1,51 +1,23 @@
-This is a webpack server designed for serving lil threejs sketches on a remote machine. 
-You can run it from root using `npm run dev`.
-Right now it's set up to work with folders in  `js` named `dayN` because I use it for daily sketches. In the `src/js` folder, you can run `cp -r day{yesterday} day{today}` to make a new sketch and automatically serve it from `your_url.com/three/day_{whatever}`.
+## A VERY BASIC PROTOTYPE OF A THREE.JS GAME ENGINE
 
-This is very much a work in progress - there are some utility scripts in `components` and `utils`, but I can't guarantee they all work as this was a pretty major refactor of my old method of daily sketching.
+### Running
 
-You'll need a sample nginx setup like the one below:
-```
-map $http_upgrade $connection_upgrade {
-        default upgrade;
-        '' close;
-    }
+To run this on your own machine, just clone it and run ```npm install`, then `npm run dev`. A simple scene should be available at `localhost:8080/main`.
 
-server {
-    listen 443 ssl http2;
-    listen [::]:443 ssl http2;
+### Structure
 
-    server_name {your_server};
-    root /home/{user}/system/nginx-root; # Used for acme.sh SSL verification (https://acme.sh)
+`app.js` creates simple React app and embeds the Three.js scene set up in `main.js`.
 
-    ssl_certificate {your_ssl};
-    ssl_certificate_key {your_key};
-    include /etc/nginx/snippets/ssl-params.conf;
+The core game stuff runs from the `app` folder. 
 
+`main.js` runs the damn thing.
 
-    location /three/ {
-        proxy_pass http://127.0.0.1:8081/;
-    }
+`engine/setup.js` gets the basic THREE environment running in the browser, creating a `world` object that allows you to access the scene, camera, lights, etc. It also contains a currently unopinionated `sceneHandler` function where you can set up logic for switching between scenes/levels.
 
-    location /ws {
-        proxy_set_header X-Real-IP  $remote_addr;
-        proxy_set_header X-Forwarded-For $remote_addr;
-        proxy_set_header Host $host;
+`engine/scene.js` provides core functions for building a  “scene” or level - I need a better wording for this, maybe level. The core idea is that this `scene.js` allows you to swap out objects, text and postprocessing effects, while the basic THREE environment built in `setup.js` remains the same.
 
-        proxy_pass http://127.0.0.1:8081/ws; 
+`scenes/` is where your individual scenes, or levels (I really need a better naming structure here) can live. Each should follow the structure of the core `scene` object in `engine/scene.js`, but you can customize each `addObjects` and `customAnimation` function.
 
+`components` contains a whole bunch of different experiments I’ve done previously in Three that are not well-documented at all, but may come in handy in the process of building a game -- just import them into your scenes and find out!
 
-        proxy_http_version 1.1;
-        proxy_set_header Upgrade $http_upgrade;
-        proxy_set_header Connection "upgrade";
-    }
-
-    location ~ /.well-known {
-        allow all;
-    }
-
-    client_max_body_size 1g;
-}
-
-```
 

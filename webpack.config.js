@@ -4,19 +4,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack')
 const CopyPlugin = require('copy-webpack-plugin')
 const fs = require('fs');
-const entryMap = {};
-let customPaths = ['','tower']
-for (let c_path of customPaths) {
-fs.readdirSync(path.resolve(__dirname, 'src/js/' + c_path))
-    .filter((f) => fs.lstatSync(path.resolve(__dirname, 'src/js/' + c_path), '/' + f).isDirectory() && f.indexOf('sketch') >= 0)
-    .map((f) => {
-        return f
-    })
-    .map((f) => [f, fs.readdirSync(path.resolve(__dirname, 'src/js/' + c_path) + '/' + f).filter(name => name == 'app.js')])
-    .forEach(f => {
-        entryMap[f[0]] = [ path.resolve(__dirname, 'src/js/' + c_path) + '/' + f[0] + '/'  + f[1]];
-    });
-}
 
 module.exports = (env) => {
   let mode = "development"
@@ -53,7 +40,7 @@ module.exports = (env) => {
           inject: false
   })
   return {
-    entry: entryMap,
+    entry:   {main: './src/js/app.js', vender: './src/js/app/main.js'},
     mode: mode,
     output: {
       path: path.resolve(__dirname, './dist'),
@@ -86,9 +73,6 @@ module.exports = (env) => {
  ],
     devServer: {
       static: './src/public/',
-        client: {
-            webSocketURL: 'https://blog.hellagrapes.club/ws'
-        },
       hot: true,
       headers: {
         "Access-Control-Allow-Origin": "*",
@@ -149,7 +133,7 @@ module.exports = (env) => {
 
                     loader: 'url-loader',
                     options: {
-                        publicPath: '/three/'
+//                        publicPath: '/three/'
                     }
               }
         ]
