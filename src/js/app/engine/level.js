@@ -1,7 +1,5 @@
 // text stuff
-import {createText} from 'components/Three/createText.js'
-import helvetiker from 'three/examples/fonts/helvetiker_regular.typeface.json'
-let font = helvetiker;
+import {createText} from 'app/ui/createText.js'
 
 // create a simple level template, to be modified in individual level files
 let createLevel = (world) => {

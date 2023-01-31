@@ -2,14 +2,26 @@ import {LineBasicMaterial, MeshBasicMaterial, Color,  Mesh, Object3D, ShapeGeome
 import {FontLoader} from 'three/examples/jsm/loaders/FontLoader.js'
 import {TTFLoader} from 'three/examples/jsm/loaders/TTFLoader.js'
 
-async function createSimpleText(text, color, font) {
+async function createSimpleText(text, color, font, isTTF=false) {
   const loader = new FontLoader();
-  let outputText, lineText;
-  const ttfLoader = new TTFLoader()
-				return new Promise(resolve => {
-          ttfLoader.load( font, function ( ttf ) {
-          font = loader.parse(ttf)
+	if (!isTTF) {
+			return new Promise(resolve => {
+					let loadedFont = loader.parse(font)
+					resolve(buildText(text, loadedFont, color, resolve))
+			})
+	} else {
+		const ttfloader = new TTFLoader()
+			return new Promise(resolve => {
+				ttfLoader.load( font, function ( ttf ) {
+					let loadedFont = loader.parse(ttf)
+					resolve(buildText(text, loadedFont, color, resolve))
+				})
+			})
+	}
+}
+function buildText(text, font, color, resolve) {
 
+  let outputText, lineText;
 					const matDark = new LineBasicMaterial( {
 						color: color,
 						side: DoubleSide
@@ -37,7 +49,7 @@ async function createSimpleText(text, color, font) {
 					// make shape ( N.B. edge view not visible )
 
 					outputText = new Mesh( geometry, matLite );
-					outputText.position.z = 50;
+//					outputText.position.z = 50;
 
 					// make line shape ( N.B. edge view remains visible )
 
@@ -78,9 +90,6 @@ async function createSimpleText(text, color, font) {
 
 					}
           resolve({ outputText, lineText })
-				} ); //end load function
 
-        });
 }
-
 export {createSimpleText}

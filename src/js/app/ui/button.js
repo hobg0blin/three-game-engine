@@ -2,7 +2,8 @@ import { BoxGeometry, Mesh, MeshPhongMaterial, Group, Raycaster, Vector3} from '
 import {createText} from './createText.js'
 
 let raycaster = new Raycaster();
-let button, callback, camera, view;
+let buttons = [];
+let camera, view;
 let text;
 import helvetiker from 'three/examples/fonts/helvetiker_regular.typeface.json'
 let font = helvetiker;
@@ -10,32 +11,37 @@ let font = helvetiker;
 let mouse = {x: 0, y: 0}
 let ratio = {}
 
-function createButton(params=
-{
-	xSize: 1,
-	ySize: 1,
-	ratio: {h: 1, w: 1},
-	y: 0,
-	x: 0,
-	z: 0,
-	color: 'green',
-	textColor: 'black',
-	text: 'click me',
-	view: undefined,
-	callback: ()=>{console.log('Button clicked')}
-}) {
+window.addEventListener( 'click', onClick );
+function createButton(params) {
+			const defaultParams = {
+				x: 10,
+				z: 26,
+				y: -10,
+				Xsize: 6,
+				Ysize: 2,
+				ratio: {h: 0.25, w: 1},
+				color: 'green',
+				textColor: 'black',
+				text: 'click me',
+				view: undefined,
+				callback: ()=>{console.log('Button clicked')}
+			}
+			for (let key of Object.keys(defaultParams)) {
+				if (params[key] == undefined) {
+					params[key] = defaultParams[key]
+				}
+			}
 			view = params.view != undefined ? params.view : { width: window.innerWidth, height: window.innerHeight, camera: params.camera }
 			camera = view.camera
-	console.log('camera: ', camera);
-			callback = params.callback
 			let geo = new BoxGeometry(params.Xsize, params.Ysize, 1);
 			let mat = new MeshPhongMaterial({color: params.color})
-			button = new Mesh(geo, mat)
+			let button = new Mesh(geo, mat)
 			button.position.set(params.x, params.y, params.z- 1)
+			button.callback = params.callback
+			buttons.push(button)
 			let textMat = new MeshPhongMaterial({color: params.textColor})
 			text = createText(params.text, font, textMat, 0.01)
 			text.position.set(params.x, params.y, params.z);
-			window.addEventListener( 'click', onClick );
 			let group = new Group()
 			group.add(button, text);
 			return group;
@@ -47,14 +53,16 @@ function checkIntersection(x, y) {
 	console.log('mouse: ', mouse);
 			// mouse.y = - ( y / window.innerHeight) * 2 + 1;
 			raycaster.setFromCamera(mouse, camera);
+			for (let button of buttons) {
+				console.log("button: ", button)
 			let intersects = raycaster.intersectObject(button, false);
-	console.log('intersects: ', intersects);
 			if (intersects.length > 0) {
-				callback()
+				button.callback()
+			}
 			}
 }
 function onClick( event ) {
-
+	console.log('buttons: ', buttons)
 	checkIntersection( event.clientX, event.clientY );
 
 }

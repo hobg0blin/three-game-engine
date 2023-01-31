@@ -1,9 +1,9 @@
 // import scne template
-import { createLevel, addText, disposeAll } from 'app/engine/level.js'
+import { createLevel, disposeAll } from 'app/engine/level.js'
+import { createDialogueBox } from 'app/ui/dialogueBox.js'
 
 //GUI/Buttons
 import { GUI } from 'three/addons/libs/lil-gui.module.min.js';
-import { createButton} from 'app/ui/button.js'
 import { mouse } from 'components/Three/mouseTracker.js'
 
 // text stuff
@@ -24,7 +24,7 @@ let textIndex = -1
 
 let globe, tower, pixelPass;
 
-const level1 = (world) => {
+const level2 = (world) => {
 const THREE = world.THREE
 let levelTemplate = createLevel(world)
 levelTemplate.addObjects = () => {
@@ -39,49 +39,12 @@ levelTemplate.addObjects = () => {
     textIndex = 0
   }
   //FIXME: there is, presumably, a better way to do this than a switch, but also go fuck yourself
-  let text;
-  let textMat = new THREE.MeshPhongMaterial({color: 'green'});
-  switch(textIndex) {
-  case 0:
     levelTemplate.firstPass()
-    text = addText('there is a tower at the end of the world.', textMat)
-    break;
-  case 1:
-    text = addText('it rises past what used to be the stratosphere,', textMat)
-    break;
-  case 2:
-   text = addText('but there is no sky left for it to pierce.', textMat)
-    break;
-  case 3:
-    text = addText('it is a monument to everything that ever was, \n a cemetry of ideas.', textMat)
-    break;
-  case 4:
-    text = addText('it is a place where nothing new will ever be born.', textMat)
-    break;
-
-  }
-  console.log('should be adding text: ', text);
-  console.log('world: ', world)
+  let text = createDialogueBox(world, 'there is a tower at the end of the world.', [{text: 'button 1', callback: () => {console.log('button 1 clicked')}}, { text: 'button 2', callback: () => {console.log('button 2 clicked')}}])
   world.scene.add(text)
 }
 
 levelTemplate.firstPass = () => {
-  // next button
-    let button = createButton({
-    x: 10,
-    z: 26,
-    y: -10,
-    Xsize: 6,
-    Ysize: 2,
-    ratio: {h: 0.25, w: 1},
-    color: 'green',
-    textColor: 'black',
-    text: 'next',
-    camera: world.camera,
-    callback: levelTemplate.handleButtonClick
-  })
-   button.doNotDispose = true;
-    world.scene.add(button);
   // GLOBe
 
   //i don't know why people use constants for functions now but it seems fancy
@@ -134,4 +97,4 @@ return levelTemplate
 }
 
 
-export { level1 }
+export { level2 }
