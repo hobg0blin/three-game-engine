@@ -27,6 +27,8 @@ let globe, tower, pixelPass;
 const level1 = (world) => {
 const THREE = world.THREE
 let levelTemplate = createLevel(world)
+
+  // simple loop to determine what's added based on state - as you advance through the scene, it redraws the text
 levelTemplate.addObjects = () => {
     pixelPass = new RenderPixelatedPass(pixelSize, world.scene, world.camera);
     world.composer.addPass(pixelPass)
@@ -60,11 +62,13 @@ levelTemplate.addObjects = () => {
     break;
 
   }
-  console.log('should be adding text: ', text);
-  console.log('world: ', world)
   world.scene.add(text)
 }
 
+
+
+// first draw pass, since addObjects() is different based on state
+// objects with "doNotDispose" flag will not be deleted as state changes
 levelTemplate.firstPass = () => {
   // next button
     let button = createButton({
@@ -82,7 +86,7 @@ levelTemplate.firstPass = () => {
   })
    button.doNotDispose = true;
     world.scene.add(button);
-  // GLOBe
+  // GLOBE
 
   //i don't know why people use constants for functions now but it seems fancy
   const addSTLModel = (geo, mat) => {
@@ -108,8 +112,8 @@ levelTemplate.firstPass = () => {
   world.scene.add(tower);
 }
 
-
-
+// animate globe and tower, etc.
+// you could do fun camera stuff here too
 levelTemplate.customAnimations = () => {
      if (globe != undefined && tower != undefined) {
           globe.rotation.z += 0.003

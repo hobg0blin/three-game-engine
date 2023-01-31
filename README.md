@@ -18,7 +18,10 @@ The core game stuff lives in the `app` folder.
 
 `engine/setup.js` gets the basic THREE environment running in the browser, creating a `world` object that allows you to access the scene, camera, lights, etc. It also contains a currently unopinionated `sceneHandler` function where you can set up logic for switching between scenes/levels.
 
-`engine/level.js` provides core functions for building a level - I need a better wording for this. The core idea is that this `level.js` allows you to swap out objects, text and postprocessing effects, while the basic THREE environment built in `setup.js` remains the same.
+For now, if you want to test out the two example levels, just switch between importing `level1` and `level2` in `setup.js` and import the relevant one in `sceneHandler` .
+This also gives you access to the `world` object, where all the core THREE stuff (scene, camera, etc.) is attached and can be changed.
+
+`engine/level.js` provides core functions for building a level  The core idea is that this `level.js` allows you to swap out objects, text and postprocessing effects, while the basic THREE environment built in `setup.js` remains the same.
 
 #### UI
 

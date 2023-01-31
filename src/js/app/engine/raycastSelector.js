@@ -4,6 +4,8 @@ let INTERSECTED
 const pointer = new Vector2
 const radius = 100
 
+// potentially useful if we want to raycast on EVERYTHING in the scene
+
 function raycastSelector(camera, scene, raycaster) {
 //camera.position.x = radius * Math.sin( MathUtils.degToRad( theta ) );
 //				camera.position.y = radius * Math.sin( MathUtils.degToRad( theta ) );

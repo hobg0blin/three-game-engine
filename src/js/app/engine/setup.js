@@ -62,7 +62,7 @@ function updateSize(renderer) {
     windowWidth = window.innerWidth;
     windowHeight = window.innerHeight;
 
-    renderer.setSize( windowWidth, windowHeight );
+    world.renderer.setSize( windowWidth, windowHeight );
 
   }
 
@@ -75,5 +75,24 @@ const levelHandler = (levelIndex) => {
   return levels[levelIndex]
 }
 
-export {setup, world, levelHandler}
+//TODO: state setup
+// ideally, JSON object stored as a cookie/in localStorage
+// something like
+// { gameState:
+//    {
+//      currentLevel: 0,
+//      currentDialogueObject: 'question 5'
+//    }
+//   playerState:
+//     {
+//       decay: 0,
+//       alexaOpinion: 1,
+//       GPTOpinion: 1,
+//       zzyxOpinion: 1
+//     }
+// }
+// which would correspond to the dialogue JSON structure laid out in ui/dialogueBox.js
+
+export {setup, world,  levelHandler}
+
 
