@@ -34,14 +34,14 @@ const addText = (text, textMat) => {
 
 
 
-// dispose of all world objects that aren't marked "do not dispose"
+// dispose of all world objects that aren't marked with a flag, e.g. doNotDispose
 // TODO: once there's more than one level, could pass a "newlevel" flag that disposes of everything
-const disposeAll = (world) => {
+const disposeAll = (world, flag) => {
       //TODO prob handle disposal in separate function that can be run recursively on an object
       const toRemove = []
       world.scene.traverse(child => {
         console.log('child: ', child);
-        if (child.doNotDispose) {
+        if (child[flag] == true) {
           return;
         } else if (child.isMesh) {
           child.geometry.dispose();

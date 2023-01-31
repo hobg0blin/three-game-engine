@@ -1,5 +1,7 @@
 import { BoxGeometry, Mesh, MeshPhongMaterial, Group, Raycaster, Vector3} from 'three'
 import {createText} from './createText.js'
+import { disposeAll } from 'app/engine/level.js'
+import { world } from 'app/engine/setup.js'
 
 let raycaster = new Raycaster();
 let buttons = [];
@@ -13,6 +15,7 @@ let ratio = {}
 
 window.addEventListener( 'click', onClick );
 function createButton(params) {
+	console.log('world in button: ', world)
 			const defaultParams = {
 				x: 10,
 				z: 26,
@@ -64,6 +67,8 @@ function checkIntersection(x, y) {
 function onClick( event ) {
 	console.log('buttons: ', buttons)
 	checkIntersection( event.clientX, event.clientY );
+	// kill everything that doesn't have a flag
+//	disposeAll(world, 'doNotDispose')
 
 }
 export {createButton}

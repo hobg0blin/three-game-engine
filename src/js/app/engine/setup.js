@@ -7,8 +7,8 @@ import { level2 }from 'levels/level2.js'
 import { EffectComposer } from 'three/examples/jsm/postprocessing/EffectComposer.js';
 import { RenderPass } from 'three/examples/jsm/postprocessing/RenderPass.js';
 
+const world = {};
 const setup = (THREE) => {
-    const world = {};
     world.THREE = THREE
   // CLOCK
     world.clock = new THREE.Clock()
@@ -75,5 +75,5 @@ const levelHandler = (levelIndex) => {
   return levels[levelIndex]
 }
 
-export {setup,  levelHandler}
+export {setup, world, levelHandler}
 

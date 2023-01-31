@@ -40,7 +40,7 @@ levelTemplate.addObjects = () => {
   }
   //FIXME: there is, presumably, a better way to do this than a switch, but also go fuck yourself
     levelTemplate.firstPass()
-  let text = createDialogueBox(world, 'there is a tower at the end of the world.', [{text: 'button 1', callback: () => {console.log('button 1 clicked')}}, { text: 'button 2', callback: () => {console.log('button 2 clicked')}}])
+  let text = createDialogueBox('there is a tower at the end of the world.', [{text: 'button 1', callback: () => {console.log('button 1 clicked')}}, { text: 'button 2', callback: () => {console.log('button 2 clicked')}}])
   world.scene.add(text)
 }
 
