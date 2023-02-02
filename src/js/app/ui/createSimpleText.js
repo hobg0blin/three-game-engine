@@ -1,95 +1,95 @@
-import {LineBasicMaterial, MeshBasicMaterial, Color,  Mesh, Object3D, ShapeGeometry, DoubleSide, Line, BufferGeometry } from 'three'
-import {FontLoader} from 'three/examples/jsm/loaders/FontLoader.js'
-import {TTFLoader} from 'three/examples/jsm/loaders/TTFLoader.js'
+import {
+  LineBasicMaterial,
+  MeshBasicMaterial,
+  Color,
+  Mesh,
+  Object3D,
+  ShapeGeometry,
+  DoubleSide,
+  Line,
+  BufferGeometry,
+} from "three";
+import { FontLoader } from "three/examples/jsm/loaders/FontLoader.js";
+import { TTFLoader } from "three/examples/jsm/loaders/TTFLoader.js";
 
-async function createSimpleText(text, color, font, isTTF=false) {
+async function createSimpleText(text, color, font, isTTF = false) {
   const loader = new FontLoader();
-	if (!isTTF) {
-			return new Promise(resolve => {
-					let loadedFont = loader.parse(font)
-					resolve(buildText(text, loadedFont, color, resolve))
-			})
-	} else {
-		const ttfloader = new TTFLoader()
-			return new Promise(resolve => {
-				ttfLoader.load( font, function ( ttf ) {
-					let loadedFont = loader.parse(ttf)
-					resolve(buildText(text, loadedFont, color, resolve))
-				})
-			})
-	}
+  if (!isTTF) {
+    return new Promise((resolve) => {
+      let loadedFont = loader.parse(font);
+      resolve(buildText(text, loadedFont, color, resolve));
+    });
+  } else {
+    const ttfloader = new TTFLoader();
+    return new Promise((resolve) => {
+      ttfLoader.load(font, function (ttf) {
+        let loadedFont = loader.parse(ttf);
+        resolve(buildText(text, loadedFont, color, resolve));
+      });
+    });
+  }
 }
 function buildText(text, font, color, resolve) {
-
   let outputText, lineText;
-					const matDark = new LineBasicMaterial( {
-						color: color,
-						side: DoubleSide
-					} );
+  const matDark = new LineBasicMaterial({
+    color: color,
+    side: DoubleSide,
+  });
 
-					const matLite = new MeshBasicMaterial( {
-						color: color,
-						transparent: true,
-						opacity: 0.4,
-						side: DoubleSide
-					} );
+  const matLite = new MeshBasicMaterial({
+    color: color,
+    transparent: true,
+    opacity: 0.4,
+    side: DoubleSide,
+  });
 
-					const message = text;
+  const message = text;
 
-					const shapes = font.generateShapes( message, 100 );
+  const shapes = font.generateShapes(message, 100);
 
-					const geometry = new ShapeGeometry( shapes );
+  const geometry = new ShapeGeometry(shapes);
 
-					geometry.computeBoundingBox();
+  geometry.computeBoundingBox();
 
-					const xMid = - 0.5 * ( geometry.boundingBox.max.x - geometry.boundingBox.min.x );
+  const xMid = -0.5 * (geometry.boundingBox.max.x - geometry.boundingBox.min.x);
 
-					geometry.translate( xMid, 0, 0 );
+  geometry.translate(xMid, 0, 0);
 
-					// make shape ( N.B. edge view not visible )
+  // make shape ( N.B. edge view not visible )
 
-					outputText = new Mesh( geometry, matLite );
-//					outputText.position.z = 50;
+  outputText = new Mesh(geometry, matLite);
+  //					outputText.position.z = 50;
 
-					// make line shape ( N.B. edge view remains visible )
+  // make line shape ( N.B. edge view remains visible )
 
-					const holeShapes = [];
+  const holeShapes = [];
 
-					for ( let i = 0; i < shapes.length; i ++ ) {
+  for (let i = 0; i < shapes.length; i++) {
+    const shape = shapes[i];
 
-						const shape = shapes[ i ];
+    if (shape.holes && shape.holes.length > 0) {
+      for (let j = 0; j < shape.holes.length; j++) {
+        const hole = shape.holes[j];
+        holeShapes.push(hole);
+      }
+    }
+  }
 
-						if ( shape.holes && shape.holes.length > 0 ) {
+  shapes.push.apply(shapes, holeShapes);
 
-							for ( let j = 0; j < shape.holes.length; j ++ ) {
+  lineText = new Object3D();
 
-								const hole = shape.holes[ j ];
-								holeShapes.push( hole );
+  for (let i = 0; i < shapes.length; i++) {
+    const shape = shapes[i];
 
-							}
+    const points = shape.getPoints();
+    const geometry = new BufferGeometry().setFromPoints(points);
 
-						}
+    geometry.translate(xMid, 0, 0);
 
-					}
-
-					shapes.push.apply( shapes, holeShapes );
-
-					lineText = new Object3D();
-
-					for ( let i = 0; i < shapes.length; i ++ ) {
-
-						const shape = shapes[ i ];
-
-						const points = shape.getPoints();
-						const geometry = new BufferGeometry().setFromPoints( points );
-
-						geometry.translate( xMid, 0, 0 );
-
-						const lineMesh = new Line( geometry, matDark );
-						lineText.add( lineMesh );
-
-					}
-          resolve({ outputText, lineText })
-
+    const lineMesh = new Line(geometry, matDark);
+    lineText.add(lineMesh);
+  }
+  resolve({ outputText, lineText });
 }
-export {createSimpleText}
+export { createSimpleText };
