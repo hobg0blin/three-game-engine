@@ -1,10 +1,12 @@
-// import scne template
-import { createLevel, addText, disposeAll } from 'app/engine/level.js'
+// import scene template
+import { createLevel, disposeAll } from 'app/engine/level.js'
+import { state } from 'app/engine/setup.js'
+import data from './level1.json'
 
 //GUI/Buttons
 import { GUI } from 'three/addons/libs/lil-gui.module.min.js';
-import { createButton} from 'app/ui/button.js'
 import { mouse } from 'components/Three/mouseTracker.js'
+
 
 // text stuff
 
@@ -26,66 +28,15 @@ let globe, tower, pixelPass;
 
 const level1 = (world) => {
 const THREE = world.THREE
-let levelTemplate = createLevel(world)
+let levelTemplate = createLevel(world, data)
 
-  // simple loop to determine what's added based on state - as you advance through the scene, it redraws the text
-levelTemplate.addObjects = () => {
+// first draw pass, since addObjects() is different based on state objects with "doNotDispose" flag will not be deleted as state changes
+
+levelTemplate.firstPass = () => {
+    let gui = new GUI();
     pixelPass = new RenderPixelatedPass(pixelSize, world.scene, world.camera);
     world.composer.addPass(pixelPass)
 
-  // GUI
-  let gui = new GUI();
-  // SET UP INITIAL SCENE COMPONENTS
-  textIndex++;
-    if (textIndex > 4) {
-    textIndex = 0
-  }
-  //FIXME: there is, presumably, a better way to do this than a switch, but also go fuck yourself
-  let text;
-  let textMat = new THREE.MeshPhongMaterial({color: 'green'});
-  switch(textIndex) {
-  case 0:
-    levelTemplate.firstPass()
-    text = addText('there is a tower at the end of the world.', textMat)
-    break;
-  case 1:
-    text = addText('it rises past what used to be the stratosphere,', textMat)
-    break;
-  case 2:
-   text = addText('but there is no sky left for it to pierce.', textMat)
-    break;
-  case 3:
-    text = addText('it is a monument to everything that ever was, \n a cemetry of ideas.', textMat)
-    break;
-  case 4:
-    text = addText('it is a place where nothing new will ever be born.', textMat)
-    break;
-
-  }
-  world.scene.add(text)
-}
-
-
-
-// first draw pass, since addObjects() is different based on state
-// objects with "doNotDispose" flag will not be deleted as state changes
-levelTemplate.firstPass = () => {
-  // next button
-    let button = createButton({
-    x: 10,
-    z: 26,
-    y: -10,
-    Xsize: 6,
-    Ysize: 2,
-    ratio: {h: 0.25, w: 1},
-    color: 'green',
-    textColor: 'black',
-    text: 'next',
-    camera: world.camera,
-    callback: levelTemplate.handleButtonClick
-  })
-   button.doNotDispose = true;
-    world.scene.add(button);
   // GLOBE
 
   //i don't know why people use constants for functions now but it seems fancy
@@ -130,9 +81,10 @@ levelTemplate.customAnimations = () => {
      if (pixelSize < 1.5) {
        dir = true
      }
-      pixelPass.setPixelSize(pixelSize)
+//      pixelPass.setPixelSize(pixelSize)
 }
 
+console.log('level template: ', levelTemplate);
 return levelTemplate
 
 }

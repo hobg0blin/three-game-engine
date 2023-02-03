@@ -1,0 +1,24 @@
+{"dialogue":
+    {
+      "q1": {
+        "text": "there is a tower at the end of the world.",
+        "leadsTo": "q2"
+      },
+      "q2": {
+      "text": "it rises past what used to be the stratosphere",
+      "leadsTo": "q3"
+      },
+      "q3": {
+        "text": "but there is no sky left for it to pierce.",
+        "leadsTo": "q4" 
+      },
+      "q4": {
+        "text": "it is a monument to everything that ever was, \n a cemetery of ideas.",
+        "leadsTo": "q5"
+      }, 
+      "q5": {
+        "text": "it is a place where nothing new will ever be born.",
+         "stateEffect": "nextlevel"
+      }
+    }
+}

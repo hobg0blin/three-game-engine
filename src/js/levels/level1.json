@@ -1,0 +1,81 @@
+{
+  "id": "node_6",
+  "npc_name": "intro",
+  "type": "dialogue_entry",
+  "responses": [
+    {
+      "type": "pass",
+      "next": {
+        "id": "node_7",
+        "type": "dialogue_event",
+        "responses": [
+          {
+            "type": "choice_response",
+            "text": "Next",
+            "next_node": {
+              "id": "node_8",
+              "type": "dialogue_event",
+              "responses": [
+                {
+                  "type": "choice_response",
+                  "text": "Next",
+                  "next_node": {
+                    "id": "node_9",
+                    "type": "dialogue_event",
+                    "responses": [
+                      {
+                        "type": "choice_response",
+                        "text": "Next",
+                        "next_node": {
+                          "id": "node_10",
+                          "type": "dialogue_event",
+                          "responses": [
+                            {
+                              "type": "choice_response",
+                              "text": "Next",
+                              "next_node": {
+                                "id": "node_11",
+                                "type": "dialogue_event",
+                                "responses": [
+                                  {
+                                    "type": "choice_response",
+                                    "text": "Next",
+                                    "next_node": {
+                                      "id": "node_12",
+                                      "type": "gameplay_event",
+                                      "responses": [
+                                        {
+                                          "type": "end_response",
+                                          "text": "Exit"
+                                        }
+                                      ],
+                                      "event": "NextLevel"
+                                    }
+                                  }
+                                ],
+                                "npc_text": "it is a place where nothing new will ever be born."
+                              }
+                            }
+                          ],
+                          "npc_text": "it is a monument to everything that ever was, \\n a cemetery of ideas."
+                        }
+                      }
+                    ],
+                    "npc_text": "but there is no sky left for it to pierce."
+                  }
+                }
+              ],
+              "npc_text": "it rises past what used to be the stratosphere"
+            }
+          }
+        ],
+        "npc_text": "there is a tower at the end of the world."
+      }
+    }
+  ],
+  "gameplay_events": [
+    "ElizaUp",
+    "ElizaDown",
+    "NextLevel"
+  ]
+}

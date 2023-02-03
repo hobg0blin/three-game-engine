@@ -81,7 +81,11 @@ module.exports = (env) => {
       }
     },
     module: {
-      rules: [
+            rules: [
+        {
+          test: '/\.json$/',
+          loader: 'json-loader'
+        },
         {
           test: /\.(jsx|js)$/,
           include: path.resolve(__dirname, 'src/js'),

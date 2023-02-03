@@ -15,8 +15,6 @@ let outlineMat = new MeshLambertMaterial({color: 'black', side: BackSide});
 function createText(text, font, mat, scale=0.2, pos = {x: 0, y: 0, z: 0}, hasBubble= false, hasOutline = false, isTTF=false) {
     let group = new Group();
     const createMesh = () => {
-    console.log('creating mesh!');
-    console.log('text: ', text);
     const geo = new TextGeometry(text, {font: font})
     geo.center()
   geo.scale(scale, scale, scale)
@@ -25,7 +23,6 @@ function createText(text, font, mat, scale=0.2, pos = {x: 0, y: 0, z: 0}, hasBub
     let mesh = new Mesh(geo, mat)
     boundingBox.setFromObject(mesh)
     boundingBox.getSize(measure)
-    console.log('measure: ', measure)
     group.add(mesh)
     if (hasOutline) {
       let scale = 1.02
@@ -54,14 +51,10 @@ function createText(text, font, mat, scale=0.2, pos = {x: 0, y: 0, z: 0}, hasBub
       }
         return group
     } else {
-      console.log('current font:' , currentFont)
-      console.log('input font: ', font);
       if (lastFont != font) {
         lastFont = font
-      console.log('should be laoding new font');
       let ttfLoader = new TTFLoader()
       ttfLoader.load(font, (ttf) => {
-      console.log('parsing ttf', ttf)
           font =  loader.parse(ttf);
            group = createMesh()
           currentFont = font
@@ -69,7 +62,6 @@ function createText(text, font, mat, scale=0.2, pos = {x: 0, y: 0, z: 0}, hasBub
       //somewhat hacky solution for async reesult
       return group
       } else {
-        console.log('skipping font reload');
         return createMesh()
     }
     }

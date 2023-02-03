@@ -1,7 +1,7 @@
 
 import Config from 'data/config';
 import Detector from 'utils/detector';
-import { gaem } from './app/main';
+import { create, gaem } from './app/main';
 import React, { Component } from "react"
 import ReactDOM from "react-dom"
 import {TextForm, fonts} from 'components/React/TextForm'
@@ -32,7 +32,7 @@ class App extends Component {
   }
   componentDidMount() {
       // add Three to the DOM
-      this.sketch = gaem()
+      this.sketch = create()
   }
   handleChange(event) {
        console.log('e: ', event)

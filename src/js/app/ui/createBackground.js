@@ -1,7 +1,6 @@
 import {MeshPhongMaterial, Mesh, PlaneGeometry, Group} from 'three'
 
 function createBackground(pos, measure, hasBubble=true, hasOutline=false) {
-  console.log('measure in background: ', measure)
    let group = new Group()
   if (hasOutline) {
       let scale = 1.02

@@ -1,32 +1,45 @@
 // text stuff
-import {createText} from 'app/ui/createText.js'
+import { state } from './setup.js'
+import { createDialogueBox } from 'app/ui/dialogueBox.js'
 
 // create a simple level template, to be modified in individual level files
 // TODO: probably needs some more opinionated functions that always run when button is clicked/level starts and ends.
-const createLevel = (world) => {
+const createLevel = (world, data) => {
   const level = {};
-  console.log('world: ', world)
   level.objects = []
   // a looping function to redraw the scene when button is pressed -- e.g. changing the dialogue
-  level.addObjects = () => {}
-  // manage level-specific animations, to automatically be dealt with in the animate render loop
+  level.redraw = () => {
+  disposeAll(world, 'doNotDispose');
+    let text = createDialogueBox(searchNode(state.gameState.currentDialogueObject, data['responses']))
+
+    world.scene.add(text)
+  }  // manage level-specific animations, to automatically be dealt with in the animate render loop
   level.customAnimations = () => {}
-  // first draw pass, if it needs to be different from "add objects"
+  // first draw pass
   // this is where you might add objects that do not need to change or be removed throughout the course of the level
   level.firstPass = () => {}
+    let text = createDialogueBox(data['responses'][0].next)
+    world.scene.add(text)
   level.animate = () => {
       level.customAnimations()
       world.render(level, world)
   }
-  // handle button clicks
-  // TODO:
-  // need flag structure (or something) to determine what gets removed in the `addObjects` loop vs. when level is changed.
-  // I guess the upside of this fairly unopinionated framework is that it can be dealt with on a per-level basis, or even a per-button basis.
-  level.handleButtonClick = () => {
-    disposeAll(world, /* flag to delete, say, the current text bubble goes here */)
-    level.addObjects()
-  }
   return level;
+}
+
+// from https://stackoverflow.com/questions/65630507/how-to-search-value-in-nested-json-in-javascript
+function searchNode(id, currentNode) {
+    let result;
+
+    for (const [key, value] of Object.entries(currentNode)) {
+    if (key == "id" && value == id)  return currentNode;
+        if (value !== null && typeof value === "object" || typeof value === "array") {
+            result = searchNode(id, value);
+           if (result) {
+            return result;
+           }
+         }
+    }
 }
 
 // set universal text variables for game
@@ -45,7 +58,6 @@ const disposeAll = (world, flag) => {
       //TODO prob handle disposal in separate function that can be run recursively on an object
       const toRemove = []
       world.scene.traverse(child => {
-        console.log('child: ', child);
         if (child[flag] == true) {
           return;
         } else if (child.isMesh) {
