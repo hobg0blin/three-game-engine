@@ -1,7 +1,7 @@
 // import scene template
 import { createLevel, disposeAll } from 'app/engine/level.js'
 import { state } from 'app/engine/setup.js'
-import data from './test.json'
+import data from './test_dialogue.json'
 
 //GUI/Buttons
 import { GUI } from 'three/addons/libs/lil-gui.module.min.js';

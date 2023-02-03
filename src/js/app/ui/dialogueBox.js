@@ -1,10 +1,10 @@
-import { Vector3, Group } from 'three'
-import { createButton } from './button.js'
-import { createBackground } from './createBackground.js'
-import { createSimpleText } from './createSimpleText.js'
-import { getBoundingBox } from 'utils/getBoundingBox.js'
-import { world } from 'app/engine/setup.js'
-import helvetiker from 'three/examples/fonts/helvetiker_regular.typeface.json'
+import { Vector3, Group } from "three";
+import { createButton } from "./button.js";
+import { createBackground } from "./createBackground.js";
+import { createSimpleText } from "./createSimpleText.js";
+import { getBoundingBox } from "utils/getBoundingBox.js";
+import { world } from "app/engine/setup.js";
+import helvetiker from "three/examples/fonts/helvetiker_regular.typeface.json";
 
 let font = helvetiker;
 //FIXME: ideally, this should just take a JSON dialogue object, something like
@@ -28,27 +28,25 @@ let font = helvetiker;
 
  function createDialogueBox(dialogueObj, position = {x: 0, y: -7.5, z: 20}, scale = 0.015, font = helvetiker, fontColor = 'black', isTTF=false) {
   let group = new Group()
-   console.log('dialogue object:', dialogueObj)
    let text = dialogueObj.npc_text
-   console.log('text: ', text)
    let responses = dialogueObj.responses
   // create 2D text (loads as a promise in the event you want to load a TTF font)
-   // TODO: if we're using a TTF over and over would be good to internally store it so it doesn't load every time
-  createSimpleText(text, fontColor, helvetiker).then(text => {
-  text.outputText.scale.set(scale, scale, scale)
-    text.outputText.position.set(position.x, position.y + 5, position.z + 2)
-    group.add(text.outputText)
+  // TODO: if we're using a TTF over and over would be good to internally store it so it doesn't load every time
+  createSimpleText(text, fontColor, helvetiker).then((text) => {
+    text.outputText.scale.set(scale, scale, scale);
+    text.outputText.position.set(position.x, position.y + 5, position.z + 2);
+    group.add(text.outputText);
 
     // get size of the text's bounding box for a background text bubble and subsequent button placement
-    let measure = new Vector3()
-    text.outputText.geometry.boundingBox.getSize(measure)
+    let measure = new Vector3();
+    text.outputText.geometry.boundingBox.getSize(measure);
     measure = measure.multiplyScalar(scale);
 
-  // create background
-  let background = createBackground(position, measure)
-  group.add(background)
+    // create background
+    let background = createBackground(position, measure);
+    group.add(background);
 
-  // create N buttons at the bottom of the text box (probably shouldn't have more than 3
+    // create N buttons at the bottom of the text box (probably shouldn't have more than 3
     // TODO: smarter math for button placement
     let width = measure.x/responses.length
     let startX = position.x
@@ -62,5 +60,4 @@ let font = helvetiker;
   return group
 }
 
-
-export { createDialogueBox }
+export { createDialogueBox };

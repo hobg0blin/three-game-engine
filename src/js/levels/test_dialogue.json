@@ -1,0 +1,98 @@
+{
+  "id": "node_0",
+  "npc_name": "GPT",
+  "type": "dialogue_entry",
+  "responses": [
+    {
+      "type": "pass",
+      "next": {
+        "id": "node_1",
+        "type": "dialogue_event",
+        "responses": [
+          {
+            "type": "choice_response",
+            "text": "Yes",
+            "next_node": {
+              "id": "node_2",
+              "type": "gameplay_event",
+              "responses": [
+                {
+                  "type": "pass",
+                  "next_node": {
+                    "id": "node_4",
+                    "type": "dialogue_event",
+                    "responses": [
+                      {
+                        "type": "choice_response",
+                        "text": "Next",
+                        "next_node": {
+                          "id": "node_6",
+                          "type": "gameplay_event",
+                          "responses": [
+                            {
+                              "type": "end_response",
+                              "text": "Exit"
+                            }
+                          ],
+                          "event": "NextLevel"
+                        }
+                      }
+                    ],
+                    "npc_text": "thank u"
+                  }
+                }
+              ],
+              "event": "GPTUp"
+            }
+          },
+          {
+            "type": "choice_response",
+            "text": "No",
+            "next_node": {
+              "id": "node_3",
+              "type": "gameplay_event",
+              "responses": [
+                {
+                  "type": "pass",
+                  "next_node": {
+                    "id": "node_5",
+                    "type": "dialogue_event",
+                    "responses": [
+                      {
+                        "type": "choice_response",
+                        "text": "Next",
+                        "next_node": {
+                          "id": "node_6",
+                          "type": "gameplay_event",
+                          "responses": [
+                            {
+                              "type": "end_response",
+                              "text": "Exit"
+                            }
+                          ],
+                          "event": "NextLevel"
+                        }
+                      }
+                    ],
+                    "npc_text": "fuck u"
+                  }
+                }
+              ],
+              "event": "GptDown"
+            }
+          }
+        ],
+        "npc_text": "Do U Like Me"
+      }
+    }
+  ],
+  "gameplay_events": [
+    "ElizaUp",
+    "ElizaDown",
+    "GPTUp",
+    "GptDown",
+    "DecayUp",
+    "DecayDown",
+    "NextLevel"
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "id": "node_7",
+  "npc_name": "Schuyler",
+  "type": "dialogue_entry",
+  "responses": [
+    {
+      "type": "pass",
+      "next": {
+        "id": "node_8",
+        "type": "dialogue_event",
+        "responses": [
+          {
+            "type": "choice_response",
+            "text": "No shit?",
+            "next_node": {
+              "id": "node_9",
+              "type": "gameplay_event",
+              "responses": [
+                {
+                  "type": "end_response",
+                  "text": "Exit"
+                }
+              ],
+              "event": "NextLevel"
+            }
+          },
+          {
+            "type": "choice_response",
+            "text": "You told this story yesterday",
+            "next_node": {
+              "id": "node_9",
+              "type": "gameplay_event",
+              "responses": [
+                {
+                  "type": "end_response",
+                  "text": "Exit"
+                }
+              ],
+              "event": "NextLevel"
+            }
+          }
+        ],
+        "npc_text": "    \"There is a tower at the end of the world. The tower is quite large. Once, I was standing at the bottom of the tower (I had dropped my keys at the base of the tower, completely coincidentally, and was looking around for them, this being back when I lived in the studio apartment with the tiny keys, of course), and standing there at the base I couldn't even see the top, and me being relatively tall too.\""
+      }
+    }
+  ],
+  "gameplay_events": [
+    "ElizaUp",
+    "ElizaDown",
+    "GPTUp",
+    "GptDown",
+    "DecayUp",
+    "DecayDown",
+    "NextLevel"
+  ]
+}

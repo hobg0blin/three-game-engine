@@ -11,13 +11,9 @@ function create() {
 }
 function gaem(world) {
   disposeAll(world, 'permanent')
-  //BIG TODO
-  // doesn't currently handle switching levels
-  // ideally this would be dealt with in the render loop, pulling from global world state
-  // e.g. if (world.level == 2)
-  // then update level
-  // not sure where this logic would best live, but right now this function basically just operates to start the thing
   state.gameState.currentLevel = levelHandler(state.gameState.currentLevelIndex)(world)
+  console.log('current level: ', state.gameState.currentLevel)
+  state.gameState.currentLevel.setup();
   state.gameState.currentLevel.firstPass();
 
   world.render(state.gameState.currentLevel, world)
@@ -26,5 +22,4 @@ function gaem(world) {
 
 
 export { create, gaem }
-
 

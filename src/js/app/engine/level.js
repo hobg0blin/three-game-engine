@@ -1,6 +1,7 @@
 // text stuff
 import { state } from './setup.js'
-import { createDialogueBox } from 'app/ui/dialogueBox.js'
+import { troikaDialogueBox } from 'app/ui/troikaDialogueBox.js'
+import { createText } from "app/ui/createText.js";
 
 // create a simple level template, to be modified in individual level files
 // TODO: probably needs some more opinionated functions that always run when button is clicked/level starts and ends.
@@ -9,23 +10,31 @@ const createLevel = (world, data) => {
   level.objects = []
   // a looping function to redraw the scene when button is pressed -- e.g. changing the dialogue
   level.redraw = () => {
-  disposeAll(world, 'doNotDispose');
-    let text = createDialogueBox(searchNode(state.gameState.currentDialogueObject, data['responses']))
-
-    world.scene.add(text)
+    disposeAll(world, 'doNotDispose');
+      console.log('redraw data: ', data)
+      let text = troikaDialogueBox(searchNode(state.gameState.currentDialogueObject, data['responses']), world)
+      world.scene.add(text)
   }  // manage level-specific animations, to automatically be dealt with in the animate render loop
   level.customAnimations = () => {}
   // first draw pass
   // this is where you might add objects that do not need to change or be removed throughout the course of the level
-  level.firstPass = () => {}
-    let text = createDialogueBox(data['responses'][0].next)
-    world.scene.add(text)
+  level.setup = () => {
+    disposeAll(world, 'permanent')
+    if (data && data['responses'][0].next) {
+      console.log('set up data: ', data)
+      let text = troikaDialogueBox(data['responses'][0].next, world)
+      world.scene.add(text)
+    }
+  }
+  level.firstPass = () => {
+  }
+  console.log('first pass data: ', data)
   level.animate = () => {
       level.customAnimations()
       world.render(level, world)
   }
   return level;
-}
+};
 
 // from https://stackoverflow.com/questions/65630507/how-to-search-value-in-nested-json-in-javascript
 function searchNode(id, currentNode) {
@@ -45,13 +54,19 @@ function searchNode(id, currentNode) {
 // set universal text variables for game
 // this is no longer used in favor of dialogueBox, I think
 const addText = (text, textMat) => {
-  let textScale = 0.015
-  let textPos = {x: 0, y: -5, z: 25}
- return createText(text, font, textMat, textScale, textPos, true, false, false)
-}
-
-
-
+  let textScale = 0.015;
+  let textPos = { x: 0, y: -5, z: 25 };
+  return createText(
+    text,
+    font,
+    textMat,
+    textScale,
+    textPos,
+    true,
+    false,
+    false
+  );
+};
 
 // dispose of all world objects that aren't marked with a flag, e.g. doNotDispose
 const disposeAll = (world, flag) => {
@@ -60,7 +75,7 @@ const disposeAll = (world, flag) => {
       world.scene.traverse(child => {
         if (child[flag] == true) {
           return;
-        } else if (child.isMesh) {
+        } else if (child.isMesh || child.isSprite) {
           child.geometry.dispose();
           child.material.dispose();
           toRemove.push(child)
@@ -74,10 +89,9 @@ const disposeAll = (world, flag) => {
             }
           })
            toRemove.push(child)
-        }
-      })
-      toRemove.forEach(child => {
-        world.scene.remove(child)
-      })
-    }
-export { createLevel, addText, disposeAll}
+    }   });
+  toRemove.forEach((child) => {
+    world.scene.remove(child);
+  });
+};
+export { createLevel, addText, disposeAll };
