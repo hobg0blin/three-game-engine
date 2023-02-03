@@ -42,7 +42,10 @@
     "react-dom": "^17.0.2",
     "tailwindcss": "^3.0.17",
     "three": "^0.144.0",
+    "three-spritetext": "^1.6.5",
     "toxiclibsjs": "^0.3.3",
+    "troika-three-text": "^0.47.1",
+    "troika-three-utils": "^0.47.0",
     "webshot-node": "^0.18.3",
     "wordnet-db": "^3.1.14"
   },

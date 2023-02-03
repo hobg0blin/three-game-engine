@@ -24,11 +24,11 @@ window.addEventListener("click", onClick);
 function createButton(params) {
   console.log("world in button: ", world);
   const defaultParams = {
-    x: 10,
+    x: 0,
     z: 26,
     y: -10,
-    Xsize: 6,
-    Ysize: 2,
+    Xsize: 10,
+    Ysize: 5,
     ratio: { h: 0.25, w: 1 },
     color: "green",
     textColor: "black",
@@ -63,6 +63,7 @@ function createButton(params) {
   text.position.set(params.x, params.y, params.z);
   let group = new Group();
   group.add(button, text);
+  world.scene.add(group);
   return group;
 }
 

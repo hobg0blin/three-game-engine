@@ -15,6 +15,9 @@ import { buildTower } from "components/Three/buildTower.js";
 
 import { RenderPixelatedPass } from "components/Three/RenderPixelatedPass.js";
 import { environmentPicture } from "../app/ui/environmentPicture";
+import { spriteDialogueBox } from "../app/ui/spriteDialogueBox";
+import { troikaDialogueBox } from "../app/ui/troikaDialogueBox";
+import { createButton } from "../app/ui/button";
 
 // any global variables for this specific scene
 // track pixel direction
@@ -68,6 +71,17 @@ const addGlobe = (THREE, world) => {
   importSTLModel("/models/earth_wireframe.stl", globeMat, addSTLModel);
 };
 
+const addSpriteText = (scene) => {
+  spriteDialogueBox("There is a tower at the end of the world", scene);
+};
+
+const addTroikaText = (scene) => {
+  troikaDialogueBox(
+    "There is a tower at the end of the world. The tower is quite large. Once, I was standing at the bottom of the tower (I had dropped my keys at the base of the tower, completely coincidentally, and was looking around for them, this being back when I lived in the studio apartment with the tiny keys, of course), and standing there at the base I couldn't even see the top, and me being relatively tall too.",
+    scene
+  );
+};
+
 const addTower = (THREE, world) => {
   let towerMat = new THREE.MeshPhongMaterial({
     color: "white",
@@ -90,9 +104,28 @@ const level2 = (world) => {
     // GUI
     let gui = new GUI();
     // SET UP INITIAL SCENE COMPONENTS
-    formatText(levelTemplate, world);
+    //formatText(levelTemplate, world);
+    //addSpriteText(world.scene);
+    addTroikaText(world.scene);
 
     environmentPicture(THREE, "pictures/hall.png", world.scene);
+
+    createButton({
+      text: "No shit?",
+      x: -2,
+      //callback: button.callback,
+      //x: startX,
+      camera: world.camera,
+    });
+
+    createButton({
+      text: "You told this story yesterday",
+      x: 20,
+      Xsize: 20,
+      //callback: button.callback,
+      //x: startX,
+      camera: world.camera,
+    });
   };
 
   levelTemplate.firstPass = () => {
