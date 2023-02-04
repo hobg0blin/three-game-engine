@@ -1,11 +1,11 @@
 // Global imports -
-import {createCamera} from 'components/Three/camera.js'
-import {createLights} from 'components/Three/lights.js'
-import {createRenderer} from 'components/Three/renderer.js'
-import {createControls, addToGUI} from 'components/Three/controls.js'
-import { test, level1, level2 }from 'levels/levels.js'
-import { EffectComposer } from 'three/examples/jsm/postprocessing/EffectComposer.js';
-import { RenderPass } from 'three/examples/jsm/postprocessing/RenderPass.js';
+import { createCamera } from "components/Three/camera.js";
+import { createLights } from "components/Three/lights.js";
+import { createRenderer } from "components/Three/renderer.js";
+import { createControls, addToGUI } from "components/Three/controls.js";
+import { eliza, test, level1, level2 } from "levels/levels.js";
+import { EffectComposer } from "three/examples/jsm/postprocessing/EffectComposer.js";
+import { RenderPass } from "three/examples/jsm/postprocessing/RenderPass.js";
 
 const world = {};
 const setup = (THREE) => {
@@ -35,7 +35,8 @@ const setup = (THREE) => {
   world.scene.add(new THREE.AmbientLight({ color: "white", intensity: 1 }));
 
   //BACKGROUND & FOG
-  world.textureLoader = new THREE.TextureLoader(); let backgroundImg = world.textureLoader.load("/three/studio-bg.jpg"); //        world.scene.background = backgroundImg
+  world.textureLoader = new THREE.TextureLoader();
+  let backgroundImg = world.textureLoader.load("/three/studio-bg.jpg"); //        world.scene.background = backgroundImg
   // CONTROLS
   world.controls = createControls(world.camera, world.renderer);
   //    this.controls.target.set(0, 0, 0)
@@ -61,14 +62,12 @@ function updateSize(renderer) {
     world.renderer.setSize(windowWidth, windowHeight);
   }
 }
- // handle level changes
+// handle level changes
 
 const levelHandler = (levelIndex) => {
-  let levels = [ level2, level1, test]
-  return levels[levelIndex]
-}
-
-
+  let levels = [eliza];
+  return levels[levelIndex];
+};
 
 //TODO: state setup
 // ideally, JSON object stored as a cookie/in localStorage
@@ -88,23 +87,18 @@ const levelHandler = (levelIndex) => {
 // }
 // which would correspond to the dialogue JSON structure laid out in ui/dialogueBox.js
 
-const state =
-  {
-    gameState:
-    {
-      currentLevelIndex: 0,
-      currentLevel: null,
-      currentDialogueObject: 'node_7'
-    },
-   playerState:
-     {
-       decay: 0,
-       elizaOpinion: 1,
-       GPTOpinion: 1,
-       zzyxOpinion: 1
-     }
- }
+const state = {
+  gameState: {
+    currentLevelIndex: 0,
+    currentLevel: null,
+    currentDialogueObject: "node_7",
+  },
+  playerState: {
+    decay: 0,
+    elizaOpinion: 1,
+    GPTOpinion: 1,
+    zzyxOpinion: 1,
+  },
+};
 
-export {setup, world, state, levelHandler}
-
-
+export { setup, world, state, levelHandler };
