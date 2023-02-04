@@ -25,7 +25,11 @@ const zzyx = (world) => {
   levelTemplate.firstPass = () => {
     let gui = new GUI();
     // ADD ANY OBJECTS OR VISUAL ELEMENTS
-    const zzyxPic = environmentPicture(THREE, "hewf", world.scene);
+    const zzyxPic = environmentPicture(
+      THREE,
+      "/pictures/zzyx.png",
+      world.scene
+    );
     zzyxPic.doNotDispose = true;
     // SET .doNotDispose = true so they're not deleted when it redraws
     // FIXME: surely there is a way to automate this
