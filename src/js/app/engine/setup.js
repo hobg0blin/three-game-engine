@@ -65,8 +65,7 @@ function updateSize(renderer) {
 // handle level changes
 
 const levelHandler = (levelIndex) => {
-  let levels = [eliza, chatGPT];
-  console.log('current level: ', levels[levelIndex])
+  let levels = [level1, eliza, chatGPT];
   return levels[levelIndex];
 };
 
