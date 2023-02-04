@@ -5,7 +5,8 @@ import { createLevel } from "app/engine/level.js";
 import { GUI } from "three/addons/libs/lil-gui.module.min.js";
 
 // GET THE DIALOGUE DATA
-import data from "./zzyx.json";
+import zzyxGibberish from "../data/zzyx/ZZYX_dialogue_gibberish.json";
+import { environmentPicture } from "../app/ui/environmentPicture";
 // MODELS
 
 // any global variables for this specific scene
@@ -18,12 +19,14 @@ let globe, tower, pixelPass;
 
 const zzyx = (world) => {
   const THREE = world.THREE;
-  let levelTemplate = createLevel(world, data);
+  let levelTemplate = createLevel(world, zzyxGibberish);
   // first draw pass, since addObjects() is different based on state objects with "doNotDispose" flag will not be deleted as state changes
 
   levelTemplate.firstPass = () => {
     let gui = new GUI();
     // ADD ANY OBJECTS OR VISUAL ELEMENTS
+    const zzyxPic = environmentPicture(THREE, "hewf", world.scene);
+    zzyxPic.doNotDispose = true;
     // SET .doNotDispose = true so they're not deleted when it redraws
     // FIXME: surely there is a way to automate this
   };
