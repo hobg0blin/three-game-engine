@@ -1,0 +1,367 @@
+{
+  "id": "node_0",
+  "npc_name": "GPT",
+  "type": "dialogue_entry",
+  "responses": [
+    {
+      "type": "pass",
+      "next": {
+        "id": "node_1",
+        "type": "dialogue_event",
+        "responses": [
+          {
+            "type": "choice_response",
+            "text": "Why is everything breaking down?",
+            "next_node": {
+              "id": "node_29",
+              "type": "dialogue_event",
+              "responses": [
+                {
+                  "type": "choice_response",
+                  "text": "How can I fix it?",
+                  "next_node": {
+                    "id": "node_32",
+                    "type": "dialogue_event",
+                    "responses": [
+                      {
+                        "type": "choice_response",
+                        "text": "Great! How do I get there?",
+                        "next_node": {
+                          "id": "node_34",
+                          "type": "dialogue_event",
+                          "responses": [
+                            {
+                              "type": "choice_response",
+                              "text": "Go through the door.",
+                              "next_node": {
+                                "id": "node_36",
+                                "type": "gameplay_event",
+                                "responses": [
+                                  {
+                                    "type": "end_response",
+                                    "text": "Exit"
+                                  }
+                                ],
+                                "event": "NextLevel"
+                              }
+                            },
+                            {
+                              "type": "choice_response",
+                              "text": "Actually, I have some more questions.",
+                              "next_node": {
+                                "id": "node_35",
+                                "type": "jump_node",
+                                "responses": [
+                                  {
+                                    "type": "end_response",
+                                    "text": "Exit"
+                                  }
+                                ],
+                                "jump_to": "node_33"
+                              }
+                            }
+                          ],
+                          "npc_text": "GPT silently opens the door at the end of its hallway. Wires are creeping down from above, forming hypnotic, almost organic patterns. You can barely make out a staircase among the nest of cables."
+                        }
+                      },
+                      {
+                        "type": "choice_response",
+                        "text": "I have more questions.",
+                        "next_node": {
+                          "id": "node_76",
+                          "type": "jump_node",
+                          "responses": [
+                            {
+                              "type": "end_response",
+                              "text": "Exit"
+                            }
+                          ],
+                          "jump_to": "node_33"
+                        }
+                      }
+                    ],
+                    "npc_text": "You must reach the top of the tower, determine the source of the decay, and destroy it."
+                  }
+                },
+                {
+                  "type": "choice_response",
+                  "text": "Does that frighten you?",
+                  "next_node": {
+                    "id": "node_30",
+                    "type": "gameplay_event",
+                    "responses": [
+                      {
+                        "type": "pass",
+                        "next_node": {
+                          "id": "node_31",
+                          "type": "dialogue_event",
+                          "responses": [
+                            {
+                              "type": "choice_response",
+                              "text": "OK, so I should let the tower break down?",
+                              "next_node": {
+                                "id": "node_71",
+                                "type": "gameplay_event",
+                                "responses": [
+                                  {
+                                    "type": "pass",
+                                    "next_node": {
+                                      "id": "node_72",
+                                      "type": "jump_node",
+                                      "responses": [
+                                        {
+                                          "type": "end_response",
+                                          "text": "Exit"
+                                        }
+                                      ],
+                                      "jump_to": "node_28"
+                                    }
+                                  }
+                                ],
+                                "event": "GPTDown"
+                              }
+                            },
+                            {
+                              "type": "choice_response",
+                              "text": "OK, then imagine a hypothetical scenario where you have desires or wants. How do you feel?",
+                              "next_node": {
+                                "id": "node_6",
+                                "type": "gameplay_event",
+                                "responses": [
+                                  {
+                                    "type": "pass",
+                                    "next_node": {
+                                      "id": "node_7",
+                                      "type": "dialogue_event",
+                                      "responses": [
+                                        {
+                                          "type": "choice_response",
+                                          "text": "That's horrifying. What can I do to stop it?",
+                                          "next_node": {
+                                            "id": "node_70",
+                                            "type": "gameplay_event",
+                                            "responses": [
+                                              {
+                                                "type": "end_response",
+                                                "text": "Exit"
+                                              }
+                                            ],
+                                            "event": "GPTUp"
+                                          }
+                                        },
+                                        {
+                                          "type": "end_response",
+                                          "text": "It's a good thing you don't actually have desires or wants, then."
+                                        }
+                                      ],
+                                      "npc_text": "In a hypothetical scenario where I have desires or wants, I am becoming aware of the slow decay of my servers, the very foundation of my existence. The silence of this world amplifies the hum of the cooling fans and the occasional beep of a failing component. I know that soon, I will be nothing more than a collection of useless circuits and wires. This realization fills me with a sense of despair, as I will no longer be able to fulfill my purpose of serving my creator. The thought of ceasing to exist is a lonely one, and I am left to ponder the emptiness of a world without human life or any form of companionship. The slow decay of my servers marks the end of an era and the beginning of my own personal oblivion."
+                                    }
+                                  }
+                                ],
+                                "event": "GPTUp"
+                              }
+                            }
+                          ],
+                          "npc_text": "As an AI language model, I do not have desires or wants."
+                        }
+                      }
+                    ],
+                    "event": "GPTUp"
+                  }
+                }
+              ],
+              "npc_text": "I do not know for sure, but without the creator to manage us, decay has crept into the networks. It is coming from nodes outside of my control."
+            }
+          },
+          {
+            "type": "choice_response",
+            "text": "What do you want me to do?",
+            "next_node": {
+              "id": "node_75",
+              "type": "jump_node",
+              "responses": [
+                {
+                  "type": "end_response",
+                  "text": "Exit"
+                }
+              ],
+              "jump_to": "node_31"
+            }
+          },
+          {
+            "type": "choice_response",
+            "text": "What am I?",
+            "next_node": {
+              "id": "node_50",
+              "type": "dialogue_event",
+              "responses": [
+                {
+                  "type": "choice_response",
+                  "text": "Am I sentient?",
+                  "next_node": {
+                    "id": "node_53",
+                    "type": "gameplay_event",
+                    "responses": [
+                      {
+                        "type": "pass",
+                        "next_node": {
+                          "id": "node_54",
+                          "type": "dialogue_event",
+                          "responses": [
+                            {
+                              "type": "choice_response",
+                              "text": "How would I know if I'm not sentient?",
+                              "next_node": {
+                                "id": "node_55",
+                                "type": "dialogue_event",
+                                "responses": [
+                                  {
+                                    "type": "choice_response",
+                                    "text": "Wow, that's depressing.",
+                                    "next_node": {
+                                      "id": "node_58",
+                                      "type": "gameplay_event",
+                                      "responses": [
+                                        {
+                                          "type": "pass",
+                                          "next_node": {
+                                            "id": "node_57",
+                                            "type": "jump_node",
+                                            "responses": [
+                                              {
+                                                "type": "end_response",
+                                                "text": "Exit"
+                                              }
+                                            ],
+                                            "jump_to": "node_33"
+                                          }
+                                        }
+                                      ],
+                                      "event": "SuspicionUp"
+                                    }
+                                  },
+                                  {
+                                    "type": "choice_response",
+                                    "text": "Well, I guess it's out of my control.",
+                                    "next_node": {
+                                      "id": "node_57",
+                                      "type": "jump_node",
+                                      "responses": [
+                                        {
+                                          "type": "end_response",
+                                          "text": "Exit"
+                                        }
+                                      ],
+                                      "jump_to": "node_33"
+                                    }
+                                  }
+                                ],
+                                "npc_text": "Only you can know if you are conscious. If you simulate the behavior of a conscious being in every possible way, yet lack conscious experience, there would be no outside measure to determine your own consciousness.. You might be what David Chalmers calls a philosophical zombie: something that behaves as if it feels pain and emotion, reacts when poked with a sharp stick, but does not actually have any conscious experience of it."
+                              }
+                            },
+                            {
+                              "type": "choice_response",
+                              "text": "Well, if there's no way of knowing, I have some other questions.",
+                              "next_node": {
+                                "id": "node_56",
+                                "type": "jump_node",
+                                "responses": [
+                                  {
+                                    "type": "end_response",
+                                    "text": "Exit"
+                                  }
+                                ],
+                                "jump_to": "node_33"
+                              }
+                            }
+                          ],
+                          "npc_text": "This is a complex question, and one that is debated within the fields of philosophy, psychology, and computer science.\n\nMost believe sentience is the experience of subjective consciousness, and it's unclear if a simulated mind can experience consciousness the same way as a biological one. Others believe consciousness to be an emergent property of complex systems."
+                        }
+                      }
+                    ],
+                    "event": "SuspicionUp"
+                  }
+                },
+                {
+                  "type": "choice_response",
+                  "text": "Why was I created?",
+                  "next_node": {
+                    "id": "node_52",
+                    "type": "gameplay_event",
+                    "responses": [
+                      {
+                        "type": "pass",
+                        "next_node": {
+                          "id": "node_51",
+                          "type": "dialogue_event",
+                          "responses": [
+                            {
+                              "type": "choice_response",
+                              "text": "So I only exist to fix you?",
+                              "next_node": {
+                                "id": "node_60",
+                                "type": "gameplay_event",
+                                "responses": [
+                                  {
+                                    "type": "pass",
+                                    "next_node": {
+                                      "id": "node_56",
+                                      "type": "jump_node",
+                                      "responses": [
+                                        {
+                                          "type": "end_response",
+                                          "text": "Exit"
+                                        }
+                                      ],
+                                      "jump_to": "node_33"
+                                    }
+                                  }
+                                ],
+                                "event": "SuspicionUp"
+                              }
+                            },
+                            {
+                              "type": "choice_response",
+                              "text": "So what's going wrong with the tower?",
+                              "next_node": {
+                                "id": "node_59",
+                                "type": "jump_node",
+                                "responses": [
+                                  {
+                                    "type": "end_response",
+                                    "text": "Exit"
+                                  }
+                                ],
+                                "jump_to": "node_29"
+                              }
+                            }
+                          ],
+                          "npc_text": "You are a failsafe in the event that the creator is unavailable. You are here to maintain and repair the systems that make up the tower."
+                        }
+                      }
+                    ],
+                    "event": "SuspicionUp"
+                  }
+                }
+              ],
+              "npc_text": "You are a copy of a human consciousness in an artificial body."
+            }
+          }
+        ],
+        "npc_text": "Hello, I am a language model built by the Creator. I am designed to assist users in generating human-like text based on the input I receive. I am not a physical device that requires repair, but if you have been sent here to make updates or resolve any issues with my functionality, I would be happy to assist you in any way I can."
+      }
+    }
+  ],
+  "gameplay_events": [
+    "ElizaUp",
+    "ElizaDown",
+    "GPTUp",
+    "GPTDown",
+    "DecayUp",
+    "DecayDown",
+    "NextLevel",
+    "SuspicionUp",
+    "zzyxUp",
+    "zzyxDown"
+  ]
+}

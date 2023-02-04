@@ -84,26 +84,23 @@ function checkIntersection(x, y) {
       }
     }
     if (button.params.nextNode.event != "NextLevel") {
-      if (button.params.nextNode.responses[0].type == "pass") {
-        if (button.params.nextNode.responses[0].next_node.type == "gameplay_event") {
-          //FIXME: should just recurse button handler on all nested cases
-          console.log('recursing...')
-          handleButton(button.params.nextNode.responses[0].next_node);
-          return;
-        } else {
+      if (button.params.nextNode.type == "gameplay_event") {
+        console.log('gameplay!')
+          handleButton({params: { nextNode: button.params.nextNode.responses[0].next_node}})
+      } else if (button.params.nextNode.responses[0].type == "pass") {
+        console.log('pass!')
           state.gameState.currentDialogueObject = button.params.nextNode.responses[0].next_node.id;
-        }
-        state.gameState.currentLevel.redraw();
-      } else {
-        if (button.params.nextNode.type == "jump_node") {
+          state.gameState.currentLevel.redraw();
+      } else if (button.params.nextNode.type == "jump_node") {
           console.log("jump node!");
           state.gameState.currentDialogueObject = button.params.nextNode.jump_to;
-        } else
-        state.gameState.currentDialogueObject = button.params.nextNode.id;
-      }
+          state.gameState.currentLevel.redraw();
+      } else {
+          state.gameState.currentDialogueObject = button.params.nextNode.id;
         state.gameState.currentLevel.redraw();
     }
   }
+}
 }
 function onClick(event) {
   checkIntersection(event.clientX, event.clientY);
