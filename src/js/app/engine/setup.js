@@ -98,6 +98,7 @@ const state = {
     elizaOpinion: 1,
     GPTOpinion: 1,
     zzyxOpinion: 1,
+    suspicion: 0,
   },
 };
 

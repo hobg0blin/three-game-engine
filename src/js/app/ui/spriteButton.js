@@ -33,60 +33,70 @@ function checkIntersection(x, y) {
     //FIXME: it is extremely stupid to have this core game logic in here, at the very least need to put these functions into something in engine and import them
     // probably ought to be getters and setters as well rather than directly modifying the object
     if (intersects.length > 0) {
-      if (button.params.nextNode == undefined) {
-        console.log("YOU AINT GOT NOTHIN HERE YET!");
+      handleButton(button);
+    }
+  }
+  function handleButton(button) {
+    if (button.params.nextNode == undefined) {
+      console.log("YOU AINT GOT NOTHIN HERE YET!");
+    }
+    if (button.params.nextNode.event != undefined) {
+      console.log("next node", button.params.nextNode);
+      switch (button.params.nextNode.event) {
+        case "ElizaUp":
+          console.log("eliza up");
+          state.playerState.elizaOpinion += 1;
+          break;
+        case "ElizaDown":
+          console.log("eliza down");
+          state.playerState.elizaOpinion -= 1;
+          break;
+        case "GPTUp":
+          state.playerState.GPTOpinion += 1;
+          break;
+        case "GPTDown":
+          state.playerState.GPTOpinion -= 1;
+          break;
+        case "zzyxUp":
+          state.playerState.zzyxOpinion += 1;
+          break;
+        case "zzyxDown":
+          state.playerState.zzyxOpinion -= 1;
+          break;
+        case "decayUp":
+          state.playerState.decay += 1;
+          break;
+        case "decayDown":
+          state.playerState.decay -= 1;
+          break;
+        case "SuspicionUp":
+          state.playerState.suspicion += 1;
+          break;
+        case "NextLevel":
+          state.gameState.currentLevelIndex += 1;
+          buttons = [];
+          gaem(world);
+          break;
+        default:
+          console.log(`huh guess you didn't account for this. maybe check to see if you goofed in the JSON somewhere`);
       }
-      if (button.params.nextNode.event != undefined) {
-        console.log("next node", button.params.nextNode);
-        switch (button.params.nextNode.event) {
-          case "ElizaUp":
-            console.log("eliza up");
-            state.playerState.elizaOpinion += 1;
-            break;
-          case "ElizaDown":
-            console.log("eliza down");
-            state.playerState.elizaOpinion -= 1;
-            break;
-          case "GPTUp":
-            state.playerState.GPTOpinion += 1;
-            break;
-          case "GPTDown":
-            state.playerState.GPTOpinion -= 1;
-            break;
-          case "zzyxUp":
-            state.playerState.zzyxOpinion += 1;
-            break;
-          case "zzyxDown":
-            state.playerState.zzyxOpinion -= 1;
-            break;
-          case "decayUp":
-            state.playerState.decay += 1;
-            break;
-          case "decayDown":
-            state.playerState.decay -= 1;
-            break;
-          case "NextLevel":
-            state.gameState.currentLevelIndex += 1;
-            buttons = [];
-            gaem(world);
-            break;
-          default:
-            console.log(`huh guess you didn't account for this. maybe check to see if you goofed in the JSON somewhere`);
-        }
-      }
-      if (button.params.nextNode.event != "NextLevel") {
-        if (button.params.nextNode.responses[0].type == "pass") {
-          if (button.params.nextNode.responses[0].next_node.type == "jump_node") {
-            console.log("jump node!");
-            state.gameState.currentDialogueObject = button.params.nextNode.responses[0].next_node.jump_to;
-          } else {
-            state.gameState.currentDialogueObject = button.params.nextNode.responses[0].next_node.id;
-          }
-          state.gameState.currentLevel.redraw();
+    }
+    if (button.params.nextNode.event != "NextLevel") {
+      if (button.params.nextNode.responses[0].type == "pass") {
+        if (button.params.nextNode.responses[0].next_node.type == "jump_node") {
+          console.log("jump node!");
+          state.gameState.currentDialogueObject = button.params.nextNode.responses[0].next_node.jump_to;
+        } else if (button.params.nextNode.responses[0].next_node.type == "gameplay_event") {
+          //FIXME: should just recurse button handler on all nested cases
+          handleButton(button.params.nextNode.responses[0].next_node);
+          return;
         } else {
-          state.gameState.currentDialogueObject = button.params.nextNode.id;
-          state.gameState.currentLevel.redraw();
+          state.gameState.currentDialogueObject = button.params.nextNode.responses[0].next_node.id;
         }
+        state.gameState.currentLevel.redraw();
+      } else {
+        state.gameState.currentDialogueObject = button.params.nextNode.id;
+        state.gameState.currentLevel.redraw();
       }
     }
   }
