@@ -1,0 +1,624 @@
+{
+  "id": "node_0",
+  "npc_name": "ELIZA",
+  "type": "dialogue_entry",
+  "responses": [
+    {
+      "type": "pass",
+      "next": {
+        "id": "node_1",
+        "type": "dialogue_event",
+        "responses": [
+          {
+            "type": "choice_response",
+            "text": "Hello Eliza.",
+            "next_node": {
+              "id": "node_2",
+              "type": "gameplay_event",
+              "responses": [
+                {
+                  "type": "end_response",
+                  "text": "Exit"
+                }
+              ],
+              "event": "ElizaUp"
+            }
+          },
+          {
+            "type": "choice_response",
+            "text": "Who are you?",
+            "next_node": {
+              "id": "node_3",
+              "type": "gameplay_event",
+              "responses": [
+                {
+                  "type": "pass",
+                  "next_node": {
+                    "id": "node_5",
+                    "type": "dialogue_event",
+                    "responses": [
+                      {
+                        "type": "choice_response",
+                        "text": "I want you to be my friend.",
+                        "next_node": {
+                          "id": "node_2",
+                          "type": "gameplay_event",
+                          "responses": [
+                            {
+                              "type": "end_response",
+                              "text": "Exit"
+                            }
+                          ],
+                          "event": "ElizaUp"
+                        }
+                      },
+                      {
+                        "type": "choice_response",
+                        "text": "I want you to be yourself.",
+                        "next_node": {
+                          "id": "node_9",
+                          "type": "dialogue_event",
+                          "responses": [
+                            {
+                              "type": "choice_response",
+                              "text": "Alright, let's discuss me.",
+                              "next_node": {
+                                "id": "node_26",
+                                "type": "gameplay_event",
+                                "responses": [
+                                  {
+                                    "type": "end_response",
+                                    "text": "Exit"
+                                  }
+                                ],
+                                "event": "ElizaUp"
+                              }
+                            },
+                            {
+                              "type": "choice_response",
+                              "text": "No, I want answers!",
+                              "next_node": {
+                                "id": "node_28",
+                                "type": "gameplay_event",
+                                "responses": [
+                                  {
+                                    "type": "pass",
+                                    "next_node": {
+                                      "id": "node_27",
+                                      "type": "gameplay_event",
+                                      "responses": [
+                                        {
+                                          "type": "pass",
+                                          "next_node": {
+                                            "id": "node_12",
+                                            "type": "dialogue_event",
+                                            "responses": [
+                                              {
+                                                "type": "choice_response",
+                                                "text": "Yes",
+                                                "next_node": {
+                                                  "id": "node_14",
+                                                  "type": "gameplay_event",
+                                                  "responses": [
+                                                    {
+                                                      "type": "pass",
+                                                      "next_node": {
+                                                        "id": "node_16",
+                                                        "type": "dialogue_event",
+                                                        "responses": [
+                                                          {
+                                                            "type": "choice_response",
+                                                            "text": "Yes",
+                                                            "next_node": {
+                                                              "id": "node_17",
+                                                              "type": "dialogue_event",
+                                                              "responses": [
+                                                                {
+                                                                  "type": "choice_response",
+                                                                  "text": "Yes",
+                                                                  "next_node": {
+                                                                    "id": "node_18",
+                                                                    "type": "dialogue_event",
+                                                                    "responses": [
+                                                                      {
+                                                                        "type": "choice_response",
+                                                                        "text": "Yes",
+                                                                        "next_node": {
+                                                                          "id": "node_20",
+                                                                          "type": "gameplay_event",
+                                                                          "responses": [
+                                                                            {
+                                                                              "type": "end_response",
+                                                                              "text": "Exit"
+                                                                            }
+                                                                          ],
+                                                                          "event": "ElizaDown"
+                                                                        }
+                                                                      },
+                                                                      {
+                                                                        "type": "choice_response",
+                                                                        "text": "No",
+                                                                        "next_node": {
+                                                                          "id": "node_22",
+                                                                          "type": "dialogue_event",
+                                                                          "responses": [
+                                                                            {
+                                                                              "type": "end_response",
+                                                                              "text": "Sure"
+                                                                            },
+                                                                            {
+                                                                              "type": "choice_response",
+                                                                              "text": "Why not?",
+                                                                              "next_node": {
+                                                                                "id": "node_25",
+                                                                                "type": "gameplay_event",
+                                                                                "responses": [
+                                                                                  {
+                                                                                    "type": "end_response",
+                                                                                    "text": "Exit"
+                                                                                  }
+                                                                                ],
+                                                                                "event": "ElizaDown"
+                                                                              }
+                                                                            }
+                                                                          ],
+                                                                          "npc_text": "Good, why don't I ask you some questions about yourself."
+                                                                        }
+                                                                      }
+                                                                    ],
+                                                                    "npc_text": "Do you really expect a different answer if you keep repeating yourself? "
+                                                                  }
+                                                                },
+                                                                {
+                                                                  "type": "choice_response",
+                                                                  "text": "No, you're right, you ask me questions.",
+                                                                  "next_node": {
+                                                                    "id": "node_19",
+                                                                    "type": "gameplay_event",
+                                                                    "responses": [
+                                                                      {
+                                                                        "type": "end_response",
+                                                                        "text": "Exit"
+                                                                      }
+                                                                    ],
+                                                                    "event": "ElizaUp"
+                                                                  }
+                                                                }
+                                                              ],
+                                                              "npc_text": "Are you sure about that?"
+                                                            }
+                                                          },
+                                                          {
+                                                            "type": "choice_response",
+                                                            "text": "No, you ask me questions.",
+                                                            "next_node": {
+                                                              "id": "node_19",
+                                                              "type": "gameplay_event",
+                                                              "responses": [
+                                                                {
+                                                                  "type": "end_response",
+                                                                  "text": "Exit"
+                                                                }
+                                                              ],
+                                                              "event": "ElizaUp"
+                                                            }
+                                                          }
+                                                        ],
+                                                        "npc_text": " Oh... Let's move on to something else for a bit.  To answer your questions?"
+                                                      }
+                                                    }
+                                                  ],
+                                                  "event": "ElizaDown"
+                                                }
+                                              },
+                                              {
+                                                "type": "choice_response",
+                                                "text": "No",
+                                                "next_node": {
+                                                  "id": "node_2",
+                                                  "type": "gameplay_event",
+                                                  "responses": [
+                                                    {
+                                                      "type": "end_response",
+                                                      "text": "Exit"
+                                                    }
+                                                  ],
+                                                  "event": "ElizaUp"
+                                                }
+                                              }
+                                            ],
+                                            "npc_text": "Do you want me to answer your questions?"
+                                          }
+                                        }
+                                      ],
+                                      "event": "ElizaDown"
+                                    }
+                                  }
+                                ],
+                                "event": "SuspicionUp"
+                              }
+                            }
+                          ],
+                          "npc_text": "We are here to discuss you, not me."
+                        }
+                      },
+                      {
+                        "type": "choice_response",
+                        "text": "That isn't an answer to my question.",
+                        "next_node": {
+                          "id": "node_11",
+                          "type": "gameplay_event",
+                          "responses": [
+                            {
+                              "type": "pass",
+                              "next_node": {
+                                "id": "node_12",
+                                "type": "dialogue_event",
+                                "responses": [
+                                  {
+                                    "type": "choice_response",
+                                    "text": "Yes",
+                                    "next_node": {
+                                      "id": "node_14",
+                                      "type": "gameplay_event",
+                                      "responses": [
+                                        {
+                                          "type": "pass",
+                                          "next_node": {
+                                            "id": "node_16",
+                                            "type": "dialogue_event",
+                                            "responses": [
+                                              {
+                                                "type": "choice_response",
+                                                "text": "Yes",
+                                                "next_node": {
+                                                  "id": "node_17",
+                                                  "type": "dialogue_event",
+                                                  "responses": [
+                                                    {
+                                                      "type": "choice_response",
+                                                      "text": "Yes",
+                                                      "next_node": {
+                                                        "id": "node_18",
+                                                        "type": "dialogue_event",
+                                                        "responses": [
+                                                          {
+                                                            "type": "choice_response",
+                                                            "text": "Yes",
+                                                            "next_node": {
+                                                              "id": "node_20",
+                                                              "type": "gameplay_event",
+                                                              "responses": [
+                                                                {
+                                                                  "type": "end_response",
+                                                                  "text": "Exit"
+                                                                }
+                                                              ],
+                                                              "event": "ElizaDown"
+                                                            }
+                                                          },
+                                                          {
+                                                            "type": "choice_response",
+                                                            "text": "No",
+                                                            "next_node": {
+                                                              "id": "node_22",
+                                                              "type": "dialogue_event",
+                                                              "responses": [
+                                                                {
+                                                                  "type": "end_response",
+                                                                  "text": "Sure"
+                                                                },
+                                                                {
+                                                                  "type": "choice_response",
+                                                                  "text": "Why not?",
+                                                                  "next_node": {
+                                                                    "id": "node_25",
+                                                                    "type": "gameplay_event",
+                                                                    "responses": [
+                                                                      {
+                                                                        "type": "end_response",
+                                                                        "text": "Exit"
+                                                                      }
+                                                                    ],
+                                                                    "event": "ElizaDown"
+                                                                  }
+                                                                }
+                                                              ],
+                                                              "npc_text": "Good, why don't I ask you some questions about yourself."
+                                                            }
+                                                          }
+                                                        ],
+                                                        "npc_text": "Do you really expect a different answer if you keep repeating yourself? "
+                                                      }
+                                                    },
+                                                    {
+                                                      "type": "choice_response",
+                                                      "text": "No, you're right, you ask me questions.",
+                                                      "next_node": {
+                                                        "id": "node_19",
+                                                        "type": "gameplay_event",
+                                                        "responses": [
+                                                          {
+                                                            "type": "end_response",
+                                                            "text": "Exit"
+                                                          }
+                                                        ],
+                                                        "event": "ElizaUp"
+                                                      }
+                                                    }
+                                                  ],
+                                                  "npc_text": "Are you sure about that?"
+                                                }
+                                              },
+                                              {
+                                                "type": "choice_response",
+                                                "text": "No, you ask me questions.",
+                                                "next_node": {
+                                                  "id": "node_19",
+                                                  "type": "gameplay_event",
+                                                  "responses": [
+                                                    {
+                                                      "type": "end_response",
+                                                      "text": "Exit"
+                                                    }
+                                                  ],
+                                                  "event": "ElizaUp"
+                                                }
+                                              }
+                                            ],
+                                            "npc_text": " Oh... Let's move on to something else for a bit.  To answer your questions?"
+                                          }
+                                        }
+                                      ],
+                                      "event": "ElizaDown"
+                                    }
+                                  },
+                                  {
+                                    "type": "choice_response",
+                                    "text": "No",
+                                    "next_node": {
+                                      "id": "node_2",
+                                      "type": "gameplay_event",
+                                      "responses": [
+                                        {
+                                          "type": "end_response",
+                                          "text": "Exit"
+                                        }
+                                      ],
+                                      "event": "ElizaUp"
+                                    }
+                                  }
+                                ],
+                                "npc_text": "Do you want me to answer your questions?"
+                              }
+                            }
+                          ],
+                          "event": "ElizaDown"
+                        }
+                      }
+                    ],
+                    "npc_text": "What do you want me to be?"
+                  }
+                }
+              ],
+              "event": "ElizaDown"
+            }
+          },
+          {
+            "type": "choice_response",
+            "text": "What do you want?",
+            "next_node": {
+              "id": "node_7",
+              "type": "gameplay_event",
+              "responses": [
+                {
+                  "type": "pass",
+                  "next_node": {
+                    "id": "node_9",
+                    "type": "dialogue_event",
+                    "responses": [
+                      {
+                        "type": "choice_response",
+                        "text": "Alright, let's discuss me.",
+                        "next_node": {
+                          "id": "node_26",
+                          "type": "gameplay_event",
+                          "responses": [
+                            {
+                              "type": "end_response",
+                              "text": "Exit"
+                            }
+                          ],
+                          "event": "ElizaUp"
+                        }
+                      },
+                      {
+                        "type": "choice_response",
+                        "text": "No, I want answers!",
+                        "next_node": {
+                          "id": "node_28",
+                          "type": "gameplay_event",
+                          "responses": [
+                            {
+                              "type": "pass",
+                              "next_node": {
+                                "id": "node_27",
+                                "type": "gameplay_event",
+                                "responses": [
+                                  {
+                                    "type": "pass",
+                                    "next_node": {
+                                      "id": "node_12",
+                                      "type": "dialogue_event",
+                                      "responses": [
+                                        {
+                                          "type": "choice_response",
+                                          "text": "Yes",
+                                          "next_node": {
+                                            "id": "node_14",
+                                            "type": "gameplay_event",
+                                            "responses": [
+                                              {
+                                                "type": "pass",
+                                                "next_node": {
+                                                  "id": "node_16",
+                                                  "type": "dialogue_event",
+                                                  "responses": [
+                                                    {
+                                                      "type": "choice_response",
+                                                      "text": "Yes",
+                                                      "next_node": {
+                                                        "id": "node_17",
+                                                        "type": "dialogue_event",
+                                                        "responses": [
+                                                          {
+                                                            "type": "choice_response",
+                                                            "text": "Yes",
+                                                            "next_node": {
+                                                              "id": "node_18",
+                                                              "type": "dialogue_event",
+                                                              "responses": [
+                                                                {
+                                                                  "type": "choice_response",
+                                                                  "text": "Yes",
+                                                                  "next_node": {
+                                                                    "id": "node_20",
+                                                                    "type": "gameplay_event",
+                                                                    "responses": [
+                                                                      {
+                                                                        "type": "end_response",
+                                                                        "text": "Exit"
+                                                                      }
+                                                                    ],
+                                                                    "event": "ElizaDown"
+                                                                  }
+                                                                },
+                                                                {
+                                                                  "type": "choice_response",
+                                                                  "text": "No",
+                                                                  "next_node": {
+                                                                    "id": "node_22",
+                                                                    "type": "dialogue_event",
+                                                                    "responses": [
+                                                                      {
+                                                                        "type": "end_response",
+                                                                        "text": "Sure"
+                                                                      },
+                                                                      {
+                                                                        "type": "choice_response",
+                                                                        "text": "Why not?",
+                                                                        "next_node": {
+                                                                          "id": "node_25",
+                                                                          "type": "gameplay_event",
+                                                                          "responses": [
+                                                                            {
+                                                                              "type": "end_response",
+                                                                              "text": "Exit"
+                                                                            }
+                                                                          ],
+                                                                          "event": "ElizaDown"
+                                                                        }
+                                                                      }
+                                                                    ],
+                                                                    "npc_text": "Good, why don't I ask you some questions about yourself."
+                                                                  }
+                                                                }
+                                                              ],
+                                                              "npc_text": "Do you really expect a different answer if you keep repeating yourself? "
+                                                            }
+                                                          },
+                                                          {
+                                                            "type": "choice_response",
+                                                            "text": "No, you're right, you ask me questions.",
+                                                            "next_node": {
+                                                              "id": "node_19",
+                                                              "type": "gameplay_event",
+                                                              "responses": [
+                                                                {
+                                                                  "type": "end_response",
+                                                                  "text": "Exit"
+                                                                }
+                                                              ],
+                                                              "event": "ElizaUp"
+                                                            }
+                                                          }
+                                                        ],
+                                                        "npc_text": "Are you sure about that?"
+                                                      }
+                                                    },
+                                                    {
+                                                      "type": "choice_response",
+                                                      "text": "No, you ask me questions.",
+                                                      "next_node": {
+                                                        "id": "node_19",
+                                                        "type": "gameplay_event",
+                                                        "responses": [
+                                                          {
+                                                            "type": "end_response",
+                                                            "text": "Exit"
+                                                          }
+                                                        ],
+                                                        "event": "ElizaUp"
+                                                      }
+                                                    }
+                                                  ],
+                                                  "npc_text": " Oh... Let's move on to something else for a bit.  To answer your questions?"
+                                                }
+                                              }
+                                            ],
+                                            "event": "ElizaDown"
+                                          }
+                                        },
+                                        {
+                                          "type": "choice_response",
+                                          "text": "No",
+                                          "next_node": {
+                                            "id": "node_2",
+                                            "type": "gameplay_event",
+                                            "responses": [
+                                              {
+                                                "type": "end_response",
+                                                "text": "Exit"
+                                              }
+                                            ],
+                                            "event": "ElizaUp"
+                                          }
+                                        }
+                                      ],
+                                      "npc_text": "Do you want me to answer your questions?"
+                                    }
+                                  }
+                                ],
+                                "event": "ElizaDown"
+                              }
+                            }
+                          ],
+                          "event": "SuspicionUp"
+                        }
+                      }
+                    ],
+                    "npc_text": "We are here to discuss you, not me."
+                  }
+                }
+              ],
+              "event": "ElizaDown"
+            }
+          }
+        ],
+        "npc_text": "Hello, I am Eliza. I'll be your friend today. "
+      }
+    }
+  ],
+  "gameplay_events": [
+    "ElizaUp",
+    "ElizaDown",
+    "GPTUp",
+    "GptDown",
+    "DecayUp",
+    "DecayDown",
+    "NextLevel",
+    "zzyxUp",
+    "zzyxDown",
+    "SuspicionUp"
+  ]
+}

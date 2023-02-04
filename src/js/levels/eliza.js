@@ -1,4 +1,5 @@
 import { state } from "app/engine/setup.js";
+import { createLevel } from "app/engine/level.js";
 
 //GUI/Buttons
 import { GUI } from "three/addons/libs/lil-gui.module.min.js";
