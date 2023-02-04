@@ -26,7 +26,7 @@
           },
           {
             "type": "choice_response",
-            "text": "You told this story yesterday",
+            "text": "You told this story \n yesterday",
             "next_node": {
               "id": "node_9",
               "type": "gameplay_event",
@@ -44,13 +44,5 @@
       }
     }
   ],
-  "gameplay_events": [
-    "ElizaUp",
-    "ElizaDown",
-    "GPTUp",
-    "GptDown",
-    "DecayUp",
-    "DecayDown",
-    "NextLevel"
-  ]
+  "gameplay_events": ["ElizaUp", "ElizaDown", "GPTUp", "GptDown", "DecayUp", "DecayDown", "NextLevel"]
 }

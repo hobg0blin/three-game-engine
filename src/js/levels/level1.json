@@ -7,7 +7,7 @@
       "type": "pass",
       "next": {
         "id": "node_7",
-        "type": "dialogue_event",
+    "type": "dialogue_event",
         "responses": [
           {
             "type": "choice_response",
@@ -57,7 +57,7 @@
                               }
                             }
                           ],
-                          "npc_text": "it is a monument to everything that ever was, \\n a cemetery of ideas."
+                          "npc_text": "it is a monument to everything that ever was, a cemetery of ideas."
                         }
                       }
                     ],
