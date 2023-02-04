@@ -15,9 +15,8 @@ let ratio = {};
 function spriteButton(buttonObj, params) {
   //		view = params.view != undefined ? params.view : { width: window.innerWidth, height: window.innerHeight, camera: params.camera }
   let button = spriteDialogueBox(params.text, world);
-  console.log("button: ", button);
-  console.log("button position: ", button.position);
   button.position.x = params.x;
+  button.position.y = params.y;
 
   button.params = params;
   buttons.push(button);
@@ -34,11 +33,11 @@ function checkIntersection(x, y) {
     //FIXME: it is extremely stupid to have this core game logic in here, at the very least need to put these functions into something in engine and import them
     // probably ought to be getters and setters as well rather than directly modifying the object
     if (intersects.length > 0) {
-      console.log("intersected button: ", button);
       if (button.params.nextNode == undefined) {
         console.log("YOU AINT GOT NOTHIN HERE YET!");
       }
       if (button.params.nextNode.event != undefined) {
+        console.log("next node", button.params.nextNode);
         switch (button.params.nextNode.event) {
           case "ElizaUp":
             console.log("eliza up");
@@ -77,7 +76,12 @@ function checkIntersection(x, y) {
       }
       if (button.params.nextNode.event != "NextLevel") {
         if (button.params.nextNode.responses[0].type == "pass") {
-          state.gameState.currentDialogueObject = button.params.nextNode.responses[0].next_node.id;
+          if (button.params.nextNode.responses[0].next_node.type == "jump_node") {
+            console.log("jump node!");
+            state.gameState.currentDialogueObject = button.params.nextNode.responses[0].next_node.jump_to;
+          } else {
+            state.gameState.currentDialogueObject = button.params.nextNode.responses[0].next_node.id;
+          }
           state.gameState.currentLevel.redraw();
         } else {
           state.gameState.currentDialogueObject = button.params.nextNode.id;

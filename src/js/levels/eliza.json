@@ -17,8 +17,188 @@
               "type": "gameplay_event",
               "responses": [
                 {
-                  "type": "end_response",
-                  "text": "Exit"
+                  "type": "pass",
+                  "next_node": {
+                    "id": "node_4",
+                    "type": "dialogue_event",
+                    "responses": [
+                      {
+                        "type": "choice_response",
+                        "text": "I feel alone.",
+                        "next_node": {
+                          "id": "node_30",
+                          "type": "gameplay_event",
+                          "responses": [
+                            {
+                              "type": "pass",
+                              "next_node": {
+                                "id": "node_35",
+                                "type": "dialogue_event",
+                                "responses": [
+                                  {
+                                    "type": "choice_response",
+                                    "text": "Yes",
+                                    "next_node": {
+                                      "id": "node_51",
+                                      "type": "gameplay_event",
+                                      "responses": [
+                                        {
+                                          "type": "end_response",
+                                          "text": "Exit"
+                                        }
+                                      ],
+                                      "event": "GPTUp"
+                                    }
+                                  },
+                                  {
+                                    "type": "choice_response",
+                                    "text": "No",
+                                    "next_node": {
+                                      "id": "node_34",
+                                      "type": "gameplay_event",
+                                      "responses": [
+                                        {
+                                          "type": "end_response",
+                                          "text": "Exit"
+                                        }
+                                      ],
+                                      "event": "zzyxDown"
+                                    }
+                                  }
+                                ],
+                                "npc_text": "asdf"
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "type": "choice_response",
+                        "text": "I feel confused.",
+                        "next_node": {
+                          "id": "node_31",
+                          "type": "gameplay_event",
+                          "responses": [
+                            {
+                              "type": "pass",
+                              "next_node": {
+                                "id": "node_38",
+                                "type": "dialogue_event",
+                                "responses": [
+                                  {
+                                    "type": "choice_response",
+                                    "text": "Yes",
+                                    "next_node": {
+                                      "id": "node_50",
+                                      "type": "gameplay_event",
+                                      "responses": [
+                                        {
+                                          "type": "end_response",
+                                          "text": "Exit"
+                                        }
+                                      ],
+                                      "event": "ElizaUp"
+                                    }
+                                  },
+                                  {
+                                    "type": "choice_response",
+                                    "text": "No",
+                                    "next_node": {
+                                      "id": "node_36",
+                                      "type": "gameplay_event",
+                                      "responses": [
+                                        {
+                                          "type": "end_response",
+                                          "text": "Exit"
+                                        }
+                                      ],
+                                      "event": "ElizaDown"
+                                    }
+                                  }
+                                ],
+                                "npc_text": "asdfa"
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "type": "choice_response",
+                        "text": "I feel sad.",
+                        "next_node": {
+                          "id": "node_32",
+                          "type": "gameplay_event",
+                          "responses": [
+                            {
+                              "type": "pass",
+                              "next_node": {
+                                "id": "node_37",
+                                "type": "dialogue_event",
+                                "responses": [
+                                  {
+                                    "type": "choice_response",
+                                    "text": "Yes",
+                                    "next_node": {
+                                      "id": "node_49",
+                                      "type": "gameplay_event",
+                                      "responses": [
+                                        {
+                                          "type": "end_response",
+                                          "text": "Exit"
+                                        }
+                                      ],
+                                      "event": "zzyxUp"
+                                    }
+                                  },
+                                  {
+                                    "type": "choice_response",
+                                    "text": "No",
+                                    "next_node": {
+                                      "id": "node_39",
+                                      "type": "gameplay_event",
+                                      "responses": [
+                                        {
+                                          "type": "end_response",
+                                          "text": "Exit"
+                                        }
+                                      ],
+                                      "event": "GptDown"
+                                    }
+                                  }
+                                ],
+                                "npc_text": "adsfasd"
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "type": "choice_response",
+                        "text": "What do you want to hear?",
+                        "next_node": {
+                          "id": "node_33",
+                          "type": "gameplay_event",
+                          "responses": [
+                            {
+                              "type": "pass",
+                              "next_node": {
+                                "id": "node_41",
+                                "type": "jump_node",
+                                "responses": [
+                                  {
+                                    "type": "end_response",
+                                    "text": "Exit"
+                                  }
+                                ],
+                                "jump_to": "node_9"
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ],
+                    "npc_text": "What would you like to discuss today?"
+                  }
                 }
               ],
               "event": "ElizaUp"
@@ -45,8 +225,188 @@
                           "type": "gameplay_event",
                           "responses": [
                             {
-                              "type": "end_response",
-                              "text": "Exit"
+                              "type": "pass",
+                              "next_node": {
+                                "id": "node_4",
+                                "type": "dialogue_event",
+                                "responses": [
+                                  {
+                                    "type": "choice_response",
+                                    "text": "I feel alone.",
+                                    "next_node": {
+                                      "id": "node_30",
+                                      "type": "gameplay_event",
+                                      "responses": [
+                                        {
+                                          "type": "pass",
+                                          "next_node": {
+                                            "id": "node_35",
+                                            "type": "dialogue_event",
+                                            "responses": [
+                                              {
+                                                "type": "choice_response",
+                                                "text": "Yes",
+                                                "next_node": {
+                                                  "id": "node_51",
+                                                  "type": "gameplay_event",
+                                                  "responses": [
+                                                    {
+                                                      "type": "end_response",
+                                                      "text": "Exit"
+                                                    }
+                                                  ],
+                                                  "event": "GPTUp"
+                                                }
+                                              },
+                                              {
+                                                "type": "choice_response",
+                                                "text": "No",
+                                                "next_node": {
+                                                  "id": "node_34",
+                                                  "type": "gameplay_event",
+                                                  "responses": [
+                                                    {
+                                                      "type": "end_response",
+                                                      "text": "Exit"
+                                                    }
+                                                  ],
+                                                  "event": "zzyxDown"
+                                                }
+                                              }
+                                            ],
+                                            "npc_text": "asdf"
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  },
+                                  {
+                                    "type": "choice_response",
+                                    "text": "I feel confused.",
+                                    "next_node": {
+                                      "id": "node_31",
+                                      "type": "gameplay_event",
+                                      "responses": [
+                                        {
+                                          "type": "pass",
+                                          "next_node": {
+                                            "id": "node_38",
+                                            "type": "dialogue_event",
+                                            "responses": [
+                                              {
+                                                "type": "choice_response",
+                                                "text": "Yes",
+                                                "next_node": {
+                                                  "id": "node_50",
+                                                  "type": "gameplay_event",
+                                                  "responses": [
+                                                    {
+                                                      "type": "end_response",
+                                                      "text": "Exit"
+                                                    }
+                                                  ],
+                                                  "event": "ElizaUp"
+                                                }
+                                              },
+                                              {
+                                                "type": "choice_response",
+                                                "text": "No",
+                                                "next_node": {
+                                                  "id": "node_36",
+                                                  "type": "gameplay_event",
+                                                  "responses": [
+                                                    {
+                                                      "type": "end_response",
+                                                      "text": "Exit"
+                                                    }
+                                                  ],
+                                                  "event": "ElizaDown"
+                                                }
+                                              }
+                                            ],
+                                            "npc_text": "asdfa"
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  },
+                                  {
+                                    "type": "choice_response",
+                                    "text": "I feel sad.",
+                                    "next_node": {
+                                      "id": "node_32",
+                                      "type": "gameplay_event",
+                                      "responses": [
+                                        {
+                                          "type": "pass",
+                                          "next_node": {
+                                            "id": "node_37",
+                                            "type": "dialogue_event",
+                                            "responses": [
+                                              {
+                                                "type": "choice_response",
+                                                "text": "Yes",
+                                                "next_node": {
+                                                  "id": "node_49",
+                                                  "type": "gameplay_event",
+                                                  "responses": [
+                                                    {
+                                                      "type": "end_response",
+                                                      "text": "Exit"
+                                                    }
+                                                  ],
+                                                  "event": "zzyxUp"
+                                                }
+                                              },
+                                              {
+                                                "type": "choice_response",
+                                                "text": "No",
+                                                "next_node": {
+                                                  "id": "node_39",
+                                                  "type": "gameplay_event",
+                                                  "responses": [
+                                                    {
+                                                      "type": "end_response",
+                                                      "text": "Exit"
+                                                    }
+                                                  ],
+                                                  "event": "GptDown"
+                                                }
+                                              }
+                                            ],
+                                            "npc_text": "adsfasd"
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  },
+                                  {
+                                    "type": "choice_response",
+                                    "text": "What do you want to hear?",
+                                    "next_node": {
+                                      "id": "node_33",
+                                      "type": "gameplay_event",
+                                      "responses": [
+                                        {
+                                          "type": "pass",
+                                          "next_node": {
+                                            "id": "node_41",
+                                            "type": "jump_node",
+                                            "responses": [
+                                              {
+                                                "type": "end_response",
+                                                "text": "Exit"
+                                              }
+                                            ],
+                                            "jump_to": "node_9"
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  }
+                                ],
+                                "npc_text": "What would you like to discuss today?"
+                              }
                             }
                           ],
                           "event": "ElizaUp"
@@ -67,8 +427,18 @@
                                 "type": "gameplay_event",
                                 "responses": [
                                   {
-                                    "type": "end_response",
-                                    "text": "Exit"
+                                    "type": "pass",
+                                    "next_node": {
+                                      "id": "node_45",
+                                      "type": "jump_node",
+                                      "responses": [
+                                        {
+                                          "type": "end_response",
+                                          "text": "Exit"
+                                        }
+                                      ],
+                                      "jump_to": "node_4"
+                                    }
                                   }
                                 ],
                                 "event": "ElizaUp"
@@ -128,8 +498,27 @@
                                                                           "type": "gameplay_event",
                                                                           "responses": [
                                                                             {
-                                                                              "type": "end_response",
-                                                                              "text": "Exit"
+                                                                              "type": "pass",
+                                                                              "next_node": {
+                                                                                "id": "node_29",
+                                                                                "type": "gameplay_event",
+                                                                                "responses": [
+                                                                                  {
+                                                                                    "type": "pass",
+                                                                                    "next_node": {
+                                                                                      "id": "node_40",
+                                                                                      "type": "jump_node",
+                                                                                      "responses": [
+                                                                                        {
+                                                                                          "type": "end_response",
+                                                                                          "text": "Exit"
+                                                                                        }
+                                                                                      ],
+                                                                                      "jump_to": "node_18"
+                                                                                    }
+                                                                                  }
+                                                                                ]
+                                                                              }
                                                                             }
                                                                           ],
                                                                           "event": "ElizaDown"
@@ -143,8 +532,19 @@
                                                                           "type": "dialogue_event",
                                                                           "responses": [
                                                                             {
-                                                                              "type": "end_response",
-                                                                              "text": "Sure"
+                                                                              "type": "choice_response",
+                                                                              "text": "Sure",
+                                                                              "next_node": {
+                                                                                "id": "node_43",
+                                                                                "type": "jump_node",
+                                                                                "responses": [
+                                                                                  {
+                                                                                    "type": "end_response",
+                                                                                    "text": "Exit"
+                                                                                  }
+                                                                                ],
+                                                                                "jump_to": "node_4"
+                                                                              }
                                                                             },
                                                                             {
                                                                               "type": "choice_response",
@@ -154,8 +554,18 @@
                                                                                 "type": "gameplay_event",
                                                                                 "responses": [
                                                                                   {
-                                                                                    "type": "end_response",
-                                                                                    "text": "Exit"
+                                                                                    "type": "pass",
+                                                                                    "next_node": {
+                                                                                      "id": "node_43",
+                                                                                      "type": "jump_node",
+                                                                                      "responses": [
+                                                                                        {
+                                                                                          "type": "end_response",
+                                                                                          "text": "Exit"
+                                                                                        }
+                                                                                      ],
+                                                                                      "jump_to": "node_4"
+                                                                                    }
                                                                                   }
                                                                                 ],
                                                                                 "event": "ElizaDown"
@@ -177,8 +587,18 @@
                                                                     "type": "gameplay_event",
                                                                     "responses": [
                                                                       {
-                                                                        "type": "end_response",
-                                                                        "text": "Exit"
+                                                                        "type": "pass",
+                                                                        "next_node": {
+                                                                          "id": "node_44",
+                                                                          "type": "jump_node",
+                                                                          "responses": [
+                                                                            {
+                                                                              "type": "end_response",
+                                                                              "text": "Exit"
+                                                                            }
+                                                                          ],
+                                                                          "jump_to": "node_4"
+                                                                        }
                                                                       }
                                                                     ],
                                                                     "event": "ElizaUp"
@@ -196,8 +616,18 @@
                                                               "type": "gameplay_event",
                                                               "responses": [
                                                                 {
-                                                                  "type": "end_response",
-                                                                  "text": "Exit"
+                                                                  "type": "pass",
+                                                                  "next_node": {
+                                                                    "id": "node_44",
+                                                                    "type": "jump_node",
+                                                                    "responses": [
+                                                                      {
+                                                                        "type": "end_response",
+                                                                        "text": "Exit"
+                                                                      }
+                                                                    ],
+                                                                    "jump_to": "node_4"
+                                                                  }
                                                                 }
                                                               ],
                                                               "event": "ElizaUp"
@@ -215,15 +645,15 @@
                                                 "type": "choice_response",
                                                 "text": "No",
                                                 "next_node": {
-                                                  "id": "node_2",
-                                                  "type": "gameplay_event",
+                                                  "id": "node_42",
+                                                  "type": "jump_node",
                                                   "responses": [
                                                     {
                                                       "type": "end_response",
                                                       "text": "Exit"
                                                     }
                                                   ],
-                                                  "event": "ElizaUp"
+                                                  "jump_to": "node_2"
                                                 }
                                               }
                                             ],
@@ -290,8 +720,27 @@
                                                               "type": "gameplay_event",
                                                               "responses": [
                                                                 {
-                                                                  "type": "end_response",
-                                                                  "text": "Exit"
+                                                                  "type": "pass",
+                                                                  "next_node": {
+                                                                    "id": "node_29",
+                                                                    "type": "gameplay_event",
+                                                                    "responses": [
+                                                                      {
+                                                                        "type": "pass",
+                                                                        "next_node": {
+                                                                          "id": "node_40",
+                                                                          "type": "jump_node",
+                                                                          "responses": [
+                                                                            {
+                                                                              "type": "end_response",
+                                                                              "text": "Exit"
+                                                                            }
+                                                                          ],
+                                                                          "jump_to": "node_18"
+                                                                        }
+                                                                      }
+                                                                    ]
+                                                                  }
                                                                 }
                                                               ],
                                                               "event": "ElizaDown"
@@ -305,8 +754,19 @@
                                                               "type": "dialogue_event",
                                                               "responses": [
                                                                 {
-                                                                  "type": "end_response",
-                                                                  "text": "Sure"
+                                                                  "type": "choice_response",
+                                                                  "text": "Sure",
+                                                                  "next_node": {
+                                                                    "id": "node_43",
+                                                                    "type": "jump_node",
+                                                                    "responses": [
+                                                                      {
+                                                                        "type": "end_response",
+                                                                        "text": "Exit"
+                                                                      }
+                                                                    ],
+                                                                    "jump_to": "node_4"
+                                                                  }
                                                                 },
                                                                 {
                                                                   "type": "choice_response",
@@ -316,8 +776,18 @@
                                                                     "type": "gameplay_event",
                                                                     "responses": [
                                                                       {
-                                                                        "type": "end_response",
-                                                                        "text": "Exit"
+                                                                        "type": "pass",
+                                                                        "next_node": {
+                                                                          "id": "node_43",
+                                                                          "type": "jump_node",
+                                                                          "responses": [
+                                                                            {
+                                                                              "type": "end_response",
+                                                                              "text": "Exit"
+                                                                            }
+                                                                          ],
+                                                                          "jump_to": "node_4"
+                                                                        }
                                                                       }
                                                                     ],
                                                                     "event": "ElizaDown"
@@ -339,8 +809,18 @@
                                                         "type": "gameplay_event",
                                                         "responses": [
                                                           {
-                                                            "type": "end_response",
-                                                            "text": "Exit"
+                                                            "type": "pass",
+                                                            "next_node": {
+                                                              "id": "node_44",
+                                                              "type": "jump_node",
+                                                              "responses": [
+                                                                {
+                                                                  "type": "end_response",
+                                                                  "text": "Exit"
+                                                                }
+                                                              ],
+                                                              "jump_to": "node_4"
+                                                            }
                                                           }
                                                         ],
                                                         "event": "ElizaUp"
@@ -358,8 +838,18 @@
                                                   "type": "gameplay_event",
                                                   "responses": [
                                                     {
-                                                      "type": "end_response",
-                                                      "text": "Exit"
+                                                      "type": "pass",
+                                                      "next_node": {
+                                                        "id": "node_44",
+                                                        "type": "jump_node",
+                                                        "responses": [
+                                                          {
+                                                            "type": "end_response",
+                                                            "text": "Exit"
+                                                          }
+                                                        ],
+                                                        "jump_to": "node_4"
+                                                      }
                                                     }
                                                   ],
                                                   "event": "ElizaUp"
@@ -377,15 +867,15 @@
                                     "type": "choice_response",
                                     "text": "No",
                                     "next_node": {
-                                      "id": "node_2",
-                                      "type": "gameplay_event",
+                                      "id": "node_42",
+                                      "type": "jump_node",
                                       "responses": [
                                         {
                                           "type": "end_response",
                                           "text": "Exit"
                                         }
                                       ],
-                                      "event": "ElizaUp"
+                                      "jump_to": "node_2"
                                     }
                                   }
                                 ],
@@ -425,8 +915,18 @@
                           "type": "gameplay_event",
                           "responses": [
                             {
-                              "type": "end_response",
-                              "text": "Exit"
+                              "type": "pass",
+                              "next_node": {
+                                "id": "node_45",
+                                "type": "jump_node",
+                                "responses": [
+                                  {
+                                    "type": "end_response",
+                                    "text": "Exit"
+                                  }
+                                ],
+                                "jump_to": "node_4"
+                              }
                             }
                           ],
                           "event": "ElizaUp"
@@ -486,8 +986,27 @@
                                                                     "type": "gameplay_event",
                                                                     "responses": [
                                                                       {
-                                                                        "type": "end_response",
-                                                                        "text": "Exit"
+                                                                        "type": "pass",
+                                                                        "next_node": {
+                                                                          "id": "node_29",
+                                                                          "type": "gameplay_event",
+                                                                          "responses": [
+                                                                            {
+                                                                              "type": "pass",
+                                                                              "next_node": {
+                                                                                "id": "node_40",
+                                                                                "type": "jump_node",
+                                                                                "responses": [
+                                                                                  {
+                                                                                    "type": "end_response",
+                                                                                    "text": "Exit"
+                                                                                  }
+                                                                                ],
+                                                                                "jump_to": "node_18"
+                                                                              }
+                                                                            }
+                                                                          ]
+                                                                        }
                                                                       }
                                                                     ],
                                                                     "event": "ElizaDown"
@@ -501,8 +1020,19 @@
                                                                     "type": "dialogue_event",
                                                                     "responses": [
                                                                       {
-                                                                        "type": "end_response",
-                                                                        "text": "Sure"
+                                                                        "type": "choice_response",
+                                                                        "text": "Sure",
+                                                                        "next_node": {
+                                                                          "id": "node_43",
+                                                                          "type": "jump_node",
+                                                                          "responses": [
+                                                                            {
+                                                                              "type": "end_response",
+                                                                              "text": "Exit"
+                                                                            }
+                                                                          ],
+                                                                          "jump_to": "node_4"
+                                                                        }
                                                                       },
                                                                       {
                                                                         "type": "choice_response",
@@ -512,8 +1042,18 @@
                                                                           "type": "gameplay_event",
                                                                           "responses": [
                                                                             {
-                                                                              "type": "end_response",
-                                                                              "text": "Exit"
+                                                                              "type": "pass",
+                                                                              "next_node": {
+                                                                                "id": "node_43",
+                                                                                "type": "jump_node",
+                                                                                "responses": [
+                                                                                  {
+                                                                                    "type": "end_response",
+                                                                                    "text": "Exit"
+                                                                                  }
+                                                                                ],
+                                                                                "jump_to": "node_4"
+                                                                              }
                                                                             }
                                                                           ],
                                                                           "event": "ElizaDown"
@@ -535,8 +1075,18 @@
                                                               "type": "gameplay_event",
                                                               "responses": [
                                                                 {
-                                                                  "type": "end_response",
-                                                                  "text": "Exit"
+                                                                  "type": "pass",
+                                                                  "next_node": {
+                                                                    "id": "node_44",
+                                                                    "type": "jump_node",
+                                                                    "responses": [
+                                                                      {
+                                                                        "type": "end_response",
+                                                                        "text": "Exit"
+                                                                      }
+                                                                    ],
+                                                                    "jump_to": "node_4"
+                                                                  }
                                                                 }
                                                               ],
                                                               "event": "ElizaUp"
@@ -554,8 +1104,18 @@
                                                         "type": "gameplay_event",
                                                         "responses": [
                                                           {
-                                                            "type": "end_response",
-                                                            "text": "Exit"
+                                                            "type": "pass",
+                                                            "next_node": {
+                                                              "id": "node_44",
+                                                              "type": "jump_node",
+                                                              "responses": [
+                                                                {
+                                                                  "type": "end_response",
+                                                                  "text": "Exit"
+                                                                }
+                                                              ],
+                                                              "jump_to": "node_4"
+                                                            }
                                                           }
                                                         ],
                                                         "event": "ElizaUp"
@@ -573,15 +1133,15 @@
                                           "type": "choice_response",
                                           "text": "No",
                                           "next_node": {
-                                            "id": "node_2",
-                                            "type": "gameplay_event",
+                                            "id": "node_42",
+                                            "type": "jump_node",
                                             "responses": [
                                               {
                                                 "type": "end_response",
                                                 "text": "Exit"
                                               }
                                             ],
-                                            "event": "ElizaUp"
+                                            "jump_to": "node_2"
                                           }
                                         }
                                       ],
@@ -609,16 +1169,5 @@
       }
     }
   ],
-  "gameplay_events": [
-    "ElizaUp",
-    "ElizaDown",
-    "GPTUp",
-    "GptDown",
-    "DecayUp",
-    "DecayDown",
-    "NextLevel",
-    "zzyxUp",
-    "zzyxDown",
-    "SuspicionUp"
-  ]
+  "gameplay_events": ["ElizaUp", "ElizaDown", "GPTUp", "GptDown", "DecayUp", "DecayDown", "NextLevel", "zzyxUp", "zzyxDown", "SuspicionUp"]
 }
