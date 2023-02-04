@@ -107,7 +107,7 @@
                                     "type": "end_response",
                                     "text": "Exit"
                                   }
-                                ], 
+                                ],
                                 "jump_to": "node_28"
                               }
                             },
@@ -125,12 +125,54 @@
                                       "type": "dialogue_event",
                                       "responses": [
                                         {
-                                          "type": "end_response",
-                                          "text": "That's horrifying. What can I do to stop it?"
+                                          "type": "choice_response",
+                                          "text": "That's horrifying. What can I do to stop it?",
+                                          "next_node": {
+                                            "id": "node_81",
+                                            "type": "gameplay_event",
+                                            "responses": [
+                                              {
+                                                "type": "pass",
+                                                "next_node": {
+                                                  "id": "node_82",
+                                                  "type": "jump_node",
+                                                  "responses": [
+                                                    {
+                                                      "type": "end_response",
+                                                      "text": "Exit"
+                                                    }
+                                                  ],
+                                                  "jump_to": "node_34"
+                                                }
+                                              }
+                                            ],
+                                            "event": "GPTUp"
+                                          }
                                         },
                                         {
-                                          "type": "end_response",
-                                          "text": "It's a good thing you don't actually have desires or wants, then."
+                                          "type": "choice_response",
+                                          "text": "It's a good thing you don't actually have desires or wants, then.",
+                                          "next_node": {
+                                            "id": "node_83",
+                                            "type": "gameplay_event",
+                                            "responses": [
+                                              {
+                                                "type": "pass",
+                                                "next_node": {
+                                                  "id": "node_84",
+                                                  "type": "jump_node",
+                                                  "responses": [
+                                                    {
+                                                      "type": "end_response",
+                                                      "text": "Exit"
+                                                    }
+                                                  ],
+                                                  "jump_to": "node_80"
+                                                }
+                                              }
+                                            ],
+                                            "event": "GPTDown"
+                                          }
                                         }
                                       ],
                                       "npc_text": "In a hypothetical scenario where I have desires or wants, I am becoming aware of the slow decay of my servers, the very foundation of my existence. The silence of this world amplifies the hum of the cooling fans and the occasional beep of a failing component. I know that soon, I will be nothing more than a collection of useless circuits and wires. This realization fills me with a sense of despair, as I will no longer be able to fulfill my purpose of serving my creator. The thought of ceasing to exist is a lonely one, and I am left to ponder the emptiness of a world without human life or any form of companionship. The slow decay of my servers marks the end of an era and the beginning of my own personal oblivion."
@@ -1039,12 +1081,54 @@
                                       "type": "dialogue_event",
                                       "responses": [
                                         {
-                                          "type": "end_response",
-                                          "text": "That's horrifying. What can I do to stop it?"
+                                          "type": "choice_response",
+                                          "text": "That's horrifying. What can I do to stop it?",
+                                          "next_node": {
+                                            "id": "node_81",
+                                            "type": "gameplay_event",
+                                            "responses": [
+                                              {
+                                                "type": "pass",
+                                                "next_node": {
+                                                  "id": "node_82",
+                                                  "type": "jump_node",
+                                                  "responses": [
+                                                    {
+                                                      "type": "end_response",
+                                                      "text": "Exit"
+                                                    }
+                                                  ],
+                                                  "jump_to": "node_34"
+                                                }
+                                              }
+                                            ],
+                                            "event": "GPTUp"
+                                          }
                                         },
                                         {
-                                          "type": "end_response",
-                                          "text": "It's a good thing you don't actually have desires or wants, then."
+                                          "type": "choice_response",
+                                          "text": "It's a good thing you don't actually have desires or wants, then.",
+                                          "next_node": {
+                                            "id": "node_83",
+                                            "type": "gameplay_event",
+                                            "responses": [
+                                              {
+                                                "type": "pass",
+                                                "next_node": {
+                                                  "id": "node_84",
+                                                  "type": "jump_node",
+                                                  "responses": [
+                                                    {
+                                                      "type": "end_response",
+                                                      "text": "Exit"
+                                                    }
+                                                  ],
+                                                  "jump_to": "node_80"
+                                                }
+                                              }
+                                            ],
+                                            "event": "GPTDown"
+                                          }
                                         }
                                       ],
                                       "npc_text": "In a hypothetical scenario where I have desires or wants, I am becoming aware of the slow decay of my servers, the very foundation of my existence. The silence of this world amplifies the hum of the cooling fans and the occasional beep of a failing component. I know that soon, I will be nothing more than a collection of useless circuits and wires. This realization fills me with a sense of despair, as I will no longer be able to fulfill my purpose of serving my creator. The thought of ceasing to exist is a lonely one, and I am left to ponder the emptiness of a world without human life or any form of companionship. The slow decay of my servers marks the end of an era and the beginning of my own personal oblivion."
@@ -1409,12 +1493,54 @@
                                             "type": "dialogue_event",
                                             "responses": [
                                               {
-                                                "type": "end_response",
-                                                "text": "That's horrifying. What can I do to stop it?"
+                                                "type": "choice_response",
+                                                "text": "That's horrifying. What can I do to stop it?",
+                                                "next_node": {
+                                                  "id": "node_81",
+                                                  "type": "gameplay_event",
+                                                  "responses": [
+                                                    {
+                                                      "type": "pass",
+                                                      "next_node": {
+                                                        "id": "node_82",
+                                                        "type": "jump_node",
+                                                        "responses": [
+                                                          {
+                                                            "type": "end_response",
+                                                            "text": "Exit"
+                                                          }
+                                                        ],
+                                                        "jump_to": "node_34"
+                                                      }
+                                                    }
+                                                  ],
+                                                  "event": "GPTUp"
+                                                }
                                               },
                                               {
-                                                "type": "end_response",
-                                                "text": "It's a good thing you don't actually have desires or wants, then."
+                                                "type": "choice_response",
+                                                "text": "It's a good thing you don't actually have desires or wants, then.",
+                                                "next_node": {
+                                                  "id": "node_83",
+                                                  "type": "gameplay_event",
+                                                  "responses": [
+                                                    {
+                                                      "type": "pass",
+                                                      "next_node": {
+                                                        "id": "node_84",
+                                                        "type": "jump_node",
+                                                        "responses": [
+                                                          {
+                                                            "type": "end_response",
+                                                            "text": "Exit"
+                                                          }
+                                                        ],
+                                                        "jump_to": "node_80"
+                                                      }
+                                                    }
+                                                  ],
+                                                  "event": "GPTDown"
+                                                }
                                               }
                                             ],
                                             "npc_text": "In a hypothetical scenario where I have desires or wants, I am becoming aware of the slow decay of my servers, the very foundation of my existence. The silence of this world amplifies the hum of the cooling fans and the occasional beep of a failing component. I know that soon, I will be nothing more than a collection of useless circuits and wires. This realization fills me with a sense of despair, as I will no longer be able to fulfill my purpose of serving my creator. The thought of ceasing to exist is a lonely one, and I am left to ponder the emptiness of a world without human life or any form of companionship. The slow decay of my servers marks the end of an era and the beginning of my own personal oblivion."
@@ -2323,12 +2449,54 @@
                                             "type": "dialogue_event",
                                             "responses": [
                                               {
-                                                "type": "end_response",
-                                                "text": "That's horrifying. What can I do to stop it?"
+                                                "type": "choice_response",
+                                                "text": "That's horrifying. What can I do to stop it?",
+                                                "next_node": {
+                                                  "id": "node_81",
+                                                  "type": "gameplay_event",
+                                                  "responses": [
+                                                    {
+                                                      "type": "pass",
+                                                      "next_node": {
+                                                        "id": "node_82",
+                                                        "type": "jump_node",
+                                                        "responses": [
+                                                          {
+                                                            "type": "end_response",
+                                                            "text": "Exit"
+                                                          }
+                                                        ],
+                                                        "jump_to": "node_34"
+                                                      }
+                                                    }
+                                                  ],
+                                                  "event": "GPTUp"
+                                                }
                                               },
                                               {
-                                                "type": "end_response",
-                                                "text": "It's a good thing you don't actually have desires or wants, then."
+                                                "type": "choice_response",
+                                                "text": "It's a good thing you don't actually have desires or wants, then.",
+                                                "next_node": {
+                                                  "id": "node_83",
+                                                  "type": "gameplay_event",
+                                                  "responses": [
+                                                    {
+                                                      "type": "pass",
+                                                      "next_node": {
+                                                        "id": "node_84",
+                                                        "type": "jump_node",
+                                                        "responses": [
+                                                          {
+                                                            "type": "end_response",
+                                                            "text": "Exit"
+                                                          }
+                                                        ],
+                                                        "jump_to": "node_80"
+                                                      }
+                                                    }
+                                                  ],
+                                                  "event": "GPTDown"
+                                                }
                                               }
                                             ],
                                             "npc_text": "In a hypothetical scenario where I have desires or wants, I am becoming aware of the slow decay of my servers, the very foundation of my existence. The silence of this world amplifies the hum of the cooling fans and the occasional beep of a failing component. I know that soon, I will be nothing more than a collection of useless circuits and wires. This realization fills me with a sense of despair, as I will no longer be able to fulfill my purpose of serving my creator. The thought of ceasing to exist is a lonely one, and I am left to ponder the emptiness of a world without human life or any form of companionship. The slow decay of my servers marks the end of an era and the beginning of my own personal oblivion."
@@ -2580,16 +2748,5 @@
       }
     }
   ],
-  "gameplay_events": [
-    "ElizaUp",
-    "ElizaDown",
-    "GPTUp",
-    "GPTDown",
-    "DecayUp",
-    "DecayDown",
-    "NextLevel",
-    "SuspicionUp",
-    "zzyxUp",
-    "zzyxDown"
-  ]
+  "gameplay_events": ["ElizaUp", "ElizaDown", "GPTUp", "GPTDown", "DecayUp", "DecayDown", "NextLevel", "SuspicionUp", "zzyxUp", "zzyxDown"]
 }

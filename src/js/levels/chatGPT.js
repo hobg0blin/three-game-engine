@@ -8,8 +8,9 @@ import { GUI } from "three/addons/libs/lil-gui.module.min.js";
 import data from "./chatGPT.json";
 // MODELS
 
-// any global variables for this specific scene
-// track pixel direction
+import { environmentPicture } from "../app/ui/environmentPicture";
+// any global variables for this specific
+// track pixel
 let dir = false;
 let pixelSize = 2;
 let textIndex = -1;
@@ -26,6 +27,8 @@ const chatGPT = (world) => {
     // ADD ANY OBJECTS OR VISUAL ELEMENTS
     // SET .doNotDispose = true so they're not deleted when it redraws
     // FIXME: surely there is a way to automate this
+    let sprite = environmentPicture(THREE, "/pictures/GPT.png", world.scene);
+    sprite.doNotDispose = true;
   };
 
   levelTemplate.customAnimations = () => {

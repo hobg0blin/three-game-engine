@@ -15,4 +15,5 @@ export const environmentPicture = (THREE, spritePath, scene) => {
   sprite.position.x = -70;
   sprite.position.y = 20;
   scene.add(sprite);
+  return sprite;
 };

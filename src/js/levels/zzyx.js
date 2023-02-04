@@ -6,6 +6,7 @@ import { GUI } from "three/addons/libs/lil-gui.module.min.js";
 
 // GET THE DIALOGUE DATA
 import data from "./zzyx.json";
+import { environmentPicture } from "../app/ui/environmentPicture";
 // MODELS
 
 // any global variables for this specific scene
@@ -26,6 +27,8 @@ const zzyx = (world) => {
     // ADD ANY OBJECTS OR VISUAL ELEMENTS
     // SET .doNotDispose = true so they're not deleted when it redraws
     // FIXME: surely there is a way to automate this
+    let sprite = environmentPicture(THREE, "/pictures/zzyx.png", world.scene);
+    sprite.doNotDispose = true;
   };
 
   levelTemplate.customAnimations = () => {
