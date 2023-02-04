@@ -65,7 +65,7 @@ function updateSize(renderer) {
 // handle level changes
 
 const levelHandler = (levelIndex) => {
-  let levels = [eliza];
+  let levels = [ test, level1, level2];
   return levels[levelIndex];
 };
 
