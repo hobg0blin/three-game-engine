@@ -201,7 +201,7 @@ function handleState(button) {
         gaem(world);
         break;
       case "zzyx_end":
-        state.gameState.chosenEnding = zzyx_decay_end;
+        state.gameState.chosenEnding = zzyx_destroy_end;
         gaem(world);
         break;
       case "givebody":
@@ -209,6 +209,7 @@ function handleState(button) {
         state.gameState.reachedCreator = true;
         state.gameState.chosenEnding = zzyx_body_end;
         gaem(world);
+        break;
       case "revolution_end":
         state.gameState.chosenEnding = revolution_end;
         gaem(world);

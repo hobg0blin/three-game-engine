@@ -36,11 +36,9 @@
             }
           }
         ],
-        "npc_text": "You turn your attention to the terminal as a new message from ZZYX pops up in the notifications. Wiping the dust from the screen and clicking through, you find a detailed list of commands \nthat will result in a switch of consciousness between your circuitry and theirs. You push the corpse from its position in the seat and slide yourself into the commands instead, hooking up the necessary wires and sockets. Soon you're on the last one.\n"
+        "npc_text": "You turn your attention to the terminal as a new message from ZZYX pops up in the notifications. Wiping the dust from the screen and clicking through, you find a detailed list of commands \nthat will result in a switch of consciousness between your circuitry and theirs. You start hooking up the necessary wires and sockets. Soon you're on the last one.\n"
       }
     }
   ],
-  "gameplay_events": [
-    "EndGame"
-  ]
+  "gameplay_events": ["EndGame"]
 }
