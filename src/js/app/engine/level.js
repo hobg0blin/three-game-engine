@@ -49,7 +49,7 @@ const createLevel = (world, data) => {
 
     const decay = state.playerState.decay;
 
-    if (decay >= 1) {
+    if (decay >= 60) {
       const offset = new Vector3();
       const distance = 1;
 
@@ -68,7 +68,10 @@ const createLevel = (world, data) => {
     }
 
     if (pixelSize != world.pixelSize) {
-      if (world.pixelPass != undefined && clock.getElapsedTime() > lastTick + 0.4) {
+      if (
+        world.pixelPass != undefined &&
+        clock.getElapsedTime() > lastTick + 0.4
+      ) {
         lastTick = clock.getElapsedTime();
         if (dir) {
           pixelSize += (0.0003 * state.playerState.decay) / 1.5;
