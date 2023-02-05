@@ -58,7 +58,6 @@ const setup = (THREE) => {
   let backgroundImg = world.textureLoader.load("/three/studio-bg.jpg"); //        world.scene.background = backgroundImg
   // CONTROLS
   world.controls = createControls(world.camera, world.renderer);
-  //    this.controls.target.set(0, 0, 0)
   // RENDERING
   //
   world.render = (level, world) => {
