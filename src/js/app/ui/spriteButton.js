@@ -4,6 +4,7 @@ import { spriteDialogueBox } from "./spriteDialogueBox";
 import { disposeAll } from "app/engine/level.js";
 import { world, state } from "app/engine/setup.js";
 import { gaem } from "app/main.js";
+import {Howl, Howler} from 'howler';
 
 let raycaster = new Raycaster();
 let buttons = [];
@@ -37,6 +38,14 @@ function checkIntersection(x, y) {
     }
   }
   function handleButton(button) {
+    console.log("HEO")
+    var sound = new Howl({
+      src: ['buttonclick.wav']
+    });
+    
+    sound.play();
+
+
     if (button.params.nextNode == undefined) {
       console.log("YOU AINT GOT NOTHIN HERE YET!");
     }
