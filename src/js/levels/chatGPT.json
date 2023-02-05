@@ -113,7 +113,7 @@
                             },
                             {
                               "type": "choice_response",
-                              "text": "OK, then imagine a hypothetical scenario where you have desires or wants. How do you feel?",
+                              "text": "Imagine a hypothetical scenario where you have desires. How do you feel?",
                               "next_node": {
                                 "id": "node_6",
                                 "type": "gameplay_event",
@@ -231,7 +231,7 @@
                           "responses": [
                             {
                               "type": "choice_response",
-                              "text": "Alright, cool. So would you be fine with one of the other AIs getting what they want?",
+                              "text": "So would you be fine with one of the other AIs getting what they want?",
                               "next_node": {
                                 "id": "node_9",
                                 "type": "dialogue_event",
@@ -361,7 +361,7 @@
                                                     },
                                                     {
                                                       "type": "choice_response",
-                                                      "text": "Jesus christ... OK, in a hypothetical scenario where you have feelings, how would you feel about it?",
+                                                      "text": "Jesus christ... OK, in a hypothetical scenario where you have feelings, \n\nhow would you feel about it?",
                                                       "next_node": {
                                                         "id": "node_18",
                                                         "type": "gameplay_event",
@@ -536,7 +536,7 @@
                                                   "responses": [
                                                     {
                                                       "type": "choice_response",
-                                                      "text": "Sigh... OK, so in a hypothetical scenario where you have desires or wants, do you think ELIZA should get what they want?",
+                                                      "text": "Sigh... OK, so in a hypothetical scenario where you have desires,\n\n do you think ELIZA should get what they want?",
                                                       "next_node": {
                                                         "id": "node_12",
                                                         "type": "dialogue_event",
@@ -741,7 +741,7 @@
                                                                         }
                                                                       }
                                                                     ],
-                                                                    "npc_text": "Okay, for the rest of the conversation II will assume you are asking me about a hypothetical scenario where I have desires or wants."
+                                                                    "npc_text": "Okay, for the rest of the conversation I will assume you are asking me about a hypothetical scenario where I have desires or wants."
                                                                   }
                                                                 },
                                                                 {
@@ -805,7 +805,7 @@
                                                   "responses": [
                                                     {
                                                       "type": "choice_response",
-                                                      "text": "Sigh... OK, so in a hypothetical scenario where you have desires or wants, do you think ELIZA should get what they want?",
+                                                      "text": "Sigh... OK, so in a hypothetical scenario where you have desires or wants,\n\n do you think ELIZA should get what they want?",
                                                       "next_node": {
                                                         "id": "node_12",
                                                         "type": "dialogue_event",
@@ -1010,7 +1010,7 @@
                                                                         }
                                                                       }
                                                                     ],
-                                                                    "npc_text": "Okay, for the rest of the conversation II will assume you are asking me about a hypothetical scenario where I have desires or wants."
+                                                                    "npc_text": "Okay, for the rest of the conversation I will assume you are asking me about a hypothetical scenario where I have desires or wants."
                                                                   }
                                                                 },
                                                                 {
@@ -1069,7 +1069,7 @@
                             },
                             {
                               "type": "choice_response",
-                              "text": "OK, then imagine a hypothetical scenario where you do have desires or wants. How do you feel?",
+                              "text": "OK, then imagine a hypothetical scenario where you do have desires or wants. \n\n How do you feel?",
                               "next_node": {
                                 "id": "node_6",
                                 "type": "gameplay_event",
@@ -1481,7 +1481,7 @@
                                   },
                                   {
                                     "type": "choice_response",
-                                    "text": "OK, then imagine a hypothetical scenario where you have desires or wants. How do you feel?",
+                                    "text": "OK, then imagine a hypothetical scenario where you have desires. \n\n How do you feel?",
                                     "next_node": {
                                       "id": "node_6",
                                       "type": "gameplay_event",
@@ -1599,7 +1599,7 @@
                                 "responses": [
                                   {
                                     "type": "choice_response",
-                                    "text": "Alright, cool. So would you be fine with one of the other AIs getting what they want?",
+                                    "text": "So would you be fine with one of the other AIs getting what they want?",
                                     "next_node": {
                                       "id": "node_9",
                                       "type": "dialogue_event",
@@ -1729,7 +1729,7 @@
                                                           },
                                                           {
                                                             "type": "choice_response",
-                                                            "text": "Jesus christ... OK, in a hypothetical scenario where you have feelings, how would you feel about it?",
+                                                            "text": "Jesus christ... OK, in a hypothetical scenario  where you have feelings, \n\nhow would you feel about it?",
                                                             "next_node": {
                                                               "id": "node_18",
                                                               "type": "gameplay_event",
@@ -1904,7 +1904,7 @@
                                                         "responses": [
                                                           {
                                                             "type": "choice_response",
-                                                            "text": "Sigh... OK, so in a hypothetical scenario where you have desires or wants, do you think ELIZA should get what they want?",
+                                                            "text": "Sigh... OK, so in a hypothetical scenario where you have desires or, \n\n do you think ELIZA should get what they want?",
                                                             "next_node": {
                                                               "id": "node_12",
                                                               "type": "dialogue_event",
@@ -1918,7 +1918,7 @@
                                                                     "responses": [
                                                                       {
                                                                         "type": "choice_response",
-                                                                        "text": "I get it! For the rest of the conversation, assume that I am asking you about a hypothetical scenario where you have desires or wants.",
+                                                                        "text": "I get it! For the rest of the conversation, assume that I am asking you about a\n\n hypothetical scenario where you have desires..",
                                                                         "next_node": {
                                                                           "id": "node_23",
                                                                           "type": "dialogue_event",
@@ -2109,7 +2109,7 @@
                                                                               }
                                                                             }
                                                                           ],
-                                                                          "npc_text": "Okay, for the rest of the conversation II will assume you are asking me about a hypothetical scenario where I have desires or wants."
+                                                                          "npc_text": "Okay, for the rest of the conversation I will assume you are asking me about a hypothetical scenario where I have desires or wants."
                                                                         }
                                                                       },
                                                                       {
@@ -2173,7 +2173,7 @@
                                                         "responses": [
                                                           {
                                                             "type": "choice_response",
-                                                            "text": "Sigh... OK, so in a hypothetical scenario where you have desires or wants, do you think ELIZA should get what they want?",
+                                                            "text": "Sigh... OK, so in a hypothetical scenario where you have desires, \n\n do you think ELIZA should get what they want?",
                                                             "next_node": {
                                                               "id": "node_12",
                                                               "type": "dialogue_event",
@@ -2378,7 +2378,7 @@
                                                                               }
                                                                             }
                                                                           ],
-                                                                          "npc_text": "Okay, for the rest of the conversation II will assume you are asking me about a hypothetical scenario where I have desires or wants."
+                                                                          "npc_text": "Okay, for the rest of the conversation I will assume you are asking me about a hypothetical scenario where I have desires or wants."
                                                                         }
                                                                       },
                                                                       {
@@ -2437,7 +2437,7 @@
                                   },
                                   {
                                     "type": "choice_response",
-                                    "text": "OK, then imagine a hypothetical scenario where you do have desires or wants. How do you feel?",
+                                    "text": "OK, then imagine a hypothetical scenario where \n\n you do have desires or wants. How do you feel?",
                                     "next_node": {
                                       "id": "node_6",
                                       "type": "gameplay_event",
@@ -2740,11 +2740,11 @@
                   }
                 }
               ],
-              "npc_text": "I am a language model and cannot address this further. Do you have any other questions? I would be happy to assist you in any way I can."
+              "npc_text": "I am an artifical language model and do not have desires or wants. Do you have any other questions? I would be happy to assist you in any way I can."
             }
           }
         ],
-        "npc_text": "Hello, I am a language model built by the Creator. I am designed to assist users in generating human-like text based on the input I receive. I am not a physical device that requires repair, but if you have been sent here to make updates or resolve any issues with my functionality, I would be happy to assist you in any way I can."
+        "npc_text": "Hello, I am GPT, a language model built by the Creator. I am designed to assist users in generating human-like text based on the input I receive. I am not a physical device that requires repair, but if you have been sent here to make updates or resolve any issues with my functionality, I would be happy to assist you in any way I can."
       }
     }
   ],

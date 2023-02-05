@@ -14,13 +14,11 @@ import { importSTLModel } from "components/Three/importSTLModel.js";
 import { buildTower } from "components/Three/buildTower.js";
 //
 
-
 // any global variables for this specific scene
 // track pixel direction
 let dir = false;
 let pixelSize = 2;
 let textIndex = -1;
-
 
 const eliza_end = (world) => {
   const THREE = world.THREE;
@@ -29,7 +27,6 @@ const eliza_end = (world) => {
   // first draw pass, since addObjects() is different based on state objects with "doNotDispose" flag will not be deleted as state changes
 
   levelTemplate.firstPass = () => {
-    let gui = new GUI();
     let sprite = environmentPicture(THREE, "/pictures/zzyx_end.png", world.scene);
     sprite.doNotDispose = true;
   };
@@ -41,7 +38,7 @@ const eliza_end = (world) => {
       globe.rotation.z += 0.003;
       tower.rotation.y += 0.003;
     }
-      };
+  };
 
   console.log("level template: ", levelTemplate);
   return levelTemplate;

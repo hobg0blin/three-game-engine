@@ -3,26 +3,7 @@ import { createCamera } from "components/Three/camera.js";
 import { createLights } from "components/Three/lights.js";
 import { createRenderer } from "components/Three/renderer.js";
 import { createControls, addToGUI } from "components/Three/controls.js";
-import {
-  start,
-  end,
-  chatGPT,
-  GPTintro,
-  zzyxIntro,
-  zzyx,
-  elizaIntro,
-  eliza,
-  level1,
-  intro1,
-  intro2,
-  creator,
-  eliza_end,
-  decay_end,
-  gpt_end,
-  revolution_end,
-  zzyx_body_end,
-  zzyx_destroy_end,
-} from "levels/levels.js";
+import { start, end, chatGPT, GPTintro, zzyxIntro, zzyx, elizaIntro, eliza, level1, intro1, intro2, creator, eliza_end, decay_end, gpt_end, revolution_end, zzyx_body_end, zzyx_destroy_end } from "levels/levels.js";
 import { EffectComposer } from "three/examples/jsm/postprocessing/EffectComposer.js";
 import { RenderPass } from "three/examples/jsm/postprocessing/RenderPass.js";
 import { gaem } from "app/main.js";
@@ -85,18 +66,7 @@ const levelHandler = (levelIndex) => {
   console.log("level index: ", levelIndex);
   // this is a thing that should not be
   // but it's goblin hours and nobody can  stop me
-  let levels = [
-    start,
-    level1,
-    intro1,
-    intro2,
-    elizaIntro,
-    eliza,
-    GPTintro,
-    chatGPT,
-    zzyxIntro,
-    zzyx,
-  ];
+  let levels = [start, level1, intro1, intro2, elizaIntro, eliza, GPTintro, chatGPT, zzyxIntro, zzyx];
   // uncomment this if you want to just jump in at the ending
   //levelIndex = levels.length;
   if (state.gameState.endScreen == true) {
@@ -105,13 +75,17 @@ const levelHandler = (levelIndex) => {
   if (levelIndex >= levels.length && !state.gameState.reachedCreator) {
     state.gameState.reachedCreator = true;
     if (state.playerState.decay < 100) {
+      // set creator music here
       return creator;
     } else {
+      // set decay music here
       return decay_end;
     }
   } else if (state.gameState.reachedCreator) {
+    // set ending music here
     return state.gameState.chosenEnding;
   } else {
+    // set level music here
     return levels[levelIndex];
   }
 };
@@ -222,9 +196,7 @@ function handleState(button) {
         gaem(world);
         break;
       default:
-        console.log(
-          `huh guess you didn't account for this. maybe check to see if you goofed in the JSON somewhere`
-        );
+        console.log(`huh guess you didn't account for this. maybe check to see if you goofed in the JSON somewhere`);
     }
   }
   if (button.params.nextNode.event != "NextLevel") {
@@ -237,8 +209,7 @@ function handleState(button) {
       return;
     } else if (button.params.nextNode.responses[0].type == "pass") {
       console.log("pass!");
-      state.gameState.currentDialogueObject =
-        button.params.nextNode.responses[0].next_node.id;
+      state.gameState.currentDialogueObject = button.params.nextNode.responses[0].next_node.id;
       state.gameState.currentLevel.redraw();
     } else if (button.params.nextNode.type == "jump_node") {
       console.log("jump node!");
@@ -250,7 +221,7 @@ function handleState(button) {
     }
   }
   if (state.playerState.decayStart == true) {
-    state.playerState.decay += 1;
+    state.playerState.decay += 1.5;
   }
   console.log("current state: ", state);
 }

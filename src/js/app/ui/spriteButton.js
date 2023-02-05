@@ -5,7 +5,6 @@ import { disposeAll } from "app/engine/level.js";
 import { world, state, handleState } from "app/engine/setup.js";
 import { gaem } from "app/main.js";
 import { Howl, Howler } from "howler";
-
 let raycaster = new Raycaster();
 let buttons = [];
 let text;
@@ -23,8 +22,8 @@ function spriteButton(buttonObj, params) {
   buttons.push(button);
   return button;
 }
-
-function checkIntersection(x, y) {
+let recentInt = false;
+function checkIntersection(x, y, isClick) {
   mouse.x = (x / window.innerWidth) * 2 - 1;
   mouse.y = -(y /*- (window.innerHeight*view.height)*/ / window.innerHeight) * 2 + 1;
   // mouse.y = - ( y / window.innerHeight) * 2 + 1;
@@ -32,14 +31,21 @@ function checkIntersection(x, y) {
   for (let button of buttons) {
     let intersects = raycaster.intersectObject(button, false);
     // probably ought to be getters and setters as well rather than directly modifying the object
-    if (intersects.length > 0) {
+    if (intersects.length > 0 && isClick) {
       buttons = [];
       handleButton(button);
+    }
+    if (intersects.length > 0 && !isClick && recentInt != button) {
+      button.scale.set((button.scale.x += 1), (button.scale.y += 1), (button.scale.z += 1));
+      recentInt = button;
+    }
+    if (intersects.length <= 0 && !isClick && recentInt == button) {
+      button.scale.set((button.scale.x -= 1), (button.scale.y -= 1), (button.scale.z -= 1));
+      recentInt = false;
     }
   }
 }
 function handleButton(button) {
-  console.log("HEO");
   var sound = new Howl({
     src: ["/buttonclick.wav"],
   });
@@ -48,11 +54,15 @@ function handleButton(button) {
   handleState(button);
 }
 
+function onHover(event) {
+  checkIntersection(event.clientX, event.clientY, false);
+}
 function onClick(event) {
-  checkIntersection(event.clientX, event.clientY);
+  checkIntersection(event.clientX, event.clientY, true);
   // kill everything that doesn't have a flag
   //	disposeAll(world, 'doNotDispose')
 }
 
 window.addEventListener("click", onClick);
+window.addEventListener("mousemove", onHover);
 export { spriteButton };

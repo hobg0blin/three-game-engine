@@ -20,7 +20,6 @@ const chatGPT = (world) => {
   // first draw pass, since addObjects() is different based on state objects with "doNotDispose" flag will not be deleted as state changes
 
   levelTemplate.firstPass = () => {
-    let gui = new GUI();
     // ADD ANY OBJECTS OR VISUAL ELEMENTS
     // SET .doNotDispose = true so they're not deleted when it redraws
     // FIXME: surely there is a way to automate this

@@ -28,7 +28,6 @@ const zzyxIntro = (world) => {
   // first draw pass, since addObjects() is different based on state objects with "doNotDispose" flag will not be deleted as state changes
 
   levelTemplate.firstPass = () => {
-    let gui = new GUI();
     let sprite = environmentPicture(THREE, "/pictures/zzyx.png", world.scene);
     sprite.doNotDispose = true;
   };

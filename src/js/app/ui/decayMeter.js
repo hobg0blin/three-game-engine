@@ -9,8 +9,11 @@ function decayMeter(state, world) {
   if (state.gameState.currentLevelIndex == 0) {
     console.log("setting pixel size");
     pixelSize = 1.25;
+    if (world.pixelPass != undefined) {
+      world.pixelSize == pixelSize;
+    }
   }
-  if (start == false) {
+  if (start == false && world.pixelPass == undefined) {
     console.log("ADDING PIXEL PASS");
     pixelPass = new RenderPixelatedPass(pixelSize, world.scene, world.camera);
     pixelPass.doNotDispose = true;
@@ -22,7 +25,7 @@ function decayMeter(state, world) {
   }
   if (state.playerState.decayStart) {
     //fixme: dumb dumb dumb
-    pixelSize += state.playerState.decay / 500;
+    pixelSize += state.playerState.decay / 750;
 
     // just adding floating poitns here so it looks "cool"
     let sprite = spriteDialogueBox(`DECAY: ${state.playerState.decay / 1.001}`);
