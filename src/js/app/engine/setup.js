@@ -3,7 +3,7 @@ import { createCamera } from "components/Three/camera.js";
 import { createLights } from "components/Three/lights.js";
 import { createRenderer } from "components/Three/renderer.js";
 import { createControls, addToGUI } from "components/Three/controls.js";
-import { chatGPT, zzyx, eliza, test, level1, level2 } from "levels/levels.js";
+import { chatGPT, zzyx, eliza, level1, intro1, intro2 } from "levels/levels.js";
 import { EffectComposer } from "three/examples/jsm/postprocessing/EffectComposer.js";
 import { RenderPass } from "three/examples/jsm/postprocessing/RenderPass.js";
 
@@ -65,7 +65,7 @@ function updateSize(renderer) {
 // handle level changes
 
 const levelHandler = (levelIndex) => {
-  let levels = [level1, eliza, chatGPT, zzyx];
+  let levels = [level1, intro1, intro2, eliza, chatGPT, zzyx];
   return levels[levelIndex];
 };
 
