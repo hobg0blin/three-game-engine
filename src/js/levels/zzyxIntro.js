@@ -15,7 +15,6 @@ import { importSTLModel } from "components/Three/importSTLModel.js";
 import { buildTower } from "components/Three/buildTower.js";
 //
 
-
 // any global variables for this specific scene
 // track pixel direction
 let textIndex = -1;
@@ -41,7 +40,6 @@ const zzyxIntro = (world) => {
       globe.rotation.z += 0.003;
       tower.rotation.y += 0.003;
     }
-
   };
 
   console.log("level template: ", levelTemplate);

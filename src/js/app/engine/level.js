@@ -3,6 +3,8 @@ import { state } from "./setup.js";
 import { troikaDialogueBox } from "app/ui/troikaDialogueBox.js";
 import { decayMeter } from "app/ui/decayMeter.js";
 import { createText } from "app/ui/createText.js";
+let dir = true;
+let pixelSize = 1.25;
 
 // create a simple level template, to be modified in individual level files
 // FIXME: would be much better if the key/private functions here were inaccessible and static, and stuff like customAnimations or whatever could be extended
@@ -32,13 +34,28 @@ const createLevel = (world, data) => {
     if (data && data["responses"][0].next) {
       let text = troikaDialogueBox(data["responses"][0].next, world);
       world.scene.add(text);
-      }
-      decayMeter(state, world)
-
+    }
+    decayMeter(state, world);
   };
   level.animate = () => {
     level.customAnimations();
     world.render(level, world);
+    if (pixelSize != world.pixelSize) {
+      if (world.pixelPass != undefined) {
+        if (dir) {
+          pixelSize += 0.0003;
+        } else {
+          pixelSize -= 0.0003;
+        }
+        if (pixelSize > world.pixelSize) {
+          dir = false;
+        }
+        if (pixelSize < 1.25) {
+          dir = true;
+        }
+        world.pixelPass.setPixelSize(pixelSize);
+      }
+    }
   };
   return level;
 };
