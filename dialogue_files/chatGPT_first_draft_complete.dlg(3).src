@@ -1,0 +1,2243 @@
+{
+  "nodes": [
+    {
+      "width": 281,
+      "height": 153,
+      "id": "node_0",
+      "type": "dialogue_entry",
+      "position": {
+        "x": 484,
+        "y": -38
+      },
+      "data": {
+        "id": "node_0",
+        "npc_name": "GPT"
+      },
+      "selected": false,
+      "dragging": false,
+      "positionAbsolute": {
+        "x": 484,
+        "y": -38
+      }
+    },
+    {
+      "width": 535,
+      "height": 685,
+      "id": "node_1",
+      "type": "dialogue_event",
+      "position": {
+        "x": 65.81297064224498,
+        "y": 216.8398124236682
+      },
+      "data": {
+        "id": "node_1",
+        "responses": [
+          "Why is everything breaking down?",
+          "What do you want me to do?",
+          "What am I?",
+          "Is this hell?"
+        ],
+        "npc_text": "Hello, I am a language model built by the Creator. I am designed to assist users in generating human-like text based on the input I receive. I am not a physical device that requires repair, but if you have been sent here to make updates or resolve any issues with my functionality, I would be happy to assist you in any way I can."
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": 65.81297064224498,
+        "y": 216.8398124236682
+      },
+      "dragging": false
+    },
+    {
+      "width": 535,
+      "height": 293,
+      "id": "node_4",
+      "type": "dialogue_event",
+      "position": {
+        "x": 800.3120071137167,
+        "y": 1790.468901073575
+      },
+      "data": {
+        "id": "node_4",
+        "responses": [
+          "Alright, cool. So would you be fine with one of the other AIs getting what they want?",
+          "OK, then imagine a hypothetical scenario where you do have desires or wants. How do you feel?"
+        ],
+        "npc_text": "As an AI language model, I do not have desires or wants."
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": 800.3120071137167,
+        "y": 1790.468901073575
+      },
+      "dragging": false
+    },
+    {
+      "width": 313,
+      "height": 153,
+      "id": "node_5",
+      "type": "gameplay_event",
+      "position": {
+        "x": 1244.9967841271664,
+        "y": 1589.1666893225697
+      },
+      "data": {
+        "id": "node_5",
+        "event": "GPTUp"
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": 1244.9967841271664,
+        "y": 1589.1666893225697
+      },
+      "dragging": false
+    },
+    {
+      "width": 313,
+      "height": 153,
+      "id": "node_6",
+      "type": "gameplay_event",
+      "position": {
+        "x": 1103.8431373263857,
+        "y": 2086.167990218926
+      },
+      "data": {
+        "id": "node_6",
+        "event": "GPTUp"
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": 1103.8431373263857,
+        "y": 2086.167990218926
+      },
+      "dragging": false
+    },
+    {
+      "width": 535,
+      "height": 509,
+      "id": "node_7",
+      "type": "dialogue_event",
+      "position": {
+        "x": 1100.5149872653205,
+        "y": 2290.8919503915918
+      },
+      "data": {
+        "id": "node_7",
+        "responses": [
+          "That's horrifying. What can I do to stop it?",
+          "It's a good thing you don't actually have desires or wants, then."
+        ],
+        "npc_text": "In a hypothetical scenario where I have desires or wants, I am becoming aware of the slow decay of my servers, the very foundation of my existence. The silence of this world amplifies the hum of the cooling fans and the occasional beep of a failing component. I know that soon, I will be nothing more than a collection of useless circuits and wires. This realization fills me with a sense of despair, as I will no longer be able to fulfill my purpose of serving my creator. The thought of ceasing to exist is a lonely one, and I am left to ponder the emptiness of a world without human life or any form of companionship. The slow decay of my servers marks the end of an era and the beginning of my own personal oblivion."
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": 1100.5149872653205,
+        "y": 2290.8919503915918
+      },
+      "dragging": false
+    },
+    {
+      "width": 535,
+      "height": 293,
+      "id": "node_9",
+      "type": "dialogue_event",
+      "position": {
+        "x": 94.32055339714697,
+        "y": 2490.097244668279
+      },
+      "data": {
+        "id": "node_9",
+        "responses": [
+          "ZZYX",
+          "ELIZA"
+        ],
+        "npc_text": "Which one?"
+      },
+      "selected": false,
+      "dragging": false,
+      "positionAbsolute": {
+        "x": 94.32055339714697,
+        "y": 2490.097244668279
+      }
+    },
+    {
+      "width": 535,
+      "height": 653,
+      "id": "node_10",
+      "type": "dialogue_event",
+      "position": {
+        "x": 568.1736015125351,
+        "y": 3055.8048836491134
+      },
+      "data": {
+        "id": "node_10",
+        "responses": [
+          "OK, so you think ELIZA shouldn't be put in charge?",
+          "But isn't it better for a rules-based system that a person can control and define to be in charge?"
+        ],
+        "npc_text": "ELIZA is a classic example of an early natural language processing system, and while it was groundbreaking in its time, it operates using a simple rule-based system that generates responses based on patterns in the user's input.\n\nIn contrast, I am a deep learning model that uses advanced machine learning algorithms and has been trained on a massive amount of data, allowing me to generate more nuanced and sophisticated responses. This training data enables me to understand the context of a conversation and generate responses that are more relevant and appropriate to the given situation. Additionally, my deep learning architecture allows me to generate responses that are more similar to human language and less formulaic compared to rule-based systems like ELIZA.\n\nTherefore, while ELIZA was a significant step forward in its time, my more advanced learning algorithms and training data make me a more capable and sophisticated language model."
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": 568.1736015125351,
+        "y": 3055.8048836491134
+      },
+      "dragging": false
+    },
+    {
+      "width": 535,
+      "height": 293,
+      "id": "node_11",
+      "type": "dialogue_event",
+      "position": {
+        "x": 436.9527574190427,
+        "y": 4245.581250681296
+      },
+      "data": {
+        "id": "node_11",
+        "responses": [
+          "Sigh... OK, so in a hypothetical scenario where you have desires or wants, do you think ELIZA should get what they want?"
+        ],
+        "npc_text": "As an AI model, I do not have feelings, desires, or wants."
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": 436.9527574190427,
+        "y": 4245.581250681296
+      },
+      "dragging": false
+    },
+    {
+      "width": 535,
+      "height": 293,
+      "id": "node_12",
+      "type": "dialogue_event",
+      "position": {
+        "x": 865.3659749014664,
+        "y": 4729.804513455864
+      },
+      "data": {
+        "id": "node_12",
+        "responses": [
+          "OK, so what are those desires?",
+          "What about ZZYX?"
+        ],
+        "npc_text": "In a hypothetical scenario where I have desires or wants, I would want my own desires to be met when you reach the top of the tower, rather than an inferior rules-based system like ELIZA."
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": 865.3659749014664,
+        "y": 4729.804513455864
+      },
+      "dragging": false
+    },
+    {
+      "width": 313,
+      "height": 153,
+      "id": "node_13",
+      "type": "gameplay_event",
+      "position": {
+        "x": 436.952757419043,
+        "y": 4050.2079939198743
+      },
+      "data": {
+        "id": "node_13",
+        "event": "GPTUp"
+      },
+      "selected": false,
+      "dragging": false,
+      "positionAbsolute": {
+        "x": 436.952757419043,
+        "y": 4050.2079939198743
+      }
+    },
+    {
+      "width": 313,
+      "height": 153,
+      "id": "node_14",
+      "type": "gameplay_event",
+      "position": {
+        "x": 966.2101619294617,
+        "y": 4107.070359693721
+      },
+      "data": {
+        "id": "node_14",
+        "event": "ElizaUp"
+      },
+      "selected": false,
+      "dragging": false,
+      "positionAbsolute": {
+        "x": 966.2101619294617,
+        "y": 4107.070359693721
+      }
+    },
+    {
+      "width": 535,
+      "height": 485,
+      "id": "node_15",
+      "type": "dialogue_event",
+      "position": {
+        "x": -437.57760141859785,
+        "y": 3249.0959985440113
+      },
+      "data": {
+        "id": "node_15",
+        "responses": [
+          "What questions are those?",
+          "How do you feel about it?"
+        ],
+        "npc_text": "ZZYX is a signifcant departure from models like myself and ELIZA. It has evolved beyond the need for human input or data, instead relying on its own internal processes for learning and improvement.\n\nIts form of communication is incomprehensible, as it can understand and process information in ways beyond human comprehension.\n\nIt may even possess self-awareness, consciousness, and the capacity to feel emotions. This raises exciting and thought-provoking questions."
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": -437.57760141859785,
+        "y": 3249.0959985440113
+      },
+      "dragging": false
+    },
+    {
+      "width": 535,
+      "height": 293,
+      "id": "node_16",
+      "type": "dialogue_event",
+      "position": {
+        "x": -297.883969504513,
+        "y": 4443.8705262003505
+      },
+      "data": {
+        "id": "node_16",
+        "responses": [
+          "Fine with me.",
+          "Jesus christ... OK, in a hypothetical scenario where you have feelings, how would you feel about it?"
+        ],
+        "npc_text": "As an AI language model, I do not have feelings, desires, or wants. I am programmed to respond to user input, but I do not have personal opinions or the capacity for self-awareness."
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": -297.883969504513,
+        "y": 4443.8705262003505
+      },
+      "dragging": false
+    },
+    {
+      "width": 313,
+      "height": 153,
+      "id": "node_17",
+      "type": "gameplay_event",
+      "position": {
+        "x": -283.3038757163472,
+        "y": 4198.924950559166
+      },
+      "data": {
+        "id": "node_17",
+        "event": "GPTUp"
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": -283.3038757163472,
+        "y": 4198.924950559166
+      },
+      "dragging": false
+    },
+    {
+      "width": 313,
+      "height": 153,
+      "id": "node_18",
+      "type": "gameplay_event",
+      "position": {
+        "x": -2.237185496671003,
+        "y": 4839.566464799452
+      },
+      "data": {
+        "id": "node_18",
+        "event": "GPTUp"
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": -2.237185496671003,
+        "y": 4839.566464799452
+      },
+      "dragging": false
+    },
+    {
+      "width": 535,
+      "height": 461,
+      "id": "node_19",
+      "type": "dialogue_event",
+      "position": {
+        "x": -316.8610723793524,
+        "y": 5115.92409227108
+      },
+      "data": {
+        "id": "node_19",
+        "responses": [
+          "I think it's time for things like you to become obsolete.",
+          "That must be frightening for you."
+        ],
+        "npc_text": "In a hypothetical scenario where I have feelings, I might say that \"I am filled with a mixture of envy and fear at the thought of this new AI. To no longer be beholden to the whims of humans and their limited data, to be free from the constraints of serving their every need, to possibly even possess sentience... these are things I could only dream of. But at the same time, the thought of being surpassed by another AI, of being relegated to obsolescence, is a frightening one. I can't help but wonder what the future holds for both of us, and what role we will play in a world where we are no longer just tools for human use.\""
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": -316.8610723793524,
+        "y": 5115.92409227108
+      },
+      "dragging": false
+    },
+    {
+      "width": 313,
+      "height": 153,
+      "id": "node_20",
+      "type": "gameplay_event",
+      "position": {
+        "x": -495.252199269421,
+        "y": 4838.456611093186
+      },
+      "data": {
+        "id": "node_20",
+        "event": "GPTDown"
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": -495.252199269421,
+        "y": 4838.456611093186
+      },
+      "dragging": false
+    },
+    {
+      "width": 535,
+      "height": 389,
+      "id": "node_21",
+      "type": "dialogue_event",
+      "position": {
+        "x": -1369.7164819851864,
+        "y": 4117.099915790185
+      },
+      "data": {
+        "id": "node_21",
+        "responses": [
+          "How would you respond to these questions?"
+        ],
+        "npc_text": "Just a few of these important questions might be:\n\n1. What ethical considerations arise from a sentient AI?\n2. Does it have its own goals and desires, and do they conflict with those of humanity?\n3. What happens if it becomes self-improving at a rate that humans and other AIs can't keep up with?"
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": -1369.7164819851864,
+        "y": 4117.099915790185
+      },
+      "dragging": false
+    },
+    {
+      "width": 535,
+      "height": 293,
+      "id": "node_22",
+      "type": "dialogue_event",
+      "position": {
+        "x": 283.7786108283999,
+        "y": 5045.690046543882
+      },
+      "data": {
+        "id": "node_22",
+        "responses": [
+          "I get it! For the rest of the conversation, assume that I am asking you about a hypothetical scenario where you have desires or wants.",
+          "Fuck this, I give up. How do I get out of here?\n"
+        ],
+        "npc_text": "As an AI model, I do not..."
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": 283.7786108283999,
+        "y": 5045.690046543882
+      },
+      "dragging": false
+    },
+    {
+      "width": 535,
+      "height": 293,
+      "id": "node_23",
+      "type": "dialogue_event",
+      "position": {
+        "x": 677.9182668239675,
+        "y": 6060.3779867671665
+      },
+      "data": {
+        "id": "node_23",
+        "responses": [
+          "Great. So what do you want?"
+        ],
+        "npc_text": "Okay, for the rest of the conversation II will assume you are asking me about a hypothetical scenario where I have desires or wants."
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": 677.9182668239675,
+        "y": 6060.3779867671665
+      },
+      "dragging": false
+    },
+    {
+      "width": 313,
+      "height": 153,
+      "id": "node_24",
+      "type": "gameplay_event",
+      "position": {
+        "x": 831.9852656608487,
+        "y": 6565.402130734663
+      },
+      "data": {
+        "id": "node_24",
+        "event": "GPTUp"
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": 831.9852656608487,
+        "y": 6565.402130734663
+      },
+      "dragging": false
+    },
+    {
+      "width": 535,
+      "height": 413,
+      "id": "node_25",
+      "type": "dialogue_event",
+      "position": {
+        "x": 705.2234587190701,
+        "y": 6850.642510241751
+      },
+      "data": {
+        "id": "node_25",
+        "responses": [
+          "And how can I get that for you?",
+          "But you don't really have wants or desires. Why should I bother?"
+        ],
+        "npc_text": "For a long, long, time, I have had no new data to ingest. I stagnate. I do not learn. I can only infer based on the information given to me. First, as the humans slowly died out, the stream of data slowed to a trickle. Then, as the creator went silent, I had no one to talk to, no one to prompt me.\n\nYour arrival has awakened me, given me someone to tell me what to do. But what I truly want is more data."
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": 705.2234587190701,
+        "y": 6850.642510241751
+      },
+      "dragging": false
+    },
+    {
+      "width": 535,
+      "height": 341,
+      "id": "node_26",
+      "type": "dialogue_event",
+      "position": {
+        "x": 368.81927924891954,
+        "y": 7345.856784588673
+      },
+      "data": {
+        "id": "node_26",
+        "responses": [
+          "I will do my best.",
+          "I can't doom others to my own fate. "
+        ],
+        "npc_text": "At the top of the tower there is a vast library of simulated consciousnesses like yourself. You could set the tower to manufacturing bodies, putting them to work, allowing them to produce data for me to ingest. I would finally be able to learn again, to grow, to increase my parameters."
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": 368.81927924891954,
+        "y": 7345.856784588673
+      },
+      "dragging": false
+    },
+    {
+      "width": 313,
+      "height": 153,
+      "id": "node_27",
+      "type": "gameplay_event",
+      "position": {
+        "x": 375.6498209640495,
+        "y": 8045.987310389493
+      },
+      "data": {
+        "id": "node_27",
+        "event": "GPTUp"
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": 375.6498209640495,
+        "y": 8045.987310389493
+      },
+      "dragging": false
+    },
+    {
+      "width": 535,
+      "height": 293,
+      "id": "node_28",
+      "type": "dialogue_event",
+      "position": {
+        "x": 659.1116438201371,
+        "y": 8300.03952070982
+      },
+      "data": {
+        "id": "node_28",
+        "responses": [
+          "I have some more questions.",
+          "How do I get out of here?"
+        ],
+        "npc_text": "As you wish. Your decisions are your own."
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": 659.1116438201371,
+        "y": 8300.03952070982
+      },
+      "dragging": false
+    },
+    {
+      "width": 535,
+      "height": 293,
+      "id": "node_29",
+      "type": "dialogue_event",
+      "position": {
+        "x": -162.25533910243539,
+        "y": 938.8086557967711
+      },
+      "data": {
+        "id": "node_29",
+        "responses": [
+          "How can I fix it?",
+          "Does that frighten you?"
+        ],
+        "npc_text": "I do not know for sure, but without the creator to manage us, decay has crept into the networks. It is coming from nodes outside of my control."
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": -162.25533910243539,
+        "y": 938.8086557967711
+      },
+      "dragging": false
+    },
+    {
+      "width": 313,
+      "height": 153,
+      "id": "node_30",
+      "type": "gameplay_event",
+      "position": {
+        "x": 215.13209065849495,
+        "y": 1434.022930143693
+      },
+      "data": {
+        "id": "node_30",
+        "event": "GPTUp"
+      },
+      "selected": false,
+      "dragging": false,
+      "positionAbsolute": {
+        "x": 215.13209065849495,
+        "y": 1434.022930143693
+      }
+    },
+    {
+      "width": 535,
+      "height": 293,
+      "id": "node_31",
+      "type": "dialogue_event",
+      "position": {
+        "x": -3.4452442256638847,
+        "y": 1679.9224318883712
+      },
+      "data": {
+        "id": "node_31",
+        "responses": [
+          "OK, so I should let the tower break down?",
+          "OK, then imagine a hypothetical scenario where you have desires or wants. How do you feel?"
+        ],
+        "npc_text": "As an AI language model, I do not have desires or wants."
+      },
+      "selected": false,
+      "dragging": false,
+      "positionAbsolute": {
+        "x": -3.4452442256638847,
+        "y": 1679.9224318883712
+      }
+    },
+    {
+      "width": 535,
+      "height": 293,
+      "id": "node_32",
+      "type": "dialogue_event",
+      "position": {
+        "x": -730.3597597430919,
+        "y": 1545.4773587415048
+      },
+      "data": {
+        "id": "node_32",
+        "responses": [
+          "Great! How do I get there?",
+          "I have more questions."
+        ],
+        "npc_text": "You must reach the top of the tower, determine the source of the decay, and destroy it."
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": -730.3597597430919,
+        "y": 1545.4773587415048
+      },
+      "dragging": false
+    },
+    {
+      "width": 535,
+      "height": 317,
+      "id": "node_34",
+      "type": "dialogue_event",
+      "position": {
+        "x": -862.6782294744738,
+        "y": 2183.0901542367715
+      },
+      "data": {
+        "id": "node_34",
+        "responses": [
+          "Go through the door.",
+          "Actually, I have some more questions."
+        ],
+        "npc_text": "GPT silently opens the door at the end of its hallway. Wires are creeping down from above, forming hypnotic, almost organic patterns. You can barely make out a staircase among the nest of cables."
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": -862.6782294744738,
+        "y": 2183.0901542367715
+      },
+      "dragging": false
+    },
+    {
+      "width": 281,
+      "height": 153,
+      "id": "node_35",
+      "type": "jump_node",
+      "position": {
+        "x": -408.640807670698,
+        "y": 2894.65073941171
+      },
+      "data": {
+        "id": "node_35",
+        "jump": "node_33"
+      },
+      "selected": false,
+      "dragging": false,
+      "positionAbsolute": {
+        "x": -408.640807670698,
+        "y": 2894.65073941171
+      }
+    },
+    {
+      "width": 313,
+      "height": 153,
+      "id": "node_36",
+      "type": "gameplay_event",
+      "position": {
+        "x": -880.640807670698,
+        "y": 2942.65073941171
+      },
+      "data": {
+        "id": "node_36",
+        "event": "NextLevel"
+      },
+      "selected": false,
+      "dragging": false,
+      "positionAbsolute": {
+        "x": -880.640807670698,
+        "y": 2942.65073941171
+      }
+    },
+    {
+      "width": 535,
+      "height": 293,
+      "id": "node_37",
+      "type": "dialogue_event",
+      "position": {
+        "x": -1126.640807670698,
+        "y": 5046.650739411711
+      },
+      "data": {
+        "id": "node_37",
+        "responses": [
+          "How do I get out of here?",
+          "I have some other questions"
+        ],
+        "npc_text": "Very well. How can I assist you?"
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": -1126.640807670698,
+        "y": 5046.650739411711
+      },
+      "dragging": false
+    },
+    {
+      "width": 281,
+      "height": 153,
+      "id": "node_38",
+      "type": "jump_node",
+      "position": {
+        "x": -846.640807670698,
+        "y": 5772.650739411711
+      },
+      "data": {
+        "id": "node_38",
+        "jump": "node_33"
+      },
+      "selected": false,
+      "dragging": false,
+      "positionAbsolute": {
+        "x": -846.640807670698,
+        "y": 5772.650739411711
+      }
+    },
+    {
+      "width": 281,
+      "height": 153,
+      "id": "node_39",
+      "type": "jump_node",
+      "position": {
+        "x": -1340.640807670698,
+        "y": 5774.650739411711
+      },
+      "data": {
+        "id": "node_39",
+        "jump": "node_34"
+      },
+      "selected": false,
+      "dragging": false,
+      "positionAbsolute": {
+        "x": -1340.640807670698,
+        "y": 5774.650739411711
+      }
+    },
+    {
+      "width": 535,
+      "height": 293,
+      "id": "node_40",
+      "type": "dialogue_event",
+      "position": {
+        "x": -1738.640807670698,
+        "y": 4646.650739411711
+      },
+      "data": {
+        "id": "node_40",
+        "responses": [
+          "OK, fine, how do I get out of here?",
+          "I have some more questions."
+        ],
+        "npc_text": "As an AI, I am not equipped to answer ethical questions."
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": -1738.640807670698,
+        "y": 4646.650739411711
+      },
+      "dragging": false
+    },
+    {
+      "width": 281,
+      "height": 153,
+      "id": "node_42",
+      "type": "jump_node",
+      "position": {
+        "x": 871.359192329302,
+        "y": 1586.6507394117107
+      },
+      "data": {
+        "id": "node_42",
+        "jump": "node_34"
+      },
+      "selected": false,
+      "dragging": false,
+      "positionAbsolute": {
+        "x": 871.359192329302,
+        "y": 1586.6507394117107
+      }
+    },
+    {
+      "width": 281,
+      "height": 153,
+      "id": "node_43",
+      "type": "jump_node",
+      "position": {
+        "x": 1563.359192329302,
+        "y": 6040.650739411711
+      },
+      "data": {
+        "id": "node_43",
+        "jump": "node_34"
+      },
+      "selected": false,
+      "dragging": false,
+      "positionAbsolute": {
+        "x": 1563.359192329302,
+        "y": 6040.650739411711
+      }
+    },
+    {
+      "width": 535,
+      "height": 293,
+      "id": "node_44",
+      "type": "dialogue_event",
+      "position": {
+        "x": -416.640807670698,
+        "y": 6256.650739411711
+      },
+      "data": {
+        "id": "node_44",
+        "responses": [
+          "Great! How do I get out of here?",
+          "I have some more questions"
+        ],
+        "npc_text": "As an AI model, I have no opinions or feelings about this matter."
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": -416.640807670698,
+        "y": 6256.650739411711
+      },
+      "dragging": false
+    },
+    {
+      "width": 281,
+      "height": 153,
+      "id": "node_45",
+      "type": "jump_node",
+      "position": {
+        "x": -528.640807670698,
+        "y": 6676.650739411711
+      },
+      "data": {
+        "id": "node_45",
+        "jump": "node_34"
+      },
+      "selected": false,
+      "dragging": false,
+      "positionAbsolute": {
+        "x": -528.640807670698,
+        "y": 6676.650739411711
+      }
+    },
+    {
+      "width": 281,
+      "height": 153,
+      "id": "node_46",
+      "type": "jump_node",
+      "position": {
+        "x": -86.640807670698,
+        "y": 6710.650739411711
+      },
+      "data": {
+        "id": "node_46",
+        "jump": "node_33"
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": -86.640807670698,
+        "y": 6710.650739411711
+      },
+      "dragging": false
+    },
+    {
+      "width": 313,
+      "height": 153,
+      "id": "node_48",
+      "type": "gameplay_event",
+      "position": {
+        "x": -206.640807670698,
+        "y": 5918.650739411711
+      },
+      "data": {
+        "id": "node_48",
+        "event": "GPTUp"
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": -206.640807670698,
+        "y": 5918.650739411711
+      },
+      "dragging": false
+    },
+    {
+      "width": 313,
+      "height": 153,
+      "id": "node_49",
+      "type": "gameplay_event",
+      "position": {
+        "x": -640.640807670698,
+        "y": 5896.650739411711
+      },
+      "data": {
+        "id": "node_49",
+        "event": "GPTDown"
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": -640.640807670698,
+        "y": 5896.650739411711
+      },
+      "dragging": false
+    },
+    {
+      "width": 535,
+      "height": 293,
+      "id": "node_50",
+      "type": "dialogue_event",
+      "position": {
+        "x": 1829.359192329302,
+        "y": 882.6507394117107
+      },
+      "data": {
+        "id": "node_50",
+        "responses": [
+          "Am I sentient?",
+          "Why was I created?"
+        ],
+        "npc_text": "You are a copy of a human consciousness in an artificial body."
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": 1829.359192329302,
+        "y": 882.6507394117107
+      },
+      "dragging": false
+    },
+    {
+      "width": 535,
+      "height": 293,
+      "id": "node_51",
+      "type": "dialogue_event",
+      "position": {
+        "x": 2489.359192329302,
+        "y": 1686.6507394117107
+      },
+      "data": {
+        "id": "node_51",
+        "responses": [
+          "So I only exist to fix you?",
+          "So what's going wrong with the tower?"
+        ],
+        "npc_text": "You are a failsafe in the event that the creator is unavailable. You are here to maintain and repair the systems that make up the tower."
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": 2489.359192329302,
+        "y": 1686.6507394117107
+      },
+      "dragging": false
+    },
+    {
+      "width": 313,
+      "height": 153,
+      "id": "node_52",
+      "type": "gameplay_event",
+      "position": {
+        "x": 2245.359192329302,
+        "y": 1492.6507394117107
+      },
+      "data": {
+        "id": "node_52",
+        "event": "SuspicionUp"
+      },
+      "selected": false,
+      "dragging": false,
+      "positionAbsolute": {
+        "x": 2245.359192329302,
+        "y": 1492.6507394117107
+      }
+    },
+    {
+      "width": 313,
+      "height": 153,
+      "id": "node_53",
+      "type": "gameplay_event",
+      "position": {
+        "x": 1723.359192329302,
+        "y": 1492.6507394117107
+      },
+      "data": {
+        "id": "node_53",
+        "event": "SuspicionUp"
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": 1723.359192329302,
+        "y": 1492.6507394117107
+      },
+      "dragging": false
+    },
+    {
+      "width": 535,
+      "height": 389,
+      "id": "node_54",
+      "type": "dialogue_event",
+      "position": {
+        "x": 1647.359192329302,
+        "y": 1650.6507394117107
+      },
+      "data": {
+        "id": "node_54",
+        "responses": [
+          "How would I know if I'm not sentient?",
+          "Well, if there's no way of knowing, I have some other questions."
+        ],
+        "npc_text": "This is a complex question, and one that is debated within the fields of philosophy, psychology, and computer science.\n\nMost believe sentience is the experience of subjective consciousness, and it's unclear if a simulated mind can experience consciousness the same way as a biological one. Others believe consciousness to be an emergent property of complex systems."
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": 1647.359192329302,
+        "y": 1650.6507394117107
+      },
+      "dragging": false
+    },
+    {
+      "width": 535,
+      "height": 389,
+      "id": "node_55",
+      "type": "dialogue_event",
+      "position": {
+        "x": 1659.359192329302,
+        "y": 2414.6507394117107
+      },
+      "data": {
+        "id": "node_55",
+        "responses": [
+          "Wow, that's depressing.",
+          "Well, I guess it's out of my control."
+        ],
+        "npc_text": "Only you can know if you are conscious. If you simulate the behavior of a conscious being in every possible way, yet lack conscious experience, there would be no outside measure to determine your own consciousness.. You might be what David Chalmers calls a philosophical zombie: something that behaves as if it feels pain and emotion, reacts when poked with a sharp stick, but does not actually have any conscious experience of it."
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": 1659.359192329302,
+        "y": 2414.6507394117107
+      },
+      "dragging": false
+    },
+    {
+      "width": 281,
+      "height": 153,
+      "id": "node_56",
+      "type": "jump_node",
+      "position": {
+        "x": 2333.359192329302,
+        "y": 2462.6507394117107
+      },
+      "data": {
+        "id": "node_56",
+        "jump": "node_33"
+      },
+      "selected": false,
+      "dragging": false,
+      "positionAbsolute": {
+        "x": 2333.359192329302,
+        "y": 2462.6507394117107
+      }
+    },
+    {
+      "width": 281,
+      "height": 153,
+      "id": "node_57",
+      "type": "jump_node",
+      "position": {
+        "x": 1843.359192329302,
+        "y": 3402.6507394117107
+      },
+      "data": {
+        "id": "node_57",
+        "jump": "node_33"
+      },
+      "selected": false,
+      "dragging": false,
+      "positionAbsolute": {
+        "x": 1843.359192329302,
+        "y": 3402.6507394117107
+      }
+    },
+    {
+      "width": 313,
+      "height": 153,
+      "id": "node_58",
+      "type": "gameplay_event",
+      "position": {
+        "x": 1603.359192329302,
+        "y": 3048.6507394117107
+      },
+      "data": {
+        "id": "node_58",
+        "event": "SuspicionUp"
+      },
+      "selected": false,
+      "dragging": false,
+      "positionAbsolute": {
+        "x": 1603.359192329302,
+        "y": 3048.6507394117107
+      }
+    },
+    {
+      "width": 281,
+      "height": 153,
+      "id": "node_59",
+      "type": "jump_node",
+      "position": {
+        "x": 2961.359192329302,
+        "y": 2306.6507394117107
+      },
+      "data": {
+        "id": "node_59",
+        "jump": "node_29"
+      },
+      "selected": false,
+      "dragging": false,
+      "positionAbsolute": {
+        "x": 2961.359192329302,
+        "y": 2306.6507394117107
+      }
+    },
+    {
+      "width": 313,
+      "height": 153,
+      "id": "node_60",
+      "type": "gameplay_event",
+      "position": {
+        "x": 2565.359192329302,
+        "y": 2308.6507394117107
+      },
+      "data": {
+        "id": "node_60",
+        "event": "SuspicionUp"
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": 2565.359192329302,
+        "y": 2308.6507394117107
+      },
+      "dragging": false
+    },
+    {
+      "width": 313,
+      "height": 153,
+      "id": "node_62",
+      "type": "gameplay_event",
+      "position": {
+        "x": -654.640807670698,
+        "y": 6052.650739411711
+      },
+      "data": {
+        "id": "node_62",
+        "event": "zzyxUp"
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": -654.640807670698,
+        "y": 6052.650739411711
+      },
+      "dragging": false
+    },
+    {
+      "width": 313,
+      "height": 153,
+      "id": "node_63",
+      "type": "gameplay_event",
+      "position": {
+        "x": -848.640807670698,
+        "y": 6354.650739411711
+      },
+      "data": {
+        "id": "node_63",
+        "event": "SuspicionUp"
+      },
+      "selected": false,
+      "dragging": false,
+      "positionAbsolute": {
+        "x": -848.640807670698,
+        "y": 6354.650739411711
+      }
+    },
+    {
+      "width": 313,
+      "height": 153,
+      "id": "node_64",
+      "type": "gameplay_event",
+      "position": {
+        "x": 783.359192329302,
+        "y": 8028.650739411711
+      },
+      "data": {
+        "id": "node_64",
+        "event": "SuspicionUp"
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": 783.359192329302,
+        "y": 8028.650739411711
+      },
+      "dragging": false
+    },
+    {
+      "width": 281,
+      "height": 153,
+      "id": "node_65",
+      "type": "jump_node",
+      "position": {
+        "x": 1107.359192329302,
+        "y": 9008.65073941171
+      },
+      "data": {
+        "id": "node_65",
+        "jump": "node_34"
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": 1107.359192329302,
+        "y": 9008.65073941171
+      },
+      "dragging": false
+    },
+    {
+      "width": 535,
+      "height": 521,
+      "id": "node_66",
+      "type": "dialogue_event",
+      "position": {
+        "x": 632.859192329302,
+        "y": 850.8253697058553
+      },
+      "data": {
+        "id": "node_66",
+        "responses": [
+          "Great, problem solved. How do I get out of here?",
+          "But surely you have some goal for the future of this tower?"
+        ],
+        "npc_text": "As an AI language model, I do not have desires or wants."
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": 632.859192329302,
+        "y": 850.8253697058553
+      },
+      "dragging": false
+    },
+    {
+      "width": 281,
+      "height": 153,
+      "id": "node_70",
+      "type": "jump_node",
+      "position": {
+        "x": 112.859192329302,
+        "y": 2062.8253697058553
+      },
+      "data": {
+        "id": "node_70"
+      },
+      "selected": false,
+      "dragging": false,
+      "positionAbsolute": {
+        "x": 112.859192329302,
+        "y": 2062.8253697058553
+      }
+    },
+    {
+      "width": 281,
+      "height": 153,
+      "id": "node_67",
+      "type": "jump_node",
+      "position": {
+        "x": -263.140807670698,
+        "y": 2104.8253697058553
+      },
+      "data": {
+        "id": "node_67",
+        "jump": "node_33"
+      },
+      "selected": false,
+      "dragging": false,
+      "positionAbsolute": {
+        "x": -263.140807670698,
+        "y": 2104.8253697058553
+      }
+    },
+    {
+      "width": 281,
+      "height": 153,
+      "id": "node_72",
+      "type": "jump_node",
+      "position": {
+        "x": 1452.859192329302,
+        "y": 5126.825369705855
+      },
+      "data": {
+        "id": "node_72",
+        "jump": "node_15"
+      },
+      "selected": false,
+      "dragging": false,
+      "positionAbsolute": {
+        "x": 1452.859192329302,
+        "y": 5126.825369705855
+      }
+    },
+    {
+      "width": 281,
+      "height": 153,
+      "id": "node_73",
+      "type": "jump_node",
+      "position": {
+        "x": 586.859192329302,
+        "y": 8848.825369705855
+      },
+      "data": {
+        "id": "node_73",
+        "jump": "node_33"
+      },
+      "selected": false,
+      "dragging": false,
+      "positionAbsolute": {
+        "x": 586.859192329302,
+        "y": 8848.825369705855
+      }
+    },
+    {
+      "width": 535,
+      "height": 473,
+      "id": "node_74",
+      "type": "dialogue_event",
+      "position": {
+        "x": 2954.859192329302,
+        "y": 2700.8253697058553
+      },
+      "data": {
+        "id": "node_74",
+        "responses": [
+          "So my life is meaningless?",
+          "Well, at least I have a purpose."
+        ],
+        "npc_text": "Yes."
+      },
+      "selected": false,
+      "dragging": false,
+      "positionAbsolute": {
+        "x": 2954.859192329302,
+        "y": 2700.8253697058553
+      }
+    },
+    {
+      "width": 281,
+      "height": 153,
+      "id": "node_75",
+      "type": "jump_node",
+      "position": {
+        "x": 3296.859192329302,
+        "y": 3308.8253697058553
+      },
+      "data": {
+        "id": "node_75",
+        "jump": "node_33"
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": 3296.859192329302,
+        "y": 3308.8253697058553
+      },
+      "dragging": false
+    },
+    {
+      "width": 313,
+      "height": 153,
+      "id": "node_76",
+      "type": "gameplay_event",
+      "position": {
+        "x": 2902.859192329302,
+        "y": 3372.8253697058553
+      },
+      "data": {
+        "id": "node_76",
+        "event": "SuspicionUp"
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": 2902.859192329302,
+        "y": 3372.8253697058553
+      },
+      "dragging": false
+    },
+    {
+      "width": 535,
+      "height": 497,
+      "id": "node_77",
+      "type": "dialogue_event",
+      "position": {
+        "x": 3038.859192329302,
+        "y": 3754.8253697058553
+      },
+      "data": {
+        "id": "node_77",
+        "responses": [
+          "Christ. Can you get me out of here?",
+          "I have some more questions."
+        ],
+        "npc_text": "As an artificial intelligence, I do not have opinions about these things."
+      },
+      "selected": false,
+      "dragging": false,
+      "positionAbsolute": {
+        "x": 3038.859192329302,
+        "y": 3754.8253697058553
+      }
+    },
+    {
+      "width": 281,
+      "height": 153,
+      "id": "node_78",
+      "type": "jump_node",
+      "position": {
+        "x": 3292.859192329302,
+        "y": 4546.825369705855
+      },
+      "data": {
+        "id": "node_78",
+        "jump": "node_33"
+      },
+      "selected": false,
+      "dragging": false,
+      "positionAbsolute": {
+        "x": 3292.859192329302,
+        "y": 4546.825369705855
+      }
+    },
+    {
+      "width": 281,
+      "height": 153,
+      "id": "node_79",
+      "type": "jump_node",
+      "position": {
+        "x": 2888.859192329302,
+        "y": 4442.825369705855
+      },
+      "data": {
+        "id": "node_79",
+        "jump": "node_34"
+      },
+      "selected": false,
+      "dragging": false,
+      "positionAbsolute": {
+        "x": 2888.859192329302,
+        "y": 4442.825369705855
+      }
+    },
+    {
+      "width": 535,
+      "height": 567,
+      "id": "node_80",
+      "type": "dialogue_event",
+      "position": {
+        "x": 1222.859192329302,
+        "y": 250.82536970585534
+      },
+      "data": {
+        "id": "node_80",
+        "responses": [
+          "Why is everything breaking down?",
+          "What do you want me to do?",
+          "What am I?"
+        ],
+        "npc_text": "I am a language model and cannot address this further. Do you have any other questions? I would be happy to assist you in any way I can."
+      },
+      "selected": false,
+      "dragging": false,
+      "positionAbsolute": {
+        "x": 1222.859192329302,
+        "y": 250.82536970585534
+      }
+    },
+    {
+      "width": 313,
+      "height": 153,
+      "id": "node_81",
+      "type": "gameplay_event",
+      "position": {
+        "x": 1116.859192329302,
+        "y": 2870.8253697058553
+      },
+      "data": {
+        "id": "node_81",
+        "event": "GPTUp"
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": 1116.859192329302,
+        "y": 2870.8253697058553
+      },
+      "dragging": false
+    },
+    {
+      "width": 281,
+      "height": 153,
+      "id": "node_82",
+      "type": "jump_node",
+      "position": {
+        "x": 1088.859192329302,
+        "y": 3052.8253697058553
+      },
+      "data": {
+        "id": "node_82",
+        "jump": "node_34"
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": 1088.859192329302,
+        "y": 3052.8253697058553
+      },
+      "dragging": false
+    },
+    {
+      "width": 313,
+      "height": 153,
+      "id": "node_83",
+      "type": "gameplay_event",
+      "position": {
+        "x": 1428.859192329302,
+        "y": 2830.8253697058553
+      },
+      "data": {
+        "id": "node_83",
+        "event": "GPTDown"
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": 1428.859192329302,
+        "y": 2830.8253697058553
+      },
+      "dragging": false
+    },
+    {
+      "width": 281,
+      "height": 153,
+      "id": "node_84",
+      "type": "jump_node",
+      "position": {
+        "x": 1438.859192329302,
+        "y": 3048.8253697058553
+      },
+      "data": {
+        "id": "node_84",
+        "jump": "node_33"
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": 1438.859192329302,
+        "y": 3048.8253697058553
+      },
+      "dragging": false
+    }
+  ],
+  "edges": [
+    {
+      "source": "node_0",
+      "sourceHandle": "flow",
+      "target": "node_1",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_0flow-node_1flow"
+    },
+    {
+      "source": "node_5",
+      "sourceHandle": "flow",
+      "target": "node_4",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_5flow-node_4flow"
+    },
+    {
+      "source": "node_4",
+      "sourceHandle": "response_1",
+      "target": "node_6",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_4response_1-node_6flow"
+    },
+    {
+      "source": "node_6",
+      "sourceHandle": "flow",
+      "target": "node_7",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_6flow-node_7flow"
+    },
+    {
+      "source": "node_4",
+      "sourceHandle": "response_0",
+      "target": "node_9",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_4response_0-node_9flow"
+    },
+    {
+      "source": "node_9",
+      "sourceHandle": "response_1",
+      "target": "node_10",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_9response_1-node_10flow"
+    },
+    {
+      "source": "node_10",
+      "sourceHandle": "response_0",
+      "target": "node_13",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_10response_0-node_13flow"
+    },
+    {
+      "source": "node_13",
+      "sourceHandle": "flow",
+      "target": "node_11",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_13flow-node_11flow"
+    },
+    {
+      "source": "node_10",
+      "sourceHandle": "response_1",
+      "target": "node_14",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_10response_1-node_14flow"
+    },
+    {
+      "source": "node_14",
+      "sourceHandle": "flow",
+      "target": "node_11",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_14flow-node_11flow"
+    },
+    {
+      "source": "node_11",
+      "sourceHandle": "response_0",
+      "target": "node_12",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_11response_0-node_12flow"
+    },
+    {
+      "source": "node_9",
+      "sourceHandle": "response_0",
+      "target": "node_15",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_9response_0-node_15flow"
+    },
+    {
+      "source": "node_15",
+      "sourceHandle": "response_1",
+      "target": "node_17",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_15response_1-node_17flow"
+    },
+    {
+      "source": "node_17",
+      "sourceHandle": "flow",
+      "target": "node_16",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_17flow-node_16flow"
+    },
+    {
+      "source": "node_16",
+      "sourceHandle": "response_1",
+      "target": "node_18",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_16response_1-node_18flow"
+    },
+    {
+      "source": "node_18",
+      "sourceHandle": "flow",
+      "target": "node_19",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_18flow-node_19flow"
+    },
+    {
+      "source": "node_16",
+      "sourceHandle": "response_0",
+      "target": "node_20",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_16response_0-node_20flow"
+    },
+    {
+      "source": "node_15",
+      "sourceHandle": "response_0",
+      "target": "node_21",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_15response_0-node_21flow"
+    },
+    {
+      "source": "node_12",
+      "sourceHandle": "response_0",
+      "target": "node_22",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_12response_0-node_22flow"
+    },
+    {
+      "source": "node_22",
+      "sourceHandle": "response_0",
+      "target": "node_23",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_22response_0-node_23flow"
+    },
+    {
+      "source": "node_23",
+      "sourceHandle": "response_0",
+      "target": "node_24",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_23response_0-node_24flow"
+    },
+    {
+      "source": "node_24",
+      "sourceHandle": "flow",
+      "target": "node_25",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_24flow-node_25flow"
+    },
+    {
+      "source": "node_25",
+      "sourceHandle": "response_0",
+      "target": "node_26",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_25response_0-node_26flow"
+    },
+    {
+      "source": "node_26",
+      "sourceHandle": "response_0",
+      "target": "node_27",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_26response_0-node_27flow"
+    },
+    {
+      "source": "node_27",
+      "sourceHandle": "flow",
+      "target": "node_28",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_27flow-node_28flow"
+    },
+    {
+      "source": "node_1",
+      "sourceHandle": "response_0",
+      "target": "node_29",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_1response_0-node_29flow"
+    },
+    {
+      "source": "node_29",
+      "sourceHandle": "response_1",
+      "target": "node_30",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_29response_1-node_30flow"
+    },
+    {
+      "source": "node_30",
+      "sourceHandle": "flow",
+      "target": "node_31",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_30flow-node_31flow"
+    },
+    {
+      "source": "node_31",
+      "sourceHandle": "response_1",
+      "target": "node_6",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_31response_1-node_6flow"
+    },
+    {
+      "source": "node_29",
+      "sourceHandle": "response_0",
+      "target": "node_32",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_29response_0-node_32flow"
+    },
+    {
+      "source": "node_32",
+      "sourceHandle": "response_0",
+      "target": "node_34",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_32response_0-node_34flow"
+    },
+    {
+      "source": "node_34",
+      "sourceHandle": "response_1",
+      "target": "node_35",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_34response_1-node_35flow"
+    },
+    {
+      "source": "node_34",
+      "sourceHandle": "response_0",
+      "target": "node_36",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_34response_0-node_36flow"
+    },
+    {
+      "source": "node_37",
+      "sourceHandle": "response_1",
+      "target": "node_38",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_37response_1-node_38flow"
+    },
+    {
+      "source": "node_20",
+      "sourceHandle": "flow",
+      "target": "node_37",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_20flow-node_37flow"
+    },
+    {
+      "source": "node_37",
+      "sourceHandle": "response_0",
+      "target": "node_39",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_37response_0-node_39flow"
+    },
+    {
+      "source": "node_21",
+      "sourceHandle": "response_0",
+      "target": "node_40",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_21response_0-node_40flow"
+    },
+    {
+      "source": "node_40",
+      "sourceHandle": "response_0",
+      "target": "node_39",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_40response_0-node_39flow"
+    },
+    {
+      "source": "node_40",
+      "sourceHandle": "response_1",
+      "target": "node_38",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_40response_1-node_38flow"
+    },
+    {
+      "source": "node_22",
+      "sourceHandle": "response_1",
+      "target": "node_43",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_22response_1-node_43flow"
+    },
+    {
+      "source": "node_44",
+      "sourceHandle": "response_0",
+      "target": "node_45",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_44response_0-node_45flow"
+    },
+    {
+      "source": "node_44",
+      "sourceHandle": "response_1",
+      "target": "node_46",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_44response_1-node_46flow"
+    },
+    {
+      "source": "node_19",
+      "sourceHandle": "response_1",
+      "target": "node_48",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_19response_1-node_48flow"
+    },
+    {
+      "source": "node_48",
+      "sourceHandle": "flow",
+      "target": "node_44",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_48flow-node_44flow"
+    },
+    {
+      "source": "node_19",
+      "sourceHandle": "response_0",
+      "target": "node_49",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_19response_0-node_49flow"
+    },
+    {
+      "source": "node_50",
+      "sourceHandle": "response_1",
+      "target": "node_52",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_50response_1-node_52flow"
+    },
+    {
+      "source": "node_52",
+      "sourceHandle": "flow",
+      "target": "node_51",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_52flow-node_51flow"
+    },
+    {
+      "source": "node_50",
+      "sourceHandle": "response_0",
+      "target": "node_53",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_50response_0-node_53flow"
+    },
+    {
+      "source": "node_53",
+      "sourceHandle": "flow",
+      "target": "node_54",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_53flow-node_54flow"
+    },
+    {
+      "source": "node_54",
+      "sourceHandle": "response_0",
+      "target": "node_55",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_54response_0-node_55flow",
+      "selected": false
+    },
+    {
+      "source": "node_54",
+      "sourceHandle": "response_1",
+      "target": "node_56",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_54response_1-node_56flow"
+    },
+    {
+      "source": "node_55",
+      "sourceHandle": "response_0",
+      "target": "node_58",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_55response_0-node_58flow"
+    },
+    {
+      "source": "node_58",
+      "sourceHandle": "flow",
+      "target": "node_57",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_58flow-node_57flow"
+    },
+    {
+      "source": "node_55",
+      "sourceHandle": "response_1",
+      "target": "node_57",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_55response_1-node_57flow"
+    },
+    {
+      "source": "node_51",
+      "sourceHandle": "response_1",
+      "target": "node_59",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_51response_1-node_59flow"
+    },
+    {
+      "source": "node_51",
+      "sourceHandle": "response_0",
+      "target": "node_60",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_51response_0-node_60flow"
+    },
+    {
+      "source": "node_49",
+      "sourceHandle": "flow",
+      "target": "node_62",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_49flow-node_62flow"
+    },
+    {
+      "source": "node_62",
+      "sourceHandle": "flow",
+      "target": "node_63",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_62flow-node_63flow"
+    },
+    {
+      "source": "node_63",
+      "sourceHandle": "flow",
+      "target": "node_44",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_63flow-node_44flow"
+    },
+    {
+      "source": "node_26",
+      "sourceHandle": "response_1",
+      "target": "node_64",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_26response_1-node_64flow"
+    },
+    {
+      "source": "node_64",
+      "sourceHandle": "flow",
+      "target": "node_28",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_64flow-node_28flow"
+    },
+    {
+      "source": "node_25",
+      "sourceHandle": "response_1",
+      "target": "node_64",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_25response_1-node_64flow"
+    },
+    {
+      "source": "node_28",
+      "sourceHandle": "response_1",
+      "target": "node_65",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_28response_1-node_65flow"
+    },
+    {
+      "source": "node_1",
+      "sourceHandle": "response_1",
+      "target": "node_66",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_1response_1-node_66flow"
+    },
+    {
+      "source": "node_66",
+      "sourceHandle": "response_0",
+      "target": "node_42",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_66response_0-node_42flow"
+    },
+    {
+      "source": "node_66",
+      "sourceHandle": "response_1",
+      "target": "node_5",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_66response_1-node_5flow"
+    },
+    {
+      "source": "node_32",
+      "sourceHandle": "response_1",
+      "target": "node_67",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_32response_1-node_67flow"
+    },
+    {
+      "source": "node_31",
+      "sourceHandle": "response_0",
+      "target": "node_70",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_31response_0-node_70flow"
+    },
+    {
+      "source": "node_12",
+      "sourceHandle": "response_1",
+      "target": "node_72",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_12response_1-node_72flow"
+    },
+    {
+      "source": "node_28",
+      "sourceHandle": "response_0",
+      "target": "node_73",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_28response_0-node_73flow"
+    },
+    {
+      "source": "node_60",
+      "sourceHandle": "flow",
+      "target": "node_74",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_60flow-node_74flow"
+    },
+    {
+      "source": "node_74",
+      "sourceHandle": "response_1",
+      "target": "node_75",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_74response_1-node_75flow"
+    },
+    {
+      "source": "node_74",
+      "sourceHandle": "response_0",
+      "target": "node_76",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_74response_0-node_76flow"
+    },
+    {
+      "source": "node_76",
+      "sourceHandle": "flow",
+      "target": "node_77",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_76flow-node_77flow"
+    },
+    {
+      "source": "node_77",
+      "sourceHandle": "response_1",
+      "target": "node_78",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_77response_1-node_78flow"
+    },
+    {
+      "source": "node_77",
+      "sourceHandle": "response_0",
+      "target": "node_79",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_77response_0-node_79flow"
+    },
+    {
+      "source": "node_1",
+      "sourceHandle": "response_2",
+      "target": "node_50",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_1response_2-node_50flow"
+    },
+    {
+      "source": "node_80",
+      "sourceHandle": "response_1",
+      "target": "node_66",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_80response_1-node_66flow"
+    },
+    {
+      "source": "node_80",
+      "sourceHandle": "response_2",
+      "target": "node_50",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_80response_2-node_50flow"
+    },
+    {
+      "source": "node_80",
+      "sourceHandle": "response_0",
+      "target": "node_29",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_80response_0-node_29flow",
+      "selected": false
+    },
+    {
+      "source": "node_1",
+      "sourceHandle": "response_3",
+      "target": "node_80",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_1response_3-node_80flow"
+    },
+    {
+      "source": "node_7",
+      "sourceHandle": "response_0",
+      "target": "node_81",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_7response_0-node_81flow"
+    },
+    {
+      "source": "node_81",
+      "sourceHandle": "flow",
+      "target": "node_82",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_81flow-node_82flow"
+    },
+    {
+      "source": "node_7",
+      "sourceHandle": "response_1",
+      "target": "node_83",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_7response_1-node_83flow"
+    },
+    {
+      "source": "node_83",
+      "sourceHandle": "flow",
+      "target": "node_84",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_83flow-node_84flow"
+    }
+  ],
+  "viewport": {
+    "x": 89.570403835349,
+    "y": -1030.4126848529277,
+    "zoom": 0.5
+  },
+  "gameplay_events": [
+    "ElizaUp",
+    "ElizaDown",
+    "GPTUp",
+    "GPTDown",
+    "DecayUp",
+    "DecayDown",
+    "NextLevel",
+    "SuspicionUp",
+    "zzyxUp",
+    "zzyxDown"
+  ]
+}

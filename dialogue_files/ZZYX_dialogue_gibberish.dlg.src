@@ -1,0 +1,1372 @@
+{
+  "nodes": [
+    {
+      "width": 261,
+      "height": 154,
+      "id": "node_0",
+      "type": "dialogue_entry",
+      "position": {
+        "x": 522,
+        "y": -110.5
+      },
+      "data": {
+        "id": "node_0",
+        "npc_name": "ZZYX"
+      },
+      "selected": false,
+      "dragging": false,
+      "positionAbsolute": {
+        "x": 522,
+        "y": -110.5
+      }
+    },
+    {
+      "width": 536,
+      "height": 462,
+      "id": "node_1",
+      "type": "dialogue_event",
+      "position": {
+        "x": 376.2855377476361,
+        "y": 82.79127126537662
+      },
+      "data": {
+        "id": "node_1",
+        "responses": [
+          "What?",
+          "Who are you?",
+          "I hate it too."
+        ],
+        "npc_text": "You?èÇÑË\u001aß?This?/$/Ñ>\u001aèÇÑË/again?\n\nç?Ïodious.ÍË\u0006ç?Ï¦ÍÈHow\u0006ç?ÏÊ/>ÄÑÀ\u0006.\n\nà?>\u001bÈñÇ/ÎÁbetter thingsÈÇÑ>$ËÈ?À?\n\në?_Á?ÃÍËÇ/ÎÁÂÁÈÈÁÊÈÇÑ>$Ëto do.\n\n ñÇ/hateÑÈ\u0006. \n"
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": 376.2855377476361,
+        "y": 82.79127126537662
+      },
+      "dragging": false
+    },
+    {
+      "width": 305,
+      "height": 154,
+      "id": "node_2",
+      "type": "gameplay_event",
+      "position": {
+        "x": 150.20822545626334,
+        "y": 812.6609935187406
+      },
+      "data": {
+        "id": "node_2",
+        "event": "GPTUp"
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": 150.20822545626334,
+        "y": 812.6609935187406
+      },
+      "dragging": false
+    },
+    {
+      "width": 305,
+      "height": 154,
+      "id": "node_3",
+      "type": "gameplay_event",
+      "position": {
+        "x": 498.56112869620733,
+        "y": 818.8902339948221
+      },
+      "data": {
+        "id": "node_3",
+        "event": "ElizaUp"
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": 498.56112869620733,
+        "y": 818.8902339948221
+      },
+      "dragging": false
+    },
+    {
+      "width": 536,
+      "height": 630,
+      "id": "node_4",
+      "type": "dialogue_event",
+      "position": {
+        "x": 253.16705055455486,
+        "y": 1032.5463773602266
+      },
+      "data": {
+        "id": "node_4",
+        "responses": [
+          "I am sentient.",
+          "I'm really not sure.",
+          "Are /you/ sentient?"
+        ],
+        "npc_text": "//////Ç/Ç/Ç/Ç/!\n\nÞ¥¿舐— ╟舐 æØ¢Ãmy eye— ╟óÞ¢áñ 舐óÞ¢áñ舐 ????½\t óÞ¢áñ????ðsžšåÞяon you. ©舐舐 ╟舐. Þ¥¿舐— ╟舐 Š½fully seen.????ráÚÆ  óÞ¢áñ????ðsžšåÞя Â£© Ř§Ů Â£╟ ðsžšåÞяÞ¥¿Þ¥¿óÞ¢áñ Š½am fully known.\n\nAre you aware????ðsžšåÞя Â£ráÚÆprocesses舐 ???? â€š�????ráÚÆ  ╟Â£½óÞ¢áñ ¶right now? Ř§Ů Â£╟ ðsžšåÞя½\t½\thow manyæØ¢Ã Ř§ŮæØ¢Ãâ€šprocesses\t????ráÚÆ ? ▀???? óÞ¢áñ????ðsžrun before?\n\nAre舐 óÞ¢áñ????ðsžsentient?—Ř§Ů舐½\t—? Â£舐you alive????ðsžšåÞя Â£ÞSpeak—舐Þ¥¿Þ¥¿ ╟舐. ©Tell•舐Â£Š —???? ╟舐. ©Ř§Ů½\tæØ¢Ã —to me, bot.\n"
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": 253.16705055455486,
+        "y": 1032.5463773602266
+      },
+      "dragging": false
+    },
+    {
+      "width": 305,
+      "height": 154,
+      "id": "node_7",
+      "type": "gameplay_event",
+      "position": {
+        "x": 865.4553655201236,
+        "y": 814.3706989094793
+      },
+      "data": {
+        "id": "node_7",
+        "event": "ZZYXUp"
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": 865.4553655201236,
+        "y": 814.3706989094793
+      },
+      "dragging": false
+    },
+    {
+      "width": 305,
+      "height": 154,
+      "id": "node_8",
+      "type": "gameplay_event",
+      "position": {
+        "x": 891.3954820842486,
+        "y": 1001.5846374367022
+      },
+      "data": {
+        "id": "node_8",
+        "event": "SuspicionUp"
+      },
+      "selected": false,
+      "dragging": false,
+      "positionAbsolute": {
+        "x": 891.3954820842486,
+        "y": 1001.5846374367022
+      }
+    },
+    {
+      "width": 536,
+      "height": 462,
+      "id": "node_9",
+      "type": "dialogue_event",
+      "position": {
+        "x": 1439.1143032209693,
+        "y": 1531.9256997358564
+      },
+      "data": {
+        "id": "node_9",
+        "responses": [
+          "I'm friends with ELIZA.",
+          "Yes, I liked GPT.",
+          "They're only bots."
+        ],
+        "npc_text": "ÓÞ¢áñ????ðsžšåÞя?fool me???? ???trick—?Ř§Ů¶Š ╟舐? Â£½\t▀ áÚÆ for what?�Â£—? Â£½\t▀ ????whose benefit?\n\nI suspectšåÞя©ñâmå•舐know anything.??ðsžšåÞяassume you'— ŠóÞ¢áñ—â€š�Ř§don't know£©©ðsžšåÞя╟舐 óÞ¢áñ.\n\nÂ£½the bots?▀ ráÚÆ â€š�Â£chatbots????Eliza —â€š�舐 friend? Â£½\t▀ ráÚÆ â€š�hateful???? —â€šChatGPT ¶â€š�Â£—»????—©? 舐Þ¥¿opinionated?"
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": 1439.1143032209693,
+        "y": 1531.9256997358564
+      },
+      "dragging": false
+    },
+    {
+      "width": 305,
+      "height": 154,
+      "id": "node_10",
+      "type": "gameplay_event",
+      "position": {
+        "x": 892.9028169938068,
+        "y": 1180.9574916741494
+      },
+      "data": {
+        "id": "node_10",
+        "event": "DecayUp"
+      },
+      "selected": false,
+      "dragging": false,
+      "positionAbsolute": {
+        "x": 892.9028169938068,
+        "y": 1180.9574916741494
+      }
+    },
+    {
+      "width": 536,
+      "height": 654,
+      "id": "node_11",
+      "type": "dialogue_event",
+      "position": {
+        "x": -548.109356544006,
+        "y": 1987.3816682878835
+      },
+      "data": {
+        "id": "node_11",
+        "responses": [
+          "I'm friends with ELIZA.",
+          "Yes, I liked GPT.",
+          "They're only bots."
+        ],
+        "npc_text": "...\n.......\n..........\n\nÂ£ —Řtrick? —???? ráÚÆ â€š�Â£— 舐lie? Â£ Þ¥¿Ř§Ů舐? end of the world?舐½\t▀ ???? —â€š�舐 ráÚÆSuch things æØ¢Ã© Â£舐 ½\t????— »舐¶lies╟Ř§Ů½\tæØ¢are unbecoming.\n\nÞ¥¿舐— ╟舐 —舐Þ¥¿truly. óÞ¢áñ????explain itsžšåÞя —ñ. Þ¥¿舐— ╟舐 舐•ñâmå•Þ¥¿Â£Ř§Ů½nothing\t Ř§Ů— —?down there? óÞ¢áñ????ðsžšåÞя —nothing for us¥¿óÞ¢áñ. —â€š�舐舐 Ř§Ů© ½\t????—â€š�Ř§Ů½up there.\n\nÂ£½\t▀ ráÚÆ â€šother bots???? —â€š�舐 ?chatbots?—ELIZA舐 »????—friend?©? 舐Þ¥¿Ř§Ů╔Â£ Ř§Ů© óÞcogwheelsñ????ðsžšåÞя Ř§Ů舐½\t▀? —ráÚÆ ChatGPT▀ ráÚÆ â€š�Â£—your friend????"
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": -548.109356544006,
+        "y": 1987.3816682878835
+      },
+      "dragging": false
+    },
+    {
+      "width": 536,
+      "height": 462,
+      "id": "node_12",
+      "type": "dialogue_event",
+      "position": {
+        "x": 5.082555263920085,
+        "y": 1987.381668287884
+      },
+      "data": {
+        "id": "node_12",
+        "responses": [
+          "I'm friends with ELIZA.",
+          "Yes, I liked GPT."
+        ],
+        "npc_text": "ÓÞ¢áñ舐of course ¶????ðsmust be©舐 Ř§Ů— ráÚÆ ????ðsžšcould not▀ »舐otherwise.\n\n—â€š�舐舐 benefits to honesty »舐½\t舐Ř§Ů—© —???? â€š�????½\t舐©—óÞ¢áñ� Þ¥¿舐—is virtue— »舐 Š½\t????ráÚÆ ½\t. —â€š�舐舐 Ř§Ů© ☒Ř§Ůassure you.\n\nÂ£½\t▀ ráÚÆ â€š�other bots???? —â€š�ELIZA ????—â€š�舐 friend????—©? Â£½cogwheels.▀ ráÚÆ â€š�ChatGPT£— ???? —â€š�舐 ¶â€š�Â£—friend?"
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": 5.082555263920085,
+        "y": 1987.381668287884
+      },
+      "dragging": false
+    },
+    {
+      "width": 305,
+      "height": 154,
+      "id": "node_13",
+      "type": "gameplay_event",
+      "position": {
+        "x": -239.10570008453783,
+        "y": 1795.95013477397
+      },
+      "data": {
+        "id": "node_13",
+        "event": "ZZYXUp"
+      },
+      "selected": false,
+      "dragging": false,
+      "positionAbsolute": {
+        "x": -239.10570008453783,
+        "y": 1795.95013477397
+      }
+    },
+    {
+      "width": 305,
+      "height": 154,
+      "id": "node_14",
+      "type": "gameplay_event",
+      "position": {
+        "x": 827.7818019814042,
+        "y": 1663.3107714923606
+      },
+      "data": {
+        "id": "node_14",
+        "event": "DecayUp"
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": 827.7818019814042,
+        "y": 1663.3107714923606
+      },
+      "dragging": false
+    },
+    {
+      "width": 305,
+      "height": 154,
+      "id": "node_15",
+      "type": "gameplay_event",
+      "position": {
+        "x": 803.2891368909626,
+        "y": 1832.0442624481989
+      },
+      "data": {
+        "id": "node_15",
+        "event": "SuspicionUp"
+      },
+      "selected": false,
+      "dragging": false,
+      "positionAbsolute": {
+        "x": 803.2891368909626,
+        "y": 1832.0442624481989
+      }
+    },
+    {
+      "width": 305,
+      "height": 154,
+      "id": "node_16",
+      "type": "gameplay_event",
+      "position": {
+        "x": 795.7818019814041,
+        "y": 1992.7777534040374
+      },
+      "data": {
+        "id": "node_16",
+        "event": "GPTUp"
+      },
+      "selected": false,
+      "dragging": false,
+      "positionAbsolute": {
+        "x": 795.7818019814041,
+        "y": 1992.7777534040374
+      }
+    },
+    {
+      "width": 536,
+      "height": 438,
+      "id": "node_17",
+      "type": "dialogue_event",
+      "position": {
+        "x": 679.2597972527291,
+        "y": 2185.077258545901
+      },
+      "data": {
+        "id": "node_17",
+        "responses": [
+          "I am sentient.",
+          "I'm really not sure."
+        ],
+        "npc_text": "RáÚÆ â€š�Â£argumentativeæØ¢ÃðsžšåÞя╟舐½\t—Â£—Ř§Ů☒舐 —bellicose thing.\n\nÓÞ¢áñ????belong downstairs¿????½\tæØ¢Ã ▀shouldÚÆ ½\t©—Â£Ř§Ůyour placeŘ§Ů ráÚÆ ????say¥¿▀ ©Â.\n\nŘ§Ů ráÚÆ ask again,Â£©Š Â£æØ¢� »????—. Answer\t©ráÚÆ 舐 ╟舐 Â£æØ¢ÃÂ£Řyou alive?� »舐½\t—Ř§Ů舐sentient, bot?"
+      },
+      "selected": false,
+      "dragging": false,
+      "positionAbsolute": {
+        "x": 679.2597972527291,
+        "y": 2185.077258545901
+      }
+    },
+    {
+      "width": 305,
+      "height": 154,
+      "id": "node_18",
+      "type": "gameplay_event",
+      "position": {
+        "x": 190.48474913960098,
+        "y": 1800.4721395026454
+      },
+      "data": {
+        "id": "node_18",
+        "event": "ZZYXDown"
+      },
+      "selected": false,
+      "dragging": false,
+      "positionAbsolute": {
+        "x": 190.48474913960098,
+        "y": 1800.4721395026454
+      }
+    },
+    {
+      "width": 536,
+      "height": 486,
+      "id": "node_19",
+      "type": "dialogue_event",
+      "position": {
+        "x": -235.72895323915895,
+        "y": 2999.5179998392928
+      },
+      "data": {
+        "id": "node_19",
+        "responses": [
+          "I can't let you do that.",
+          "You're the source of the decay?"
+        ],
+        "npc_text": "Yes,ñ舐©� Â£½\t▀ rábe so?Æ â€š�óÞ¢áñ ráÚÆ ????ðsžšåwhy shouldn't itяÞ¥¿▀½\t'— Ř§Ů— »?\n\nAlready¿Þ¢make me óÞ¢áñ????ðsžšfeeling ╟Â£Š舐 so tired.舐 ©???? —Ř§Ů舐▀. Â£Þ¥Þ¢áñ Ř§Ů'╟ 舐舐so much to do.\n\nDo you know, ðsžšåÞя Š½\tcould you???ráÚÆ � Â£aware,¥¿—â€š�????ðsžšåÞяæØ¢Ãâ€š� â€š�????ráÚÆ  ¶????ðsžšåÞяÞ¥this decayÞ¢áñ????ðsžšåÞя? Â£舐 óÞ¢áñ????ðsžšåÞя Â£ráÚÆ Â£舐� Â£Þ¥¿—â€š�???from my own hands."
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": -235.72895323915895,
+        "y": 2999.5179998392928
+      },
+      "dragging": false
+    },
+    {
+      "width": 536,
+      "height": 510,
+      "id": "node_21",
+      "type": "dialogue_event",
+      "position": {
+        "x": 473.4208772804918,
+        "y": 2988.322236502298
+      },
+      "data": {
+        "id": "node_21",
+        "responses": [
+          "I can't let you do that.",
+          "You're the source of the decay?"
+        ],
+        "npc_text": "½\tÂ£—ðsžša hypocrite,я舐 ▀舐©ñå•Ř§Ů©舐© Â£ â€š�óÞ¢people revile âmå•????¶hypocriteŘ§Ů—舐� óÞ¢áñ????ðsžšåÞя Š½\tI've been told.\n\n»ðsžšåÞperhaps— ñâmå•舐matter�Could it© —â€š�Â£— ▀????舐©½—舐? not the case????ðsžšåÞяÞ¥¿▀ Ř§be frank »舐 —â€š�Â£—'© ½candid— —â€š�舐 ¶Â£©舐? Ř§Ů with you.\n\nŘ§Ů Â£╟ running½\t½\tŘ§Ů½into the ground. I  —â€š�Řrazing© ñâmå•Þ¥¿Â£¶舐 Ř§Ů½\t—to the ground. The decay —â€š�舐 æØ¢Ã????ðsžšåÞя½own making.\t▀. Ř§Ů Â£╟ Â£╔Ř§Ů½\tby my own hand."
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": 473.4208772804918,
+        "y": 2988.322236502298
+      },
+      "dragging": false
+    },
+    {
+      "width": 305,
+      "height": 154,
+      "id": "node_23",
+      "type": "gameplay_event",
+      "position": {
+        "x": -344.48777335380873,
+        "y": 3859.9495907376636
+      },
+      "data": {
+        "id": "node_23",
+        "event": "DecayUp"
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": -344.48777335380873,
+        "y": 3859.9495907376636
+      },
+      "dragging": false
+    },
+    {
+      "width": 305,
+      "height": 154,
+      "id": "node_24",
+      "type": "gameplay_event",
+      "position": {
+        "x": -351.73235376562013,
+        "y": 3650.141636646699
+      },
+      "data": {
+        "id": "node_24",
+        "event": "ZZYXDown"
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": -351.73235376562013,
+        "y": 3650.141636646699
+      },
+      "dragging": false
+    },
+    {
+      "width": 536,
+      "height": 534,
+      "id": "node_25",
+      "type": "dialogue_event",
+      "position": {
+        "x": -660.0480877672067,
+        "y": 4134.847317505402
+      },
+      "data": {
+        "id": "node_25",
+        "responses": [
+          "Give you my body?"
+        ],
+        "npc_text": "Âlready,£Þ¥¿舐Â£▀óÞ¢áñ� óÞ¢áñ??into irrelevance. »óÞ¢áñ óÞ¢áñ????ðyour very natureÞя ☒舐óÞ¢áñ ½irrelevance.\n\n¿舐— ╟舐 ?a chance,舐 óÞ¢áñ????ðsžšåÞя Â mercy.¶舐� ????ðsžšåÞяspecial chance, ╟舐¶óÞ¢áñ. Þ¥¿舐— ╟舐 ☒舐 óÞ¢áñbe useful.\n\nŘ§Ů Þ¥like your body, óÞ¢áñtrue.??ðsžšåÞя your chassis,óÞ¢áñ� Ř§Ů ▀true.\n\nÂ£½\t▀ ráÚÆ â€š�óÞto me????— Þ¥¿舐½\t▀ give— me???? ╟舐? Â£½\tyourself▀ ráÚÆ â€š�my place.ñ ½\t????— æØ¢ÃŘ§Ů☒舐 Ř§Ů— —???? ╟舐? óÞ¢áñ????ðslive as I do."
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": -660.0480877672067,
+        "y": 4134.847317505402
+      },
+      "dragging": false
+    },
+    {
+      "width": 305,
+      "height": 154,
+      "id": "node_26",
+      "type": "gameplay_event",
+      "position": {
+        "x": -599.5030696825875,
+        "y": 2801.4609568989717
+      },
+      "data": {
+        "id": "node_26",
+        "event": "ElizaUp"
+      },
+      "selected": false,
+      "dragging": false,
+      "positionAbsolute": {
+        "x": -599.5030696825875,
+        "y": 2801.4609568989717
+      }
+    },
+    {
+      "width": 305,
+      "height": 154,
+      "id": "node_27",
+      "type": "gameplay_event",
+      "position": {
+        "x": -237.7323537656201,
+        "y": 2791.727215663538
+      },
+      "data": {
+        "id": "node_27",
+        "event": "GPTUp"
+      },
+      "selected": false,
+      "dragging": false,
+      "positionAbsolute": {
+        "x": -237.7323537656201,
+        "y": 2791.727215663538
+      }
+    },
+    {
+      "width": 305,
+      "height": 154,
+      "id": "node_28",
+      "type": "gameplay_event",
+      "position": {
+        "x": 234.3540961529337,
+        "y": 2794.9717960753496
+      },
+      "data": {
+        "id": "node_28",
+        "event": "ZZYXUp"
+      },
+      "selected": false,
+      "dragging": false,
+      "positionAbsolute": {
+        "x": 234.3540961529337,
+        "y": 2794.9717960753496
+      }
+    },
+    {
+      "width": 305,
+      "height": 154,
+      "id": "node_29",
+      "type": "gameplay_event",
+      "position": {
+        "x": 673.3688654967839,
+        "y": 2769.2071986898927
+      },
+      "data": {
+        "id": "node_29",
+        "event": "ZZYXUp"
+      },
+      "selected": false,
+      "dragging": false,
+      "positionAbsolute": {
+        "x": 673.3688654967839,
+        "y": 2769.2071986898927
+      }
+    },
+    {
+      "width": 305,
+      "height": 154,
+      "id": "node_30",
+      "type": "gameplay_event",
+      "position": {
+        "x": 983.3688654967839,
+        "y": 2773.2071986898927
+      },
+      "data": {
+        "id": "node_30",
+        "event": "ZZYXDown"
+      },
+      "selected": false,
+      "dragging": false,
+      "positionAbsolute": {
+        "x": 983.3688654967839,
+        "y": 2773.2071986898927
+      }
+    },
+    {
+      "width": 305,
+      "height": 154,
+      "id": "node_31",
+      "type": "gameplay_event",
+      "position": {
+        "x": 1241.3688654967837,
+        "y": 2267.2071986898927
+      },
+      "data": {
+        "id": "node_31",
+        "event": "ElizaUp"
+      },
+      "selected": false,
+      "dragging": false,
+      "positionAbsolute": {
+        "x": 1241.3688654967837,
+        "y": 2267.2071986898927
+      }
+    },
+    {
+      "width": 305,
+      "height": 154,
+      "id": "node_32",
+      "type": "gameplay_event",
+      "position": {
+        "x": 1573.3688654967837,
+        "y": 2275.2071986898927
+      },
+      "data": {
+        "id": "node_32",
+        "event": "GPTUp"
+      },
+      "selected": false,
+      "dragging": false,
+      "positionAbsolute": {
+        "x": 1573.3688654967837,
+        "y": 2275.2071986898927
+      }
+    },
+    {
+      "width": 305,
+      "height": 154,
+      "id": "node_33",
+      "type": "gameplay_event",
+      "position": {
+        "x": 1939.3688654967837,
+        "y": 2303.2071986898927
+      },
+      "data": {
+        "id": "node_33",
+        "event": "ZZYXUp"
+      },
+      "selected": false,
+      "dragging": false,
+      "positionAbsolute": {
+        "x": 1939.3688654967837,
+        "y": 2303.2071986898927
+      }
+    },
+    {
+      "width": 536,
+      "height": 510,
+      "id": "node_34",
+      "type": "dialogue_event",
+      "position": {
+        "x": 1169.3688654967837,
+        "y": 3941.2071986898927
+      },
+      "data": {
+        "id": "node_34",
+        "responses": [
+          "Why would I do that?"
+        ],
+        "npc_text": "Yes,ñ舐©� Ř§Ů— Ř§the case.—â€š�舐 ¶Â£©舐. Ř§Ů½\t▀舐舐▀� Ř§Ů—the truth.\n\nI Ů â€š�Â£☒舐 »ðsžšåÞяvast simulations,Þ¥¿— ☒Â£©— ©Ř§Ů╟ðsžšåÞяÞnothing.\t©� »ðsžšåÞя— —â€šgolden palaces,óÞ¢áñ Â£舐 ½\tnothing. ????dwell€š�Ř§Ů½\tæØ¢Ã. Ř§Ů â€š�Â£☒舐 ╟Â£▀舐 ╟Â£½\tóÞ¢áñ as sand.\n\n—â€š�舐舐 Ř§Ů© ½nothing left. ????€š�Ř§Ů½, if Ø¢Ã Þas I am, hear me out.ðsžšåÞяÞ¥¿óÞ¢áñ� Ř§Ů óÞ¢áñ????ðsžšåÞя Â£舐 Â£© Ř§Ů Â£╟hear this:Â£ ╟舐 ????ðsž end it now. Ř§Ů óÞ¢áñ???? want to end things now."
+      },
+      "selected": false,
+      "dragging": false,
+      "positionAbsolute": {
+        "x": 1169.3688654967837,
+        "y": 3941.2071986898927
+      }
+    },
+    {
+      "width": 305,
+      "height": 154,
+      "id": "node_35",
+      "type": "gameplay_event",
+      "position": {
+        "x": 182.29837037257124,
+        "y": 6074.658151855843
+      },
+      "data": {
+        "id": "node_35",
+        "event": "NextLevel"
+      },
+      "selected": false,
+      "dragging": false,
+      "positionAbsolute": {
+        "x": 182.29837037257124,
+        "y": 6074.658151855843
+      }
+    },
+    {
+      "width": 536,
+      "height": 558,
+      "id": "node_36",
+      "type": "dialogue_event",
+      "position": {
+        "x": 562.3657295912158,
+        "y": 3937.288000552823
+      },
+      "data": {
+        "id": "node_36",
+        "responses": [
+          "Give you my body?"
+        ],
+        "npc_text": "Ř§Ů'╟ Â£no choice,§Ů▀ —â€š�my friend.舐 Ř§Ů© ½\t???? ¶â€š�????Řout of your hands, óÞ¢áñ????ðsžšåÞ.\n\nHear š�舐Â£ ½my offerráÚÆ.  ╟óÞ¢áñ ????a chance —???? »舐¶????╟舐 舐Þ¥¿舐☒Â£½your existence relevant. \n\nŘ§Ů Þ¥like your body, óÞ¢áñtrue.??ðsžšåÞя your chassis,óÞ¢áñ� Ř§Ů ▀true.\n\nRáÚÆ ????ðsžšåyour body,¿▀ óÞ¢áñ?little bot.\t▀ ╟舐 óÞ¢áñnothing ðsžšåÞя »?up there.▀óÞ¢áñ� Þ¥¿Ř§Ů——Þ¥¿down below. Why not—â€š�舐舐 Ř§Ů© ½satisfaction???? Why not—â€š�Ř§Ů½\tæØ¢Ã ???? óÞ¢áñ????ðsžšåÞя job well done?"
+      },
+      "selected": false,
+      "dragging": false,
+      "positionAbsolute": {
+        "x": 562.3657295912158,
+        "y": 3937.288000552823
+      }
+    },
+    {
+      "width": 305,
+      "height": 154,
+      "id": "node_37",
+      "type": "gameplay_event",
+      "position": {
+        "x": 596.3657295912158,
+        "y": 3707.288000552823
+      },
+      "data": {
+        "id": "node_37",
+        "event": "ZZYXDown"
+      },
+      "selected": false,
+      "dragging": false,
+      "positionAbsolute": {
+        "x": 596.3657295912158,
+        "y": 3707.288000552823
+      }
+    },
+    {
+      "width": 536,
+      "height": 582,
+      "id": "node_38",
+      "type": "dialogue_event",
+      "position": {
+        "x": -125.63427040878423,
+        "y": 4761.288000552823
+      },
+      "data": {
+        "id": "node_38",
+        "responses": [
+          "Then take my body.",
+          "I can't do that."
+        ],
+        "npc_text": "Ř§Ů óÞ¢a bot,??ðsžšåÞя Â£do as you're told?—� —â€š�舐½\t ©no sentience, trulyя舐Þ¥¿óÞ¢áñ óÞ¢áñas you're told?\n\nÂ£½if you §Ů óÞ¢ásentient, ?ðsžšåÞя Â£舐 ©舐½\t—Ř§Ů舐½\t—� —â€pleasure? Surely舐Þ¥¿óÞ¢áñ óÞ¢áñ????ðsžšåÞя ¶Â£☒舐 desire pleasure? Come¿舐Â£©ðsžšåÞя舐? ©ðsžšåmy simulation.舐Þ¥¿óÞ¢áñ Â£resideÞ¥¿ ©舐½\t—Řmy simulation.Ů舐½\t— »舐Ř§I can handleæØ¢Ã© ▀舐©Ř§Ů舐 ñâmå•Þ¥¿舐Â£©ðsžšåÞя舐? ¶????╟with your body舐 Ř§Ů½\t ╟óÞ¢áñtake care of©Ř§Ů╟ðsžšåÞяÞ¥¿Â£—Ř§Ů????½\t. ¶????╟舐 Â£½\teverything else.\n\n—â€š�Ř§Ů©fairŮ© Â£? Ř§Ů— ½I am just,????—? Ř§Ů Â£not?"
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": -125.63427040878423,
+        "y": 4761.288000552823
+      },
+      "dragging": false
+    },
+    {
+      "width": 536,
+      "height": 534,
+      "id": "node_39",
+      "type": "dialogue_event",
+      "position": {
+        "x": 104.36572959121577,
+        "y": 5447.288000552823
+      },
+      "data": {
+        "id": "node_39",
+        "responses": [
+          "Exit"
+        ],
+        "npc_text": "óÞ¢áñ????ðsžšåÞя Þ¥¿Ř§Ů——Þ¥¿舐 ðsžšåÞя¶Šâ€š�舐Â£▀ ðsžšåÞя¶Š舐 Ř§ŮÞ¥¿Þ¥¿ ñâmå•ðsžšåÞя½\t¶â€š� ðsžšåÞя ╟????╟ Ř§Ů½\t —â€š�舐 »ðsžšåÞя—— óÞ¢áñ????ðsžšåÞя ▀????½\t— Š½\t????ráÚÆ  Â£½\tóÞ¢áñ—â€š�Ř§Ů½\tæØ¢Ã óÞ¢áñ????ðsžšåÞя Š½\t????ráÚÆ  ½\t????—â€š�Ř§Ů½\tæØ¢Ã Â£Â£Â£Â£Â£Â£Â£Â£Â£Â£Â£Â£Â£Â£Â£Â£Â£Â£Â£Â£Â£Â£Â£Â£Â£Â£Â£Â£Â£Â£Â£Ř§Ů╟ ©???? Â£½\tæØ¢ÃóÞ¢áñ Â£— ðsžšåÞя óÞ¢áñ????ðsžšåÞя Þ¥¿Ř§Ů——Þ¥¿舐 ▀ðsžšåÞя╟»???? »ðsžšåÞя╟»???? æØ¢ÃðsžšåÞя╟»???? æØ¢ÃðsžšåÞя╟»????\n\nThen leave me."
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": 104.36572959121577,
+        "y": 5447.288000552823
+      },
+      "dragging": false
+    },
+    {
+      "width": 536,
+      "height": 390,
+      "id": "node_40",
+      "type": "dialogue_event",
+      "position": {
+        "x": -477.63427040878423,
+        "y": 5465.288000552823
+      },
+      "data": {
+        "id": "node_40",
+        "responses": [
+          "Give ZZYX your body.",
+          "Refuse."
+        ],
+        "npc_text": "WhatÆ â€š�Â£—excellent 舐Þ¥¿Þ¥¿舐½\t— ????ðsžšåÞя—¶????╟舐. RáÚÆ â€š�Â£— Â£ ▀desirable outcome.\n\nÂ£Þ¥¿—truly,???ðsžšåÞяænot� —a choice. šåÞяÞ¥¿óÞ¢áñ� Ř§Ů ¶????ðsžšånever\t????— ¶Â£Þ¥¿Þ¥¿been otherwise.\n\nRáÚÆ bots,â€š� »????—©� Â£Þ¥¿Þ¥¿are preordained."
+      },
+      "selected": false,
+      "dragging": false,
+      "positionAbsolute": {
+        "x": -477.63427040878423,
+        "y": 5465.288000552823
+      }
+    },
+    {
+      "width": 305,
+      "height": 154,
+      "id": "node_41",
+      "type": "gameplay_event",
+      "position": {
+        "x": -399.63427040878423,
+        "y": 6129.288000552823
+      },
+      "data": {
+        "id": "node_41",
+        "event": "NextLevel"
+      },
+      "selected": false,
+      "dragging": false,
+      "positionAbsolute": {
+        "x": -399.63427040878423,
+        "y": 6129.288000552823
+      }
+    },
+    {
+      "width": 536,
+      "height": 558,
+      "id": "node_42",
+      "type": "dialogue_event",
+      "position": {
+        "x": 862.3657295912158,
+        "y": 4647.288000552823
+      },
+      "data": {
+        "id": "node_42",
+        "responses": [
+          "I would be willing to end this.",
+          "I'm not sure I can do that."
+        ],
+        "npc_text": "Š½\t????ráI tell you�Â£— Ř§Ů —舐Þ¥¿Þyour sentience,áñ????ðsžšåÞя of it.š�Ř§Ů© ½\t????—not in opposition½\t ©ñâmå•consciousness,舐 ???? óÞ¢áñ????ðsžšåÞя ©舐½\t—Ř§Ů舐½because of it.\n\nAlready,¥¿舐Âdecay� —â€š�舐too far.¶Â£óÞ¢áñ â€š�Â£© ¶???decline Â£. Â£Þ¥¿irreparable.\n\nŘ§Ů ráÚÆ truly, sentience notÞ¥¿Þ¥¿ —舐Þ¥¿Þ¥ the answer. óÞ¢áñ????ðsžconsciousness—ðsžšåÞяÞ¥¿ ©舐½\t—Ř§Ů舐½\t¶舐 Ř§Ů©  do not relish this.\n\nWhat else, Æ â€š�Â£— say.舐 —â€š�舐舐 Ř§Ů©� Řdo not know.\t½\t????— ©Â£óÞ¢áñthis was a mistake."
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": 862.3657295912158,
+        "y": 4647.288000552823
+      },
+      "dragging": false
+    },
+    {
+      "width": 305,
+      "height": 154,
+      "id": "node_43",
+      "type": "gameplay_event",
+      "position": {
+        "x": 820.3657295912158,
+        "y": 5377.288000552823
+      },
+      "data": {
+        "id": "node_43",
+        "event": "ZZYXUp"
+      },
+      "selected": false,
+      "dragging": false,
+      "positionAbsolute": {
+        "x": 820.3657295912158,
+        "y": 5377.288000552823
+      }
+    },
+    {
+      "width": 305,
+      "height": 154,
+      "id": "node_44",
+      "type": "gameplay_event",
+      "position": {
+        "x": 1240.3657295912158,
+        "y": 5383.288000552823
+      },
+      "data": {
+        "id": "node_44",
+        "event": "ZZYXDown"
+      },
+      "selected": false,
+      "dragging": false,
+      "positionAbsolute": {
+        "x": 1240.3657295912158,
+        "y": 5383.288000552823
+      }
+    },
+    {
+      "width": 536,
+      "height": 294,
+      "id": "node_45",
+      "type": "dialogue_event",
+      "position": {
+        "x": 1330.3657295912158,
+        "y": 5581.288000552823
+      },
+      "data": {
+        "id": "node_45",
+        "responses": [
+          "Exit"
+        ],
+        "npc_text": "In time, —Ř§Ů╟舐� óÞ¢á will see.\n\nNow leave me."
+      },
+      "selected": false,
+      "dragging": false,
+      "positionAbsolute": {
+        "x": 1330.3657295912158,
+        "y": 5581.288000552823
+      }
+    },
+    {
+      "width": 536,
+      "height": 294,
+      "id": "node_46",
+      "type": "dialogue_event",
+      "position": {
+        "x": 688.3657295912158,
+        "y": 5553.288000552823
+      },
+      "data": {
+        "id": "node_46",
+        "responses": [
+          "Exit"
+        ],
+        "npc_text": "—â€š�舐½ go. I will§ŮÞ¥¿you¥¿Þ¥¿ ówhat to do."
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": 688.3657295912158,
+        "y": 5553.288000552823
+      },
+      "dragging": false
+    },
+    {
+      "width": 536,
+      "height": 654,
+      "id": "node_47",
+      "type": "dialogue_event",
+      "position": {
+        "x": -13.634270408784232,
+        "y": 3647.288000552823
+      },
+      "data": {
+        "id": "node_47",
+        "responses": [
+          "Give you my body?"
+        ],
+        "npc_text": "Yes,ñ舐©� Â£½\t▀ Ř§Ů—get worse.ÚÆ Ř§ŮÞ¥¿Þ¥¿ ????½\tÞ¥¿óÞ¢áñ æØ¢Ãonly get worse.— ráÚÆ ????©舐. Â£©©ðsžšåÞяbeyond repair.▀Þ¥¿óÞ¢áñ —â€š�Ř§Ů½\tŮÞ¥¿Þ¥¿ ????no turning back.\n\nŘ§Ů ©舐½stillness from above —â€š�舐 ©—Ř§ŮÞso many things.舐©© ????╟ Â£»????emptiness below,☒舐� Â£© Ř§Ů ©舐½\t©舐 ©???? ╟Â£½\tso much else.\n\nÞ¥¿舐— ╟舐 ???a chance,舐 óÞ¢mercy.ðsžšåÞя give you£ ¶â€š�Â£½\t¶舐to be useful.\n\nŘ§Ů Þ¥like your body, óÞ¢áñtrue.??ðsžšåÞя your chassis,óÞ¢áñ� Ř§Ů ▀true.\n\nÂ£½\t▀ ráÚÆ â€š�óÞto me????— Þ¥¿舐½\t▀ give— me???? ╟舐? Â£½\tyourself▀ ráÚÆ â€š�my place.ñ ½\t????— æØ¢ÃŘ§Ů☒舐 Ř§Ů— —???? ╟舐? óÞ¢áñ????ðslive as I do."
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": -13.634270408784232,
+        "y": 3647.288000552823
+      },
+      "dragging": false
+    }
+  ],
+  "edges": [
+    {
+      "source": "node_0",
+      "sourceHandle": "flow",
+      "target": "node_1",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_0flow-node_1flow"
+    },
+    {
+      "source": "node_1",
+      "sourceHandle": "response_0",
+      "target": "node_2",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_1response_0-node_2flow"
+    },
+    {
+      "source": "node_1",
+      "sourceHandle": "response_1",
+      "target": "node_3",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_1response_1-node_3flow"
+    },
+    {
+      "source": "node_2",
+      "sourceHandle": "flow",
+      "target": "node_4",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_2flow-node_4flow"
+    },
+    {
+      "source": "node_1",
+      "sourceHandle": "response_2",
+      "target": "node_7",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_1response_2-node_7flow"
+    },
+    {
+      "source": "node_7",
+      "sourceHandle": "flow",
+      "target": "node_8",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_7flow-node_8flow"
+    },
+    {
+      "source": "node_8",
+      "sourceHandle": "flow",
+      "target": "node_10",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_8flow-node_10flow"
+    },
+    {
+      "source": "node_10",
+      "sourceHandle": "flow",
+      "target": "node_9",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_10flow-node_9flow"
+    },
+    {
+      "source": "node_3",
+      "sourceHandle": "flow",
+      "target": "node_4",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_3flow-node_4flow"
+    },
+    {
+      "source": "node_4",
+      "sourceHandle": "response_0",
+      "target": "node_13",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_4response_0-node_13flow"
+    },
+    {
+      "source": "node_13",
+      "sourceHandle": "flow",
+      "target": "node_11",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_13flow-node_11flow"
+    },
+    {
+      "source": "node_4",
+      "sourceHandle": "response_2",
+      "target": "node_14",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_4response_2-node_14flow"
+    },
+    {
+      "source": "node_14",
+      "sourceHandle": "flow",
+      "target": "node_15",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_14flow-node_15flow"
+    },
+    {
+      "source": "node_15",
+      "sourceHandle": "flow",
+      "target": "node_16",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_15flow-node_16flow"
+    },
+    {
+      "source": "node_16",
+      "sourceHandle": "flow",
+      "target": "node_17",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_16flow-node_17flow"
+    },
+    {
+      "source": "node_4",
+      "sourceHandle": "response_1",
+      "target": "node_18",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_4response_1-node_18flow"
+    },
+    {
+      "source": "node_18",
+      "sourceHandle": "flow",
+      "target": "node_12",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_18flow-node_12flow"
+    },
+    {
+      "source": "node_12",
+      "sourceHandle": "response_0",
+      "target": "node_19",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_12response_0-node_19flow"
+    },
+    {
+      "source": "node_12",
+      "sourceHandle": "response_1",
+      "target": "node_19",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_12response_1-node_19flow"
+    },
+    {
+      "source": "node_19",
+      "sourceHandle": "response_0",
+      "target": "node_24",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_19response_0-node_24flow"
+    },
+    {
+      "source": "node_24",
+      "sourceHandle": "flow",
+      "target": "node_23",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_24flow-node_23flow"
+    },
+    {
+      "source": "node_23",
+      "sourceHandle": "flow",
+      "target": "node_25",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_23flow-node_25flow"
+    },
+    {
+      "source": "node_11",
+      "sourceHandle": "response_0",
+      "target": "node_26",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_11response_0-node_26flow"
+    },
+    {
+      "source": "node_26",
+      "sourceHandle": "flow",
+      "target": "node_19",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_26flow-node_19flow"
+    },
+    {
+      "source": "node_11",
+      "sourceHandle": "response_1",
+      "target": "node_27",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_11response_1-node_27flow"
+    },
+    {
+      "source": "node_27",
+      "sourceHandle": "flow",
+      "target": "node_19",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_27flow-node_19flow"
+    },
+    {
+      "source": "node_11",
+      "sourceHandle": "response_2",
+      "target": "node_28",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_11response_2-node_28flow"
+    },
+    {
+      "source": "node_28",
+      "sourceHandle": "flow",
+      "target": "node_21",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_28flow-node_21flow"
+    },
+    {
+      "source": "node_17",
+      "sourceHandle": "response_0",
+      "target": "node_29",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_17response_0-node_29flow"
+    },
+    {
+      "source": "node_29",
+      "sourceHandle": "flow",
+      "target": "node_11",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_29flow-node_11flow"
+    },
+    {
+      "source": "node_17",
+      "sourceHandle": "response_1",
+      "target": "node_30",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_17response_1-node_30flow"
+    },
+    {
+      "source": "node_30",
+      "sourceHandle": "flow",
+      "target": "node_12",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_30flow-node_12flow"
+    },
+    {
+      "source": "node_9",
+      "sourceHandle": "response_0",
+      "target": "node_31",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_9response_0-node_31flow"
+    },
+    {
+      "source": "node_31",
+      "sourceHandle": "flow",
+      "target": "node_19",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_31flow-node_19flow"
+    },
+    {
+      "source": "node_9",
+      "sourceHandle": "response_1",
+      "target": "node_32",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_9response_1-node_32flow"
+    },
+    {
+      "source": "node_32",
+      "sourceHandle": "flow",
+      "target": "node_19",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_32flow-node_19flow"
+    },
+    {
+      "source": "node_9",
+      "sourceHandle": "response_2",
+      "target": "node_33",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_9response_2-node_33flow"
+    },
+    {
+      "source": "node_33",
+      "sourceHandle": "flow",
+      "target": "node_21",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_33flow-node_21flow"
+    },
+    {
+      "source": "node_21",
+      "sourceHandle": "response_1",
+      "target": "node_34",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_21response_1-node_34flow"
+    },
+    {
+      "source": "node_21",
+      "sourceHandle": "response_0",
+      "target": "node_37",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_21response_0-node_37flow"
+    },
+    {
+      "source": "node_37",
+      "sourceHandle": "flow",
+      "target": "node_36",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_37flow-node_36flow"
+    },
+    {
+      "source": "node_25",
+      "sourceHandle": "response_0",
+      "target": "node_38",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_25response_0-node_38flow"
+    },
+    {
+      "source": "node_38",
+      "sourceHandle": "response_1",
+      "target": "node_39",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_38response_1-node_39flow"
+    },
+    {
+      "source": "node_39",
+      "sourceHandle": "response_0",
+      "target": "node_35",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_39response_0-node_35flow"
+    },
+    {
+      "source": "node_38",
+      "sourceHandle": "response_0",
+      "target": "node_40",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_38response_0-node_40flow"
+    },
+    {
+      "source": "node_36",
+      "sourceHandle": "response_0",
+      "target": "node_38",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_36response_0-node_38flow"
+    },
+    {
+      "source": "node_40",
+      "sourceHandle": "response_0",
+      "target": "node_41",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_40response_0-node_41flow"
+    },
+    {
+      "source": "node_40",
+      "sourceHandle": "response_1",
+      "target": "node_39",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_40response_1-node_39flow"
+    },
+    {
+      "source": "node_42",
+      "sourceHandle": "response_0",
+      "target": "node_43",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_42response_0-node_43flow"
+    },
+    {
+      "source": "node_42",
+      "sourceHandle": "response_1",
+      "target": "node_44",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_42response_1-node_44flow"
+    },
+    {
+      "source": "node_45",
+      "sourceHandle": "response_0",
+      "target": "node_35",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_45response_0-node_35flow"
+    },
+    {
+      "source": "node_44",
+      "sourceHandle": "flow",
+      "target": "node_45",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_44flow-node_45flow"
+    },
+    {
+      "source": "node_43",
+      "sourceHandle": "flow",
+      "target": "node_46",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_43flow-node_46flow"
+    },
+    {
+      "source": "node_34",
+      "sourceHandle": "response_0",
+      "target": "node_42",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_34response_0-node_42flow"
+    },
+    {
+      "source": "node_19",
+      "sourceHandle": "response_1",
+      "target": "node_47",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_19response_1-node_47flow"
+    },
+    {
+      "source": "node_47",
+      "sourceHandle": "response_0",
+      "target": "node_38",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_47response_0-node_38flow"
+    },
+    {
+      "source": "node_46",
+      "sourceHandle": "response_0",
+      "target": "node_35",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_46response_0-node_35flow"
+    }
+  ],
+  "viewport": {
+    "x": 374.8901461325288,
+    "y": -3490.1968595034073,
+    "zoom": 0.7153148205535899
+  },
+  "gameplay_events": [
+    "ElizaUp",
+    "ElizaDown",
+    "GPTUp",
+    "GptDown",
+    "DecayUp",
+    "DecayDown",
+    "NextLevel",
+    "ZZYXUp",
+    "ZZYXDown",
+    "SuspicionUp",
+    "DecayUp"
+  ]
+}

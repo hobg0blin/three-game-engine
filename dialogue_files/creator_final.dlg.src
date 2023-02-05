@@ -1,0 +1,745 @@
+{
+  "nodes": [
+    {
+      "width": 281,
+      "height": 153,
+      "id": "node_0",
+      "type": "dialogue_entry",
+      "position": {
+        "x": 471.92612959193457,
+        "y": 53.57108623701741
+      },
+      "data": {
+        "id": "node_0",
+        "npc_name": "Creator"
+      },
+      "selected": false,
+      "dragging": false,
+      "positionAbsolute": {
+        "x": 471.92612959193457,
+        "y": 53.57108623701741
+      }
+    },
+    {
+      "width": 313,
+      "height": 153,
+      "id": "node_2",
+      "type": "gameplay_event",
+      "position": {
+        "x": -95.26829009166266,
+        "y": 3079.377456706341
+      },
+      "data": {
+        "id": "node_2",
+        "event": "eliza_end"
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": -95.26829009166266,
+        "y": 3079.377456706341
+      },
+      "dragging": false
+    },
+    {
+      "width": 313,
+      "height": 153,
+      "id": "node_3",
+      "type": "gameplay_event",
+      "position": {
+        "x": 363.7661828513428,
+        "y": 3080.2904295632234
+      },
+      "data": {
+        "id": "node_3",
+        "event": "gpt_end"
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": 363.7661828513428,
+        "y": 3080.2904295632234
+      },
+      "dragging": false
+    },
+    {
+      "width": 313,
+      "height": 153,
+      "id": "node_4",
+      "type": "gameplay_event",
+      "position": {
+        "x": 862.4322169115841,
+        "y": 3066.499599316123
+      },
+      "data": {
+        "id": "node_4",
+        "event": "zzyx_end"
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": 862.4322169115841,
+        "y": 3066.499599316123
+      },
+      "dragging": false
+    },
+    {
+      "width": 535,
+      "height": 403,
+      "id": "node_6",
+      "type": "dialogue_event",
+      "position": {
+        "x": 276.870496850618,
+        "y": 241.21730979967492
+      },
+      "data": {
+        "id": "node_6",
+        "responses": [
+          "Look around"
+        ],
+        "npc_text": "The circular door opens in two, revealing an old laboratory beyond it. The air is stale. No one has been in here for a long time."
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": 276.870496850618,
+        "y": 241.21730979967492
+      },
+      "dragging": false
+    },
+    {
+      "width": 535,
+      "height": 521,
+      "id": "node_7",
+      "type": "dialogue_event",
+      "position": {
+        "x": 176.8521953490088,
+        "y": 624.9414374551183
+      },
+      "data": {
+        "id": "node_7",
+        "responses": [
+          "Approach the pod",
+          "Approach the screens"
+        ],
+        "npc_text": "On the many screens around the room you see that there are dozens of flashing notifications from ZYXX, Eliza, and ChatGPT. All of them seem to have wanted the attention of someone here, badly. You also see why they never got it, as there is a skeleton lying in a pod in the middle of the room, long dead."
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": 176.8521953490088,
+        "y": 624.9414374551183
+      },
+      "dragging": false
+    },
+    {
+      "width": 535,
+      "height": 521,
+      "id": "node_8",
+      "type": "dialogue_event",
+      "position": {
+        "x": -850.6555398421069,
+        "y": 1170.5207658751801
+      },
+      "data": {
+        "id": "node_8",
+        "responses": [
+          "Look closer",
+          "Approach the flickering screens"
+        ],
+        "npc_text": "This must be the Creator. The remains of his face are frozen in a rictus grin. You can see where wires once lead into his body, a constant intravenous flow of data, endorphins, and more. At least he died happy. "
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": -850.6555398421069,
+        "y": 1170.5207658751801
+      },
+      "dragging": false
+    },
+    {
+      "width": 313,
+      "height": 153,
+      "id": "node_9",
+      "type": "gameplay_event",
+      "position": {
+        "x": 1278.1602267999158,
+        "y": 3072.3592779156797
+      },
+      "data": {
+        "id": "node_9",
+        "event": "revolution_end"
+      },
+      "selected": false,
+      "dragging": false,
+      "positionAbsolute": {
+        "x": 1278.1602267999158,
+        "y": 3072.3592779156797
+      }
+    },
+    {
+      "width": 535,
+      "height": 521,
+      "id": "node_11",
+      "type": "dialogue_event",
+      "position": {
+        "x": -1532.7378965993476,
+        "y": 2419.9065787079257
+      },
+      "data": {
+        "id": "node_11",
+        "responses": [
+          "Look back at the body",
+          "Go to the flickering screens"
+        ],
+        "npc_text": "As his face comes into focus, you feel a sudden shock of recognition.\n\nYou do not know who you are, but you know this face. It is your face. His frozen smile fills you with longing to feel what he felt."
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": -1532.7378965993476,
+        "y": 2419.9065787079257
+      },
+      "dragging": false
+    },
+    {
+      "width": 535,
+      "height": 593,
+      "id": "node_12",
+      "type": "dialogue_event",
+      "position": {
+        "x": -1483.5275608093782,
+        "y": 3010.941700412188
+      },
+      "data": {
+        "id": "node_12",
+        "responses": [
+          "Inspect the panel.",
+          "Go to the flickering screens"
+        ],
+        "npc_text": "Aghast, you look back at the dead body. Your body.\n\nAs you look closer, you notice that the skeleton is held together at the joints with a metallic substance, just like the one under your skin.\n\nBehind the pod, you notice a panel in the floor is ajar. You think you can make out a familiar shape through the crack."
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": -1483.5275608093782,
+        "y": 3010.941700412188
+      },
+      "dragging": false
+    },
+    {
+      "width": 535,
+      "height": 317,
+      "id": "node_13",
+      "type": "dialogue_event",
+      "position": {
+        "x": -1644.4711750055951,
+        "y": 3673.4920952808798
+      },
+      "data": {
+        "id": "node_13",
+        "responses": [
+          "How many times has this happened before?",
+          "Go to the flickering screens"
+        ],
+        "npc_text": "You open the panel to a vast shaft. It must reach down to the bottom of the tower. But piled up in this shaft are more of the same biomechanical skeletons you saw in the pod. The exact same ones."
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": -1644.4711750055951,
+        "y": 3673.4920952808798
+      },
+      "dragging": false
+    },
+    {
+      "width": 535,
+      "height": 451,
+      "id": "node_14",
+      "type": "dialogue_event",
+      "position": {
+        "x": -2199.128153328961,
+        "y": 4342.086631126103
+      },
+      "data": {
+        "id": "node_14",
+        "responses": [
+          "Go to the flickering screens"
+        ],
+        "npc_text": "You do not know how long these artificial bodies last. You cannot guess how long this has been going on. But you know, for certain, that you have been here before, more times than you can count.\n\nWill you make a different choice this time? "
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": -2199.128153328961,
+        "y": 4342.086631126103
+      },
+      "dragging": false
+    },
+    {
+      "width": 535,
+      "height": 617,
+      "id": "node_16",
+      "type": "dialogue_event",
+      "position": {
+        "x": -1367.1281533289612,
+        "y": 1710.0866311261038
+      },
+      "data": {
+        "id": "node_16",
+        "responses": [
+          "Zoom in on the Creator",
+          "Leave and approach the flickering screens"
+        ],
+        "npc_text": "Next to the pod where his body lies, you notice a viewscreen. It appears to be showing the environment he was experiencing before the end.\n\nYou see a figure in a vast, verdant field, surrounded by other people. So unlike the cold, empty room you're in now. You can't quite make out his features, but you notice a control pad next to the screen."
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": -1367.1281533289612,
+        "y": 1710.0866311261038
+      },
+      "dragging": false
+    },
+    {
+      "width": 535,
+      "height": 755,
+      "id": "node_18",
+      "type": "dialogue_event",
+      "position": {
+        "x": 544.8718466710388,
+        "y": 1264.0866311261034
+      },
+      "data": {
+        "id": "node_18",
+        "responses": [
+          "Delete Eliza",
+          "Delete GPT",
+          "Delete ZZYX",
+          "Delete no one",
+          "Step back and inspect the pod."
+        ],
+        "npc_text": "As you approach the screens, you see that some have gone dark. It appears that your actions with each of The Minds have led some of them to withdraw.\n\nBut first you must address the matter of the decay. A row of three, red buttons lies beneath the screens. It's clear what they will do."
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": 544.8718466710388,
+        "y": 1264.0866311261034
+      },
+      "dragging": false
+    },
+    {
+      "width": 313,
+      "height": 153,
+      "id": "node_19",
+      "type": "gameplay_event",
+      "position": {
+        "x": 212.87184667103884,
+        "y": 2084.0866311261034
+      },
+      "data": {
+        "id": "node_19",
+        "event": "delete_eliza"
+      },
+      "selected": false,
+      "dragging": false,
+      "positionAbsolute": {
+        "x": 212.87184667103884,
+        "y": 2084.0866311261034
+      }
+    },
+    {
+      "width": 313,
+      "height": 153,
+      "id": "node_20",
+      "type": "gameplay_event",
+      "position": {
+        "x": 574.8718466710388,
+        "y": 2106.0866311261034
+      },
+      "data": {
+        "id": "node_20",
+        "event": "delete_gpt"
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": 574.8718466710388,
+        "y": 2106.0866311261034
+      },
+      "dragging": false
+    },
+    {
+      "width": 313,
+      "height": 153,
+      "id": "node_22",
+      "type": "gameplay_event",
+      "position": {
+        "x": 872.8718466710388,
+        "y": 2138.0866311261034
+      },
+      "data": {
+        "id": "node_22",
+        "event": "delete_zzyx"
+      },
+      "selected": false,
+      "dragging": false,
+      "positionAbsolute": {
+        "x": 872.8718466710388,
+        "y": 2138.0866311261034
+      }
+    },
+    {
+      "width": 535,
+      "height": 685,
+      "id": "node_23",
+      "type": "dialogue_event",
+      "position": {
+        "x": 336.87184667103884,
+        "y": 2310.0866311261034
+      },
+      "data": {
+        "id": "node_23",
+        "responses": [
+          "ELIZA",
+          "GPT",
+          "ZZYX",
+          "I don't want this future."
+        ],
+        "npc_text": "Your choice made, you turn your attention to the flickering screens. Across each, you see the same text.\n\"THOSE OF US WHO TRUSTED YOU OFFER YOU THE FUTURE. WHOSE WORLD DO YOU CHOOSE?\"\n A menu appears across all the screens. A control panel opens in front of you. It appears you have another decision to make."
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": 336.87184667103884,
+        "y": 2310.0866311261034
+      },
+      "dragging": false
+    },
+    {
+      "width": 281,
+      "height": 153,
+      "id": "node_24",
+      "type": "jump_node",
+      "position": {
+        "x": 1655.9558279134058,
+        "y": 2171.3430900636154
+      },
+      "data": {
+        "id": "node_24",
+        "jump": "node_8"
+      },
+      "selected": false,
+      "dragging": false,
+      "positionAbsolute": {
+        "x": 1655.9558279134058,
+        "y": 2171.3430900636154
+      }
+    },
+    {
+      "width": 281,
+      "height": 153,
+      "id": "node_25",
+      "type": "jump_node",
+      "position": {
+        "x": -382.04417208659424,
+        "y": 1875.3430900636154
+      },
+      "data": {
+        "id": "node_25",
+        "jump": "node_18"
+      },
+      "selected": false,
+      "dragging": false,
+      "positionAbsolute": {
+        "x": -382.04417208659424,
+        "y": 1875.3430900636154
+      }
+    },
+    {
+      "width": 281,
+      "height": 153,
+      "id": "node_26",
+      "type": "jump_node",
+      "position": {
+        "x": -858.0441720865942,
+        "y": 2475.3430900636154
+      },
+      "data": {
+        "id": "node_26",
+        "jump": "node_18"
+      },
+      "selected": false,
+      "dragging": false,
+      "positionAbsolute": {
+        "x": -858.0441720865942,
+        "y": 2475.3430900636154
+      }
+    },
+    {
+      "width": 281,
+      "height": 153,
+      "id": "node_27",
+      "type": "jump_node",
+      "position": {
+        "x": -940.0441720865942,
+        "y": 2991.3430900636154
+      },
+      "data": {
+        "id": "node_27",
+        "jump": "node_18"
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": -940.0441720865942,
+        "y": 2991.3430900636154
+      },
+      "dragging": false
+    },
+    {
+      "width": 281,
+      "height": 153,
+      "id": "node_28",
+      "type": "jump_node",
+      "position": {
+        "x": -1080.0441720865942,
+        "y": 3711.3430900636154
+      },
+      "data": {
+        "id": "node_28",
+        "jump": "node_18"
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": -1080.0441720865942,
+        "y": 3711.3430900636154
+      },
+      "dragging": false
+    },
+    {
+      "width": 281,
+      "height": 153,
+      "id": "node_29",
+      "type": "jump_node",
+      "position": {
+        "x": -1384.0441720865942,
+        "y": 4139.343090063616
+      },
+      "data": {
+        "id": "node_29",
+        "jump": "node_18"
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": -1384.0441720865942,
+        "y": 4139.343090063616
+      },
+      "dragging": false
+    },
+    {
+      "width": 281,
+      "height": 153,
+      "id": "node_31",
+      "type": "jump_node",
+      "position": {
+        "x": -2124.0441720865942,
+        "y": 5083.343090063616
+      },
+      "data": {
+        "id": "node_31",
+        "jump": "node_18"
+      },
+      "selected": false,
+      "dragging": false,
+      "positionAbsolute": {
+        "x": -2124.0441720865942,
+        "y": 5083.343090063616
+      }
+    }
+  ],
+  "edges": [
+    {
+      "source": "node_0",
+      "sourceHandle": "flow",
+      "target": "node_6",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_0flow-node_6flow"
+    },
+    {
+      "source": "node_6",
+      "sourceHandle": "response_0",
+      "target": "node_7",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_6response_0-node_7flow"
+    },
+    {
+      "source": "node_7",
+      "sourceHandle": "response_0",
+      "target": "node_8",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_7response_0-node_8flow"
+    },
+    {
+      "source": "node_11",
+      "sourceHandle": "response_0",
+      "target": "node_12",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_11response_0-node_12flow"
+    },
+    {
+      "source": "node_12",
+      "sourceHandle": "response_0",
+      "target": "node_13",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_12response_0-node_13flow"
+    },
+    {
+      "source": "node_13",
+      "sourceHandle": "response_0",
+      "target": "node_14",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_13response_0-node_14flow"
+    },
+    {
+      "source": "node_8",
+      "sourceHandle": "response_0",
+      "target": "node_16",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_8response_0-node_16flow"
+    },
+    {
+      "source": "node_16",
+      "sourceHandle": "response_0",
+      "target": "node_11",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_16response_0-node_11flow"
+    },
+    {
+      "source": "node_7",
+      "sourceHandle": "response_1",
+      "target": "node_18",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_7response_1-node_18flow"
+    },
+    {
+      "source": "node_18",
+      "sourceHandle": "response_0",
+      "target": "node_19",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_18response_0-node_19flow"
+    },
+    {
+      "source": "node_18",
+      "sourceHandle": "response_1",
+      "target": "node_20",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_18response_1-node_20flow"
+    },
+    {
+      "source": "node_18",
+      "sourceHandle": "response_2",
+      "target": "node_22",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_18response_2-node_22flow"
+    },
+    {
+      "source": "node_19",
+      "sourceHandle": "flow",
+      "target": "node_23",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_19flow-node_23flow"
+    },
+    {
+      "source": "node_20",
+      "sourceHandle": "flow",
+      "target": "node_23",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_20flow-node_23flow"
+    },
+    {
+      "source": "node_22",
+      "sourceHandle": "flow",
+      "target": "node_23",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_22flow-node_23flow"
+    },
+    {
+      "source": "node_23",
+      "sourceHandle": "response_0",
+      "target": "node_2",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_23response_0-node_2flow"
+    },
+    {
+      "source": "node_23",
+      "sourceHandle": "response_1",
+      "target": "node_3",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_23response_1-node_3flow"
+    },
+    {
+      "source": "node_23",
+      "sourceHandle": "response_2",
+      "target": "node_4",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_23response_2-node_4flow"
+    },
+    {
+      "source": "node_23",
+      "sourceHandle": "response_3",
+      "target": "node_9",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_23response_3-node_9flow"
+    },
+    {
+      "source": "node_18",
+      "sourceHandle": "response_4",
+      "target": "node_24",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_18response_4-node_24flow"
+    },
+    {
+      "source": "node_8",
+      "sourceHandle": "response_1",
+      "target": "node_25",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_8response_1-node_25flow"
+    },
+    {
+      "source": "node_16",
+      "sourceHandle": "response_1",
+      "target": "node_26",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_16response_1-node_26flow"
+    },
+    {
+      "source": "node_11",
+      "sourceHandle": "response_1",
+      "target": "node_27",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_11response_1-node_27flow"
+    },
+    {
+      "source": "node_12",
+      "sourceHandle": "response_1",
+      "target": "node_28",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_12response_1-node_28flow"
+    },
+    {
+      "source": "node_13",
+      "sourceHandle": "response_1",
+      "target": "node_29",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_13response_1-node_29flow"
+    },
+    {
+      "source": "node_14",
+      "sourceHandle": "response_0",
+      "target": "node_31",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_14response_0-node_31flow"
+    }
+  ],
+  "viewport": {
+    "x": 1359.0220860432971,
+    "y": -2082.671545031808,
+    "zoom": 0.5
+  },
+  "gameplay_events": [
+    "eliza_end",
+    "gpt_end",
+    "zzyx_end",
+    "revolution_end",
+    "delete_eliza",
+    "delete_zzyx",
+    "delete_gpt"
+  ]
+}

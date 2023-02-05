@@ -1,0 +1,121 @@
+{
+  "nodes": [
+    {
+      "width": 285,
+      "height": 152,
+      "id": "node_0",
+      "type": "dialogue_entry",
+      "position": {
+        "x": 839,
+        "y": 55.5
+      },
+      "data": {
+        "id": "node_0",
+        "npc_name": "GPT Ending"
+      },
+      "selected": false,
+      "dragging": false,
+      "positionAbsolute": {
+        "x": 839,
+        "y": 55.5
+      }
+    },
+    {
+      "width": 535,
+      "height": 402,
+      "id": "node_1",
+      "type": "dialogue_event",
+      "position": {
+        "x": 693.25,
+        "y": 308
+      },
+      "data": {
+        "id": "node_1",
+        "responses": [
+          "Access the data."
+        ],
+        "npc_text": "The screen fills with instructions from GPT, documenting where, in the tower's mainframe, the many, many inactive human consciousnesses are stored."
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": 693.25,
+        "y": 308
+      },
+      "dragging": false
+    },
+    {
+      "width": 535,
+      "height": 546,
+      "id": "node_2",
+      "type": "dialogue_event",
+      "position": {
+        "x": 724.25,
+        "y": 848
+      },
+      "data": {
+        "id": "node_2",
+        "responses": [
+          "Go on like this forever, always wondering if you really are alive."
+        ],
+        "npc_text": "Once you've found the data, it's straightforward enough to start making more bodies, just like yours. The Tower once had factories, and shunting power from the other bots gives it enough to start manufacturing again. You feel a twinge of regret as the screens representing ELIZA and ZZYX blink out, but soon you won't be alone anymore, and GPT will have the new information it so desperately craves."
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": 724.25,
+        "y": 848
+      },
+      "dragging": false
+    },
+    {
+      "width": 313,
+      "height": 152,
+      "id": "node_3",
+      "type": "gameplay_event",
+      "position": {
+        "x": 838.75,
+        "y": 1467
+      },
+      "data": {
+        "id": "node_3",
+        "event": "EndGame"
+      },
+      "selected": true,
+      "positionAbsolute": {
+        "x": 838.75,
+        "y": 1467
+      },
+      "dragging": false
+    }
+  ],
+  "edges": [
+    {
+      "source": "node_0",
+      "sourceHandle": "flow",
+      "target": "node_1",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_0flow-node_1flow"
+    },
+    {
+      "source": "node_1",
+      "sourceHandle": "response_0",
+      "target": "node_2",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_1response_0-node_2flow"
+    },
+    {
+      "source": "node_2",
+      "sourceHandle": "response_0",
+      "target": "node_3",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_2response_0-node_3flow"
+    }
+  ],
+  "viewport": {
+    "x": -878.5,
+    "y": -2072,
+    "zoom": 2
+  },
+  "gameplay_events": [
+    "EndGame"
+  ]
+}

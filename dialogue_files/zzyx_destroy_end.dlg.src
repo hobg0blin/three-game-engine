@@ -1,0 +1,91 @@
+{
+  "nodes": [
+    {
+      "width": 281,
+      "height": 153,
+      "id": "node_0",
+      "type": "dialogue_entry",
+      "position": {
+        "x": 324,
+        "y": 91.5
+      },
+      "data": {
+        "id": "node_0",
+        "npc_name": "zzyx_destroy_end"
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": 324,
+        "y": 91.5
+      },
+      "dragging": false
+    },
+    {
+      "width": 535,
+      "height": 499,
+      "id": "node_1",
+      "type": "dialogue_event",
+      "position": {
+        "x": 164.81300198602986,
+        "y": 414.4469995416854
+      },
+      "data": {
+        "id": "node_1",
+        "responses": [
+          "Embrace oblivion."
+        ],
+        "npc_text": "You turn your attention to the terminal as a new message from ZZYX pops up in the notifications. Wiping the dust from the screen and clicking through, you find a detailed list of commands \nwhich will result in the self-destruction of the tower. Keying in the final sequence, you reflect on your fate as the tower collapses around you. Whatever the sins of the previous inhabitants of \nthis world, the slate has been wiped clean."
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": 164.81300198602986,
+        "y": 414.4469995416854
+      },
+      "dragging": false
+    },
+    {
+      "width": 313,
+      "height": 153,
+      "id": "node_2",
+      "type": "gameplay_event",
+      "position": {
+        "x": 260.99584645003154,
+        "y": 1023.3036496542945
+      },
+      "data": {
+        "id": "node_2",
+        "event": "EndGame"
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": 260.99584645003154,
+        "y": 1023.3036496542945
+      },
+      "dragging": false
+    }
+  ],
+  "edges": [
+    {
+      "source": "node_0",
+      "sourceHandle": "flow",
+      "target": "node_1",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_0flow-node_1flow"
+    },
+    {
+      "source": "node_1",
+      "sourceHandle": "response_0",
+      "target": "node_2",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_1response_0-node_2flow"
+    }
+  ],
+  "viewport": {
+    "x": 345.7658204224839,
+    "y": -484.91290210679585,
+    "zoom": 0.7748559309591712
+  },
+  "gameplay_events": [
+    "EndGame"
+  ]
+}

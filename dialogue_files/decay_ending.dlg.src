@@ -1,0 +1,91 @@
+{
+  "nodes": [
+    {
+      "width": 285,
+      "height": 152,
+      "id": "node_0",
+      "type": "dialogue_entry",
+      "position": {
+        "x": 1005.2757531324237,
+        "y": -774.6612592213055
+      },
+      "data": {
+        "id": "node_0",
+        "npc_name": "decay_ending"
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": 1005.2757531324237,
+        "y": -774.6612592213055
+      },
+      "dragging": false
+    },
+    {
+      "width": 535,
+      "height": 474,
+      "id": "node_2",
+      "type": "dialogue_event",
+      "position": {
+        "x": 869.7323671745249,
+        "y": -399.8301030840331
+      },
+      "data": {
+        "id": "node_2",
+        "responses": [
+          "Let your eyes fall shut."
+        ],
+        "npc_text": "Your vision blurs. You trip and fall, your leg having given out under you. You try to crawl forward, only to find yourself unable to use one of your arms. A strange numbness spreads through your body as you struggle to move. Perhaps this body wasn’t meant to last this long in this state. The tower's decay has taken over your mind, and your body will follow. If only you had gotten here quicker…. "
+      },
+      "selected": true,
+      "dragging": false,
+      "positionAbsolute": {
+        "x": 869.7323671745249,
+        "y": -399.8301030840331
+      }
+    },
+    {
+      "width": 313,
+      "height": 152,
+      "id": "node_3",
+      "type": "gameplay_event",
+      "position": {
+        "x": 1071.2577515168066,
+        "y": 294.50105305323916
+      },
+      "data": {
+        "id": "node_3",
+        "event": "EndGame"
+      },
+      "selected": false,
+      "dragging": false,
+      "positionAbsolute": {
+        "x": 1071.2577515168066,
+        "y": 294.50105305323916
+      }
+    }
+  ],
+  "edges": [
+    {
+      "source": "node_0",
+      "sourceHandle": "flow",
+      "target": "node_2",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_0flow-node_2flow"
+    },
+    {
+      "source": "node_2",
+      "sourceHandle": "response_0",
+      "target": "node_3",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_2response_0-node_3flow"
+    }
+  ],
+  "viewport": {
+    "x": 422.42622847957614,
+    "y": 538.0982087804279,
+    "zoom": 0.5904963307147651
+  },
+  "gameplay_events": [
+    "EndGame"
+  ]
+}

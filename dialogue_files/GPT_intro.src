@@ -1,0 +1,151 @@
+{
+  "nodes": [
+    {
+      "width": 281,
+      "height": 153,
+      "id": "node_0",
+      "type": "dialogue_entry",
+      "position": {
+        "x": 538,
+        "y": 75.5
+      },
+      "data": {
+        "id": "node_0",
+        "npc_name": "GPT_intro"
+      },
+      "selected": false,
+      "dragging": false,
+      "positionAbsolute": {
+        "x": 538,
+        "y": 75.5
+      }
+    },
+    {
+      "width": 535,
+      "height": 403,
+      "id": "node_1",
+      "type": "dialogue_event",
+      "position": {
+        "x": 471.25,
+        "y": 192
+      },
+      "data": {
+        "id": "node_1",
+        "responses": [
+          "Go up the stairs."
+        ],
+        "npc_text": "You leave ELIZA's room, somewhat shaken, and see a staircase ahead. The twisting, rotting cables seem to be gettting even thicker here. "
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": 471.25,
+        "y": 192
+      },
+      "dragging": false
+    },
+    {
+      "width": 535,
+      "height": 403,
+      "id": "node_2",
+      "type": "dialogue_event",
+      "position": {
+        "x": 477.6468525020256,
+        "y": 682.9134986968894
+      },
+      "data": {
+        "id": "node_2",
+        "responses": [
+          "Open the door."
+        ],
+        "npc_text": "As you make your way up the stairs, turning ELIZA's questions over in your mind, you see at their top a door slightly ajar, with a cool blue glow emanating from it."
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": 477.6468525020256,
+        "y": 682.9134986968894
+      },
+      "dragging": false
+    },
+    {
+      "width": 535,
+      "height": 475,
+      "id": "node_3",
+      "type": "dialogue_event",
+      "position": {
+        "x": 539.6191695629911,
+        "y": 1208.4339536792531
+      },
+      "data": {
+        "id": "node_3",
+        "responses": [
+          "Hello?"
+        ],
+        "npc_text": "Inside the room is a vast array of server racks, solid state hard drives, all networked together, their LED indicators blinking a soft blue. In the center of the room, you see a vast screen, with an amorphous figure regarding you impassively. At the bottom of the screen, you see a cursor blinking softly. It appears to be waiting for you to type something."
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": 539.6191695629911,
+        "y": 1208.4339536792531
+      },
+      "dragging": false
+    },
+    {
+      "width": 313,
+      "height": 153,
+      "id": "node_4",
+      "type": "gameplay_event",
+      "position": {
+        "x": 813.3698475563003,
+        "y": 1887.7704409193138
+      },
+      "data": {
+        "id": "node_4",
+        "event": "NextLevel"
+      },
+      "selected": true,
+      "dragging": false,
+      "positionAbsolute": {
+        "x": 813.3698475563003,
+        "y": 1887.7704409193138
+      }
+    }
+  ],
+  "edges": [
+    {
+      "source": "node_0",
+      "sourceHandle": "flow",
+      "target": "node_1",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_0flow-node_1flow"
+    },
+    {
+      "source": "node_1",
+      "sourceHandle": "response_0",
+      "target": "node_2",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_1response_0-node_2flow"
+    },
+    {
+      "source": "node_2",
+      "sourceHandle": "response_0",
+      "target": "node_3",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_2response_0-node_3flow"
+    },
+    {
+      "source": "node_3",
+      "sourceHandle": "response_0",
+      "target": "node_4",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_3response_0-node_4flow"
+    }
+  ],
+  "viewport": {
+    "x": 352.31507622184984,
+    "y": -564.8852204596569,
+    "zoom": 0.5
+  },
+  "gameplay_events": [
+    "NextLevel"
+  ]
+}

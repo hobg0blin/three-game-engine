@@ -1,0 +1,332 @@
+{
+  "nodes": [
+    {
+      "width": 281,
+      "height": 153,
+      "id": "node_0",
+      "type": "dialogue_entry",
+      "position": {
+        "x": 285.9443859389013,
+        "y": 25.12151978619015
+      },
+      "data": {
+        "id": "node_0",
+        "npc_name": "Introduction"
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": 285.9443859389013,
+        "y": 25.12151978619015
+      },
+      "dragging": false
+    },
+    {
+      "width": 535,
+      "height": 403,
+      "id": "node_1",
+      "type": "dialogue_event",
+      "position": {
+        "x": 155.68696855257906,
+        "y": 261.83041736395484
+      },
+      "data": {
+        "id": "node_1",
+        "responses": [
+          "Look at your hands"
+        ],
+        "npc_text": "You awaken in a dark hallway, surrounded by a vast web of cables and blinking lights."
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": 155.68696855257906,
+        "y": 261.83041736395484
+      },
+      "dragging": false
+    },
+    {
+      "width": 535,
+      "height": 497,
+      "id": "node_2",
+      "type": "dialogue_event",
+      "position": {
+        "x": 168.70422032496725,
+        "y": 785.0517379211918
+      },
+      "data": {
+        "id": "node_2",
+        "responses": [
+          "Check the temperature.",
+          "Punch the wall."
+        ],
+        "npc_text": "They are covered in what appears to be skin, but you do not feel the normal buzzing of contact with the outside world. As you look closer, you notice a metallic substance, visible beneath the skin, just under the joints."
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": 168.70422032496725,
+        "y": 785.0517379211918
+      },
+      "dragging": false
+    },
+    {
+      "width": 313,
+      "height": 153,
+      "id": "node_3",
+      "type": "gameplay_event",
+      "position": {
+        "x": 533.223612424321,
+        "y": 1436.6902728599296
+      },
+      "data": {
+        "id": "node_3",
+        "event": "SuspicionUp"
+      },
+      "selected": false,
+      "dragging": false,
+      "positionAbsolute": {
+        "x": 533.223612424321,
+        "y": 1436.6902728599296
+      }
+    },
+    {
+      "width": 535,
+      "height": 293,
+      "id": "node_4",
+      "type": "dialogue_event",
+      "position": {
+        "x": 457.10038867048,
+        "y": 1643.8162537715434
+      },
+      "data": {
+        "id": "node_4",
+        "responses": [
+          "Take a step forward."
+        ],
+        "npc_text": "You hear a satisfying crunch as your fist lands in the center of a nest of cables. You've punched clean through them. You felt nothing."
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": 457.10038867048,
+        "y": 1643.8162537715434
+      },
+      "dragging": false
+    },
+    {
+      "width": 535,
+      "height": 293,
+      "id": "node_5",
+      "type": "dialogue_event",
+      "position": {
+        "x": -132.41201853949718,
+        "y": 1562.3821074302248
+      },
+      "data": {
+        "id": "node_5",
+        "responses": [
+          "Take a step forward."
+        ],
+        "npc_text": "You feel nothing at all. "
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": -132.41201853949718,
+        "y": 1562.3821074302248
+      },
+      "dragging": false
+    },
+    {
+      "width": 535,
+      "height": 473,
+      "id": "node_6",
+      "type": "dialogue_event",
+      "position": {
+        "x": 23.6719687349119,
+        "y": 1987.7320544069294
+      },
+      "data": {
+        "id": "node_6",
+        "responses": [
+          "Approach the screen",
+          "Run away"
+        ],
+        "npc_text": "As you take a step forward, you see a flickering screen activate to your right. You can hear the faint crackle of a voice."
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": 23.6719687349119,
+        "y": 1987.7320544069294
+      },
+      "dragging": false
+    },
+    {
+      "width": 313,
+      "height": 153,
+      "id": "node_7",
+      "type": "gameplay_event",
+      "position": {
+        "x": -9.17447877574682,
+        "y": 2540.572351331429
+      },
+      "data": {
+        "id": "node_7",
+        "event": "NextLevel"
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": -9.17447877574682,
+        "y": 2540.572351331429
+      },
+      "dragging": false
+    },
+    {
+      "width": 313,
+      "height": 153,
+      "id": "node_8",
+      "type": "gameplay_event",
+      "position": {
+        "x": 364.8255212242532,
+        "y": 2552.572351331429
+      },
+      "data": {
+        "id": "node_8",
+        "event": "SuspicionUp"
+      },
+      "selected": false,
+      "dragging": false,
+      "positionAbsolute": {
+        "x": 364.8255212242532,
+        "y": 2552.572351331429
+      }
+    },
+    {
+      "width": 535,
+      "height": 427,
+      "id": "node_9",
+      "type": "dialogue_event",
+      "position": {
+        "x": 252.82552122425318,
+        "y": 2774.572351331429
+      },
+      "data": {
+        "id": "node_9",
+        "responses": [
+          "Resign yourself to your fate."
+        ],
+        "npc_text": "As you start to turn, you feel your legs lock up. Inexorably, as you fight against it, sending furious messages to your legs to move, run, go anywhere but there, your body turns toward the screen and begins to approach it."
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": 252.82552122425318,
+        "y": 2774.572351331429
+      },
+      "dragging": false
+    },
+    {
+      "width": 313,
+      "height": 153,
+      "id": "node_10",
+      "type": "gameplay_event",
+      "position": {
+        "x": 390.8255212242532,
+        "y": 3330.572351331429
+      },
+      "data": {
+        "id": "node_10",
+        "event": "NextLevel"
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": 390.8255212242532,
+        "y": 3330.572351331429
+      },
+      "dragging": false
+    }
+  ],
+  "edges": [
+    {
+      "source": "node_0",
+      "sourceHandle": "flow",
+      "target": "node_1",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_0flow-node_1flow"
+    },
+    {
+      "source": "node_1",
+      "sourceHandle": "response_0",
+      "target": "node_2",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_1response_0-node_2flow"
+    },
+    {
+      "source": "node_2",
+      "sourceHandle": "response_1",
+      "target": "node_3",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_2response_1-node_3flow"
+    },
+    {
+      "source": "node_3",
+      "sourceHandle": "flow",
+      "target": "node_4",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_3flow-node_4flow"
+    },
+    {
+      "source": "node_2",
+      "sourceHandle": "response_0",
+      "target": "node_5",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_2response_0-node_5flow"
+    },
+    {
+      "source": "node_5",
+      "sourceHandle": "response_0",
+      "target": "node_6",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_5response_0-node_6flow"
+    },
+    {
+      "source": "node_4",
+      "sourceHandle": "response_0",
+      "target": "node_6",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_4response_0-node_6flow"
+    },
+    {
+      "source": "node_6",
+      "sourceHandle": "response_0",
+      "target": "node_7",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_6response_0-node_7flow"
+    },
+    {
+      "source": "node_6",
+      "sourceHandle": "response_1",
+      "target": "node_8",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_6response_1-node_8flow"
+    },
+    {
+      "source": "node_8",
+      "sourceHandle": "flow",
+      "target": "node_9",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_8flow-node_9flow"
+    },
+    {
+      "source": "node_9",
+      "sourceHandle": "response_0",
+      "target": "node_10",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_9response_0-node_10flow"
+    }
+  ],
+  "viewport": {
+    "x": 413.5872393878734,
+    "y": -1063.2861756657146,
+    "zoom": 0.5
+  },
+  "gameplay_events": [
+    "SuspicionUp",
+    "NextLevel"
+  ]
+}

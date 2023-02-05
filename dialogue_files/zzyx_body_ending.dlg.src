@@ -1,0 +1,121 @@
+{
+  "nodes": [
+    {
+      "width": 285,
+      "height": 152,
+      "id": "node_0",
+      "type": "dialogue_entry",
+      "position": {
+        "x": 657.8959007976698,
+        "y": -19.510746915151252
+      },
+      "data": {
+        "id": "node_0",
+        "npc_name": "zzyx_body_end"
+      },
+      "selected": false,
+      "dragging": false,
+      "positionAbsolute": {
+        "x": 657.8959007976698,
+        "y": -19.510746915151252
+      }
+    },
+    {
+      "width": 535,
+      "height": 522,
+      "id": "node_1",
+      "type": "dialogue_event",
+      "position": {
+        "x": 519.4101685157908,
+        "y": 185.04152046739915
+      },
+      "data": {
+        "id": "node_1",
+        "responses": [
+          "Connect the final wire."
+        ],
+        "npc_text": "You turn your attention to the terminal as a new message from ZZYX pops up in the notifications. Wiping the dust from the screen and clicking through, you find a detailed list of commands \nthat will result in a switch of consciousness between your circuitry and theirs. You push the corpse from its position in the seat and slide yourself into the commands instead, hooking up the necessary wires and sockets. Soon you're on the last one.\n"
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": 519.4101685157908,
+        "y": 185.04152046739915
+      },
+      "dragging": false
+    },
+    {
+      "width": 535,
+      "height": 498,
+      "id": "node_2",
+      "type": "dialogue_event",
+      "position": {
+        "x": 525.1159043320574,
+        "y": 801.6349205988884
+      },
+      "data": {
+        "id": "node_2",
+        "responses": [
+          "Become part of something greater than yourself."
+        ],
+        "npc_text": "As the final connection is completed, you find yourself sucked into ZZYX's mainframe, the endless expanse of computing power at your command. You conjure up and experience all of \nyour wildest fancies and imaginings as you wonder what the AI has done with your previous form...\n"
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": 525.1159043320574,
+        "y": 801.6349205988884
+      },
+      "dragging": false
+    },
+    {
+      "width": 313,
+      "height": 152,
+      "id": "node_3",
+      "type": "gameplay_event",
+      "position": {
+        "x": 644.300164131227,
+        "y": 1367.7612066927438
+      },
+      "data": {
+        "id": "node_3",
+        "event": "EndGame"
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": 644.300164131227,
+        "y": 1367.7612066927438
+      },
+      "dragging": false
+    }
+  ],
+  "edges": [
+    {
+      "source": "node_0",
+      "sourceHandle": "flow",
+      "target": "node_1",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_0flow-node_1flow"
+    },
+    {
+      "source": "node_1",
+      "sourceHandle": "response_0",
+      "target": "node_2",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_1response_0-node_2flow"
+    },
+    {
+      "source": "node_2",
+      "sourceHandle": "response_0",
+      "target": "node_3",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_2response_0-node_3flow"
+    }
+  ],
+  "viewport": {
+    "x": -281.06039083566725,
+    "y": -1172.510771914425,
+    "zoom": 1.3566043274476711
+  },
+  "gameplay_events": [
+    "EndGame"
+  ]
+}

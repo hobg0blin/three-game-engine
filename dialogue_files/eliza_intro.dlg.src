@@ -1,0 +1,118 @@
+{
+  "nodes": [
+    {
+      "width": 281,
+      "height": 153,
+      "id": "node_0",
+      "type": "dialogue_entry",
+      "position": {
+        "x": 1255,
+        "y": -21
+      },
+      "data": {
+        "id": "node_0",
+        "npc_name": "eliza_intro"
+      },
+      "selected": false,
+      "dragging": false,
+      "positionAbsolute": {
+        "x": 1255,
+        "y": -21
+      }
+    },
+    {
+      "width": 535,
+      "height": 451,
+      "id": "node_1",
+      "type": "dialogue_event",
+      "position": {
+        "x": 1119.6008595739588,
+        "y": 243.4331067983499
+      },
+      "data": {
+        "id": "node_1",
+        "responses": [
+          "Approach the computer."
+        ],
+        "npc_text": "You enter the first room you come across. The entire room feels like it has been take from another time and place, the lighting is soft, the room is quite other than the noise you hear as magnetic tape moves through spools around the room. Connected to all of these vintage servers, you see an old computer, discolored by age."
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": 1119.6008595739588,
+        "y": 243.4331067983499
+      },
+      "dragging": false
+    },
+    {
+      "width": 535,
+      "height": 427,
+      "id": "node_2",
+      "type": "dialogue_event",
+      "position": {
+        "x": 1120.974693044958,
+        "y": 803.3911238452891
+      },
+      "data": {
+        "id": "node_2",
+        "responses": [
+          "Read the text."
+        ],
+        "npc_text": "On the screen it only says ELIZA, but there is a flashing text prompt for you to type in. As you step up to the computer, new text flashes on screen.   \n"
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": 1120.974693044958,
+        "y": 803.3911238452891
+      },
+      "dragging": false
+    },
+    {
+      "width": 313,
+      "height": 153,
+      "id": "node_3",
+      "type": "gameplay_event",
+      "position": {
+        "x": 1191.7869942113218,
+        "y": 1330.9427675346979
+      },
+      "data": {
+        "id": "node_3"
+      },
+      "selected": true,
+      "positionAbsolute": {
+        "x": 1191.7869942113218,
+        "y": 1330.9427675346979
+      },
+      "dragging": false
+    }
+  ],
+  "edges": [
+    {
+      "source": "node_0",
+      "sourceHandle": "flow",
+      "target": "node_1",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_0flow-node_1flow"
+    },
+    {
+      "source": "node_1",
+      "sourceHandle": "response_0",
+      "target": "node_2",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_1response_0-node_2flow"
+    },
+    {
+      "source": "node_2",
+      "sourceHandle": "response_0",
+      "target": "node_3",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_2response_0-node_3flow"
+    }
+  ],
+  "viewport": {
+    "x": -152.20901853557007,
+    "y": -299.814442187288,
+    "zoom": 0.5648736072850615
+  },
+  "gameplay_events": []
+}

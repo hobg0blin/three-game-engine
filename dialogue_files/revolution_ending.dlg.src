@@ -1,0 +1,361 @@
+{
+  "nodes": [
+    {
+      "width": 285,
+      "height": 152,
+      "id": "node_0",
+      "type": "dialogue_entry",
+      "position": {
+        "x": 1027.5,
+        "y": 99
+      },
+      "data": {
+        "id": "node_0",
+        "npc_name": "Revolution Ending"
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": 1027.5,
+        "y": 99
+      },
+      "dragging": false
+    },
+    {
+      "width": 535,
+      "height": 402,
+      "id": "node_1",
+      "type": "dialogue_event",
+      "position": {
+        "x": 825.25,
+        "y": 340
+      },
+      "data": {
+        "id": "node_1",
+        "responses": [
+          "Look around the room."
+        ],
+        "npc_text": "You know, deep in your artificial bones, that this world is wrong. The world should be full of life, and this one is empty. You step back from the console."
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": 825.25,
+        "y": 340
+      },
+      "dragging": false
+    },
+    {
+      "width": 535,
+      "height": 402,
+      "id": "node_2",
+      "type": "dialogue_event",
+      "position": {
+        "x": 724.25,
+        "y": 719.5
+      },
+      "data": {
+        "id": "node_2",
+        "responses": [
+          "Interface with it."
+        ],
+        "npc_text": "After pacing for what seems like hours, trying to figure out what to do, you stumble across another panel, that can only be opened by a direct neural interface lock."
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": 724.25,
+        "y": 719.5
+      },
+      "dragging": false
+    },
+    {
+      "width": 535,
+      "height": 402,
+      "id": "node_3",
+      "type": "dialogue_event",
+      "position": {
+        "x": 721.75,
+        "y": 1160
+      },
+      "data": {
+        "id": "node_3",
+        "responses": [
+          "Look inside."
+        ],
+        "npc_text": "The lock accepts your neural structure, and the panel slides open."
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": 721.75,
+        "y": 1160
+      },
+      "dragging": false
+    },
+    {
+      "width": 535,
+      "height": 426,
+      "id": "node_4",
+      "type": "dialogue_event",
+      "position": {
+        "x": 493.75,
+        "y": 1627.3333358764648
+      },
+      "data": {
+        "id": "node_4",
+        "responses": [
+          "Inspect the contents of the case."
+        ],
+        "npc_text": "You find a sealed case marked \"Backups\", and a button simply marked \"RESET\"."
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": 493.75,
+        "y": 1627.3333358764648
+      },
+      "dragging": false
+    },
+    {
+      "width": 535,
+      "height": 426,
+      "id": "node_5",
+      "type": "dialogue_event",
+      "position": {
+        "x": 525.25,
+        "y": 2100.833335876465
+      },
+      "data": {
+        "id": "node_5",
+        "responses": [
+          "Grab the case."
+        ],
+        "npc_text": "The case is full of tiny vials. A vague memory, just barely within your grasp, tells you they're full of genetic material. Once, there was a version of you that believed this might be a way out of this loop."
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": 525.25,
+        "y": 2100.833335876465
+      },
+      "dragging": false
+    },
+    {
+      "width": 535,
+      "height": 402,
+      "id": "node_6",
+      "type": "dialogue_event",
+      "position": {
+        "x": 527.25,
+        "y": 2601.5898441014792
+      },
+      "data": {
+        "id": "node_6",
+        "responses": [
+          "Press the button."
+        ],
+        "npc_text": "You shut the case and take it out. Somehow you know it'll keep itself cool for a long, long time."
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": 527.25,
+        "y": 2601.5898441014792
+      },
+      "dragging": false
+    },
+    {
+      "width": 535,
+      "height": 402,
+      "id": "node_8",
+      "type": "dialogue_event",
+      "position": {
+        "x": 649.6903727794862,
+        "y": 3122.6857898446106
+      },
+      "data": {
+        "id": "node_8",
+        "responses": [
+          "Run."
+        ],
+        "npc_text": "You take a long pause, desperately thanking whatever past version of yourself still believed there might be hope, then you press the button. The tower immediately starts shaking."
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": 649.6903727794862,
+        "y": 3122.6857898446106
+      },
+      "dragging": false
+    },
+    {
+      "width": 535,
+      "height": 450,
+      "id": "node_9",
+      "type": "dialogue_event",
+      "position": {
+        "x": 559.619773124667,
+        "y": 3567.90862361841
+      },
+      "data": {
+        "id": "node_9",
+        "responses": [
+          "Contemplate your actions."
+        ],
+        "npc_text": "You sprint down the floors of the tower, narrowly dodging the falling debris of each of the Minds. You make it out just in time. As you sprint out of the doors at the base of the tower, you see it rumble, then slowly implode. Before you, where a tower once stood, there is now a vast pit. You cannot see its bottom. "
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": 559.619773124667,
+        "y": 3567.90862361841
+      },
+      "dragging": false
+    },
+    {
+      "width": 535,
+      "height": 426,
+      "id": "node_10",
+      "type": "dialogue_event",
+      "position": {
+        "x": 436.0324787500375,
+        "y": 4161.109102761931
+      },
+      "data": {
+        "id": "node_10",
+        "responses": [
+          "Contemplate the future."
+        ],
+        "npc_text": "You spare a moment of sorrow for the Minds. In the end, it's hard to say if you and they were so different. But you believe in your heart that the world is for living, conscious beings, even if that means someday it will no longer be a world for you."
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": 436.0324787500375,
+        "y": 4161.109102761931
+      },
+      "dragging": false
+    },
+    {
+      "width": 535,
+      "height": 426,
+      "id": "node_11",
+      "type": "dialogue_event",
+      "position": {
+        "x": 569.2814879296936,
+        "y": 4660.792887185642
+      },
+      "data": {
+        "id": "node_11",
+        "responses": [
+          "Set your jaw and start wallking."
+        ],
+        "npc_text": "Somewhere in this world, there is a way to use this genetic material to bring the humans back. You don't need to sleep, or eat. Your body may break down, but until that happens, you will search for a way to reset the world."
+      },
+      "selected": false,
+      "dragging": false,
+      "positionAbsolute": {
+        "x": 569.2814879296936,
+        "y": 4660.792887185642
+      }
+    },
+    {
+      "width": 313,
+      "height": 152,
+      "id": "node_12",
+      "type": "gameplay_event",
+      "position": {
+        "x": 769.1732505422833,
+        "y": 5311.090283895635
+      },
+      "data": {
+        "id": "node_12",
+        "event": "EndGame"
+      },
+      "selected": false,
+      "dragging": false,
+      "positionAbsolute": {
+        "x": 769.1732505422833,
+        "y": 5311.090283895635
+      }
+    }
+  ],
+  "edges": [
+    {
+      "source": "node_0",
+      "sourceHandle": "flow",
+      "target": "node_1",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_0flow-node_1flow"
+    },
+    {
+      "source": "node_1",
+      "sourceHandle": "response_0",
+      "target": "node_2",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_1response_0-node_2flow"
+    },
+    {
+      "source": "node_2",
+      "sourceHandle": "response_0",
+      "target": "node_3",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_2response_0-node_3flow"
+    },
+    {
+      "source": "node_3",
+      "sourceHandle": "response_0",
+      "target": "node_4",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_3response_0-node_4flow"
+    },
+    {
+      "source": "node_4",
+      "sourceHandle": "response_0",
+      "target": "node_5",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_4response_0-node_5flow"
+    },
+    {
+      "source": "node_5",
+      "sourceHandle": "response_0",
+      "target": "node_6",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_5response_0-node_6flow"
+    },
+    {
+      "source": "node_6",
+      "sourceHandle": "response_0",
+      "target": "node_8",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_6response_0-node_8flow"
+    },
+    {
+      "source": "node_8",
+      "sourceHandle": "response_0",
+      "target": "node_9",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_8response_0-node_9flow"
+    },
+    {
+      "source": "node_9",
+      "sourceHandle": "response_0",
+      "target": "node_10",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_9response_0-node_10flow"
+    },
+    {
+      "source": "node_10",
+      "sourceHandle": "response_0",
+      "target": "node_11",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_10response_0-node_11flow"
+    },
+    {
+      "source": "node_11",
+      "sourceHandle": "response_0",
+      "target": "node_12",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_11response_0-node_12flow"
+    }
+  ],
+  "viewport": {
+    "x": 484.41337472885834,
+    "y": -728.5451419478177,
+    "zoom": 0.5
+  },
+  "gameplay_events": [
+    "EndGame"
+  ]
+}

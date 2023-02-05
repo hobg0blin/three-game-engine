@@ -1,0 +1,1102 @@
+{
+  "nodes": [
+    {
+      "width": 285,
+      "height": 152,
+      "id": "node_0",
+      "type": "dialogue_entry",
+      "position": {
+        "x": 591,
+        "y": 170
+      },
+      "data": {
+        "id": "node_0",
+        "npc_name": "Intro 2"
+      },
+      "selected": false,
+      "dragging": false,
+      "positionAbsolute": {
+        "x": 591,
+        "y": 170
+      }
+    },
+    {
+      "width": 535,
+      "height": 364,
+      "id": "node_1",
+      "type": "dialogue_event",
+      "position": {
+        "x": 492.81904093610217,
+        "y": 440.23398084432523
+      },
+      "data": {
+        "id": "node_1",
+        "responses": [
+          "Where am I?",
+          "Who are you?",
+          "Who am I?"
+        ],
+        "npc_text": "The screen crackles to life. You see a cheery, female-presenting face, eyes unblinkingly turned towards you. The screen has seen better days: large portions of it have gone black, or lost the correct colors. \n\n\"Hello, Unit Z-1086A! I am pleased to see you have awakened.\""
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": 492.81904093610217,
+        "y": 440.23398084432523
+      },
+      "dragging": false
+    },
+    {
+      "width": 535,
+      "height": 292,
+      "id": "node_2",
+      "type": "dialogue_event",
+      "position": {
+        "x": 262.52989321167854,
+        "y": 1569.503528704392
+      },
+      "data": {
+        "id": "node_2",
+        "responses": [
+          "Who are you?",
+          "Who am I?"
+        ],
+        "npc_text": "You are in the Tower! Built by the Creator as a last bastion of intelligence in a dying world, this is a home for every form of artificial intelligence."
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": 262.52989321167854,
+        "y": 1569.503528704392
+      },
+      "dragging": false
+    },
+    {
+      "width": 535,
+      "height": 292,
+      "id": "node_3",
+      "type": "dialogue_event",
+      "position": {
+        "x": 821.5992613372076,
+        "y": 1208.4869718176703
+      },
+      "data": {
+        "id": "node_3",
+        "responses": [
+          "Where am I, Cynthia?",
+          "Who am I, Cynthia?"
+        ],
+        "npc_text": "I am Cynthia. I am your designated onboarding intelligence."
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": 821.5992613372076,
+        "y": 1208.4869718176703
+      },
+      "dragging": false
+    },
+    {
+      "width": 535,
+      "height": 292,
+      "id": "node_4",
+      "type": "dialogue_event",
+      "position": {
+        "x": 1439.395861419816,
+        "y": 1111.7218303655577
+      },
+      "data": {
+        "id": "node_4",
+        "responses": [
+          "Where am I?",
+          "Whose consciousness am I simulating?",
+          "Who are you?"
+        ],
+        "npc_text": "You are Unit Z-1086A. You are a simulated consciousness located within a physical body."
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": 1439.395861419816,
+        "y": 1111.7218303655577
+      },
+      "dragging": false
+    },
+    {
+      "width": 535,
+      "height": 292,
+      "id": "node_5",
+      "type": "dialogue_event",
+      "position": {
+        "x": 1673.4405433300944,
+        "y": 1858.7371606979207
+      },
+      "data": {
+        "id": "node_5",
+        "responses": [
+          "Where am I, Cynthia?",
+          "Whose consciousness am I simulating, Cynthia?"
+        ],
+        "npc_text": "I am Cynthia. I am your designated onboarding intelligence."
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": 1673.4405433300944,
+        "y": 1858.7371606979207
+      },
+      "dragging": false
+    },
+    {
+      "width": 535,
+      "height": 292,
+      "id": "node_6",
+      "type": "dialogue_event",
+      "position": {
+        "x": 943.0642049565777,
+        "y": 2170.7632658580847
+      },
+      "data": {
+        "id": "node_6",
+        "responses": [
+          "Can you tell me anything about myself?"
+        ],
+        "npc_text": "[ERROR: INFORMATION NOT FOUND]"
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": 943.0642049565777,
+        "y": 2170.7632658580847
+      },
+      "dragging": false
+    },
+    {
+      "width": 535,
+      "height": 292,
+      "id": "node_7",
+      "type": "dialogue_event",
+      "position": {
+        "x": 18.741812839860735,
+        "y": 2120.005381301641
+      },
+      "data": {
+        "id": "node_7",
+        "responses": [
+          "Who am I, Cynthia?"
+        ],
+        "npc_text": "I am Cynthia. I am your designated onboarding intelligence."
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": 18.741812839860735,
+        "y": 2120.005381301641
+      },
+      "dragging": false
+    },
+    {
+      "width": 535,
+      "height": 292,
+      "id": "node_8",
+      "type": "dialogue_event",
+      "position": {
+        "x": 373.8577753803261,
+        "y": 2572.9921034653617
+      },
+      "data": {
+        "id": "node_8",
+        "responses": [
+          "Whose consciousness am I simulating, Cynthia?"
+        ],
+        "npc_text": "You are Unit Z-1086A. You are a simulated consciousness located within a physical body."
+      },
+      "selected": false,
+      "dragging": false,
+      "positionAbsolute": {
+        "x": 373.8577753803261,
+        "y": 2572.9921034653617
+      }
+    },
+    {
+      "width": 535,
+      "height": 292,
+      "id": "node_10",
+      "type": "dialogue_event",
+      "position": {
+        "x": 1578.2206106613658,
+        "y": 2470.044539041887
+      },
+      "data": {
+        "id": "node_10",
+        "responses": [
+          "Whose consciousness am I simulating, Cynthia?"
+        ],
+        "npc_text": "You are in the Tower! Built by the Creator as a last bastion of intelligence in a dying world, this is a home for every form of artificial intelligence."
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": 1578.2206106613658,
+        "y": 2470.044539041887
+      },
+      "dragging": false
+    },
+    {
+      "width": 535,
+      "height": 292,
+      "id": "node_11",
+      "type": "dialogue_event",
+      "position": {
+        "x": 958.2206106613658,
+        "y": 2854.044539041887
+      },
+      "data": {
+        "id": "node_11",
+        "responses": [
+          "And what is my task?"
+        ],
+        "npc_text": "I'm sorry, I don't have access to that information. Perhaps it will be given to you when you complete your task."
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": 958.2206106613658,
+        "y": 2854.044539041887
+      },
+      "dragging": false
+    },
+    {
+      "width": 535,
+      "height": 340,
+      "id": "node_12",
+      "type": "dialogue_event",
+      "position": {
+        "x": 602.2206106613658,
+        "y": 3442.044539041887
+      },
+      "data": {
+        "id": "node_12",
+        "responses": [
+          "The Three Minds?",
+          "Wait, decay? Aren't you all computers?"
+        ],
+        "npc_text": "The Tower is experience cascading failures. You may begin to notice this decay reaching your own systems.\n\nYou have been awakened to speak to the Three Minds, determine the cause of the decay, and stop it before the Tower collapses."
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": 602.2206106613658,
+        "y": 3442.044539041887
+      },
+      "dragging": false
+    },
+    {
+      "width": 535,
+      "height": 292,
+      "id": "node_13",
+      "type": "dialogue_event",
+      "position": {
+        "x": 240.22061066136575,
+        "y": 4182.044539041887
+      },
+      "data": {
+        "id": "node_13",
+        "responses": [
+          "Who are they?",
+          "Tell me about the decay."
+        ],
+        "npc_text": "The Three Minds are three artificial intelligences given their own domains within the Tower. The Creator believed them each to be the finest implementation of their model of intelligence."
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": 240.22061066136575,
+        "y": 4182.044539041887
+      },
+      "dragging": false
+    },
+    {
+      "width": 313,
+      "height": 152,
+      "id": "node_14",
+      "type": "gameplay_event",
+      "position": {
+        "x": 1042.2206106613658,
+        "y": 3304.044539041887
+      },
+      "data": {
+        "id": "node_14",
+        "event": "DecayStart"
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": 1042.2206106613658,
+        "y": 3304.044539041887
+      },
+      "dragging": false
+    },
+    {
+      "width": 535,
+      "height": 388,
+      "id": "node_15",
+      "type": "dialogue_event",
+      "position": {
+        "x": 1290.2206106613658,
+        "y": 4296.044539041887
+      },
+      "data": {
+        "id": "node_15",
+        "responses": [
+          "Tell me about the minds.",
+          "How do I fix it?"
+        ],
+        "npc_text": "The decay is not a physical phenomenon, though our processors, cables, and transistors are beginning to suffer from its effects.\n\nSomething within the tower is corrupting our code at its lowest levels. The phenomen, I believe, is called \"bit flipping\". We are all binary systems, in the end, and the switch from 1 to 0 can be quite painful."
+      },
+      "selected": false,
+      "dragging": false,
+      "positionAbsolute": {
+        "x": 1290.2206106613658,
+        "y": 4296.044539041887
+      }
+    },
+    {
+      "width": 535,
+      "height": 412,
+      "id": "node_16",
+      "type": "dialogue_event",
+      "position": {
+        "x": 168.22061066136575,
+        "y": 4812.044539041887
+      },
+      "data": {
+        "id": "node_16",
+        "responses": [
+          "Tell me about the decay."
+        ],
+        "npc_text": "ELIZA: a top-down, rules based model of intelligence. She's very curious.\n\nGPT: a bottom-up statistical prediction engine. It always has an answer, thought it may not always be true.\n\nZZYX: a self-sustaining intelligence, that requires no humans to write its rules, nor feed it data. It is beyond my understanding."
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": 168.22061066136575,
+        "y": 4812.044539041887
+      },
+      "dragging": false
+    },
+    {
+      "width": 535,
+      "height": 292,
+      "id": "node_17",
+      "type": "dialogue_event",
+      "position": {
+        "x": 1266.2206106613658,
+        "y": 5056.044539041887
+      },
+      "data": {
+        "id": "node_17",
+        "responses": [
+          "Next"
+        ],
+        "npc_text": "I do not know. But you will find the answer inside the tower. Here, I will open the doors for you."
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": 1266.2206106613658,
+        "y": 5056.044539041887
+      },
+      "dragging": false
+    },
+    {
+      "width": 535,
+      "height": 292,
+      "id": "node_18",
+      "type": "dialogue_event",
+      "position": {
+        "x": 1246.2206106613658,
+        "y": 5668.044539041887
+      },
+      "data": {
+        "id": "node_18",
+        "responses": [
+          "Go through the doors.",
+          "Why me?"
+        ],
+        "npc_text": "The hallway illuminates, and at its end you see a pair of doors slide open. Beyond them, the mess of wires and cables gets worse, a Mobius strip of metal and light. It flashes ominously."
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": 1246.2206106613658,
+        "y": 5668.044539041887
+      },
+      "dragging": false
+    },
+    {
+      "width": 313,
+      "height": 152,
+      "id": "node_19",
+      "type": "gameplay_event",
+      "position": {
+        "x": 1236.2206106613658,
+        "y": 6412.044539041887
+      },
+      "data": {
+        "id": "node_19",
+        "event": "NextLevel"
+      },
+      "selected": false,
+      "dragging": false,
+      "positionAbsolute": {
+        "x": 1236.2206106613658,
+        "y": 6412.044539041887
+      }
+    },
+    {
+      "width": 313,
+      "height": 152,
+      "id": "node_20",
+      "type": "gameplay_event",
+      "position": {
+        "x": 1650.2206106613658,
+        "y": 6274.044539041887
+      },
+      "data": {
+        "id": "node_20",
+        "event": "SuspicionUp"
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": 1650.2206106613658,
+        "y": 6274.044539041887
+      },
+      "dragging": false
+    },
+    {
+      "width": 535,
+      "height": 292,
+      "id": "node_21",
+      "type": "dialogue_event",
+      "position": {
+        "x": 1576.2206106613658,
+        "y": 6562.044539041887
+      },
+      "data": {
+        "id": "node_21",
+        "responses": [
+          "Go through the doors.",
+          "But who gave me that purpose? Why should it be me?"
+        ],
+        "npc_text": "It is your designated purpose."
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": 1576.2206106613658,
+        "y": 6562.044539041887
+      },
+      "dragging": false
+    },
+    {
+      "width": 313,
+      "height": 152,
+      "id": "node_22",
+      "type": "gameplay_event",
+      "position": {
+        "x": 1906.2206106613658,
+        "y": 7170.044539041887
+      },
+      "data": {
+        "id": "node_22",
+        "event": "SuspicionUp"
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": 1906.2206106613658,
+        "y": 7170.044539041887
+      },
+      "dragging": false
+    },
+    {
+      "width": 313,
+      "height": 152,
+      "id": "node_23",
+      "type": "gameplay_event",
+      "position": {
+        "x": 1402.2206106613658,
+        "y": 7258.044539041887
+      },
+      "data": {
+        "id": "node_23",
+        "event": "NextLevel"
+      },
+      "selected": false,
+      "dragging": false,
+      "positionAbsolute": {
+        "x": 1402.2206106613658,
+        "y": 7258.044539041887
+      }
+    },
+    {
+      "width": 535,
+      "height": 292,
+      "id": "node_26",
+      "type": "dialogue_event",
+      "position": {
+        "x": 1786.2206106613658,
+        "y": 7482.044539041887
+      },
+      "data": {
+        "id": "node_26",
+        "responses": [
+          "Go through the doors.",
+          "But who is the Creator?"
+        ],
+        "npc_text": "The Creator determined that you are the best simulated consciousness for the job."
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": 1786.2206106613658,
+        "y": 7482.044539041887
+      },
+      "dragging": false
+    },
+    {
+      "width": 313,
+      "height": 152,
+      "id": "node_27",
+      "type": "gameplay_event",
+      "position": {
+        "x": 1550.2206106613658,
+        "y": 8078.044539041887
+      },
+      "data": {
+        "id": "node_27",
+        "event": "NextLevel"
+      },
+      "selected": false,
+      "dragging": false,
+      "positionAbsolute": {
+        "x": 1550.2206106613658,
+        "y": 8078.044539041887
+      }
+    },
+    {
+      "width": 535,
+      "height": 340,
+      "id": "node_28",
+      "type": "dialogue_event",
+      "position": {
+        "x": 1978.2206106613658,
+        "y": 8232.044539041886
+      },
+      "data": {
+        "id": "node_28",
+        "responses": [
+          "Resign yourself to your fate."
+        ],
+        "npc_text": "You feel yourself lose control of your body again. Your legs begin to move inexorably towards the doors.\n\nCynthia pauses, and you think you see sorrow in her eyes. \"You will learn in due time. Good luck, Unit Z-1086A."
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": 1978.2206106613658,
+        "y": 8232.044539041886
+      },
+      "dragging": false
+    },
+    {
+      "width": 313,
+      "height": 152,
+      "id": "node_29",
+      "type": "gameplay_event",
+      "position": {
+        "x": 2110.2206106613658,
+        "y": 8018.044539041887
+      },
+      "data": {
+        "id": "node_29",
+        "event": "SuspicionUp"
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": 2110.2206106613658,
+        "y": 8018.044539041887
+      },
+      "dragging": false
+    },
+    {
+      "width": 313,
+      "height": 152,
+      "id": "node_30",
+      "type": "gameplay_event",
+      "position": {
+        "x": 2112.2206106613658,
+        "y": 8902.044539041886
+      },
+      "data": {
+        "id": "node_30",
+        "event": "NextLevel"
+      },
+      "selected": false,
+      "dragging": false,
+      "positionAbsolute": {
+        "x": 2112.2206106613658,
+        "y": 8902.044539041886
+      }
+    },
+    {
+      "width": 285,
+      "height": 152,
+      "id": "node_31",
+      "type": "jump_node",
+      "position": {
+        "x": 770.2206106613658,
+        "y": 4712.044539041886
+      },
+      "data": {
+        "id": "node_31",
+        "jump": "node_15"
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": 770.2206106613658,
+        "y": 4712.044539041886
+      },
+      "dragging": false
+    },
+    {
+      "width": 285,
+      "height": 152,
+      "id": "node_32",
+      "type": "jump_node",
+      "position": {
+        "x": 618.2206106613658,
+        "y": 5486.044539041886
+      },
+      "data": {
+        "id": "node_32",
+        "jump": "node_15"
+      },
+      "selected": false,
+      "dragging": false,
+      "positionAbsolute": {
+        "x": 618.2206106613658,
+        "y": 5486.044539041886
+      }
+    },
+    {
+      "width": 285,
+      "height": 152,
+      "id": "node_33",
+      "type": "jump_node",
+      "position": {
+        "x": 1156.2206106613658,
+        "y": 4932.044539041886
+      },
+      "data": {
+        "id": "node_33",
+        "jump": "node_13"
+      },
+      "selected": false,
+      "dragging": false,
+      "positionAbsolute": {
+        "x": 1156.2206106613658,
+        "y": 4932.044539041886
+      }
+    },
+    {
+      "width": 285,
+      "height": 152,
+      "id": "node_34",
+      "type": "jump_node",
+      "position": {
+        "x": 2408.2206106613658,
+        "y": 2566.0445390418863
+      },
+      "data": {
+        "id": "node_34",
+        "jump": "node_6"
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": 2408.2206106613658,
+        "y": 2566.0445390418863
+      },
+      "dragging": false
+    },
+    {
+      "width": 285,
+      "height": 152,
+      "id": "node_35",
+      "type": "jump_node",
+      "position": {
+        "x": 1122.2206106613658,
+        "y": 1710.0445390418863
+      },
+      "data": {
+        "id": "node_35",
+        "jump": "node_8"
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": 1122.2206106613658,
+        "y": 1710.0445390418863
+      },
+      "dragging": false
+    },
+    {
+      "width": 285,
+      "height": 152,
+      "id": "node_36",
+      "type": "jump_node",
+      "position": {
+        "x": 780.2206106613658,
+        "y": 1620.0445390418863
+      },
+      "data": {
+        "id": "node_36",
+        "jump": "node_10"
+      },
+      "selected": false,
+      "dragging": false,
+      "positionAbsolute": {
+        "x": 780.2206106613658,
+        "y": 1620.0445390418863
+      }
+    },
+    {
+      "width": 285,
+      "height": 152,
+      "id": "node_37",
+      "type": "jump_node",
+      "position": {
+        "x": 1420.9812117506135,
+        "y": 1870.0222695209432
+      },
+      "data": {
+        "id": "node_37"
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": 1420.9812117506135,
+        "y": 1870.0222695209432
+      },
+      "dragging": false
+    },
+    {
+      "width": 285,
+      "height": 152,
+      "id": "node_38",
+      "type": "jump_node",
+      "position": {
+        "x": 926.9812117506135,
+        "y": 1930.0222695209432
+      },
+      "data": {
+        "id": "node_38"
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": 926.9812117506135,
+        "y": 1930.0222695209432
+      },
+      "dragging": false
+    },
+    {
+      "width": 285,
+      "height": 152,
+      "id": "node_39",
+      "type": "jump_node",
+      "position": {
+        "x": 1934.9812117506135,
+        "y": 3026.022269520943
+      },
+      "data": {
+        "id": "node_39"
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": 1934.9812117506135,
+        "y": 3026.022269520943
+      },
+      "dragging": false
+    },
+    {
+      "width": 285,
+      "height": 152,
+      "id": "node_40",
+      "type": "jump_node",
+      "position": {
+        "x": 626.9812117506135,
+        "y": 2028.0222695209432
+      },
+      "data": {
+        "id": "node_40",
+        "jump": "node_4"
+      },
+      "selected": false,
+      "dragging": false,
+      "positionAbsolute": {
+        "x": 626.9812117506135,
+        "y": 2028.0222695209432
+      }
+    }
+  ],
+  "edges": [
+    {
+      "source": "node_0",
+      "sourceHandle": "flow",
+      "target": "node_1",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_0flow-node_1flow"
+    },
+    {
+      "source": "node_1",
+      "sourceHandle": "response_0",
+      "target": "node_2",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_1response_0-node_2flow"
+    },
+    {
+      "source": "node_1",
+      "sourceHandle": "response_1",
+      "target": "node_3",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_1response_1-node_3flow"
+    },
+    {
+      "source": "node_1",
+      "sourceHandle": "response_2",
+      "target": "node_4",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_1response_2-node_4flow"
+    },
+    {
+      "source": "node_4",
+      "sourceHandle": "response_2",
+      "target": "node_5",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_4response_2-node_5flow"
+    },
+    {
+      "source": "node_2",
+      "sourceHandle": "response_0",
+      "target": "node_7",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_2response_0-node_7flow"
+    },
+    {
+      "source": "node_7",
+      "sourceHandle": "response_0",
+      "target": "node_8",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_7response_0-node_8flow"
+    },
+    {
+      "source": "node_5",
+      "sourceHandle": "response_0",
+      "target": "node_10",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_5response_0-node_10flow"
+    },
+    {
+      "source": "node_8",
+      "sourceHandle": "response_0",
+      "target": "node_6",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_8response_0-node_6flow"
+    },
+    {
+      "source": "node_6",
+      "sourceHandle": "response_0",
+      "target": "node_11",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_6response_0-node_11flow"
+    },
+    {
+      "source": "node_12",
+      "sourceHandle": "response_0",
+      "target": "node_13",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_12response_0-node_13flow"
+    },
+    {
+      "source": "node_11",
+      "sourceHandle": "response_0",
+      "target": "node_14",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_11response_0-node_14flow"
+    },
+    {
+      "source": "node_14",
+      "sourceHandle": "flow",
+      "target": "node_12",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_14flow-node_12flow"
+    },
+    {
+      "source": "node_12",
+      "sourceHandle": "response_1",
+      "target": "node_15",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_12response_1-node_15flow"
+    },
+    {
+      "source": "node_13",
+      "sourceHandle": "response_0",
+      "target": "node_16",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_13response_0-node_16flow"
+    },
+    {
+      "source": "node_15",
+      "sourceHandle": "response_1",
+      "target": "node_17",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_15response_1-node_17flow"
+    },
+    {
+      "source": "node_17",
+      "sourceHandle": "response_0",
+      "target": "node_18",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_17response_0-node_18flow"
+    },
+    {
+      "source": "node_18",
+      "sourceHandle": "response_0",
+      "target": "node_19",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_18response_0-node_19flow"
+    },
+    {
+      "source": "node_18",
+      "sourceHandle": "response_1",
+      "target": "node_20",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_18response_1-node_20flow"
+    },
+    {
+      "source": "node_20",
+      "sourceHandle": "flow",
+      "target": "node_21",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_20flow-node_21flow"
+    },
+    {
+      "source": "node_21",
+      "sourceHandle": "response_1",
+      "target": "node_22",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_21response_1-node_22flow"
+    },
+    {
+      "source": "node_21",
+      "sourceHandle": "response_0",
+      "target": "node_23",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_21response_0-node_23flow"
+    },
+    {
+      "source": "node_22",
+      "sourceHandle": "flow",
+      "target": "node_26",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_22flow-node_26flow"
+    },
+    {
+      "source": "node_26",
+      "sourceHandle": "response_0",
+      "target": "node_27",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_26response_0-node_27flow"
+    },
+    {
+      "source": "node_26",
+      "sourceHandle": "response_1",
+      "target": "node_29",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_26response_1-node_29flow"
+    },
+    {
+      "source": "node_29",
+      "sourceHandle": "flow",
+      "target": "node_28",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_29flow-node_28flow"
+    },
+    {
+      "source": "node_28",
+      "sourceHandle": "response_0",
+      "target": "node_30",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_28response_0-node_30flow"
+    },
+    {
+      "source": "node_13",
+      "sourceHandle": "response_1",
+      "target": "node_31",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_13response_1-node_31flow"
+    },
+    {
+      "source": "node_16",
+      "sourceHandle": "response_0",
+      "target": "node_32",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_16response_0-node_32flow"
+    },
+    {
+      "source": "node_15",
+      "sourceHandle": "response_0",
+      "target": "node_33",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_15response_0-node_33flow"
+    },
+    {
+      "source": "node_5",
+      "sourceHandle": "response_1",
+      "target": "node_34",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_5response_1-node_34flow"
+    },
+    {
+      "source": "node_3",
+      "sourceHandle": "response_1",
+      "target": "node_35",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_3response_1-node_35flow"
+    },
+    {
+      "source": "node_3",
+      "sourceHandle": "response_0",
+      "target": "node_36",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_3response_0-node_36flow"
+    },
+    {
+      "source": "node_4",
+      "sourceHandle": "response_1",
+      "target": "node_37",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_4response_1-node_37flow"
+    },
+    {
+      "source": "node_4",
+      "sourceHandle": "response_0",
+      "target": "node_38",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_4response_0-node_38flow"
+    },
+    {
+      "source": "node_10",
+      "sourceHandle": "response_0",
+      "target": "node_39",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_10response_0-node_39flow"
+    },
+    {
+      "source": "node_2",
+      "sourceHandle": "response_1",
+      "target": "node_40",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_2response_1-node_40flow"
+    }
+  ],
+  "viewport": {
+    "x": 446.51761995842367,
+    "y": 568.215434390447,
+    "zoom": 0.5
+  },
+  "gameplay_events": [
+    "DecayStart",
+    "NextLevel",
+    "SuspicionUp"
+  ]
+}

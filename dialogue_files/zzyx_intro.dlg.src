@@ -1,0 +1,151 @@
+{
+  "nodes": [
+    {
+      "width": 281,
+      "height": 153,
+      "id": "node_0",
+      "type": "dialogue_entry",
+      "position": {
+        "x": 347,
+        "y": 141
+      },
+      "data": {
+        "id": "node_0",
+        "npc_name": "zzyx_intro"
+      },
+      "selected": false,
+      "dragging": false,
+      "positionAbsolute": {
+        "x": 347,
+        "y": 141
+      }
+    },
+    {
+      "width": 535,
+      "height": 427,
+      "id": "node_1",
+      "type": "dialogue_event",
+      "position": {
+        "x": 188.54608390846118,
+        "y": 305.03127183142703
+      },
+      "data": {
+        "id": "node_1",
+        "responses": [
+          "Look around."
+        ],
+        "npc_text": "You enter an elevator which takes you soundlessly upwards on a journey which lasts several minutes. When it finally opens, you find yourself in a colossal room with a thin walkway that stretches \nthrough the center."
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": 188.54608390846118,
+        "y": 305.03127183142703
+      },
+      "dragging": false
+    },
+    {
+      "width": 535,
+      "height": 475,
+      "id": "node_2",
+      "type": "dialogue_event",
+      "position": {
+        "x": 185.96495892755763,
+        "y": 822.5468305025906
+      },
+      "data": {
+        "id": "node_2",
+        "responses": [
+          "Walk forward."
+        ],
+        "npc_text": "Beneath the walkway, under a sheet of glass, you can see thousands upon thousands of processors arrayed in rows. The ceiling is lost in a haze of crackling static, and \nat the other end of the room you can see a circular door. Everything has a sense of corrosion around it, and you can see that many of the servers are broken down or run to exhaustion."
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": 185.96495892755763,
+        "y": 822.5468305025906
+      },
+      "dragging": false
+    },
+    {
+      "width": 535,
+      "height": 451,
+      "id": "node_3",
+      "type": "dialogue_event",
+      "position": {
+        "x": 193.7083338702684,
+        "y": 1411.043326148602
+      },
+      "data": {
+        "id": "node_3",
+        "responses": [
+          "Hello?"
+        ],
+        "npc_text": "As you begin to walk towards towards the circular door at the other end of the room, the static across the ceiling coalesces into a series of floating screens that surround you, furiously printing text. \nA low, ambient hum starts to resolve itself into a voice which speaks to you in a crackly, almost unintelligent whisper."
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": 193.7083338702684,
+        "y": 1411.043326148602
+      },
+      "dragging": false
+    },
+    {
+      "width": 313,
+      "height": 153,
+      "id": "node_4",
+      "type": "gameplay_event",
+      "position": {
+        "x": 293.08164563505534,
+        "y": 1994.3775718328066
+      },
+      "data": {
+        "id": "node_4",
+        "event": "NextLevel"
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": 293.08164563505534,
+        "y": 1994.3775718328066
+      },
+      "dragging": false
+    }
+  ],
+  "edges": [
+    {
+      "source": "node_0",
+      "sourceHandle": "flow",
+      "target": "node_1",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_0flow-node_1flow"
+    },
+    {
+      "source": "node_1",
+      "sourceHandle": "response_0",
+      "target": "node_2",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_1response_0-node_2flow"
+    },
+    {
+      "source": "node_2",
+      "sourceHandle": "response_0",
+      "target": "node_3",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_2response_0-node_3flow"
+    },
+    {
+      "source": "node_3",
+      "sourceHandle": "response_0",
+      "target": "node_4",
+      "targetHandle": "flow",
+      "id": "reactflow__edge-node_3response_0-node_4flow"
+    }
+  ],
+  "viewport": {
+    "x": 137.90394862440326,
+    "y": -1077.3552901066005,
+    "zoom": 0.7748559309591712
+  },
+  "gameplay_events": [
+    "NextLevel"
+  ]
+}
