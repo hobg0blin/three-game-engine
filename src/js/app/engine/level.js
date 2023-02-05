@@ -3,8 +3,11 @@ import { state } from "./setup.js";
 import { troikaDialogueBox } from "app/ui/troikaDialogueBox.js";
 import { decayMeter } from "app/ui/decayMeter.js";
 import { createText } from "app/ui/createText.js";
+import { Clock } from "three";
 let dir = true;
 let pixelSize = 1.25;
+const clock = new Clock();
+let lastTick = 0;
 
 // create a simple level template, to be modified in individual level files
 // FIXME: would be much better if the key/private functions here were inaccessible and static, and stuff like customAnimations or whatever could be extended
@@ -41,11 +44,12 @@ const createLevel = (world, data) => {
     level.customAnimations();
     world.render(level, world);
     if (pixelSize != world.pixelSize) {
-      if (world.pixelPass != undefined) {
+      if (world.pixelPass != undefined && clock.getElapsedTime() > lastTick + 0.5) {
+        lastTick = clock.getElapsedTime();
         if (dir) {
-          pixelSize += 0.0003;
+          pixelSize += 0.0003 * state.playerState.decay;
         } else {
-          pixelSize -= 0.0003;
+          pixelSize -= 0.0003 * state.playerState.decay;
         }
         if (pixelSize > world.pixelSize) {
           dir = false;
