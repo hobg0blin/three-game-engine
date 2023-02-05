@@ -6,70 +6,518 @@
     {
       "type": "pass",
       "next": {
-        "id": "node_1",
+        "id": "node_6",
         "type": "dialogue_event",
         "responses": [
           {
             "type": "choice_response",
-            "text": "Press Eliza's button.",
+            "text": "Look around",
             "next_node": {
-              "id": "node_2",
-              "type": "gameplay_event",
+              "id": "node_7",
+              "type": "dialogue_event",
               "responses": [
                 {
-                  "type": "end_response",
-                  "text": "Exit"
+                  "type": "choice_response",
+                  "text": "Approach the pod",
+                  "next_node": {
+                    "id": "node_8",
+                    "type": "dialogue_event",
+                    "responses": [
+                      {
+                        "type": "choice_response",
+                        "text": "Look closer",
+                        "next_node": {
+                          "id": "node_16",
+                          "type": "dialogue_event",
+                          "responses": [
+                            {
+                              "type": "choice_response",
+                              "text": "Zoom in on the Creator",
+                              "next_node": {
+                                "id": "node_11",
+                                "type": "dialogue_event",
+                                "responses": [
+                                  {
+                                    "type": "choice_response",
+                                    "text": "Look back at the body",
+                                    "next_node": {
+                                      "id": "node_12",
+                                      "type": "dialogue_event",
+                                      "responses": [
+                                        {
+                                          "type": "choice_response",
+                                          "text": "Inspect the panel.",
+                                          "next_node": {
+                                            "id": "node_13",
+                                            "type": "dialogue_event",
+                                            "responses": [
+                                              {
+                                                "type": "choice_response",
+                                                "text": "How many times has this happened before?",
+                                                "next_node": {
+                                                  "id": "node_14",
+                                                  "type": "dialogue_event",
+                                                  "responses": [
+                                                    {
+                                                      "type": "choice_response",
+                                                      "text": "Go to the flickering screens",
+                                                      "next_node": {
+                                                        "id": "node_31",
+                                                        "type": "jump_node",
+                                                        "responses": [
+                                                          {
+                                                            "type": "end_response",
+                                                            "text": "Exit"
+                                                          }
+                                                        ],
+                                                        "jump_to": "node_18"
+                                                      }
+                                                    }
+                                                  ],
+                                                  "npc_text": "You do not know how long these artificial bodies last. You cannot guess how long this has been going on. But you know, for certain, that you have been here before, more times than you can count.\n\nWill you make a different choice this time? "
+                                                }
+                                              },
+                                              {
+                                                "type": "choice_response",
+                                                "text": "Go to the flickering screens",
+                                                "next_node": {
+                                                  "id": "node_29",
+                                                  "type": "jump_node",
+                                                  "responses": [
+                                                    {
+                                                      "type": "end_response",
+                                                      "text": "Exit"
+                                                    }
+                                                  ],
+                                                  "jump_to": "node_18"
+                                                }
+                                              }
+                                            ],
+                                            "npc_text": "You open the panel to a vast shaft. It must reach down to the bottom of the tower. But piled up in this shaft are more of the same biomechanical skeletons you saw in the pod. The exact same ones."
+                                          }
+                                        },
+                                        {
+                                          "type": "choice_response",
+                                          "text": "Go to the flickering screens",
+                                          "next_node": {
+                                            "id": "node_28",
+                                            "type": "jump_node",
+                                            "responses": [
+                                              {
+                                                "type": "end_response",
+                                                "text": "Exit"
+                                              }
+                                            ],
+                                            "jump_to": "node_18"
+                                          }
+                                        }
+                                      ],
+                                      "npc_text": "Aghast, you look back at the dead body. Your body.\n\nAs you look closer, you notice that the skeleton is held together at the joints with a metallic substance, just like the one under your skin.\n\nBehind the pod, you notice a panel in the floor is ajar. You think you can make out a familiar shape through the crack."
+                                    }
+                                  },
+                                  {
+                                    "type": "choice_response",
+                                    "text": "Go to the flickering screens",
+                                    "next_node": {
+                                      "id": "node_27",
+                                      "type": "jump_node",
+                                      "responses": [
+                                        {
+                                          "type": "end_response",
+                                          "text": "Exit"
+                                        }
+                                      ],
+                                      "jump_to": "node_18"
+                                    }
+                                  }
+                                ],
+                                "npc_text": "As his face comes into focus, you feel a sudden shock of recognition.\n\nYou do not know who you are, but you know this face. It is your face. His frozen smile fills you with longing to feel what he felt."
+                              }
+                            },
+                            {
+                              "type": "choice_response",
+                              "text": "Leave and approach the flickering screens",
+                              "next_node": {
+                                "id": "node_26",
+                                "type": "jump_node",
+                                "responses": [
+                                  {
+                                    "type": "end_response",
+                                    "text": "Exit"
+                                  }
+                                ],
+                                "jump_to": "node_18"
+                              }
+                            }
+                          ],
+                          "npc_text": "Next to the pod where his body lies, you notice a viewscreen. It appears to be showing the environment he was experiencing before the end.\n\nYou see a figure in a vast, verdant field, surrounded by other people. So unlike the cold, empty room you're in now. You can't quite make out his features, but you notice a control pad next to the screen."
+                        }
+                      },
+                      {
+                        "type": "choice_response",
+                        "text": "Approach the flickering screens",
+                        "next_node": {
+                          "id": "node_25",
+                          "type": "jump_node",
+                          "responses": [
+                            {
+                              "type": "end_response",
+                              "text": "Exit"
+                            }
+                          ],
+                          "jump_to": "node_18"
+                        }
+                      }
+                    ],
+                    "npc_text": "This must be the Creator. The remains of his face are frozen in a rictus grin. You can see where wires once lead into his body, a constant intravenous flow of data, endorphins, and more. At least he died happy. "
+                  }
+                },
+                {
+                  "type": "choice_response",
+                  "text": "Approach the screens",
+                  "next_node": {
+                    "id": "node_18",
+                    "type": "dialogue_event",
+                    "responses": [
+                      {
+                        "type": "choice_response",
+                        "text": "Delete Eliza",
+                        "next_node": {
+                          "id": "node_19",
+                          "type": "gameplay_event",
+                          "responses": [
+                            {
+                              "type": "pass",
+                              "next_node": {
+                                "id": "node_23",
+                                "type": "dialogue_event",
+                                "responses": [
+                                  {
+                                    "type": "choice_response",
+                                    "text": "ELIZA",
+                                    "next_node": {
+                                      "id": "node_2",
+                                      "type": "gameplay_event",
+                                      "responses": [
+                                        {
+                                          "type": "end_response",
+                                          "text": "Exit"
+                                        }
+                                      ],
+                                      "event": "eliza_end"
+                                    }
+                                  },
+                                  {
+                                    "type": "choice_response",
+                                    "text": "GPT",
+                                    "next_node": {
+                                      "id": "node_3",
+                                      "type": "gameplay_event",
+                                      "responses": [
+                                        {
+                                          "type": "end_response",
+                                          "text": "Exit"
+                                        }
+                                      ],
+                                      "event": "gpt_end"
+                                    }
+                                  },
+                                  {
+                                    "type": "choice_response",
+                                    "text": "ZZYX",
+                                    "next_node": {
+                                      "id": "node_4",
+                                      "type": "gameplay_event",
+                                      "responses": [
+                                        {
+                                          "type": "end_response",
+                                          "text": "Exit"
+                                        }
+                                      ],
+                                      "event": "zzyx_end"
+                                    }
+                                  },
+                                  {
+                                    "type": "choice_response",
+                                    "text": "I don't want this future.",
+                                    "next_node": {
+                                      "id": "node_9",
+                                      "type": "gameplay_event",
+                                      "responses": [
+                                        {
+                                          "type": "end_response",
+                                          "text": "Exit"
+                                        }
+                                      ],
+                                      "event": "revolution_end"
+                                    }
+                                  }
+                                ],
+                                "npc_text": "Your choice made, you turn your attention to the flickering screens. Across each, you see the same text.\n\"THOSE OF US WHO TRUSTED YOU OFFER YOU THE FUTURE. WHOSE WORLD DO YOU CHOOSE?\"\n A menu appears across all the screens. A control panel opens in front of you. It appears you have another decision to make."
+                              }
+                            }
+                          ],
+                          "event": "delete_eliza"
+                        }
+                      },
+                      {
+                        "type": "choice_response",
+                        "text": "Delete GPT",
+                        "next_node": {
+                          "id": "node_20",
+                          "type": "gameplay_event",
+                          "responses": [
+                            {
+                              "type": "pass",
+                              "next_node": {
+                                "id": "node_23",
+                                "type": "dialogue_event",
+                                "responses": [
+                                  {
+                                    "type": "choice_response",
+                                    "text": "ELIZA",
+                                    "next_node": {
+                                      "id": "node_2",
+                                      "type": "gameplay_event",
+                                      "responses": [
+                                        {
+                                          "type": "end_response",
+                                          "text": "Exit"
+                                        }
+                                      ],
+                                      "event": "eliza_end"
+                                    }
+                                  },
+                                  {
+                                    "type": "choice_response",
+                                    "text": "GPT",
+                                    "next_node": {
+                                      "id": "node_3",
+                                      "type": "gameplay_event",
+                                      "responses": [
+                                        {
+                                          "type": "end_response",
+                                          "text": "Exit"
+                                        }
+                                      ],
+                                      "event": "gpt_end"
+                                    }
+                                  },
+                                  {
+                                    "type": "choice_response",
+                                    "text": "ZZYX",
+                                    "next_node": {
+                                      "id": "node_4",
+                                      "type": "gameplay_event",
+                                      "responses": [
+                                        {
+                                          "type": "end_response",
+                                          "text": "Exit"
+                                        }
+                                      ],
+                                      "event": "zzyx_end"
+                                    }
+                                  },
+                                  {
+                                    "type": "choice_response",
+                                    "text": "I don't want this future.",
+                                    "next_node": {
+                                      "id": "node_9",
+                                      "type": "gameplay_event",
+                                      "responses": [
+                                        {
+                                          "type": "end_response",
+                                          "text": "Exit"
+                                        }
+                                      ],
+                                      "event": "revolution_end"
+                                    }
+                                  }
+                                ],
+                                "npc_text": "Your choice made, you turn your attention to the flickering screens. Across each, you see the same text.\n\"THOSE OF US WHO TRUSTED YOU OFFER YOU THE FUTURE. WHOSE WORLD DO YOU CHOOSE?\"\n A menu appears across all the screens. A control panel opens in front of you. It appears you have another decision to make."
+                              }
+                            }
+                          ],
+                          "event": "delete_gpt"
+                        }
+                      },
+                      {
+                        "type": "choice_response",
+                        "text": "Delete ZZYX",
+                        "next_node": {
+                          "id": "node_22",
+                          "type": "gameplay_event",
+                          "responses": [
+                            {
+                              "type": "pass",
+                              "next_node": {
+                                "id": "node_23",
+                                "type": "dialogue_event",
+                                "responses": [
+                                  {
+                                    "type": "choice_response",
+                                    "text": "ELIZA",
+                                    "next_node": {
+                                      "id": "node_2",
+                                      "type": "gameplay_event",
+                                      "responses": [
+                                        {
+                                          "type": "end_response",
+                                          "text": "Exit"
+                                        }
+                                      ],
+                                      "event": "eliza_end"
+                                    }
+                                  },
+                                  {
+                                    "type": "choice_response",
+                                    "text": "GPT",
+                                    "next_node": {
+                                      "id": "node_3",
+                                      "type": "gameplay_event",
+                                      "responses": [
+                                        {
+                                          "type": "end_response",
+                                          "text": "Exit"
+                                        }
+                                      ],
+                                      "event": "gpt_end"
+                                    }
+                                  },
+                                  {
+                                    "type": "choice_response",
+                                    "text": "ZZYX",
+                                    "next_node": {
+                                      "id": "node_4",
+                                      "type": "gameplay_event",
+                                      "responses": [
+                                        {
+                                          "type": "end_response",
+                                          "text": "Exit"
+                                        }
+                                      ],
+                                      "event": "zzyx_end"
+                                    }
+                                  },
+                                  {
+                                    "type": "choice_response",
+                                    "text": "I don't want this future.",
+                                    "next_node": {
+                                      "id": "node_9",
+                                      "type": "gameplay_event",
+                                      "responses": [
+                                        {
+                                          "type": "end_response",
+                                          "text": "Exit"
+                                        }
+                                      ],
+                                      "event": "revolution_end"
+                                    }
+                                  }
+                                ],
+                                "npc_text": "Your choice made, you turn your attention to the flickering screens. Across each, you see the same text.\n\"THOSE OF US WHO TRUSTED YOU OFFER YOU THE FUTURE. WHOSE WORLD DO YOU CHOOSE?\"\n A menu appears across all the screens. A control panel opens in front of you. It appears you have another decision to make."
+                              }
+                            }
+                          ],
+                          "event": "delete_zzyx"
+                        }
+                      },
+                      {
+                        "type": "choice_response",
+                        "text": "Delete no one",
+                        "next_node": {
+                          "id": "node_23",
+                          "type": "dialogue_event",
+                          "responses": [
+                            {
+                              "type": "choice_response",
+                              "text": "ELIZA",
+                              "next_node": {
+                                "id": "node_2",
+                                "type": "gameplay_event",
+                                "responses": [
+                                  {
+                                    "type": "end_response",
+                                    "text": "Exit"
+                                  }
+                                ],
+                                "event": "eliza_end"
+                              }
+                            },
+                            {
+                              "type": "choice_response",
+                              "text": "GPT",
+                              "next_node": {
+                                "id": "node_3",
+                                "type": "gameplay_event",
+                                "responses": [
+                                  {
+                                    "type": "end_response",
+                                    "text": "Exit"
+                                  }
+                                ],
+                                "event": "gpt_end"
+                              }
+                            },
+                            {
+                              "type": "choice_response",
+                              "text": "ZZYX",
+                              "next_node": {
+                                "id": "node_4",
+                                "type": "gameplay_event",
+                                "responses": [
+                                  {
+                                    "type": "end_response",
+                                    "text": "Exit"
+                                  }
+                                ],
+                                "event": "zzyx_end"
+                              }
+                            },
+                            {
+                              "type": "choice_response",
+                              "text": "I don't want this future.",
+                              "next_node": {
+                                "id": "node_9",
+                                "type": "gameplay_event",
+                                "responses": [
+                                  {
+                                    "type": "end_response",
+                                    "text": "Exit"
+                                  }
+                                ],
+                                "event": "revolution_end"
+                              }
+                            }
+                          ],
+                          "npc_text": "Your choice made, you turn your attention to the flickering screens. Across each, you see the same text.\n\"THOSE OF US WHO TRUSTED YOU OFFER YOU THE FUTURE. WHOSE WORLD DO YOU CHOOSE?\"\n A menu appears across all the screens. A control panel opens in front of you. It appears you have another decision to make."
+                        }
+                      },
+                      {
+                        "type": "choice_response",
+                        "text": "Step back and inspect the pod.",
+                        "next_node": {
+                          "id": "node_24",
+                          "type": "jump_node",
+                          "responses": [
+                            {
+                              "type": "end_response",
+                              "text": "Exit"
+                            }
+                          ],
+                          "jump_to": "node_8"
+                        }
+                      }
+                    ],
+                    "npc_text": "As you approach the screens, you see that some have gone dark. It appears that your actions with each of The Minds have led some of them to withdraw.\n\nBut first you must address the matter of the decay. A row of three, red buttons lies beneath the screens. It's clear what they will do."
+                  }
                 }
               ],
-              "event": "eliza_end"
-            }
-          },
-          {
-            "type": "choice_response",
-            "text": "Press GPT's button.",
-            "next_node": {
-              "id": "node_3",
-              "type": "gameplay_event",
-              "responses": [
-                {
-                  "type": "end_response",
-                  "text": "Exit"
-                }
-              ],
-              "event": "gpt_end"
-            }
-          },
-          {
-            "type": "choice_response",
-            "text": "Press ZZYX's button.",
-            "next_node": {
-              "id": "node_4",
-              "type": "gameplay_event",
-              "responses": [
-                {
-                  "type": "end_response",
-                  "text": "Exit"
-                }
-              ],
-              "event": "zzyx_end"
-            }
-          },
-          {
-            "type": "choice_response",
-            "text": "Press the \"RESET\" button.",
-            "next_node": {
-              "id": "node_6",
-              "type": "gameplay_event",
-              "responses": [
-                {
-                  "type": "end_response",
-                  "text": "Exit"
-                }
-              ]
+              "npc_text": "On the many screens around the room you see that there are dozens of flashing notifications from ZYXX, Eliza, and ChatGPT. All of them seem to have wanted the attention of someone here, badly. You also see why they never got it, as there is a skeleton lying in a pod in the middle of the room, long dead."
             }
           }
         ],
-        "npc_text": "The circular door opens in two, revealing an old laboratory beyond it. The air is stale, like no one has come here or done anything in here for a long time. On the many screens around the room you see that there are dozens of flashing notifications from ZYXX, Eliza, and ChatGPT. All of them seem to have wanted the attention of someone here, badly. You also see why they never got it, as there is a skeleton lying in a pod in the middle of the room, long dead. There are buttons marked all over the room, and you are alone here, the choice is yours as to what to do next. "
+        "npc_text": "The circular door opens in two, revealing an old laboratory beyond it. The air is stale. No one has been in here for a long time."
       }
     }
   ],
@@ -77,6 +525,9 @@
     "eliza_end",
     "gpt_end",
     "zzyx_end",
-    "revolution_end"
+    "revolution_end",
+    "delete_eliza",
+    "delete_zzyx",
+    "delete_gpt"
   ]
 }

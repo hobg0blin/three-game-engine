@@ -1,5 +1,5 @@
 import { state } from "app/engine/setup.js";
-import { createLevel } from "app/engine/level.js";
+import { createLevel, disposeAll, searchNode } from "app/engine/level.js";
 
 //GUI/Buttons
 import { GUI } from "three/addons/libs/lil-gui.module.min.js";
@@ -22,12 +22,46 @@ const creator = (world) => {
   const THREE = world.THREE;
   let levelTemplate = createLevel(world, data);
   // i am breaking my own rules here but it's 10:30 and my brain is failing
-  levelTemplate.setup = () => {
-    if (data && data["responses"][0].next) {
-      let text = troikaDialogueBox(data["responses"][0].next, world);
-      console.log("responses: ", data["responses"]);
-      //FILTER RESPONSES BASED ON STATE
-      world.scene.add(text);
+  levelTemplate.redraw = () => {
+    disposeAll(world, "doNotDispose");
+    let dialogueObject = searchNode(state.gameState.currentDialogueObject, data["responses"]);
+    if (state.gameState.currentDialogueObject == "node_23") {
+      console.log("ending decision: ", dialogueObject);
+      let filtered = dialogueObject.responses.filter((response) => {
+        console.log("response: ", response);
+        console.log("id: ", response.id);
+        if (state.playerState.elizaOpinion < 2 && response.next_node.id == "node_2") {
+          return false;
+        } else if (state.playerState.GPTOpinion < 2 && response.next_node.id == "node_3") {
+          return false;
+        } else if (state.playerState.zzyxOpinion < 2 && response.next_node.id == "node_4") {
+          return false;
+        } else if (state.playerState.suspicion < 2 && response.next_node.id == "node_9") {
+          return false;
+        } else {
+          return true;
+        }
+      });
+      console.log("filtered: ", filtered);
+      dialogueObject.responses = filtered;
+    }
+    let text = troikaDialogueBox(dialogueObject, world);
+    world.scene.add(text);
+    //TODO: would be nice to have the numbers tick up
+    if (state.playerState.decayStart) {
+      let sprite = spriteDialogueBox(`DECAY: ${state.playerState.decay / 125}`);
+      sprite.backgroundColor = null;
+      if (state.playerState.decay < 50) {
+        sprite.color = "green";
+      } else if (state.playerState.decay < 85) {
+        sprite.color = "yellow";
+      } else {
+        sprite.color = "red";
+        console.log("hit decay ending");
+      }
+      sprite.position.x = 80;
+      sprite.position.y = -75;
+      world.scene.add(sprite);
     }
   };
 

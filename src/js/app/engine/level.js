@@ -95,4 +95,4 @@ const disposeAll = (world, flag) => {
     world.scene.remove(child);
   });
 };
-export { createLevel, disposeAll };
+export { createLevel, disposeAll, searchNode };

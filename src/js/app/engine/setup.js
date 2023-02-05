@@ -65,8 +65,10 @@ function updateSize(renderer) {
 }
 // handle level changes
 const levelHandler = (levelIndex) => {
+  // this is a thing that should not be
+  // but it's goblin hours and nobody can  stop me
   let levels = [level1, intro1, intro2, eliza, chatGPT, zzyx];
-  if (levelIndex >= levels.length - 1 && !state.gameState.reachedCreator) {
+  if (levelIndex >= levels.length && !state.gameState.reachedCreator) {
     state.gameState.reachedCreator = true;
     return creator;
   } else if (state.gameState.reachedCreator) {
@@ -87,7 +89,7 @@ const state = {
   },
   playerState: {
     decay: 0,
-    elizaOpinion: 1,
+    elizaOpinion: 2,
     GPTOpinion: 1,
     zzyxOpinion: 1,
     suspicion: 0,
