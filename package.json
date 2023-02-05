@@ -1,8 +1,9 @@
 {
-  "name": "threejs-es6-webpack-boilerplate",
+  "name": "TheTower",
   "version": "1.6.1",
-  "description": "Boilerplate for Three.js projects set up with Babel for ES6 and compiled with webpack",
-  "author": "Paul Graffam",
+  "repository": { "url": "git+https://github.com/hobg0blin/the_tower.git" },
+  "description": "A game about the end of the world.",
+  "author": "Brent Bailey, Ben Tidswell, Schuyler DeVos, and Matt Ross.",
   "main": "app.js",
   "engines": {
     "node": ">=10.0"
@@ -11,6 +12,8 @@
     "dev": "run-s dev:js",
     "build": "run-s build:dir build:js",
     "prebuild": "run-s clean",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "clean": "rimraf build",
     "lint": "eslint src/js/",
     "webpack-watch": "webpack --env NODE_ENV=development --progress --color --watch --hot",
@@ -29,6 +32,7 @@
     "chroma-js": "^2.1.2",
     "es6-promise": "^4.2.8",
     "fs": "^0.0.1-security",
+    "gh-pages": "^5.0.0",
     "howler": "^2.2.3",
     "natural": "^5.1.13",
     "optionator": "^0.9.1",
@@ -43,6 +47,7 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "save": "^2.9.0",
+    "save-dev": "^0.0.1-security",
     "tailwindcss": "^3.0.17",
     "three": "^0.144.0",
     "three-spritetext": "^1.6.5",
