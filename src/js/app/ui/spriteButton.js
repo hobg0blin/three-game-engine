@@ -35,21 +35,17 @@ function checkIntersection(x, y, isClick) {
       buttons = [];
       handleButton(button);
     }
-    console.log("recent int: ", recentInt);
     if (intersects.length > 0 && !isClick && recentInt != button) {
-      console.log("increase");
       button.scale.set((button.scale.x += 1), (button.scale.y += 1), (button.scale.z += 1));
       recentInt = button;
     }
     if (intersects.length <= 0 && !isClick && recentInt == button) {
-      console.log(" decrease");
       button.scale.set((button.scale.x -= 1), (button.scale.y -= 1), (button.scale.z -= 1));
       recentInt = false;
     }
   }
 }
 function handleButton(button) {
-  console.log("HEO");
   var sound = new Howl({
     src: ["/buttonclick.wav"],
   });
