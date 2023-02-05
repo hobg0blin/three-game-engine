@@ -1,0 +1,82 @@
+{
+  "id": "node_0",
+  "npc_name": "Creator",
+  "type": "dialogue_entry",
+  "responses": [
+    {
+      "type": "pass",
+      "next": {
+        "id": "node_1",
+        "type": "dialogue_event",
+        "responses": [
+          {
+            "type": "choice_response",
+            "text": "Press Eliza's button.",
+            "next_node": {
+              "id": "node_2",
+              "type": "gameplay_event",
+              "responses": [
+                {
+                  "type": "end_response",
+                  "text": "Exit"
+                }
+              ],
+              "event": "eliza_end"
+            }
+          },
+          {
+            "type": "choice_response",
+            "text": "Press GPT's button.",
+            "next_node": {
+              "id": "node_3",
+              "type": "gameplay_event",
+              "responses": [
+                {
+                  "type": "end_response",
+                  "text": "Exit"
+                }
+              ],
+              "event": "gpt_end"
+            }
+          },
+          {
+            "type": "choice_response",
+            "text": "Press ZZYX's button.",
+            "next_node": {
+              "id": "node_4",
+              "type": "gameplay_event",
+              "responses": [
+                {
+                  "type": "end_response",
+                  "text": "Exit"
+                }
+              ],
+              "event": "zzyx_end"
+            }
+          },
+          {
+            "type": "choice_response",
+            "text": "Press the \"RESET\" button.",
+            "next_node": {
+              "id": "node_6",
+              "type": "gameplay_event",
+              "responses": [
+                {
+                  "type": "end_response",
+                  "text": "Exit"
+                }
+              ]
+            }
+          }
+        ],
+        "npc_text": "The circular door opens in two, revealing an old laboratory beyond it. The air is stale, like no one has come here or done anything in here for a long time. On the many screens around the room you see that there are dozens of flashing notifications from ZYXX, Eliza, and ChatGPT. All of them seem to have wanted the attention of someone here, badly. You also see why they never got it, as there is a skeleton lying in a pod in the middle of the room, long dead. There are buttons marked all over the room, and you are alone here, the choice is yours as to what to do next. "
+      }
+    }
+  ],
+  "gameplay_events": [
+    "eliza_end",
+    "gpt_end",
+    "zzyx_end",
+    "revolution_end"
+  ]
+}

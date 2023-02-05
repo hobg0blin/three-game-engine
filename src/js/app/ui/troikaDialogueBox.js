@@ -11,10 +11,9 @@ function troikaDialogueBox(dialogueObj, world) {
   const myText = new Text();
   const responses = dialogueObj.responses;
   // Create:
-  console.log(responses);
   // Create Bar to handle text reveal
   var height = 15 + 30 * (dialogueObj.npc_text.length / 100);
-  var geometry = new THREE.BoxGeometry(140, height, 2);
+  var geometry = new THREE.BoxGeometry(150, height, 2);
   //geometry.position(-10, 56, 10 )
   var material = new THREE.MeshPhongMaterial({ color: "black" });
   var mesh = new THREE.Mesh(geometry, material);
@@ -39,7 +38,7 @@ function troikaDialogueBox(dialogueObj, world) {
   myText.position.y = 65;
   myText.position.x = -10;
   myText.color = 0xffffff;
-  myText.maxWidth = 100;
+  myText.maxWidth = 130;
 
   // Update the rendering:
   myText.sync();
@@ -52,7 +51,9 @@ function troikaDialogueBox(dialogueObj, world) {
     let b = spriteButton(button, { text: button.text, x: startX, y: startY, camera: world.camera, event: button.event, nextNode: button.next_node, scale: 0.25 });
     //startX += width + 15;
     startY -= 15;
-    group.add(b);
+    setTimeout(() => {
+      group.add(b);
+    }, 2100);
   }
   return group;
 }

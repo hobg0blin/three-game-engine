@@ -3,9 +3,10 @@ import { createCamera } from "components/Three/camera.js";
 import { createLights } from "components/Three/lights.js";
 import { createRenderer } from "components/Three/renderer.js";
 import { createControls, addToGUI } from "components/Three/controls.js";
-import { chatGPT, zzyx, eliza, level1, intro1, intro2 } from "levels/levels.js";
+import { chatGPT, zzyx, eliza, level1, intro1, intro2, creator, eliza_end } from "levels/levels.js";
 import { EffectComposer } from "three/examples/jsm/postprocessing/EffectComposer.js";
 import { RenderPass } from "three/examples/jsm/postprocessing/RenderPass.js";
+import { gaem } from "app/main.js";
 
 const world = {};
 const setup = (THREE) => {
@@ -63,35 +64,26 @@ function updateSize(renderer) {
   }
 }
 // handle level changes
-
 const levelHandler = (levelIndex) => {
   let levels = [level1, intro1, intro2, eliza, chatGPT, zzyx];
-  return levels[levelIndex];
+  if (levelIndex >= levels.length - 1 && !state.gameState.reachedCreator) {
+    state.gameState.reachedCreator = true;
+    return creator;
+  } else if (state.gameState.reachedCreator) {
+    console.log("should be ending with: ", state.gameState.chosenEnding);
+    return state.gameState.chosenEnding;
+  } else {
+    return levels[levelIndex];
+  }
 };
-
-//TODO: state setup
-// ideally, JSON object stored as a cookie/in localStorage
-// something like
-// { gameState:
-//    {
-//      currentLevel: 0,
-//      currentDialogueObject: 'question 5'
-//    }
-//   playerState:
-//     {
-//       decay: 0,
-//       alexaOpinion: 1,
-//       GPTOpinion: 1,
-//       zzyxOpinion: 1
-//     }
-// }
-// which would correspond to the dialogue JSON structure laid out in ui/dialogueBox.js
 
 const state = {
   gameState: {
     currentLevelIndex: 0,
     currentLevel: null,
     currentDialogueObject: "node_7",
+    reachedCreator: false,
+    choseEnding: null,
   },
   playerState: {
     decay: 0,
@@ -99,7 +91,96 @@ const state = {
     GPTOpinion: 1,
     zzyxOpinion: 1,
     suspicion: 0,
+    decayStart: false,
   },
 };
 
-export { setup, world, state, levelHandler };
+function handleState(button) {
+  if (button.params.nextNode == undefined) {
+    console.log("YOU AINT GOT NOTHIN HERE YET!");
+  }
+  if (button.params.nextNode.event != undefined) {
+    console.log("button event: ", button.params.nextNode.event);
+    // account for human error by lowercasing
+    switch (button.params.nextNode.event.toLowerCase()) {
+      case "elizaup":
+        state.playerState.elizaOpinion += 1;
+        break;
+      case "elizadown":
+        state.playerState.elizaOpinion -= 1;
+        break;
+      case "gptup":
+        state.playerState.GPTOpinion += 1;
+        break;
+      case "gptdown":
+        state.playerState.GPTOpinion -= 1;
+        break;
+      case "zzyxup":
+        state.playerState.zzyxOpinion += 1;
+        break;
+      case "zzyxdown":
+        state.playerState.zzyxOpinion -= 1;
+        break;
+      case "decaystart":
+        state.playerState.decayStart = true;
+        break;
+      case "decayup":
+        state.playerState.decay += 1;
+        break;
+      case "decaydown":
+        state.playerState.decay -= 1;
+        break;
+      case "suspicionup":
+        state.playerState.suspicion += 1;
+        break;
+      case "nextlevel":
+        state.gameState.currentLevelIndex += 1;
+        gaem(world);
+        break;
+      case "eliza_end":
+        state.gameState.chosenEnding = eliza_end;
+        gaem(world);
+        break;
+      //case "gpt_end":
+      //  state.gameState.chosenEnding = gpt_end;
+      //  break;
+      //case "zzyx_end":
+      //  state.gameState.chosenEnding = zzyx_end;
+      //  break;
+      //case "revolution_end":
+      //  state.gameState.chosenEnding = zzyx_end;
+      //  break;
+      //case "decay_end":
+      //  state.gameState.chosenEnding = decay_end;
+      //  break;
+
+      default:
+        console.log(`huh guess you didn't account for this. maybe check to see if you goofed in the JSON somewhere`);
+    }
+  }
+  if (button.params.nextNode.event != "NextLevel") {
+    if (button.params.nextNode.type == "gameplay_event") {
+      console.log("gameplay!");
+      //fixme: recursion causing decay to implement twice, thought return would fix but guess it don't
+      handleState({ params: { nextNode: button.params.nextNode.responses[0].next_node } });
+      return;
+    } else if (button.params.nextNode.responses[0].type == "pass") {
+      console.log("pass!");
+      state.gameState.currentDialogueObject = button.params.nextNode.responses[0].next_node.id;
+      state.gameState.currentLevel.redraw();
+    } else if (button.params.nextNode.type == "jump_node") {
+      console.log("jump node!");
+      state.gameState.currentDialogueObject = button.params.nextNode.jump_to;
+      state.gameState.currentLevel.redraw();
+    } else {
+      state.gameState.currentDialogueObject = button.params.nextNode.id;
+      state.gameState.currentLevel.redraw();
+    }
+  }
+  if (state.playerState.decayStart == true) {
+    state.playerState.decay += 1;
+  }
+  console.log("current state: ", state);
+}
+
+export { setup, world, state, handleState, levelHandler };

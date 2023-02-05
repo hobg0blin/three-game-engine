@@ -1,6 +1,7 @@
 // text stuff
-import { state } from './setup.js'
-import { troikaDialogueBox } from 'app/ui/troikaDialogueBox.js'
+import { state } from "./setup.js";
+import { troikaDialogueBox } from "app/ui/troikaDialogueBox.js";
+import { spriteDialogueBox } from "app/ui/spriteDialogueBox.js";
 import { createText } from "app/ui/createText.js";
 
 // create a simple level template, to be modified in individual level files
@@ -8,72 +9,88 @@ import { createText } from "app/ui/createText.js";
 //
 const createLevel = (world, data) => {
   const level = {};
-  level.objects = []
+  level.objects = [];
   //DO NOT TOUCH
   // this automatically changes the dialogue on button press
   level.redraw = () => {
-      disposeAll(world, 'doNotDispose')
-      let text = troikaDialogueBox(searchNode(state.gameState.currentDialogueObject, data['responses']), world)
-      world.scene.add(text)
-  }
+    disposeAll(world, "doNotDispose");
+    let text = troikaDialogueBox(searchNode(state.gameState.currentDialogueObject, data["responses"]), world);
+    world.scene.add(text);
+    //TODO: would be nice to have the numbers tick up
+    if (state.playerState.decayStart) {
+      let sprite = spriteDialogueBox(`DECAY: ${state.playerState.decay / 125}`);
+      sprite.backgroundColor = null;
+      if (state.playerState.decay < 50) {
+        sprite.color = "green";
+      } else if (state.playerState.decay < 85) {
+        sprite.color = "yellow";
+      } else {
+        sprite.color = "red";
+        console.log("hit decay ending");
+      }
+      sprite.position.x = 80;
+      sprite.position.y = -75;
+      world.scene.add(sprite);
+    }
+  };
   // manage level-specific animations, to automatically be dealt with in the animate render loop
-  level.customAnimations = () => {}
+  level.customAnimations = () => {};
   // first draw pass
   // this is where you might add objects that do not need to change or be removed throughout the course of the level
 
-  level.firstPass = () => {}
+  level.firstPass = () => {};
   //DO NOT TOUCH
   // This sets up the first dialogue box
   level.setup = () => {
-    if (data && data['responses'][0].next) {
-      let text = troikaDialogueBox(data['responses'][0].next, world)
-      world.scene.add(text)
+    if (data && data["responses"][0].next) {
+      let text = troikaDialogueBox(data["responses"][0].next, world);
+      world.scene.add(text);
     }
-  }
- level.animate = () => {
-    level.customAnimations()
-    world.render(level, world)
-  }
+  };
+  level.animate = () => {
+    level.customAnimations();
+    world.render(level, world);
+  };
   return level;
 };
 
 // from https://stackoverflow.com/questions/65630507/how-to-search-value-in-nested-json-in-javascript
 function searchNode(id, currentNode) {
-    let result;
-    for (const [key, value] of Object.entries(currentNode)) {
-    if (key == "id" && value == id)  return currentNode;
-        if (value !== null && typeof value === "object" || typeof value === "array") {
-            result = searchNode(id, value);
-           if (result) {
-            return result;
-           }
-         }
+  let result;
+  for (const [key, value] of Object.entries(currentNode)) {
+    if (key == "id" && value == id) return currentNode;
+    if ((value !== null && typeof value === "object") || typeof value === "array") {
+      result = searchNode(id, value);
+      if (result) {
+        return result;
+      }
     }
+  }
 }
-
 
 // dispose of all world objects that aren't marked with a flag, e.g. doNotDispose
 const disposeAll = (world, flag) => {
-      //TODO prob handle disposal in separate function that can be run recursively on an object
-      const toRemove = []
-      world.scene.traverse(child => {
-        if (child[flag] == true) {
-          return;
-        } else if (child.isMesh || child.isSprite) {
-          child.geometry.dispose();
-          child.material.dispose();
-          toRemove.push(child)
-        } else if (child.isGroup) {
-          //FIXME do i need to recurse this further?
-          child.traverse(baby => {
-            if (baby.isMesh) {
-              baby.geometry.dispose();
-              baby.material.dispose();
-              toRemove.push(baby)
-            }
-          })
-           toRemove.push(child)
-    }   });
+  //TODO prob handle disposal in separate function that can be run recursively on an object
+  const toRemove = [];
+  world.scene.traverse((child) => {
+    if (child[flag] == true) {
+      return;
+    } else if (child.isMesh || child.isSprite) {
+      child.geometry.dispose();
+      child.material.dispose();
+      toRemove.push(child);
+    } else if (child.isGroup) {
+      //FIXME do i need to recurse this further?
+      child.traverse((baby) => {
+        if (baby.isMesh) {
+          baby.geometry.dispose();
+          baby.material.dispose();
+          toRemove.push(baby);
+        }
+      });
+      toRemove.push(child);
+    }
+  });
   toRemove.forEach((child) => {
     world.scene.remove(child);
   });

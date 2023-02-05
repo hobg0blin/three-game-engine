@@ -1,0 +1,33 @@
+{
+  "id": "node_0",
+  "npc_name": "eliza_end",
+  "type": "dialogue_entry",
+  "responses": [
+    {
+      "type": "pass",
+      "next": {
+        "id": "node_1",
+        "type": "dialogue_event",
+        "responses": [
+          {
+            "type": "choice_response",
+            "text": "Slip into a comfortable oblivion.",
+            "next_node": {
+              "id": "node_2",
+              "type": "gameplay_event",
+              "responses": [
+                {
+                  "type": "end_response",
+                  "text": "Exit"
+                }
+              ],
+              "event": "EndGame"
+            }
+          }
+        ],
+        "npc_text": "“Yes, take a seat. I have so much to ask you. And you have so much to work through.”   \n\nYou take a seat in the chair across the room, and clamps slam down over your ankles and wrists as Eliza’s voice comes through the speakers near your ears. It seems you don’t have a choice what to do anymore, but that is fine. Eliza asks you question after question, delving deeper into your past, into your mind as you relax. It is so easy to talk to her, so easy to let her solve your problems. It will take a while, but you have nothing but time.   "
+      }
+    }
+  ],
+  "gameplay_events": ["EndGame"]
+}
