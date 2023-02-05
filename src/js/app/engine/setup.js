@@ -3,7 +3,16 @@ import { createCamera } from "components/Three/camera.js";
 import { createLights } from "components/Three/lights.js";
 import { createRenderer } from "components/Three/renderer.js";
 import { createControls, addToGUI } from "components/Three/controls.js";
-import { chatGPT, zzyx, eliza, level1, intro1, intro2, creator, eliza_end } from "levels/levels.js";
+import {
+  chatGPT,
+  zzyx,
+  eliza,
+  level1,
+  intro1,
+  intro2,
+  creator,
+  eliza_end,
+} from "levels/levels.js";
 import { EffectComposer } from "three/examples/jsm/postprocessing/EffectComposer.js";
 import { RenderPass } from "three/examples/jsm/postprocessing/RenderPass.js";
 import { gaem } from "app/main.js";
@@ -81,7 +90,7 @@ const levelHandler = (levelIndex) => {
 
 const state = {
   gameState: {
-    currentLevelIndex: 0,
+    currentLevelIndex: 5,
     currentLevel: null,
     currentDialogueObject: "node_7",
     reachedCreator: false,
@@ -157,18 +166,23 @@ function handleState(button) {
       //  break;
 
       default:
-        console.log(`huh guess you didn't account for this. maybe check to see if you goofed in the JSON somewhere`);
+        console.log(
+          `huh guess you didn't account for this. maybe check to see if you goofed in the JSON somewhere`
+        );
     }
   }
   if (button.params.nextNode.event != "NextLevel") {
     if (button.params.nextNode.type == "gameplay_event") {
       console.log("gameplay!");
       //fixme: recursion causing decay to implement twice, thought return would fix but guess it don't
-      handleState({ params: { nextNode: button.params.nextNode.responses[0].next_node } });
+      handleState({
+        params: { nextNode: button.params.nextNode.responses[0].next_node },
+      });
       return;
     } else if (button.params.nextNode.responses[0].type == "pass") {
       console.log("pass!");
-      state.gameState.currentDialogueObject = button.params.nextNode.responses[0].next_node.id;
+      state.gameState.currentDialogueObject =
+        button.params.nextNode.responses[0].next_node.id;
       state.gameState.currentLevel.redraw();
     } else if (button.params.nextNode.type == "jump_node") {
       console.log("jump node!");
