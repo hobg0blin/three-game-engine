@@ -46,9 +46,17 @@ function troikaDialogueBox(dialogueObj, world) {
   group.add(myText);
   let width = 100 / responses.length;
   let startX = myText.position.x + 65;
-  let startY = -20;
+  let startY = -40;
   for (let button of responses) {
-    let b = spriteButton(button, { text: button.text, x: startX, y: startY, camera: world.camera, event: button.event, nextNode: button.next_node, scale: 0.25 });
+    let b = spriteButton(button, {
+      text: button.text,
+      x: startX,
+      y: startY,
+      camera: world.camera,
+      event: button.event,
+      nextNode: button.next_node,
+      scale: 0.25,
+    });
     //startX += width + 15;
     startY -= 15;
     setTimeout(() => {
