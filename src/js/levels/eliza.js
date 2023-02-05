@@ -9,12 +9,10 @@ import data from "./eliza.json";
 // MODELS
 import { environmentPicture } from "../app/ui/environmentPicture";
 // any global variables for this specific scene
-// track pixel direction
 let dir = false;
-let pixelSize = 2;
 let textIndex = -1;
 
-let globe, tower, pixelPass;
+let globe, tower;
 
 const eliza = (world) => {
   const THREE = world.THREE;

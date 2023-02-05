@@ -14,7 +14,6 @@ import { importSTLModel } from "components/Three/importSTLModel.js";
 import { buildTower } from "components/Three/buildTower.js";
 //
 
-import { RenderPixelatedPass } from "components/Three/RenderPixelatedPass.js";
 
 // any global variables for this specific scene
 // track pixel direction
@@ -22,7 +21,6 @@ let dir = false;
 let pixelSize = 2;
 let textIndex = -1;
 
-let globe, tower, pixelPass;
 
 const eliza_end = (world) => {
   const THREE = world.THREE;
@@ -32,7 +30,7 @@ const eliza_end = (world) => {
 
   levelTemplate.firstPass = () => {
     let gui = new GUI();
-    let sprite = environmentPicture(THREE, "/pictures/eliza_end.png", world.scene);
+    let sprite = environmentPicture(THREE, "/pictures/zzyx_end.png", world.scene);
     sprite.doNotDispose = true;
   };
 
@@ -43,19 +41,7 @@ const eliza_end = (world) => {
       globe.rotation.z += 0.003;
       tower.rotation.y += 0.003;
     }
-    if (dir) {
-      pixelSize += 0.005;
-    } else {
-      pixelSize -= 0.005;
-    }
-    if (pixelSize > 3) {
-      dir = false;
-    }
-    if (pixelSize < 1.5) {
-      dir = true;
-    }
-    //      pixelPass.setPixelSize(pixelSize)
-  };
+      };
 
   console.log("level template: ", levelTemplate);
   return levelTemplate;

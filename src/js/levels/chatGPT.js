@@ -10,12 +10,9 @@ import data from "./chatGPT.json";
 
 import { environmentPicture } from "../app/ui/environmentPicture";
 // any global variables for this specific
-// track pixel
-let dir = false;
-let pixelSize = 2;
 let textIndex = -1;
 
-let globe, tower, pixelPass;
+let globe, tower;
 
 const chatGPT = (world) => {
   const THREE = world.THREE;

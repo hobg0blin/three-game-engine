@@ -1,11 +1,26 @@
 import { spriteDialogueBox } from "app/ui/spriteDialogueBox.js";
+import { RenderPixelatedPass } from "components/Three/RenderPixelatedPass.js";
+let start = false
+let pixelSize = 0
+
 function decayMeter(state, world) {
+
   if (state.playerState.decayStart) {
-    let sprite = spriteDialogueBox(`DECAY: ${state.playerState.decay / 125}`);
+    //fixme: dumb dumb dumb
+    if (start = false) {
+      let pixelPass = new RenderPixelatedPass(pixelSize, world.scene, world.camera);
+      world.composer.addPass(pixelPass);
+      start = true
+    }
+    pixelSize += state.playerState.decay/100
+    pixelPass.setPixelSize(pixelSize)
+
+    // just adding floating poitns here so it looks "cool"
+    let sprite = spriteDialogueBox(`DECAY: ${state.playerState.decay / 1.001}`);
     sprite.backgroundColor = null;
-    if (state.playerState.decay < 50) {
+    if (state.playerState.decay < 45) {
       sprite.color = "green";
-    } else if (state.playerState.decay < 85) {
+    } else if (state.playerState.decay < 75) {
       sprite.color = "yellow";
     } else {
       sprite.color = "red";

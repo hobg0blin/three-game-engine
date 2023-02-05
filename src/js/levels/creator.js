@@ -12,11 +12,9 @@ import { troikaDialogueBox } from "app/ui/troikaDialogueBox.js";
 
 // any global variables for this specific scene
 // track pixel direction
-let dir = false;
-let pixelSize = 2;
 let textIndex = -1;
 
-let globe, tower, pixelPass;
+let globe, tower;
 
 const creator = (world) => {
   const THREE = world.THREE;
@@ -63,7 +61,6 @@ const creator = (world) => {
   };
 
   levelTemplate.customAnimations = () => {
-    //set any custom animations, e.g. increase pixelation as decay increases
   };
 
   return levelTemplate;

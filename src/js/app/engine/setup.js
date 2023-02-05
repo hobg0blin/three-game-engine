@@ -75,7 +75,7 @@ const levelHandler = (levelIndex) => {
   }
   if (levelIndex >= levels.length && !state.gameState.reachedCreator) {
     state.gameState.reachedCreator = true;
-    if (state.playerState.decay < 125) {
+    if (state.playerState.decay < 100) {
       return creator;
     } else {
       return decay_end;
@@ -96,7 +96,7 @@ const startingState = {
     endScreen: false,
   },
   playerState: {
-    decay: 0,
+    decay: 125,
     elizaOpinion: 0,
     GPTOpinion: 0,
     zzyxOpinion: 0,
