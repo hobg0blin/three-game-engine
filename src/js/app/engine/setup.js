@@ -18,9 +18,7 @@ const setup = (THREE) => {
   world.renderer.setSize(window.innerWidth, window.innerHeight);
   world.scene = new THREE.Scene();
 
-  // CAMERA & VIEWPORTS
-
-  world.camera = createCamera();
+  // CAMERA & VIEWPORTS world.camera = createCamera();
   world.camera.position.set(0, 20, 150);
   // effects
   world.composer = new EffectComposer(world.renderer);
@@ -65,6 +63,7 @@ function updateSize(renderer) {
 }
 // handle level changes
 const levelHandler = (levelIndex) => {
+  console.log("level index: ", levelIndex);
   // this is a thing that should not be
   // but it's goblin hours and nobody can  stop me
   let levels = [start, level1, intro1, intro2, elizaIntro, eliza, GPTintro, chatGPT, zzyxIntro, zzyx];
@@ -192,7 +191,9 @@ function handleState(button) {
     if (button.params.nextNode.type == "gameplay_event") {
       console.log("gameplay!");
       //fixme: recursion causing decay to implement twice, thought return would fix but guess it don't
-      handleState({ params: { nextNode: button.params.nextNode.responses[0].next_node } });
+      handleState({
+        params: { nextNode: button.params.nextNode.responses[0].next_node },
+      });
       return;
     } else if (button.params.nextNode.responses[0].type == "pass") {
       console.log("pass!");

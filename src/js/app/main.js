@@ -10,8 +10,9 @@ function create() {
 }
 function gaem(world) {
   disposeAll(world, "permanent");
-  state.gameState.currentLevel = levelHandler(state.gameState.currentLevelIndex)(world);
-  console.log("current level: ", state.gameState.currentLevel);
+  state.gameState.currentLevel = levelHandler(
+    state.gameState.currentLevelIndex
+  )(world);
   state.gameState.currentLevel.setup();
   state.gameState.currentLevel.firstPass();
 
