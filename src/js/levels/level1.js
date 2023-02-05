@@ -14,7 +14,6 @@ import { importSTLModel } from "components/Three/importSTLModel.js";
 import { buildTower } from "components/Three/buildTower.js";
 //
 
-
 // any global variables for this specific scene
 // track pixel direction
 let dir = false;
@@ -28,8 +27,6 @@ const level1 = (world) => {
   // first draw pass, since addObjects() is different based on state objects with "doNotDispose" flag will not be deleted as state changes
 
   levelTemplate.firstPass = () => {
-    let gui = new GUI();
-
     // GLOBE
 
     //i don't know why people use constants for functions now but it seems fancy
@@ -64,7 +61,7 @@ const level1 = (world) => {
       globe.rotation.z += 0.003;
       tower.rotation.y += 0.003;
     }
-      };
+  };
 
   console.log("level template: ", levelTemplate);
   return levelTemplate;
