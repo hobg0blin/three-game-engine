@@ -12,31 +12,31 @@ import { Howl, Howler } from "howler";
 const world = {};
 
 var introSound = new Howl({
-  src: ["/music/Elizaintro.wav"],
+  src: ["/music/ElizaIntro.wav"],
   autoplay: false,
   loop: true,
-  volume: 1.0
+  volume: 1.0,
 });
 
 var gptSound = new Howl({
   src: ["/music/GPTMusic.wav"],
   autoplay: false,
   loop: true,
-  volume: 1.0
+  volume: 1.0,
 });
 
 var zzyxSound = new Howl({
   src: ["/music/Decay.wav"],
   autoplay: false,
   loop: true,
-  volume: 1.0
+  volume: 1.0,
 });
 
 var endingMusic = new Howl({
   src: ["/music/EndingMusic.wav"],
   autoplay: false,
   loop: true,
-  volume: 1.0
+  volume: 1.0,
 });
 
 const setup = (THREE) => {
@@ -64,9 +64,8 @@ const setup = (THREE) => {
   world.scene.add(world.light[0]);
   world.scene.add(new THREE.AmbientLight({ color: "white", intensity: 1 }));
   var introMusicPlaying =
-
     //BACKGROUND & FOG
-    world.textureLoader = new THREE.TextureLoader();
+    (world.textureLoader = new THREE.TextureLoader());
   let backgroundImg = world.textureLoader.load("/three/studio-bg.jpg"); //        world.scene.background = backgroundImg
   // CONTROLS
   world.controls = createControls(world.camera, world.renderer);
@@ -80,8 +79,6 @@ const setup = (THREE) => {
   };
   return world;
 };
-
-
 
 // deal with browser resizing
 let windowWidth, windowHeight;
@@ -107,29 +104,24 @@ const levelHandler = (levelIndex) => {
 
   let levels = [start, level1, intro1, intro2, elizaIntro, eliza, GPTintro, chatGPT, zzyxIntro, zzyx];
 
+  // Handle BG Music
 
-  // Handle BG Music 
-
-  console.log()
+  console.log();
   if (levelIndex < 5) {
-
     if (!introMusicPlaying) {
-      console.log("STARTING ITNRO MUSIC")
+      console.log("STARTING ITNRO MUSIC");
       introSound.play();
       introMusicPlaying = true;
     }
   } else if (levelIndex >= 5 && levelIndex < 8) {
-    introSound.stop()
+    introSound.stop();
     if (!gptPlaying) {
-
       gptSound.play();
       gptPlaying = true;
     }
-
   } else if (levelIndex >= 8) {
-    gptSound.stop()
+    gptSound.stop();
     if (!zzyxPlaying) {
-
       zzyxSound.play();
       zzyxPlaying = true;
     }
@@ -141,9 +133,9 @@ const levelHandler = (levelIndex) => {
   }
   if (levelIndex >= levels.length && !state.gameState.reachedCreator) {
     state.gameState.reachedCreator = true;
-    zzyxSound.stop()
+    zzyxSound.stop();
     if (!endingPlaying) {
-      console.log("playin this ")
+      console.log("playin this ");
       endingMusic.play();
       endingPlaying = true;
     }
@@ -270,7 +262,7 @@ function handleState(button) {
         gptPlaying = false;
         zzyxPlaying = false;
         endingPlaying = false;
-        endingMusic.stop()
+        endingMusic.stop();
         state.gameState.endScreen = true;
         gaem(world);
         break;

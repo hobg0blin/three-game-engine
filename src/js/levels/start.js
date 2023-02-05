@@ -2,6 +2,7 @@
 import { createLevel, disposeAll } from "app/engine/level.js";
 import { state } from "app/engine/setup.js";
 import { spriteDialogueBox } from "app/ui/spriteDialogueBox.js";
+import { troikaDialogueBox } from "app/ui/troikaDialogueBox.js";
 import { spriteButton } from "app/ui/spriteButton.js";
 
 //GUI/Buttons
@@ -53,6 +54,11 @@ const start = (world) => {
     world.scene.add(tower);
     let startButton = spriteButton({}, { start: true, text: "START", x: 10, y: 0 });
     world.scene.add(startButton);
+
+    let startText = troikaDialogueBox({ npc_text: "T H E   T O W E R", responses: [] }, world);
+    startText.children[0].fontSize = 15;
+    startText.children[0].sync();
+    world.scene.add(startText);
   };
 
   // animate globe and tower, etc.

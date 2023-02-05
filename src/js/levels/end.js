@@ -52,9 +52,14 @@ const end = (world) => {
     tower.position.y = 12;
     tower.doNotDispose = true;
     world.scene.add(tower);
-    let restartButton = spriteButton({}, { restart: true, text: "RESTART", x: 10, y: 0 });
+    let restartButton = spriteButton({}, { restart: true, text: "RESTART", x: 10, y: -15 });
     world.scene.add(restartButton);
     let endText = troikaDialogueBox({ npc_text: "T H E   E N D", responses: [] }, world);
+    let credits = troikaDialogueBox({ npc_text: "By Brent Bailey, Ben Tidswell, Schuyler DeVos, and Matt Ross.", responses: [] }, world);
+    credits.position.y = -20;
+    setTimeout(() => {
+      world.scene.add(credits);
+    }, 2000);
     console.log("end text: ", endText);
     endText.children[0].fontSize = 15;
     endText.children[0].sync();
