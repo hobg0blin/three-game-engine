@@ -76,13 +76,17 @@ const levelHandler = (levelIndex) => {
   if (levelIndex >= levels.length && !state.gameState.reachedCreator) {
     state.gameState.reachedCreator = true;
     if (state.playerState.decay < 100) {
+      // set creator music here
       return creator;
     } else {
+      // set decay music here
       return decay_end;
     }
   } else if (state.gameState.reachedCreator) {
+    // set ending music here
     return state.gameState.chosenEnding;
   } else {
+    // set level music here
     return levels[levelIndex];
   }
 };
