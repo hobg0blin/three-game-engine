@@ -11,9 +11,9 @@ export const environmentPicture = (THREE, spritePath, scene) => {
   );
   const material = new THREE.SpriteMaterial({ map: map });
   const sprite = new THREE.Sprite(material);
-  sprite.scale.set(100, 100, 1);
-  sprite.position.x = -70;
-  sprite.position.y = 20;
+  sprite.scale.set(135, 135, 1);
+  sprite.position.x = -100;
+  sprite.position.y = 0;
   scene.add(sprite);
   return sprite;
 };
