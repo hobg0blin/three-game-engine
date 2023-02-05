@@ -172,7 +172,7 @@ function handleState(button) {
         break;
       case "givebody":
         //skip creator
-        state.gameState.metCreator = true;
+        state.gameState.reachedCreator = true;
         state.gameState.chosenEnding = zzyx_body_end;
         gaem(world);
       case "revolution_end":
