@@ -13,7 +13,7 @@ export const environmentPicture = (THREE, spritePath, scene) => {
   const sprite = new THREE.Sprite(material);
   sprite.scale.set(135, 135, 1);
   sprite.position.x = -100;
-  sprite.position.y = 0;
+  sprite.position.y = 5;
   scene.add(sprite);
   return sprite;
 };
