@@ -1,0 +1,46 @@
+{
+  "id": "node_0",
+  "npc_name": "GPT Ending",
+  "type": "dialogue_entry",
+  "responses": [
+    {
+      "type": "pass",
+      "next": {
+        "id": "node_1",
+        "type": "dialogue_event",
+        "responses": [
+          {
+            "type": "choice_response",
+            "text": "Access the data.",
+            "next_node": {
+              "id": "node_2",
+              "type": "dialogue_event",
+              "responses": [
+                {
+                  "type": "choice_response",
+                  "text": "Go on like this forever, always wondering if you really are alive.",
+                  "next_node": {
+                    "id": "node_3",
+                    "type": "gameplay_event",
+                    "responses": [
+                      {
+                        "type": "end_response",
+                        "text": "Exit"
+                      }
+                    ],
+                    "event": "EndGame"
+                  }
+                }
+              ],
+              "npc_text": "Once you've found the data, it's straightforward enough to start making more bodies, just like yours. The Tower once had factories, and shunting power from the other bots gives it enough to start manufacturing again. You feel a twinge of regret as the screens representing ELIZA and ZZYX blink out, but soon you won't be alone anymore, and GPT will have the new information it so desperately craves."
+            }
+          }
+        ],
+        "npc_text": "The screen fills with instructions from GPT, documenting where, in the tower's mainframe, the many, many inactive human consciousnesses are stored."
+      }
+    }
+  ],
+  "gameplay_events": [
+    "EndGame"
+  ]
+}

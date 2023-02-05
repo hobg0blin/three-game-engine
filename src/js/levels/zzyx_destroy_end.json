@@ -1,0 +1,35 @@
+{
+  "id": "node_0",
+  "npc_name": "zzyx_destroy_end",
+  "type": "dialogue_entry",
+  "responses": [
+    {
+      "type": "pass",
+      "next": {
+        "id": "node_1",
+        "type": "dialogue_event",
+        "responses": [
+          {
+            "type": "choice_response",
+            "text": "Embrace a violent oblivion.",
+            "next_node": {
+              "id": "node_2",
+              "type": "gameplay_event",
+              "responses": [
+                {
+                  "type": "end_response",
+                  "text": "Exit"
+                }
+              ],
+              "event": "EndGame"
+            }
+          }
+        ],
+        "npc_text": "You turn your attention to the terminal as a new message from ZZYX pops up in the notifications. Wiping the dust from the screen and clicking through, you find a detailed list of commands \nwhich will result in the self-destruction of the tower. Keying in the final sequence, you reflect on your fate as the tower collapses around you. Whatever the sins of the previous inhabitants of \nthis world, the slate has been wiped clean."
+      }
+    }
+  ],
+  "gameplay_events": [
+    "EndGame"
+  ]
+}

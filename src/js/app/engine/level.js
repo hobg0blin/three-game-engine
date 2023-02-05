@@ -14,6 +14,7 @@ const createLevel = (world, data) => {
   // this automatically changes the dialogue on button press
   level.redraw = () => {
     disposeAll(world, "doNotDispose");
+    console.log("data: ", data);
     let text = troikaDialogueBox(searchNode(state.gameState.currentDialogueObject, data["responses"]), world);
     world.scene.add(text);
     //TODO: would be nice to have the numbers tick up

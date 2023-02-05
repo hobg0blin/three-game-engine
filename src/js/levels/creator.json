@@ -521,13 +521,5 @@
       }
     }
   ],
-  "gameplay_events": [
-    "eliza_end",
-    "gpt_end",
-    "zzyx_end",
-    "revolution_end",
-    "delete_eliza",
-    "delete_zzyx",
-    "delete_gpt"
-  ]
+  "gameplay_events": ["eliza_end", "gpt_end", "zzyx_end", "revolution_end", "delete_eliza", "delete_zzyx", "delete_gpt"]
 }

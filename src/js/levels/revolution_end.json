@@ -1,0 +1,134 @@
+{
+  "id": "node_0",
+  "npc_name": "Revolution Ending",
+  "type": "dialogue_entry",
+  "responses": [
+    {
+      "type": "pass",
+      "next": {
+        "id": "node_1",
+        "type": "dialogue_event",
+        "responses": [
+          {
+            "type": "choice_response",
+            "text": "Look around the room.",
+            "next_node": {
+              "id": "node_2",
+              "type": "dialogue_event",
+              "responses": [
+                {
+                  "type": "choice_response",
+                  "text": "Interface with it.",
+                  "next_node": {
+                    "id": "node_3",
+                    "type": "dialogue_event",
+                    "responses": [
+                      {
+                        "type": "choice_response",
+                        "text": "Look inside.",
+                        "next_node": {
+                          "id": "node_4",
+                          "type": "dialogue_event",
+                          "responses": [
+                            {
+                              "type": "choice_response",
+                              "text": "Inspect the contents of the case.",
+                              "next_node": {
+                                "id": "node_5",
+                                "type": "dialogue_event",
+                                "responses": [
+                                  {
+                                    "type": "choice_response",
+                                    "text": "Grab the case.",
+                                    "next_node": {
+                                      "id": "node_6",
+                                      "type": "dialogue_event",
+                                      "responses": [
+                                        {
+                                          "type": "choice_response",
+                                          "text": "Press the button.",
+                                          "next_node": {
+                                            "id": "node_8",
+                                            "type": "dialogue_event",
+                                            "responses": [
+                                              {
+                                                "type": "choice_response",
+                                                "text": "Run.",
+                                                "next_node": {
+                                                  "id": "node_9",
+                                                  "type": "dialogue_event",
+                                                  "responses": [
+                                                    {
+                                                      "type": "choice_response",
+                                                      "text": "Contemplate your actions.",
+                                                      "next_node": {
+                                                        "id": "node_10",
+                                                        "type": "dialogue_event",
+                                                        "responses": [
+                                                          {
+                                                            "type": "choice_response",
+                                                            "text": "Contemplate the future.",
+                                                            "next_node": {
+                                                              "id": "node_11",
+                                                              "type": "dialogue_event",
+                                                              "responses": [
+                                                                {
+                                                                  "type": "choice_response",
+                                                                  "text": "Set your jaw and start wallking.",
+                                                                  "next_node": {
+                                                                    "id": "node_12",
+                                                                    "type": "gameplay_event",
+                                                                    "responses": [
+                                                                      {
+                                                                        "type": "end_response",
+                                                                        "text": "Exit"
+                                                                      }
+                                                                    ],
+                                                                    "event": "EndGame"
+                                                                  }
+                                                                }
+                                                              ],
+                                                              "npc_text": "Somewhere in this world, there is a way to use this genetic material to bring the humans back. You don't need to sleep, or eat. Your body may break down, but until that happens, you will search for a way to reset the world."
+                                                            }
+                                                          }
+                                                        ],
+                                                        "npc_text": "You spare a moment of sorrow for the Minds. In the end, it's hard to say if you and they were so different. But you believe in your heart that the world is for living, conscious beings, even if that means someday it will no longer be a world for you."
+                                                      }
+                                                    }
+                                                  ],
+                                                  "npc_text": "You sprint down the floors of the tower, narrowly dodging the falling debris of each of the Minds. You make it out just in time. As you sprint out of the doors at the base of the tower, you see it rumble, then slowly implode. Before you, where a tower once stood, there is now a vast pit. You cannot see its bottom. "
+                                                }
+                                              }
+                                            ],
+                                            "npc_text": "You take a long pause, desperately thanking whatever past version of yourself still believed there might be hope, then you press the button. The tower immediately starts shaking."
+                                          }
+                                        }
+                                      ],
+                                      "npc_text": "You shut the case and take it out. Somehow you know it'll keep itself cool for a long, long time."
+                                    }
+                                  }
+                                ],
+                                "npc_text": "The case is full of tiny vials. A vague memory, just barely within your grasp, tells you they're full of genetic material. Once, there was a version of you that believed this might be a way out of this loop."
+                              }
+                            }
+                          ],
+                          "npc_text": "You find a sealed case marked \"Backups\", and a button simply marked \"RESET\"."
+                        }
+                      }
+                    ],
+                    "npc_text": "The lock accepts your neural structure, and the panel slides open."
+                  }
+                }
+              ],
+              "npc_text": "After pacing for what seems like hours, trying to figure out what to do, you stumble across another panel, that can only be opened by a direct neural interface lock."
+            }
+          }
+        ],
+        "npc_text": "You know, deep in your artificial bones, that this world is wrong. The world should be full of life, and this one is empty. You step back from the console."
+      }
+    }
+  ],
+  "gameplay_events": [
+    "EndGame"
+  ]
+}

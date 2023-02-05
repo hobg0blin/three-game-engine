@@ -1,0 +1,35 @@
+{
+  "id": "node_0",
+  "npc_name": "decay_ending",
+  "type": "dialogue_entry",
+  "responses": [
+    {
+      "type": "pass",
+      "next": {
+        "id": "node_2",
+        "type": "dialogue_event",
+        "responses": [
+          {
+            "type": "choice_response",
+            "text": "Let your eyes fall shut.",
+            "next_node": {
+              "id": "node_3",
+              "type": "gameplay_event",
+              "responses": [
+                {
+                  "type": "end_response",
+                  "text": "Exit"
+                }
+              ],
+              "event": "EndGame"
+            }
+          }
+        ],
+        "npc_text": "Your vision blurs. You trip and fall, your leg having given out under you. You try to crawl forward, only to find yourself unable to use one of your arms. A strange numbness spreads through your body as you struggle to move. Perhaps this body wasn’t meant to last this long in this state. The tower's decay has taken over your mind, and your body will follow. If only you had gotten here quicker…. "
+      }
+    }
+  ],
+  "gameplay_events": [
+    "EndGame"
+  ]
+}

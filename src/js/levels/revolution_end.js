@@ -1,8 +1,7 @@
 // import scene template
-//
 import { createLevel, disposeAll } from "app/engine/level.js";
 import { state } from "app/engine/setup.js";
-import data from "./intro_2.json";
+import data from "./revolution_end.json";
 import { environmentPicture } from "../app/ui/environmentPicture";
 //GUI/Buttons
 import { GUI } from "three/addons/libs/lil-gui.module.min.js";
@@ -25,7 +24,7 @@ let textIndex = -1;
 
 let globe, tower, pixelPass;
 
-const intro2 = (world) => {
+const revolution_end = (world) => {
   const THREE = world.THREE;
   let levelTemplate = createLevel(world, data);
 
@@ -33,10 +32,9 @@ const intro2 = (world) => {
 
   levelTemplate.firstPass = () => {
     let gui = new GUI();
-    let sprite = environmentPicture(THREE, "/pictures/cynthia.png", world.scene);
+    let sprite = environmentPicture(THREE, "/pictures/revolution_end.png", world.scene);
     sprite.doNotDispose = true;
   };
-
   // animate globe and tower, etc.
   // you could do fun camera stuff here too
   levelTemplate.customAnimations = () => {
@@ -62,4 +60,4 @@ const intro2 = (world) => {
   return levelTemplate;
 };
 
-export { intro2 };
+export { revolution_end };

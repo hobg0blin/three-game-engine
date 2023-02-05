@@ -1,0 +1,46 @@
+{
+  "id": "node_0",
+  "npc_name": "eliza_intro",
+  "type": "dialogue_entry",
+  "responses": [
+    {
+      "type": "pass",
+      "next": {
+        "id": "node_1",
+        "type": "dialogue_event",
+        "responses": [
+          {
+            "type": "choice_response",
+            "text": "Approach the computer.",
+            "next_node": {
+              "id": "node_2",
+              "type": "dialogue_event",
+              "responses": [
+                {
+                  "type": "choice_response",
+                  "text": "Read the text.",
+                  "next_node": {
+                    "id": "node_3",
+                    "type": "gameplay_event",
+                    "responses": [
+                      {
+                        "type": "end_response",
+                        "text": "Exit"
+                      }
+                    ],
+                    "event": "NextLevel"
+                  }
+                }
+              ],
+              "npc_text": "On the screen it only says ELIZA, but there is a flashing text prompt for you to type in. As you step up to the computer, new text flashes on screen.   \n"
+            }
+          }
+        ],
+        "npc_text": "You enter the first room you come across. The entire room feels like it has been take from another time and place, the lighting is soft, the room is quite other than the noise you hear as magnetic tape moves through spools around the room. Connected to all of these vintage servers, you see an old computer, discolored by age."
+      }
+    }
+  ],
+  "gameplay_events": [
+    "NextLevel"
+  ]
+}

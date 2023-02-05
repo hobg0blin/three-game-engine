@@ -1,0 +1,46 @@
+{
+  "id": "node_0",
+  "npc_name": "zzyx_body_end",
+  "type": "dialogue_entry",
+  "responses": [
+    {
+      "type": "pass",
+      "next": {
+        "id": "node_1",
+        "type": "dialogue_event",
+        "responses": [
+          {
+            "type": "choice_response",
+            "text": "Connect the final wire.",
+            "next_node": {
+              "id": "node_2",
+              "type": "dialogue_event",
+              "responses": [
+                {
+                  "type": "choice_response",
+                  "text": "Become part of something greater than yourself.",
+                  "next_node": {
+                    "id": "node_3",
+                    "type": "gameplay_event",
+                    "responses": [
+                      {
+                        "type": "end_response",
+                        "text": "Exit"
+                      }
+                    ],
+                    "event": "EndGame"
+                  }
+                }
+              ],
+              "npc_text": "As the final connection is completed, you find yourself sucked into ZZYX's mainframe, the endless expanse of computing power at your command. You conjure up and experience all of \nyour wildest fancies and imaginings as you wonder what the AI has done with your previous form...\n"
+            }
+          }
+        ],
+        "npc_text": "You turn your attention to the terminal as a new message from ZZYX pops up in the notifications. Wiping the dust from the screen and clicking through, you find a detailed list of commands \nthat will result in a switch of consciousness between your circuitry and theirs. You push the corpse from its position in the seat and slide yourself into the commands instead, hooking up the necessary wires and sockets. Soon you're on the last one.\n"
+      }
+    }
+  ],
+  "gameplay_events": [
+    "EndGame"
+  ]
+}

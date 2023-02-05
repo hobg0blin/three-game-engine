@@ -1,0 +1,57 @@
+{
+  "id": "node_0",
+  "npc_name": "zzyx_intro",
+  "type": "dialogue_entry",
+  "responses": [
+    {
+      "type": "pass",
+      "next": {
+        "id": "node_1",
+        "type": "dialogue_event",
+        "responses": [
+          {
+            "type": "choice_response",
+            "text": "Look around.",
+            "next_node": {
+              "id": "node_2",
+              "type": "dialogue_event",
+              "responses": [
+                {
+                  "type": "choice_response",
+                  "text": "Walk forward.",
+                  "next_node": {
+                    "id": "node_3",
+                    "type": "dialogue_event",
+                    "responses": [
+                      {
+                        "type": "choice_response",
+                        "text": "Hello?",
+                        "next_node": {
+                          "id": "node_4",
+                          "type": "gameplay_event",
+                          "responses": [
+                            {
+                              "type": "end_response",
+                              "text": "Exit"
+                            }
+                          ],
+                          "event": "NextLevel"
+                        }
+                      }
+                    ],
+                    "npc_text": "As you begin to walk towards towards the circular door at the other end of the room, the static across the ceiling coalesces into a series of floating screens that surround you, furiously printing text. \nA low, ambient hum starts to resolve itself into a voice which speaks to you in a crackly, almost unintelligent whisper."
+                  }
+                }
+              ],
+              "npc_text": "Beneath the walkway, under a sheet of glass, you can see thousands upon thousands of processors arrayed in rows. The ceiling is lost in a haze of crackling static, and \nat the other end of the room you can see a circular door. Everything has a sense of corrosion around it, and you can see that many of the servers are broken down or run to exhaustion."
+            }
+          }
+        ],
+        "npc_text": "You enter an elevator which takes you soundlessly upwards on a journey which lasts several minutes. When it finally opens, you find yourself in a colossal room with a thin walkway that stretches \nthrough the center."
+      }
+    }
+  ],
+  "gameplay_events": [
+    "NextLevel"
+  ]
+}

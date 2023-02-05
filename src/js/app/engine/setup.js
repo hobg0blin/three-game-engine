@@ -3,7 +3,7 @@ import { createCamera } from "components/Three/camera.js";
 import { createLights } from "components/Three/lights.js";
 import { createRenderer } from "components/Three/renderer.js";
 import { createControls, addToGUI } from "components/Three/controls.js";
-import { chatGPT, zzyx, eliza, level1, intro1, intro2, creator, eliza_end } from "levels/levels.js";
+import { start, end, chatGPT, GPTintro, zzyxIntro, zzyx, elizaIntro, eliza, level1, intro1, intro2, creator, eliza_end, decay_end, gpt_end, revolution_end, zzyx_body_end, zzyx_destroy_end } from "levels/levels.js";
 import { EffectComposer } from "three/examples/jsm/postprocessing/EffectComposer.js";
 import { RenderPass } from "three/examples/jsm/postprocessing/RenderPass.js";
 import { gaem } from "app/main.js";
@@ -67,25 +67,32 @@ function updateSize(renderer) {
 const levelHandler = (levelIndex) => {
   // this is a thing that should not be
   // but it's goblin hours and nobody can  stop me
-  let levels = [level1, intro1, intro2, eliza, chatGPT, zzyx];
+  let levels = [start, level1, intro1, intro2, elizaIntro, eliza, GPTintro, chatGPT, zzyxIntro, zzyx];
+  //levelIndex = levels.length;
+  if (state.gameState.endScreen == true) {
+    return end;
+  }
   if (levelIndex >= levels.length && !state.gameState.reachedCreator) {
     state.gameState.reachedCreator = true;
-    return creator;
+    if (state.playerState.decay < 125) {
+      return creator;
+    } else {
+      return decay_end;
+    }
   } else if (state.gameState.reachedCreator) {
-    console.log("should be ending with: ", state.gameState.chosenEnding);
     return state.gameState.chosenEnding;
   } else {
     return levels[levelIndex];
   }
 };
-
-const state = {
+const startingState = {
   gameState: {
     currentLevelIndex: 0,
     currentLevel: null,
     currentDialogueObject: "node_7",
     reachedCreator: false,
     choseEnding: null,
+    endScreen: false,
   },
   playerState: {
     decay: 0,
@@ -96,8 +103,22 @@ const state = {
     decayStart: false,
   },
 };
-
+const state = startingState;
 function handleState(button) {
+  console.log("button params: ", button.params);
+  if (button.params.restart == true && state.gameState.endScreen == true) {
+    console.log("restarting");
+    state.gameState.endScreen == false;
+    state.gameState = startingState.gameState;
+    state.playerState = startingState.playerState;
+    gaem(world);
+    return;
+  }
+  if (button.params.start == true) {
+    state.gameState.currentLevelIndex += 1;
+    gaem(world);
+    return;
+  }
   if (button.params.nextNode == undefined) {
     console.log("YOU AINT GOT NOTHIN HERE YET!");
   }
@@ -143,19 +164,26 @@ function handleState(button) {
         state.gameState.chosenEnding = eliza_end;
         gaem(world);
         break;
-      //case "gpt_end":
-      //  state.gameState.chosenEnding = gpt_end;
-      //  break;
-      //case "zzyx_end":
-      //  state.gameState.chosenEnding = zzyx_end;
-      //  break;
-      //case "revolution_end":
-      //  state.gameState.chosenEnding = zzyx_end;
-      //  break;
-      //case "decay_end":
-      //  state.gameState.chosenEnding = decay_end;
-      //  break;
-
+      case "gpt_end":
+        state.gameState.chosenEnding = gpt_end;
+        break;
+      case "zzyx_end":
+        state.gameState.chosenEnding = zzyx_decay_end;
+        break;
+      case "givebody":
+        //skip creator
+        state.gameState.metCreator = true;
+        state.gameState.chosenEnding = zzyx_body_end;
+        gaem(world);
+      case "revolution_end":
+        state.gameState.chosenEnding = revolution_end;
+        break;
+      case "decay_end":
+        state.gameState.chosenEnding = decay_end;
+        break;
+      case "endgame":
+        state.gameState.endScreen = true;
+        gaem();
       default:
         console.log(`huh guess you didn't account for this. maybe check to see if you goofed in the JSON somewhere`);
     }

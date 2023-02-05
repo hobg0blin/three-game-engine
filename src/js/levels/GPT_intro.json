@@ -1,0 +1,57 @@
+{
+  "id": "node_0",
+  "npc_name": "GPT_intro",
+  "type": "dialogue_entry",
+  "responses": [
+    {
+      "type": "pass",
+      "next": {
+        "id": "node_1",
+        "type": "dialogue_event",
+        "responses": [
+          {
+            "type": "choice_response",
+            "text": "Go up the stairs.",
+            "next_node": {
+              "id": "node_2",
+              "type": "dialogue_event",
+              "responses": [
+                {
+                  "type": "choice_response",
+                  "text": "Open the door.",
+                  "next_node": {
+                    "id": "node_3",
+                    "type": "dialogue_event",
+                    "responses": [
+                      {
+                        "type": "choice_response",
+                        "text": "Hello?",
+                        "next_node": {
+                          "id": "node_4",
+                          "type": "gameplay_event",
+                          "responses": [
+                            {
+                              "type": "end_response",
+                              "text": "Exit"
+                            }
+                          ],
+                          "event": "NextLevel"
+                        }
+                      }
+                    ],
+                    "npc_text": "Inside the room is a vast array of server racks, solid state hard drives, all networked together, their LED indicators blinking a soft blue. In the center of the room, you see a vast screen, with an amorphous figure regarding you impassively. At the bottom of the screen, you see a cursor blinking softly. It appears to be waiting for you to type something."
+                  }
+                }
+              ],
+              "npc_text": "As you make your way up the stairs, turning ELIZA's questions over in your mind, you see at their top a door slightly ajar, with a cool blue glow emanating from it."
+            }
+          }
+        ],
+        "npc_text": "You leave ELIZA's room, somewhat shaken, and see a staircase ahead. The twisting, rotting cables seem to be gettting even thicker here. "
+      }
+    }
+  ],
+  "gameplay_events": [
+    "NextLevel"
+  ]
+}
