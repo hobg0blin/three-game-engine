@@ -44,14 +44,14 @@ const createLevel = (world, data) => {
     level.customAnimations();
     world.render(level, world);
     if (pixelSize != world.pixelSize) {
-      if (world.pixelPass != undefined && clock.getElapsedTime() > lastTick + 0.5) {
+      if (world.pixelPass != undefined && clock.getElapsedTime() > lastTick + 0.4) {
         lastTick = clock.getElapsedTime();
         if (dir) {
-          pixelSize += 0.0003 * state.playerState.decay;
+          pixelSize += (0.0003 * state.playerState.decay) / 1.5;
         } else {
-          pixelSize -= 0.0003 * state.playerState.decay;
+          pixelSize -= (0.0003 * state.playerState.decay) / 1.5;
         }
-        if (pixelSize > world.pixelSize) {
+        if (pixelSize > world.pixelSize / 1.5) {
           dir = false;
         }
         if (pixelSize < 1.25) {

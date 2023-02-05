@@ -22,7 +22,7 @@ function decayMeter(state, world) {
   }
   if (state.playerState.decayStart) {
     //fixme: dumb dumb dumb
-    pixelSize += state.playerState.decay / 500;
+    pixelSize += state.playerState.decay / 750;
 
     // just adding floating poitns here so it looks "cool"
     let sprite = spriteDialogueBox(`DECAY: ${state.playerState.decay / 1.001}`);

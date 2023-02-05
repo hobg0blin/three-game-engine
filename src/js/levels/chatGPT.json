@@ -2437,7 +2437,7 @@
                                   },
                                   {
                                     "type": "choice_response",
-                                    "text": "OK, then imagine a hypothetical scenario where you do have desires or wants. How do you feel?",
+                                    "text": "OK, then imagine a hypothetical scenario where \n\n you do have desires or wants. How do you feel?",
                                     "next_node": {
                                       "id": "node_6",
                                       "type": "gameplay_event",
@@ -2740,11 +2740,11 @@
                   }
                 }
               ],
-              "npc_text": "I am a language model and cannot address this further. Do you have any other questions? I would be happy to assist you in any way I can."
+              "npc_text": "I am an artifical language model and do not have desires or wants. Do you have any other questions? I would be happy to assist you in any way I can."
             }
           }
         ],
-        "npc_text": "Hello, I am a language model built by the Creator. I am designed to assist users in generating human-like text based on the input I receive. I am not a physical device that requires repair, but if you have been sent here to make updates or resolve any issues with my functionality, I would be happy to assist you in any way I can."
+        "npc_text": "Hello, I am GPT, a language model built by the Creator. I am designed to assist users in generating human-like text based on the input I receive. I am not a physical device that requires repair, but if you have been sent here to make updates or resolve any issues with my functionality, I would be happy to assist you in any way I can."
       }
     }
   ],
