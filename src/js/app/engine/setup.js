@@ -26,8 +26,38 @@ import {
 import { EffectComposer } from "three/examples/jsm/postprocessing/EffectComposer.js";
 import { RenderPass } from "three/examples/jsm/postprocessing/RenderPass.js";
 import { gaem } from "app/main.js";
+import { Howl, Howler } from "howler";
 
 const world = {};
+
+var introSound = new Howl({
+  src: ["/music/Elizaintro.wav"],
+  autoplay: false,
+  loop: true,
+  volume: 1.0
+});
+
+var gptSound = new Howl({
+  src: ["/music/GPTMusic.wav"],
+  autoplay: false,
+  loop: true,
+  volume: 1.0
+});
+
+var zzyxSound = new Howl({
+  src: ["/music/Decay.wav"],
+  autoplay: false,
+  loop: true,
+  volume: 1.0
+});
+
+var endingMusic = new Howl({
+  src: ["/music/EndingMusic.wav"],
+  autoplay: false,
+  loop: true,
+  volume: 1.0
+});
+
 const setup = (THREE) => {
   world.THREE = THREE;
   // CLOCK
@@ -52,9 +82,10 @@ const setup = (THREE) => {
   world.light[0].castShadow = true;
   world.scene.add(world.light[0]);
   world.scene.add(new THREE.AmbientLight({ color: "white", intensity: 1 }));
+  var introMusicPlaying =
 
-  //BACKGROUND & FOG
-  world.textureLoader = new THREE.TextureLoader();
+    //BACKGROUND & FOG
+    world.textureLoader = new THREE.TextureLoader();
   let backgroundImg = world.textureLoader.load("/three/studio-bg.jpg"); //        world.scene.background = backgroundImg
   // CONTROLS
   world.controls = createControls(world.camera, world.renderer);
@@ -70,8 +101,15 @@ const setup = (THREE) => {
   return world;
 };
 
+
+
 // deal with browser resizing
 let windowWidth, windowHeight;
+
+var introMusicPlaying = false;
+var gptPlaying = false;
+var zzyxPlaying = false;
+var endingPlaying = false;
 
 function updateSize(renderer) {
   if (windowWidth != window.innerWidth || windowHeight != window.innerHeight) {
@@ -98,6 +136,33 @@ const levelHandler = (levelIndex) => {
     zzyxIntro,
     zzyx,
   ];
+
+  // Handle BG Music 
+
+  console.log()
+  if (levelIndex < 5) {
+
+    if (!introMusicPlaying) {
+      console.log("STARTING ITNRO MUSIC")
+      introSound.play();
+      introMusicPlaying = true;
+    }
+  } else if (levelIndex >= 5 && levelIndex < 8) {
+    introSound.stop()
+    if (!gptPlaying) {
+
+      gptSound.play();
+      gptPlaying = true;
+    }
+
+  } else if (levelIndex >= 8) {
+    gptSound.stop()
+    if (!zzyxPlaying) {
+
+      zzyxSound.play();
+      zzyxPlaying = true;
+    }
+  }
   // uncomment this if you want to just jump in at the ending
   //levelIndex = levels.length;
   if (state.gameState.endScreen == true) {
@@ -105,6 +170,13 @@ const levelHandler = (levelIndex) => {
   }
   if (levelIndex >= levels.length && !state.gameState.reachedCreator) {
     state.gameState.reachedCreator = true;
+    zzyxSound.stop()
+    if (!endingPlaying) {
+      console.log("playin this ")
+      endingMusic.play();
+      endingPlaying = true;
+    }
+
     if (state.playerState.decay < 100) {
       return creator;
     } else {
@@ -219,6 +291,11 @@ function handleState(button) {
         gaem(world);
         break;
       case "endgame":
+        introMusicPlaying = false;
+        gptPlaying = false;
+        zzyxPlaying = false;
+        endingPlaying = false;
+        endingMusic.stop()
         state.gameState.endScreen = true;
         gaem(world);
       default:

@@ -39,7 +39,6 @@ function checkIntersection(x, y) {
   }
 }
 function handleButton(button) {
-  console.log("HEO");
   var sound = new Howl({
     src: ["/buttonclick.wav"],
   });
