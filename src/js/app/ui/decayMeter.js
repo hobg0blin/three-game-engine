@@ -2,6 +2,7 @@ import { spriteDialogueBox } from "app/ui/spriteDialogueBox.js";
 import { RenderPixelatedPass } from "components/Three/RenderPixelatedPass.js";
 let start = false
 let pixelSize = 0
+let pixelPass;
 
 function decayMeter(state, world) {
   //fixme: all of this is so dumb
@@ -10,7 +11,7 @@ function decayMeter(state, world) {
     pixelSize = 1.25
   }
     if (start == false) {
-      let pixelPass = new RenderPixelatedPass(pixelSize, world.scene, world.camera);
+      pixelPass = new RenderPixelatedPass(pixelSize, world.scene, world.camera);
       pixelPass.doNotDispose = true
       pixelPass.permanent = true
 
