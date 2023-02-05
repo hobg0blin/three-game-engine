@@ -3,7 +3,26 @@ import { createCamera } from "components/Three/camera.js";
 import { createLights } from "components/Three/lights.js";
 import { createRenderer } from "components/Three/renderer.js";
 import { createControls, addToGUI } from "components/Three/controls.js";
-import { start, end, chatGPT, GPTintro, zzyxIntro, zzyx, elizaIntro, eliza, level1, intro1, intro2, creator, eliza_end, decay_end, gpt_end, revolution_end, zzyx_body_end, zzyx_destroy_end } from "levels/levels.js";
+import {
+  start,
+  end,
+  chatGPT,
+  GPTintro,
+  zzyxIntro,
+  zzyx,
+  elizaIntro,
+  eliza,
+  level1,
+  intro1,
+  intro2,
+  creator,
+  eliza_end,
+  decay_end,
+  gpt_end,
+  revolution_end,
+  zzyx_body_end,
+  zzyx_destroy_end,
+} from "levels/levels.js";
 import { EffectComposer } from "three/examples/jsm/postprocessing/EffectComposer.js";
 import { RenderPass } from "three/examples/jsm/postprocessing/RenderPass.js";
 import { gaem } from "app/main.js";
@@ -67,7 +86,18 @@ const levelHandler = (levelIndex) => {
   console.log("level index: ", levelIndex);
   // this is a thing that should not be
   // but it's goblin hours and nobody can  stop me
-  let levels = [start, level1, intro1, intro2, elizaIntro, eliza, GPTintro, chatGPT, zzyxIntro, zzyx];
+  let levels = [
+    start,
+    level1,
+    intro1,
+    intro2,
+    elizaIntro,
+    eliza,
+    GPTintro,
+    chatGPT,
+    zzyxIntro,
+    zzyx,
+  ];
   // uncomment this if you want to just jump in at the ending
   //levelIndex = levels.length;
   if (state.gameState.endScreen == true) {
@@ -107,7 +137,7 @@ const startingState = {
 // clone the starting state
 const state = JSON.parse(JSON.stringify(startingState));
 function handleState(button) {
-  console.log('current state: ', state)
+  console.log("current state: ", state);
   if (button.params.restart == true && state.gameState.endScreen == true) {
     console.log("restarting");
     state.gameState.endScreen == false;
@@ -168,11 +198,11 @@ function handleState(button) {
         break;
       case "gpt_end":
         state.gameState.chosenEnding = gpt_end;
-        gaem(world)
+        gaem(world);
         break;
       case "zzyx_end":
         state.gameState.chosenEnding = zzyx_decay_end;
-        gaem(world)
+        gaem(world);
         break;
       case "givebody":
         //skip creator
@@ -181,17 +211,19 @@ function handleState(button) {
         gaem(world);
       case "revolution_end":
         state.gameState.chosenEnding = revolution_end;
-        gaem(world)
+        gaem(world);
         break;
       case "decay_end":
         state.gameState.chosenEnding = decay_end;
-        gaem(world)
+        gaem(world);
         break;
       case "endgame":
         state.gameState.endScreen = true;
         gaem(world);
       default:
-        console.log(`huh guess you didn't account for this. maybe check to see if you goofed in the JSON somewhere`);
+        console.log(
+          `huh guess you didn't account for this. maybe check to see if you goofed in the JSON somewhere`
+        );
     }
   }
   if (button.params.nextNode.event != "NextLevel") {
@@ -204,7 +236,8 @@ function handleState(button) {
       return;
     } else if (button.params.nextNode.responses[0].type == "pass") {
       console.log("pass!");
-      state.gameState.currentDialogueObject = button.params.nextNode.responses[0].next_node.id;
+      state.gameState.currentDialogueObject =
+        button.params.nextNode.responses[0].next_node.id;
       state.gameState.currentLevel.redraw();
     } else if (button.params.nextNode.type == "jump_node") {
       console.log("jump node!");
