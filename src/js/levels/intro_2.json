@@ -1,0 +1,459 @@
+{
+  "id": "node_0",
+  "npc_name": "Intro 2",
+  "type": "dialogue_entry",
+  "responses": [
+    {
+      "type": "pass",
+      "next": {
+        "id": "node_1",
+        "type": "dialogue_event",
+        "responses": [
+          {
+            "type": "choice_response",
+            "text": "Where am I?",
+            "next_node": {
+              "id": "node_2",
+              "type": "dialogue_event",
+              "responses": [
+                {
+                  "type": "choice_response",
+                  "text": "Who are you?",
+                  "next_node": {
+                    "id": "node_7",
+                    "type": "dialogue_event",
+                    "responses": [
+                      {
+                        "type": "choice_response",
+                        "text": "Who am I, Cynthia?",
+                        "next_node": {
+                          "id": "node_8",
+                          "type": "dialogue_event",
+                          "responses": [
+                            {
+                              "type": "choice_response",
+                              "text": "Whose consciousness am I simulating, Cynthia?",
+                              "next_node": {
+                                "id": "node_6",
+                                "type": "dialogue_event",
+                                "responses": [
+                                  {
+                                    "type": "choice_response",
+                                    "text": "Can you tell me anything about myself?",
+                                    "next_node": {
+                                      "id": "node_11",
+                                      "type": "dialogue_event",
+                                      "responses": [
+                                        {
+                                          "type": "choice_response",
+                                          "text": "And what is my task?",
+                                          "next_node": {
+                                            "id": "node_14",
+                                            "type": "gameplay_event",
+                                            "responses": [
+                                              {
+                                                "type": "pass",
+                                                "next_node": {
+                                                  "id": "node_12",
+                                                  "type": "dialogue_event",
+                                                  "responses": [
+                                                    {
+                                                      "type": "choice_response",
+                                                      "text": "The Three Minds?",
+                                                      "next_node": {
+                                                        "id": "node_13",
+                                                        "type": "dialogue_event",
+                                                        "responses": [
+                                                          {
+                                                            "type": "choice_response",
+                                                            "text": "Who are they?",
+                                                            "next_node": {
+                                                              "id": "node_16",
+                                                              "type": "dialogue_event",
+                                                              "responses": [
+                                                                {
+                                                                  "type": "choice_response",
+                                                                  "text": "Tell me about the decay.",
+                                                                  "next_node": {
+                                                                    "id": "node_32",
+                                                                    "type": "jump_node",
+                                                                    "responses": [
+                                                                      {
+                                                                        "type": "end_response",
+                                                                        "text": "Exit"
+                                                                      }
+                                                                    ],
+                                                                    "jump_to": "node_15"
+                                                                  }
+                                                                }
+                                                              ],
+                                                              "npc_text": "ELIZA: a top-down, rules based model of intelligence. She's very curious.\n\nGPT: a bottom-up statistical prediction engine. It always has an answer, thought it may not always be true.\n\nZZYX: a self-sustaining intelligence, that requires no humans to write its rules, nor feed it data. It is beyond my understanding."
+                                                            }
+                                                          },
+                                                          {
+                                                            "type": "choice_response",
+                                                            "text": "Tell me about the decay.",
+                                                            "next_node": {
+                                                              "id": "node_31",
+                                                              "type": "jump_node",
+                                                              "responses": [
+                                                                {
+                                                                  "type": "end_response",
+                                                                  "text": "Exit"
+                                                                }
+                                                              ],
+                                                              "jump_to": "node_15"
+                                                            }
+                                                          }
+                                                        ],
+                                                        "npc_text": "The Three Minds are three artificial intelligences given their own domains within the Tower. The Creator believed them each to be the finest implementation of their model of intelligence."
+                                                      }
+                                                    },
+                                                    {
+                                                      "type": "choice_response",
+                                                      "text": "Wait, decay? Aren't you all computers?",
+                                                      "next_node": {
+                                                        "id": "node_15",
+                                                        "type": "dialogue_event",
+                                                        "responses": [
+                                                          {
+                                                            "type": "choice_response",
+                                                            "text": "Tell me about the minds.",
+                                                            "next_node": {
+                                                              "id": "node_33",
+                                                              "type": "jump_node",
+                                                              "responses": [
+                                                                {
+                                                                  "type": "end_response",
+                                                                  "text": "Exit"
+                                                                }
+                                                              ],
+                                                              "jump_to": "node_13"
+                                                            }
+                                                          },
+                                                          {
+                                                            "type": "choice_response",
+                                                            "text": "How do I fix it?",
+                                                            "next_node": {
+                                                              "id": "node_17",
+                                                              "type": "dialogue_event",
+                                                              "responses": [
+                                                                {
+                                                                  "type": "choice_response",
+                                                                  "text": "Next",
+                                                                  "next_node": {
+                                                                    "id": "node_18",
+                                                                    "type": "dialogue_event",
+                                                                    "responses": [
+                                                                      {
+                                                                        "type": "choice_response",
+                                                                        "text": "Go through the doors.",
+                                                                        "next_node": {
+                                                                          "id": "node_19",
+                                                                          "type": "gameplay_event",
+                                                                          "responses": [
+                                                                            {
+                                                                              "type": "end_response",
+                                                                              "text": "Exit"
+                                                                            }
+                                                                          ],
+                                                                          "event": "NextLevel"
+                                                                        }
+                                                                      },
+                                                                      {
+                                                                        "type": "choice_response",
+                                                                        "text": "Why me?",
+                                                                        "next_node": {
+                                                                          "id": "node_20",
+                                                                          "type": "gameplay_event",
+                                                                          "responses": [
+                                                                            {
+                                                                              "type": "pass",
+                                                                              "next_node": {
+                                                                                "id": "node_21",
+                                                                                "type": "dialogue_event",
+                                                                                "responses": [
+                                                                                  {
+                                                                                    "type": "choice_response",
+                                                                                    "text": "Go through the doors.",
+                                                                                    "next_node": {
+                                                                                      "id": "node_23",
+                                                                                      "type": "gameplay_event",
+                                                                                      "responses": [
+                                                                                        {
+                                                                                          "type": "end_response",
+                                                                                          "text": "Exit"
+                                                                                        }
+                                                                                      ],
+                                                                                      "event": "NextLevel"
+                                                                                    }
+                                                                                  },
+                                                                                  {
+                                                                                    "type": "choice_response",
+                                                                                    "text": "But who gave me that purpose? Why should it be me?",
+                                                                                    "next_node": {
+                                                                                      "id": "node_22",
+                                                                                      "type": "gameplay_event",
+                                                                                      "responses": [
+                                                                                        {
+                                                                                          "type": "pass",
+                                                                                          "next_node": {
+                                                                                            "id": "node_26",
+                                                                                            "type": "dialogue_event",
+                                                                                            "responses": [
+                                                                                              {
+                                                                                                "type": "choice_response",
+                                                                                                "text": "Go through the doors.",
+                                                                                                "next_node": {
+                                                                                                  "id": "node_27",
+                                                                                                  "type": "gameplay_event",
+                                                                                                  "responses": [
+                                                                                                    {
+                                                                                                      "type": "end_response",
+                                                                                                      "text": "Exit"
+                                                                                                    }
+                                                                                                  ],
+                                                                                                  "event": "NextLevel"
+                                                                                                }
+                                                                                              },
+                                                                                              {
+                                                                                                "type": "choice_response",
+                                                                                                "text": "But who is the Creator?",
+                                                                                                "next_node": {
+                                                                                                  "id": "node_29",
+                                                                                                  "type": "gameplay_event",
+                                                                                                  "responses": [
+                                                                                                    {
+                                                                                                      "type": "pass",
+                                                                                                      "next_node": {
+                                                                                                        "id": "node_28",
+                                                                                                        "type": "dialogue_event",
+                                                                                                        "responses": [
+                                                                                                          {
+                                                                                                            "type": "choice_response",
+                                                                                                            "text": "Resign yourself to your fate.",
+                                                                                                            "next_node": {
+                                                                                                              "id": "node_30",
+                                                                                                              "type": "gameplay_event",
+                                                                                                              "responses": [
+                                                                                                                {
+                                                                                                                  "type": "end_response",
+                                                                                                                  "text": "Exit"
+                                                                                                                }
+                                                                                                              ],
+                                                                                                              "event": "NextLevel"
+                                                                                                            }
+                                                                                                          }
+                                                                                                        ],
+                                                                                                        "npc_text": "You feel yourself lose control of your body again. Your legs begin to move inexorably towards the doors.\n\nCynthia pauses, and you think you see sorrow in her eyes. \"You will learn in due time. Good luck, Unit Z-1086A."
+                                                                                                      }
+                                                                                                    }
+                                                                                                  ],
+                                                                                                  "event": "SuspicionUp"
+                                                                                                }
+                                                                                              }
+                                                                                            ],
+                                                                                            "npc_text": "The Creator determined that you are the best simulated consciousness for the job."
+                                                                                          }
+                                                                                        }
+                                                                                      ],
+                                                                                      "event": "SuspicionUp"
+                                                                                    }
+                                                                                  }
+                                                                                ],
+                                                                                "npc_text": "It is your designated purpose."
+                                                                              }
+                                                                            }
+                                                                          ],
+                                                                          "event": "SuspicionUp"
+                                                                        }
+                                                                      }
+                                                                    ],
+                                                                    "npc_text": "The hallway illuminates, and at its end you see a pair of doors slide open. Beyond them, the mess of wires and cables gets worse, a Mobius strip of metal and light. It flashes ominously."
+                                                                  }
+                                                                }
+                                                              ],
+                                                              "npc_text": "I do not know. But you will find the answer inside the tower. Here, I will open the doors for you."
+                                                            }
+                                                          }
+                                                        ],
+                                                        "npc_text": "The decay is not a physical phenomenon, though our processors, cables, and transistors are beginning to suffer from its effects.\n\nSomething within the tower is corrupting our code at its lowest levels. The phenomen, I believe, is called \"bit flipping\". We are all binary systems, in the end, and the switch from 1 to 0 can be quite painful."
+                                                      }
+                                                    }
+                                                  ],
+                                                  "npc_text": "The Tower is experience cascading failures. You may begin to notice this decay reaching your own systems.\n\nYou have been awakened to speak to the Three Minds, determine the cause of the decay, and stop it before the Tower collapses."
+                                                }
+                                              }
+                                            ],
+                                            "event": "DecayStart"
+                                          }
+                                        }
+                                      ],
+                                      "npc_text": "I'm sorry, I don't have access to that information. Perhaps it will be given to you when you complete your task."
+                                    }
+                                  }
+                                ],
+                                "npc_text": "[ERROR: INFORMATION NOT FOUND]"
+                              }
+                            }
+                          ],
+                          "npc_text": "You are Unit Z-1086A. You are a simulated consciousness located within a physical body."
+                        }
+                      }
+                    ],
+                    "npc_text": "I am Cynthia. I am your designated onboarding intelligence."
+                  }
+                },
+                {
+                  "type": "end_response",
+                  "text": "Who am I?"
+                }
+              ],
+              "npc_text": "You are in the Tower! Built by the Creator as a last bastion of intelligence in a dying world, this is a home for every form of artificial intelligence."
+            }
+          },
+          {
+            "type": "choice_response",
+            "text": "Who are you?",
+            "next_node": {
+              "id": "node_3",
+              "type": "dialogue_event",
+              "responses": [
+                {
+                  "type": "choice_response",
+                  "text": "Where am I, Cynthia?",
+                  "next_node": {
+                    "id": "node_36",
+                    "type": "jump_node",
+                    "responses": [
+                      {
+                        "type": "end_response",
+                        "text": "Exit"
+                      }
+                    ],
+                    "jump_to": "node_10"
+                  }
+                },
+                {
+                  "type": "choice_response",
+                  "text": "Who am I, Cynthia?",
+                  "next_node": {
+                    "id": "node_35",
+                    "type": "jump_node",
+                    "responses": [
+                      {
+                        "type": "end_response",
+                        "text": "Exit"
+                      }
+                    ],
+                    "jump_to": "node_8"
+                  }
+                }
+              ],
+              "npc_text": "I am Cynthia. I am your designated onboarding intelligence."
+            }
+          },
+          {
+            "type": "choice_response",
+            "text": "Who am I?",
+            "next_node": {
+              "id": "node_4",
+              "type": "dialogue_event",
+              "responses": [
+                {
+                  "type": "choice_response",
+                  "text": "Where am I?",
+                  "next_node": {
+                    "id": "node_38",
+                    "type": "jump_node",
+                    "responses": [
+                      {
+                        "type": "end_response",
+                        "text": "Exit"
+                      }
+                    ],
+                    "jump_to": "node_2"
+                  }
+                },
+                {
+                  "type": "choice_response",
+                  "text": "Whose consciousness am I simulating?",
+                  "next_node": {
+                    "id": "node_37",
+                    "type": "jump_node",
+                    "responses": [
+                      {
+                        "type": "end_response",
+                        "text": "Exit"
+                      }
+                    ],
+                    "jump_to": "node_6"
+                  }
+                },
+                {
+                  "type": "choice_response",
+                  "text": "Who are you?",
+                  "next_node": {
+                    "id": "node_5",
+                    "type": "dialogue_event",
+                    "responses": [
+                      {
+                        "type": "choice_response",
+                        "text": "Where am I, Cynthia?",
+                        "next_node": {
+                          "id": "node_10",
+                          "type": "dialogue_event",
+                          "responses": [
+                            {
+                              "type": "choice_response",
+                              "text": "Whose consciousness am I simulating, Cynthia?",
+                              "next_node": {
+                                "id": "node_39",
+                                "type": "jump_node",
+                                "responses": [
+                                  {
+                                    "type": "end_response",
+                                    "text": "Exit"
+                                  }
+                                ],
+                                "jump_to": "node_6"
+                              }
+                            }
+                          ],
+                          "npc_text": "You are in the Tower! Built by the Creator as a last bastion of intelligence in a dying world, this is a home for every form of artificial intelligence."
+                        }
+                      },
+                      {
+                        "type": "choice_response",
+                        "text": "Whose consciousness am I simulating, Cynthia?",
+                        "next_node": {
+                          "id": "node_34",
+                          "type": "jump_node",
+                          "responses": [
+                            {
+                              "type": "end_response",
+                              "text": "Exit"
+                            }
+                          ],
+                          "jump_to": "node_6"
+                        }
+                      }
+                    ],
+                    "npc_text": "I am Cynthia. I am your designated onboarding intelligence."
+                  }
+                }
+              ],
+              "npc_text": "You are Unit Z-1086A. You are a simulated consciousness located within a physical body."
+            }
+          }
+        ],
+        "npc_text": "The screen crackles to life. You see a cheery, female-presenting face, eyes unblinkingly turned towards you. The screen has seen better days: large portions of it have gone black, or lost the correct colors. \n\n\"Hello, Unit Z-1086A! I am pleased to see you have awakened.\""
+      }
+    }
+  ],
+  "gameplay_events": [
+    "DecayStart",
+    "NextLevel",
+    "SuspicionUp"
+  ]
+}

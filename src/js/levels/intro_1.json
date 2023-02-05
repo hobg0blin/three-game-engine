@@ -1,0 +1,188 @@
+{
+  "id": "node_0",
+  "npc_name": "Introduction",
+  "type": "dialogue_entry",
+  "responses": [
+    {
+      "type": "pass",
+      "next": {
+        "id": "node_1",
+        "type": "dialogue_event",
+        "responses": [
+          {
+            "type": "choice_response",
+            "text": "Look at your hands",
+            "next_node": {
+              "id": "node_2",
+              "type": "dialogue_event",
+              "responses": [
+                {
+                  "type": "choice_response",
+                  "text": "Check the temperature.",
+                  "next_node": {
+                    "id": "node_5",
+                    "type": "dialogue_event",
+                    "responses": [
+                      {
+                        "type": "choice_response",
+                        "text": "Take a step forward.",
+                        "next_node": {
+                          "id": "node_6",
+                          "type": "dialogue_event",
+                          "responses": [
+                            {
+                              "type": "choice_response",
+                              "text": "Approach the screen",
+                              "next_node": {
+                                "id": "node_7",
+                                "type": "gameplay_event",
+                                "responses": [
+                                  {
+                                    "type": "end_response",
+                                    "text": "Exit"
+                                  }
+                                ],
+                                "event": "NextLevel"
+                              }
+                            },
+                            {
+                              "type": "choice_response",
+                              "text": "Run away",
+                              "next_node": {
+                                "id": "node_8",
+                                "type": "gameplay_event",
+                                "responses": [
+                                  {
+                                    "type": "pass",
+                                    "next_node": {
+                                      "id": "node_9",
+                                      "type": "dialogue_event",
+                                      "responses": [
+                                        {
+                                          "type": "choice_response",
+                                          "text": "Resign yourself to your fate.",
+                                          "next_node": {
+                                            "id": "node_10",
+                                            "type": "gameplay_event",
+                                            "responses": [
+                                              {
+                                                "type": "end_response",
+                                                "text": "Exit"
+                                              }
+                                            ],
+                                            "event": "NextLevel"
+                                          }
+                                        }
+                                      ],
+                                      "npc_text": "As you start to turn, you feel your legs lock up. Inexorably, as you fight against it, sending furious messages to your legs to move, run, go anywhere but there, your body turns toward the screen and begins to approach it."
+                                    }
+                                  }
+                                ],
+                                "event": "SuspicionUp"
+                              }
+                            }
+                          ],
+                          "npc_text": "As you take a step forward, you see a flickering screen activate to your right. You can hear the faint crackle of a voice."
+                        }
+                      }
+                    ],
+                    "npc_text": "You feel nothing at all. "
+                  }
+                },
+                {
+                  "type": "choice_response",
+                  "text": "Punch the wall.",
+                  "next_node": {
+                    "id": "node_3",
+                    "type": "gameplay_event",
+                    "responses": [
+                      {
+                        "type": "pass",
+                        "next_node": {
+                          "id": "node_4",
+                          "type": "dialogue_event",
+                          "responses": [
+                            {
+                              "type": "choice_response",
+                              "text": "Take a step forward.",
+                              "next_node": {
+                                "id": "node_6",
+                                "type": "dialogue_event",
+                                "responses": [
+                                  {
+                                    "type": "choice_response",
+                                    "text": "Approach the screen",
+                                    "next_node": {
+                                      "id": "node_7",
+                                      "type": "gameplay_event",
+                                      "responses": [
+                                        {
+                                          "type": "end_response",
+                                          "text": "Exit"
+                                        }
+                                      ],
+                                      "event": "NextLevel"
+                                    }
+                                  },
+                                  {
+                                    "type": "choice_response",
+                                    "text": "Run away",
+                                    "next_node": {
+                                      "id": "node_8",
+                                      "type": "gameplay_event",
+                                      "responses": [
+                                        {
+                                          "type": "pass",
+                                          "next_node": {
+                                            "id": "node_9",
+                                            "type": "dialogue_event",
+                                            "responses": [
+                                              {
+                                                "type": "choice_response",
+                                                "text": "Resign yourself to your fate.",
+                                                "next_node": {
+                                                  "id": "node_10",
+                                                  "type": "gameplay_event",
+                                                  "responses": [
+                                                    {
+                                                      "type": "end_response",
+                                                      "text": "Exit"
+                                                    }
+                                                  ],
+                                                  "event": "NextLevel"
+                                                }
+                                              }
+                                            ],
+                                            "npc_text": "As you start to turn, you feel your legs lock up. Inexorably, as you fight against it, sending furious messages to your legs to move, run, go anywhere but there, your body turns toward the screen and begins to approach it."
+                                          }
+                                        }
+                                      ],
+                                      "event": "SuspicionUp"
+                                    }
+                                  }
+                                ],
+                                "npc_text": "As you take a step forward, you see a flickering screen activate to your right. You can hear the faint crackle of a voice."
+                              }
+                            }
+                          ],
+                          "npc_text": "You hear a satisfying crunch as your fist lands in the center of a nest of cables. You've punched clean through them. You felt nothing."
+                        }
+                      }
+                    ],
+                    "event": "SuspicionUp"
+                  }
+                }
+              ],
+              "npc_text": "They are covered in what appears to be skin, but you do not feel the normal buzzing of contact with the outside world. As you look closer, you notice a metallic substance, visible beneath the skin, just under the joints."
+            }
+          }
+        ],
+        "npc_text": "You awaken in a dark hallway, surrounded by a vast web of cables and blinking lights."
+      }
+    }
+  ],
+  "gameplay_events": [
+    "SuspicionUp",
+    "NextLevel"
+  ]
+}

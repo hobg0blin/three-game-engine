@@ -7,7 +7,7 @@ import { GUI } from "three/addons/libs/lil-gui.module.min.js";
 // GET THE DIALOGUE DATA
 import data from "./eliza.json";
 // MODELS
-
+import { environmentPicture } from "../app/ui/environmentPicture";
 // any global variables for this specific scene
 // track pixel direction
 let dir = false;
@@ -26,6 +26,8 @@ const eliza = (world) => {
     // ADD ANY OBJECTS OR VISUAL ELEMENTS
     // SET .doNotDispose = true so they're not deleted when it redraws
     // FIXME: surely there is a way to automate this
+    let sprite = environmentPicture(THREE, "/pictures/eliza.png", world.scene);
+    sprite.doNotDispose = true;
   };
 
   levelTemplate.customAnimations = () => {
