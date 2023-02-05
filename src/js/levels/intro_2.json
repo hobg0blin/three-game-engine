@@ -305,8 +305,19 @@
                   }
                 },
                 {
-                  "type": "end_response",
-                  "text": "Who am I?"
+                  "type": "choice_response",
+                  "text": "Who am I?",
+                  "next_node": {
+                    "id": "node_40",
+                    "type": "jump_node",
+                    "responses": [
+                      {
+                        "type": "end_response",
+                        "text": "Exit"
+                      }
+                    ],
+                    "jump_to": "node_4"
+                  }
                 }
               ],
               "npc_text": "You are in the Tower! Built by the Creator as a last bastion of intelligence in a dying world, this is a home for every form of artificial intelligence."
@@ -372,7 +383,7 @@
                         "text": "Exit"
                       }
                     ],
-                    "jump_to": "node_2"
+                    "jump_to": "node_8"
                   }
                 },
                 {
@@ -451,9 +462,5 @@
       }
     }
   ],
-  "gameplay_events": [
-    "DecayStart",
-    "NextLevel",
-    "SuspicionUp"
-  ]
+  "gameplay_events": ["DecayStart", "NextLevel", "SuspicionUp"]
 }
