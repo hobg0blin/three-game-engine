@@ -1,6 +1,6 @@
 import { state } from "app/engine/setup.js";
 import { createLevel, disposeAll, searchNode } from "app/engine/level.js";
-
+import { decayMeter } from "app/ui/decayMeter.js";
 //GUI/Buttons
 import { GUI } from "three/addons/libs/lil-gui.module.min.js";
 
@@ -48,21 +48,7 @@ const creator = (world) => {
     let text = troikaDialogueBox(dialogueObject, world);
     world.scene.add(text);
     //TODO: would be nice to have the numbers tick up
-    if (state.playerState.decayStart) {
-      let sprite = spriteDialogueBox(`DECAY: ${state.playerState.decay / 125}`);
-      sprite.backgroundColor = null;
-      if (state.playerState.decay < 50) {
-        sprite.color = "green";
-      } else if (state.playerState.decay < 85) {
-        sprite.color = "yellow";
-      } else {
-        sprite.color = "red";
-        console.log("hit decay ending");
-      }
-      sprite.position.x = 80;
-      sprite.position.y = -75;
-      world.scene.add(sprite);
-    }
+    decayMeter(state, world);
   };
 
   // first draw pass, since addObjects() is different based on state objects with "doNotDispose" flag will not be deleted as state changes

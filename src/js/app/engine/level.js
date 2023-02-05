@@ -1,7 +1,7 @@
 // text stuff
 import { state } from "./setup.js";
 import { troikaDialogueBox } from "app/ui/troikaDialogueBox.js";
-import { spriteDialogueBox } from "app/ui/spriteDialogueBox.js";
+import { decayMeter } from "app/ui/decayMeter.js";
 import { createText } from "app/ui/createText.js";
 
 // create a simple level template, to be modified in individual level files
@@ -17,22 +17,8 @@ const createLevel = (world, data) => {
     console.log("data: ", data);
     let text = troikaDialogueBox(searchNode(state.gameState.currentDialogueObject, data["responses"]), world);
     world.scene.add(text);
+    decayMeter(state, world);
     //TODO: would be nice to have the numbers tick up
-    if (state.playerState.decayStart) {
-      let sprite = spriteDialogueBox(`DECAY: ${state.playerState.decay / 125}`);
-      sprite.backgroundColor = null;
-      if (state.playerState.decay < 50) {
-        sprite.color = "green";
-      } else if (state.playerState.decay < 85) {
-        sprite.color = "yellow";
-      } else {
-        sprite.color = "red";
-        console.log("hit decay ending");
-      }
-      sprite.position.x = 80;
-      sprite.position.y = -75;
-      world.scene.add(sprite);
-    }
   };
   // manage level-specific animations, to automatically be dealt with in the animate render loop
   level.customAnimations = () => {};
