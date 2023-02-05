@@ -20,7 +20,7 @@ const setup = (THREE) => {
 
   // CAMERA & VIEWPORTS
   world.camera = createCamera();
-  world.camera.position.set(0, 20, 150);
+  world.camera.position.set(0, 20, 160);
   // effects
   world.composer = new EffectComposer(world.renderer);
   world.composer.addPass(new RenderPass(world.scene, world.camera));
@@ -68,6 +68,7 @@ const levelHandler = (levelIndex) => {
   // this is a thing that should not be
   // but it's goblin hours and nobody can  stop me
   let levels = [start, level1, intro1, intro2, elizaIntro, eliza, GPTintro, chatGPT, zzyxIntro, zzyx];
+  // uncomment this if you want to just jump in at the ending
   //levelIndex = levels.length;
   if (state.gameState.endScreen == true) {
     return end;
@@ -96,21 +97,22 @@ const startingState = {
   },
   playerState: {
     decay: 0,
-    elizaOpinion: 2,
-    GPTOpinion: 1,
-    zzyxOpinion: 1,
+    elizaOpinion: 0,
+    GPTOpinion: 0,
+    zzyxOpinion: 0,
     suspicion: 0,
     decayStart: false,
   },
 };
-const state = startingState;
+// clone the starting state
+const state = JSON.parse(JSON.stringify(startingState));
 function handleState(button) {
-  console.log("button params: ", button.params);
+  console.log('current state: ', state)
   if (button.params.restart == true && state.gameState.endScreen == true) {
     console.log("restarting");
     state.gameState.endScreen == false;
-    state.gameState = startingState.gameState;
-    state.playerState = startingState.playerState;
+    state.gameState = JSON.parse(JSON.stringify(startingState.gameState));
+    state.playerState = JSON.parse(JSON.stringify(startingState.playerState));
     gaem(world);
     return;
   }
@@ -166,9 +168,11 @@ function handleState(button) {
         break;
       case "gpt_end":
         state.gameState.chosenEnding = gpt_end;
+        gaem(world)
         break;
       case "zzyx_end":
         state.gameState.chosenEnding = zzyx_decay_end;
+        gaem(world)
         break;
       case "givebody":
         //skip creator
@@ -177,13 +181,15 @@ function handleState(button) {
         gaem(world);
       case "revolution_end":
         state.gameState.chosenEnding = revolution_end;
+        gaem(world)
         break;
       case "decay_end":
         state.gameState.chosenEnding = decay_end;
+        gaem(world)
         break;
       case "endgame":
         state.gameState.endScreen = true;
-        gaem();
+        gaem(world);
       default:
         console.log(`huh guess you didn't account for this. maybe check to see if you goofed in the JSON somewhere`);
     }
