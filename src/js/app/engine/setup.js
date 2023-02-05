@@ -126,7 +126,7 @@ const startingState = {
     endScreen: false,
   },
   playerState: {
-    decay: 125,
+    decay: 0,
     elizaOpinion: 0,
     GPTOpinion: 0,
     zzyxOpinion: 0,

@@ -32,7 +32,9 @@ const createLevel = (world, data) => {
     if (data && data["responses"][0].next) {
       let text = troikaDialogueBox(data["responses"][0].next, world);
       world.scene.add(text);
-    }
+      }
+      decayMeter(state, world)
+
   };
   level.animate = () => {
     level.customAnimations();

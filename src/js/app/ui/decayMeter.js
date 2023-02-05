@@ -4,15 +4,24 @@ let start = false
 let pixelSize = 0
 
 function decayMeter(state, world) {
-
-  if (state.playerState.decayStart) {
-    //fixme: dumb dumb dumb
-    if (start = false) {
+  //fixme: all of this is so dumb
+  if (state.gameState.currentLevelIndex == 0) {
+    console.log('setting pixel size')
+    pixelSize = 1.25
+  }
+    if (start == false) {
       let pixelPass = new RenderPixelatedPass(pixelSize, world.scene, world.camera);
+      pixelPass.doNotDispose = true
+      pixelPass.permanent = true
+
       world.composer.addPass(pixelPass);
       start = true
     }
-    pixelSize += state.playerState.decay/100
+
+  if (state.playerState.decayStart) {
+    //fixme: dumb dumb dumb
+    pixelSize += state.playerState.decay/500
+    console.log('new pixel size: ', pixelSize)
     pixelPass.setPixelSize(pixelSize)
 
     // just adding floating poitns here so it looks "cool"
