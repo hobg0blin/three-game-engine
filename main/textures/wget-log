@@ -1,0 +1,6 @@
+--2022-10-20 00:49:01--  https://external-preview.redd.it/Nnjjt8JfPSoXWER93Q0a5hylRmhRk1Watl72UQcxuLg.jpg?width=640
+Resolving external-preview.redd.it (external-preview.redd.it)... 2a04:4e42:6f::396, 199.232.189.140
+Connecting to external-preview.redd.it (external-preview.redd.it)|2a04:4e42:6f::396|:443... connected.
+HTTP request sent, awaiting response... 403 Forbidden
+2022-10-20 00:49:01 ERROR 403: Forbidden.
+

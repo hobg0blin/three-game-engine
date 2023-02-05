@@ -33,21 +33,21 @@ module.exports = (env) => {
         chunkId,
       };
     },
-    title: "ThreeJS Playground",
+    title: "The Tower",
     template: path.join(__dirname, "/src/html/index.html"),
     path: path.resolve(__dirname, "./dist/"),
-    filename: "[name]/index.html",
+    filename: "./index.html",
     inject: false,
   });
   return {
     entry: { main: "./src/js/app.js", vender: "./src/js/app/main.js" },
     mode: mode,
     output: {
-      path: path.resolve(__dirname, "./"),
+      path: path.resolve(__dirname, "./dist"),
       filename: "[name]/[name].js",
     },
     resolve: {
-      extensions: [".js", ".css", ".jpg"],
+      extensions: [".js", ".css", ".jpg", ".png", ".stl", ".wav"],
       modules: [path.resolve(__dirname, "src/public"), path.resolve(__dirname, "src/js"), path.resolve(__dirname, "src"), path.resolve(__dirname, "node_modules"), path.resolve(__dirname, "src/js/[name]")],
       fallback: {
         fs: false,
@@ -135,12 +135,12 @@ module.exports = (env) => {
           ],
         },
         {
-          test: /\.jpg$/i,
+          test: /\.(jpg|png|stl)$/i,
           use: [
             {
               loader: "url-loader",
               options: {
-                //                        publicPath: '/three/'
+                publicPath: "/the-tower/",
               },
             },
           ],
