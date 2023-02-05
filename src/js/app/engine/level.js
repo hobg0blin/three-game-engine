@@ -3,7 +3,7 @@ import { state } from "./setup.js";
 import { troikaDialogueBox } from "app/ui/troikaDialogueBox.js";
 import { decayMeter } from "app/ui/decayMeter.js";
 import { createText } from "app/ui/createText.js";
-import { Clock } from "three";
+import { Vector3, Clock } from "three";
 let dir = true;
 let pixelSize = 1.25;
 const clock = new Clock();
@@ -20,7 +20,10 @@ const createLevel = (world, data) => {
   level.redraw = () => {
     disposeAll(world, "doNotDispose");
     console.log("data: ", data);
-    let text = troikaDialogueBox(searchNode(state.gameState.currentDialogueObject, data["responses"]), world);
+    let text = troikaDialogueBox(
+      searchNode(state.gameState.currentDialogueObject, data["responses"]),
+      world
+    );
     world.scene.add(text);
     decayMeter(state, world);
     //TODO: would be nice to have the numbers tick up
@@ -40,9 +43,30 @@ const createLevel = (world, data) => {
     }
     decayMeter(state, world);
   };
-  level.animate = () => {
+  level.animate = (time) => {
     level.customAnimations();
     world.render(level, world);
+
+    const decay = state.playerState.decay;
+
+    if (decay >= 1) {
+      const offset = new Vector3();
+      const distance = 1;
+
+      offset.x = distance * Math.sin(time * 0.0001 + decay / 100) * 0.1;
+      offset.z = distance * Math.cos(time * 0.0001 + decay / 100) * 0.1;
+
+      world.camera.lookAt(0, 0, 0);
+
+      world.camera.rotation.set(
+        world.camera.rotation.x + offset.x,
+        world.camera.rotation.y,
+        world.camera.rotation.z + offset.z
+      );
+
+      world.camera.rotation.add(offset);
+    }
+
     if (pixelSize != world.pixelSize) {
       if (world.pixelPass != undefined && clock.getElapsedTime() > lastTick + 0.4) {
         lastTick = clock.getElapsedTime();
@@ -69,7 +93,10 @@ function searchNode(id, currentNode) {
   let result;
   for (const [key, value] of Object.entries(currentNode)) {
     if (key == "id" && value == id) return currentNode;
-    if ((value !== null && typeof value === "object") || typeof value === "array") {
+    if (
+      (value !== null && typeof value === "object") ||
+      typeof value === "array"
+    ) {
       result = searchNode(id, value);
       if (result) {
         return result;
