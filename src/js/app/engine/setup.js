@@ -191,6 +191,7 @@ function handleState(button) {
       case "endgame":
         state.gameState.endScreen = true;
         gaem(world);
+        break;
       default:
         console.log(`huh guess you didn't account for this. maybe check to see if you goofed in the JSON somewhere`);
     }

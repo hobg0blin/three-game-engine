@@ -35,7 +35,7 @@ function decayMeter(state, world) {
       sprite.color = "red";
       console.log("hit decay ending");
     }
-    sprite.position.x = 80;
+    sprite.position.x = -110;
     sprite.position.y = -75;
     world.scene.add(sprite);
   }
