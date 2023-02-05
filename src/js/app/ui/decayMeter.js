@@ -9,8 +9,11 @@ function decayMeter(state, world) {
   if (state.gameState.currentLevelIndex == 0) {
     console.log("setting pixel size");
     pixelSize = 1.25;
+    if (world.pixelPass != undefined) {
+      world.pixelSize == pixelSize;
+    }
   }
-  if (start == false) {
+  if (start == false && world.pixelPass == undefined) {
     console.log("ADDING PIXEL PASS");
     pixelPass = new RenderPixelatedPass(pixelSize, world.scene, world.camera);
     pixelPass.doNotDispose = true;
